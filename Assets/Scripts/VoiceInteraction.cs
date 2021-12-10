@@ -18,6 +18,7 @@ using Valve.Newtonsoft.Json.Linq;
 using System.Web;
 using Valve.VR;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class VoiceInteraction : MonoBehaviour
 {
@@ -28,21 +29,23 @@ public class VoiceInteraction : MonoBehaviour
     private static bool isRecording = false;        // have we started recording?
     private static bool isRecognized = false;
     private ArrayList selectedIntent = new ArrayList();  // the answer!
+    private string KeyFilePath; //the file path to the keys and app
     
     // Replace with your own subscription key and service region (e.g., "westus").
-    private static string subscription_key = "c23410a601b74a1782766c68ef3f44f7"; // speech to text
-    private static string region_name = "canadacentral";   // speech to text
+    private string subscription_key; // speech to text
+    private string region_name;   // speech to text
 
     // YOUR-APP-ID: The App ID GUID found on the www.luis.ai Application Settings page.
-    private static string appId = "70c9a26e-877c-4d94-a0a0-ff5197d4a2e9";  // LUIS
+    private string appId;  // LUIS
 
     // YOUR-PREDICTION-KEY: 32 character key.
-    private static string predictionKey = "3180862a6aa54c06b16d91bf18279daa"; // LUIS
+    private string predictionKey; // LUIS
 
     // YOUR-PREDICTION-ENDPOINT: Example is "https://westus.api.cognitive.microsoft.com/"
     private static string predictionEndpoint = "https://p360v.cognitiveservices.azure.com/"; // LUIS
 
-// public
+    // public
+    public string FileName;
     // VR Related
     public SteamVR_Action_Boolean RecordMic;    // the action
     public SteamVR_Input_Sources handType;      // the hand
@@ -62,6 +65,7 @@ public class VoiceInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pullKeyAndId();//pull from text method
         // if this is attached to a button, this would be a good place to add a state listener
         if (useMic && (StartAfterSeconds == 0))
         {
@@ -238,5 +242,13 @@ public class VoiceInteraction : MonoBehaviour
         // return the JSON
         return strResponseContent.ToString();
     }
-
+    private void pullKeyAndId()
+    {
+        KeyFilePath = Application.dataPath + "/" + FileName;
+        string [] textfile = File.ReadAllLines(KeyFilePath);
+        subscription_key = textfile[1];
+        region_name = textfile[3];
+        appId = textfile[5];
+        predictionKey = textfile[7];
+    }
 }

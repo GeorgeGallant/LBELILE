@@ -5,6 +5,8 @@
 [Bb]uilds/
 [Vv]ideoFiles/
 [Ss]peechSDK/
+[Ll]ogs/
+[Hh]iddenText/
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory

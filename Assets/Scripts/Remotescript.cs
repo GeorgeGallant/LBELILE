@@ -12,6 +12,8 @@ public class Remotescript : MonoBehaviour
     public Vector3 prefRotation;
     public SteamVR_Action_Boolean TV;
     public SteamVR_Input_Sources handType;
+    public float timer;
+    public bool useTimer;
 
     private void Start()
     {
@@ -21,7 +23,21 @@ public class Remotescript : MonoBehaviour
         //this is to change the remot so it look correct in the players hand
         this.transform.localPosition = prefPos;
         this.transform.localRotation = Quaternion.Euler(prefRotation);
-        //goodToPress();
+        if (!useTimer) {
+            goodToPress(); 
+        }
+      
+    }
+    private void Update()
+    {
+        if (useTimer) { 
+        timer = timer - Time.deltaTime;
+            if (timer <= 0)
+            {
+            goodToPress();
+            useTimer = false;
+            }
+        }
     }
     //a methode to cue once the player is good to press the button
     public void goodToPress()
