@@ -629,6 +629,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+--- !u!1 &740864715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  m_PrefabInstance: {fileID: 740864714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &740864716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740864715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b9214fcabd06441b2126022165164a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FileName: 
+  RecordMic:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  handType: 2
+  GoodSceneIntent: p3v.dispatch.ackClear
+  GoodSceneName: 1B
+  BadSceneName: 1A
+  useMic: 1
+  StartAfterSeconds: 0
+  TimeoutAfterSeconds: 20
+  lastUtterance: 
 --- !u!1 &2107174982
 GameObject:
   m_ObjectHideFlags: 0
