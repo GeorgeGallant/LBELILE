@@ -144,7 +144,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108530}
-  m_LocalRotation: {x: 0.72308403, y: 0.6755512, z: -0.09876423, w: 0.10500364}
+  m_LocalRotation: {x: 0.72974986, y: 0.6836463, z: 0.00836861, w: 0.0047755535}
   m_LocalPosition: {x: 0.008360226, y: 0.110485606, z: -0.025393812}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -155,7 +155,7 @@ Transform:
   - {fileID: 413786}
   m_Father: {fileID: 422916}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180.256, y: -1.0740051, z: -86.26099}
 --- !u!1 &118542
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,15 +242,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127476}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0, z: 0}
+  m_LocalRotation: {x: 0.13765801, y: -0.137658, z: -0.69357777, w: 0.693578}
+  m_LocalPosition: {x: 0.0198, y: 0, z: 0.0192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 490550}
   - {fileID: 422916}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -22.452, z: -90}
 --- !u!95 &9558232
 Animator:
   serializedVersion: 3
@@ -282,6 +282,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f452251c0f44f7049ad2579d3d1711d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonPress: {fileID: 11400000, guid: bf57c3d1605876c4a8557bf8e368e9f5, type: 2}
+  controllerName: Right Controller
+  down: 0
 --- !u!1 &128874
 GameObject:
   m_ObjectHideFlags: 0

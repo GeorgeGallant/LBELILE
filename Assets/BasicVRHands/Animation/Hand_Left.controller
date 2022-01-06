@@ -113,7 +113,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Grab
-  m_Speed: 2.5
+  m_Speed: 4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 110148566}
@@ -146,7 +146,7 @@ AnimatorStateMachine:
     m_Position: {x: -48, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110282538}
-    m_Position: {x: -48, y: 216, z: 0}
+    m_Position: {x: -50, y: 220, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

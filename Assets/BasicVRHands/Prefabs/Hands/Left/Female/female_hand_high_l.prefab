@@ -146,8 +146,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119048}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalRotation: {x: 0.16475002, y: 0.16475007, z: 0.6876463, w: 0.6876463}
+  m_LocalPosition: {x: 0.0013, y: 0, z: 0.015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 473900}
@@ -186,6 +186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f452251c0f44f7049ad2579d3d1711d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonPress: {fileID: 11400000, guid: 2530d781848e21a47b35f94dc94ce9a9, type: 2}
+  controllerName: Left Controller
+  down: 0
 --- !u!1 &132794
 GameObject:
   m_ObjectHideFlags: 0
