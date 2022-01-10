@@ -14,11 +14,11 @@ using System;
 using System.Collections;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Valve.Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Linq;
 using System.Web;
-using Valve.VR;
 using UnityEngine.SceneManagement;
 using System.IO;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class VoiceInteraction : MonoBehaviour
 {
@@ -47,9 +47,9 @@ public class VoiceInteraction : MonoBehaviour
     // public
     public string FileName;
     // VR Related
-    public SteamVR_Action_Boolean RecordMic;    // the action
-    public SteamVR_Input_Sources handType;      // the hand
-    
+
+    public event Action OnRecordMic;
+
     // Interface for scene direction
     public string GoodSceneIntent;          // code for what the user should say
     public string GoodSceneName;            // where to go when utterance is correct
@@ -62,6 +62,8 @@ public class VoiceInteraction : MonoBehaviour
 
     public String lastUtterance = "";
 
+    public ButtonHandler buttonPress;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,9 +71,37 @@ public class VoiceInteraction : MonoBehaviour
         // if this is attached to a button, this would be a good place to add a state listener
         if (useMic && (StartAfterSeconds == 0))
         {
-            RecordMic.AddOnStateDownListener(ButtonClick, handType); // this is a click not a hold!!!
+            //RecordMic.AddOnStateDownListener(ButtonClick, handType); // this is a click not a hold!!!
             isMicTriggerSet = true;
+            BindXRControllerEvents();
         }
+    }
+    public void OnDestroy()
+    {
+        UnbindXRControllerEvents();
+    }
+
+    public void BindXRControllerEvents()
+    {
+        buttonPress.OnButtonDown += ButtonDown;
+        // buttonPress.OnButtonUp += ButtonUp;
+    }
+
+    public void UnbindXRControllerEvents()
+    {
+        buttonPress.OnButtonDown -= ButtonDown;
+        // buttonPress.OnButtonUp -= ButtonUp;
+    }
+
+    public void ButtonDown(XRController controller)
+    {
+        Debug.Log("RADIO BUTTON PRESSED");
+        ButtonClick();
+    }
+
+    public void ButtonUp(XRController controller)
+    {
+
     }
 
     // Update is called once per frame
@@ -83,8 +113,9 @@ public class VoiceInteraction : MonoBehaviour
             // start the mic if it is a delayed start
             if (useMic && (StartAfterSeconds > 0) && (elapsedTime >= StartAfterSeconds))
             {
-                RecordMic.AddOnStateDownListener(ButtonClick, handType); // this is a click not a hold?!!
+                //RecordMic.AddOnStateDownListener(ButtonClick, handType); // this is a click not a hold?!!
                 isMicTriggerSet = true;
+                BindXRControllerEvents();
             }
             // start listening at the right time if we are not using the mic/radio
             else if (!useMic && (elapsedTime >= StartAfterSeconds)) {
@@ -204,7 +235,7 @@ public class VoiceInteraction : MonoBehaviour
         }
     }
 
-    public async void ButtonClick(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
+    public async void ButtonClick()
     {
         await TimedListener();
     }
