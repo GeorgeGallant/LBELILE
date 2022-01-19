@@ -2193,7 +2193,6 @@ MonoBehaviour:
   dark: {r: 0.3207547, g: 0.20634027, b: 0.07716268, a: 1}
   medium: {r: 0.5377358, g: 0.410258, b: 0.2663314, a: 1}
   light: {r: 0.8396226, g: 0.72242826, b: 0.59011215, a: 1}
-  ThisPanel: {fileID: 1509615343}
   leftController: {fileID: 1072497670}
   rightController: {fileID: 1057358158}
   maleLeftHandModel: {fileID: 198286, guid: 7fd4f834ddb58af4c8dc5208428c7108, type: 3}
@@ -2205,6 +2204,7 @@ MonoBehaviour:
   - {fileID: 1544679165}
   - {fileID: 817852194}
   active: 0
+  selectionMade: 0
   changeLeft: 1
   changeRight: 0
   ButtonHandlers: []
@@ -2979,10 +2979,10 @@ VideoPlayer:
   m_DirectAudioVolumes:
   - 1
   m_Url: 
-  m_EnabledAudioTracks: 01
+  m_EnabledAudioTracks: 00
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 0
