@@ -24,17 +24,15 @@ public class SelectionManger : MonoBehaviour
     public GameObject femaleLeftHandModel;
     public GameObject femaleRightHandModel;
 
+    public List<GameObject> deactivateOnContinue = new List<GameObject>();
+
     public VideoPlayer video;
     public List<AudioSource> audio;
-
-    public bool active;
 
     public bool selectionMade = false;
 
     public bool changeLeft = true;
     public bool changeRight = true;
-
-    public List<ButtonHandler> ButtonHandlers = new List<ButtonHandler>();
 
     public void setGender(string selectedGender)
     {
@@ -148,12 +146,16 @@ public class SelectionManger : MonoBehaviour
 
     public void StartVideo()
     {
-        active = false;
+        gameObject.SetActive(false);
         selectionMade = true;
         video.Play();
         foreach(AudioSource sound in audio)
         {
             sound.Play(0);
+        }
+        foreach(GameObject go in deactivateOnContinue)
+        {
+            go.SetActive(false);
         }
     }
 
