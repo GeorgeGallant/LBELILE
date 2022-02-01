@@ -93,13 +93,13 @@ public class VoiceInteraction : MonoBehaviour
         // buttonPress.OnButtonUp -= ButtonUp;
     }
 
-    public void ButtonDown(XRController controller)
+    public void ButtonDown(XRController controller, InputHelpers.Button button)
     {
         Debug.Log("RADIO BUTTON PRESSED");
         ButtonClick();
     }
 
-    public void ButtonUp(XRController controller)
+    public void ButtonUp(XRController controller, InputHelpers.Button button)
     {
 
     }

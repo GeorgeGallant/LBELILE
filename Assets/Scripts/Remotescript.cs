@@ -45,7 +45,7 @@ public class Remotescript : MonoBehaviour
         buttonPress.OnButtonDown += Clicked;
     }
    
-    private void Clicked(XRController controller)
+    private void Clicked(XRController controller, InputHelpers.Button button)
     {
         //de attach from hand so it does not go the next scene
         this.gameObject.transform.SetParent(null);

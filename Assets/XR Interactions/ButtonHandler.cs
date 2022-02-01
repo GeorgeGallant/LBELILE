@@ -1,12 +1,15 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+
+
+
 [CreateAssetMenu(fileName = "NewButtonHandler")]
 public class ButtonHandler : InputHandler
 {
     public InputHelpers.Button button = InputHelpers.Button.None;
 
-    public delegate void StateChange(XRController controller);
+    public delegate void StateChange(XRController controller, InputHelpers.Button button);
     public event StateChange OnButtonDown;
     public event StateChange OnButtonUp;
 
@@ -14,6 +17,7 @@ public class ButtonHandler : InputHandler
 
     public override void HandleState(XRController controller)
     {
+        
        if(controller.inputDevice.IsPressed(button, out bool pressed, controller.axisToPressThreshold))
         {
             if(lastPressed != pressed)
@@ -22,10 +26,12 @@ public class ButtonHandler : InputHandler
 
                 if(pressed)
                 {
-                    OnButtonDown?.Invoke(controller);
+                    OnButtonDown?.Invoke(controller, button);
+                    Debug.Log("Button Down");
                 } else
                 {
-                    OnButtonUp?.Invoke(controller);
+                    OnButtonUp?.Invoke(controller, button);
+                    Debug.Log("Button Up");
                 }
             }
         }
