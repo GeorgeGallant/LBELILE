@@ -26,7 +26,7 @@ public class HandController : MonoBehaviour
         buttonPress.OnButtonUp -= OnUp;
     }
 
-    private void OnDown(XRController controller)
+    private void OnDown(XRController controller, InputHelpers.Button button)
     {
         if (controller.name == controllerName)
         {
@@ -39,7 +39,7 @@ public class HandController : MonoBehaviour
 
     }
 
-    private void OnUp(XRController controller)
+    private void OnUp(XRController controller, InputHelpers.Button button)
     {
         if (controller.name == controllerName)
         {
