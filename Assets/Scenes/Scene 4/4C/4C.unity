@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 38536257b27d7874dbd6f24161d2da84, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d103b7e22f3b5e143915038b7fb7783c, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.99999905, g: 0.99999905, b: 0.99999905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -394,7 +394,8 @@ AudioSource:
   m_GameObject: {fileID: 976944268}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -1796614490163352485, guid: 0edc9a6c21b503a47bbd672dc12af922, type: 2}
+  OutputAudioMixerGroup: {fileID: -1796614490163352485, guid: 0edc9a6c21b503a47bbd672dc12af922,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 3b9fdbf4b36ce124b9c31668da4617a4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -586,7 +587,8 @@ AudioSource:
   m_GameObject: {fileID: 1480132419}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 4107046357385952674, guid: 0edc9a6c21b503a47bbd672dc12af922, type: 2}
+  OutputAudioMixerGroup: {fileID: 4107046357385952674, guid: 0edc9a6c21b503a47bbd672dc12af922,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 2c1d4583cf195cb4c92df2c7c600fa78, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -748,4 +750,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1821959794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1821959796}
+  - component: {fileID: 1821959795}
+  m_Layer: 0
+  m_Name: copernic360 Loader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1821959795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821959794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500ea758856513141a1e0ac59992d10c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 398421198}
+--- !u!4 &1821959796
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821959794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1520343, y: -0.6668929, z: -0.11470443}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
