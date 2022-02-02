@@ -808,6 +808,11 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1559497001}
+    - target: {fileID: 1915059362548088702, guid: 22a70fb1488e84747bf5bd75fad2d3ea,
+        type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 401296, guid: 7fd4f834ddb58af4c8dc5208428c7108, type: 3}
     - target: {fileID: 1915059362550643236, guid: 22a70fb1488e84747bf5bd75fad2d3ea,
         type: 3}
       propertyPath: m_InteractionManager
@@ -827,6 +832,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PlayHapticsOnHoverEntered
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915059362550643238, guid: 22a70fb1488e84747bf5bd75fad2d3ea,
+        type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 433266, guid: cb27c64c5d221534bad23f83c0b73c45, type: 3}
+    - target: {fileID: 1915059362550643258, guid: 22a70fb1488e84747bf5bd75fad2d3ea,
+        type: 3}
+      propertyPath: m_Name
+      value: RightController
       objectReference: {fileID: 0}
     - target: {fileID: 1915059364091608752, guid: 22a70fb1488e84747bf5bd75fad2d3ea,
         type: 3}
