@@ -16,7 +16,6 @@ public class HandController : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();
         buttonPress.OnButtonDown += OnDown;
         buttonPress.OnButtonUp += OnUp;
     }
