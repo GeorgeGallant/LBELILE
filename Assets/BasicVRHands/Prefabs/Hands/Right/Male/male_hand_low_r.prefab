@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -353,7 +353,8 @@ GameObject:
   m_Component:
   - component: {fileID: 433266}
   - component: {fileID: 9558232}
-  - component: {fileID: 11445172}
+  - component: {fileID: 5000858179110576001}
+  - component: {fileID: -8073566213988953496}
   m_Layer: 0
   m_Name: male_hand_low_r
   m_TagString: Untagged
@@ -396,7 +397,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &11445172
+--- !u!114 &5000858179110576001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ade644f51360d74f80da7f7909703e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerName: RightController
+  blendRate: 0.2
+--- !u!114 &-8073566213988953496
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -411,6 +426,8 @@ MonoBehaviour:
   buttonPress: {fileID: 11400000, guid: bf57c3d1605876c4a8557bf8e368e9f5, type: 2}
   controllerName: Right Controller
   down: 0
+  DownActions: []
+  UpActions: []
 --- !u!1 &128874
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -504,7 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -553,7 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -602,7 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -651,7 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -666,7 +683,6 @@ GameObject:
   m_Component:
   - component: {fileID: 490550}
   - component: {fileID: 13775416}
-  - component: {fileID: 29992484405213020}
   m_Layer: 0
   m_Name: male_hand_high_r
   m_TagString: Untagged
@@ -757,103 +773,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.08843321, y: -0.01122259, z: 0.015376821}
     m_Extent: {x: 0.12686901, y: 0.0868638, z: 0.07831125}
   m_DirtyAABB: 0
---- !u!114 &29992484405213020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6cdb0d9da4add43a1380b3888509ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  worldSize: 1
-  handleSize: 0.025
-  fingerHandleScale: 0.3
-  highlightScale: 0.75
-  drawSkeleton: 1
-  handleColor: {r: 0, g: 0.5, b: 1, a: 1}
-  inactiveHandleColor: {r: 0, g: 0.32, b: 0, a: 1}
-  multiColor: 1
-  multiColorVariation: 6
-  multiColorSaturation: 1
-  multiColorBrightness: 1
-  caseSensitive: 0
-  nameFilter: 
-  drawLabel: 1
-  labelFontSize: 16
-  labelColor: {r: 0, g: 0.64, b: 0, a: 1}
-  inactiveLabelColor: {r: 0, g: 0.32, b: 0, a: 1}
-  inheritHandleColor: 1
-  labelStyle:
-    m_Name: LargeLabel
-    m_Normal:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0.64, b: 0, a: 1}
-    m_Hover:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
-    m_Active:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
-    m_Focused:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
-    m_OnNormal:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
-    m_OnHover:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
-    m_OnActive:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
-    m_OnFocused:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
-    m_Border:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Margin:
-      m_Left: 4
-      m_Right: 4
-      m_Top: 4
-      m_Bottom: 4
-    m_Padding:
-      m_Left: 2
-      m_Right: 2
-      m_Top: 1
-      m_Bottom: 1
-    m_Overflow:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Font: {fileID: 0}
-    m_FontSize: 16
-    m_FontStyle: 0
-    m_Alignment: 7
-    m_WordWrap: 0
-    m_RichText: 0
-    m_TextClipping: 0
-    m_ImagePosition: 0
-    m_ContentOffset: {x: 5.5, y: 0}
-    m_FixedWidth: 1
-    m_FixedHeight: 1
-    m_StretchWidth: 1
-    m_StretchHeight: 0
 --- !u!1 &153614
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,7 +848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -978,7 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -1027,7 +946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -1075,7 +994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
@@ -1124,7 +1043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2223297e97de26f4684302612d8d3c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 29992484405213020}
+  manager: {fileID: 0}
   hideChildren: 0
   selected: 0
   label: 
