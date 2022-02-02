@@ -1602,6 +1602,11 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1863683825}
+    - target: {fileID: 4779030218873375125, guid: ce1f5d525d1419b4a926f56780220752,
+        type: 3}
+      propertyPath: m_Name
+      value: RightController
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce1f5d525d1419b4a926f56780220752, type: 3}
 --- !u!1001 &8531898827407337383
@@ -1636,6 +1641,36 @@ PrefabInstance:
       propertyPath: video
       value: 
       objectReference: {fileID: 1815936173}
+    - target: {fileID: 8531898828340937046, guid: 12dd52c6ee1b8a74eac4b48acc00bf26,
+        type: 3}
+      propertyPath: light.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531898828340937046, guid: 12dd52c6ee1b8a74eac4b48acc00bf26,
+        type: 3}
+      propertyPath: light.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531898828340937046, guid: 12dd52c6ee1b8a74eac4b48acc00bf26,
+        type: 3}
+      propertyPath: light.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531898828340937046, guid: 12dd52c6ee1b8a74eac4b48acc00bf26,
+        type: 3}
+      propertyPath: medium.b
+      value: 0.23789605
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531898828340937046, guid: 12dd52c6ee1b8a74eac4b48acc00bf26,
+        type: 3}
+      propertyPath: medium.g
+      value: 0.38350332
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531898828340937046, guid: 12dd52c6ee1b8a74eac4b48acc00bf26,
+        type: 3}
+      propertyPath: medium.r
+      value: 0.509434
+      objectReference: {fileID: 0}
     - target: {fileID: 8531898828340937046, guid: 12dd52c6ee1b8a74eac4b48acc00bf26,
         type: 3}
       propertyPath: leftController
