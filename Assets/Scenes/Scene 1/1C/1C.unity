@@ -819,6 +819,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1915059364091608755, guid: 22a70fb1488e84747bf5bd75fad2d3ea,
         type: 3}
+      propertyPath: GoodSceneIntent
+      value: pv3.dispatch.ackArrive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915059364091608755, guid: 22a70fb1488e84747bf5bd75fad2d3ea,
+        type: 3}
       propertyPath: TimeoutAfterSeconds
       value: 35
       objectReference: {fileID: 0}

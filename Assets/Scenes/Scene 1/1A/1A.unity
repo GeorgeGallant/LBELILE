@@ -905,6 +905,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1915059364091608755, guid: 22a70fb1488e84747bf5bd75fad2d3ea,
         type: 3}
+      propertyPath: useMic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915059364091608755, guid: 22a70fb1488e84747bf5bd75fad2d3ea,
+        type: 3}
       propertyPath: FileName
       value: HiddenText/AppKey.txt
       objectReference: {fileID: 0}
