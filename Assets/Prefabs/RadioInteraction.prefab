@@ -612,7 +612,7 @@ MonoBehaviour:
   GoodSceneIntent: pv3.dispatch.ackClear
   GoodSceneName: 1B
   BadSceneName: 1A
-  useMic: 0
+  useMic: 1
   StartAfterSeconds: 0
   TimeoutAfterSeconds: 20
   lastUtterance: 

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7423323837697487889}
   - component: {fileID: 5812786088504916916}
   - component: {fileID: 8597333684677906302}
+  - component: {fileID: 1619786741649513880}
+  - component: {fileID: 5188339168405886261}
   m_Layer: 0
   m_Name: TVRemote
   m_TagString: Untagged
@@ -81,3 +83,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &1619786741649513880
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7804493099305381547}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.01
+  m_Center: {x: 0.01, y: 0.05, z: -9.626543e-11}
+--- !u!114 &5188339168405886261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7804493099305381547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72fd8098d0f9d2f4c921783939dcfa86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
