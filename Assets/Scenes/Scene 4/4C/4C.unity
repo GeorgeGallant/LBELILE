@@ -737,6 +737,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b1935efe20ae2f4dbc72a8eb7c8add0, type: 3}
+--- !u!1 &1650115784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7004808014119743239, guid: 5b1935efe20ae2f4dbc72a8eb7c8add0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1650115783}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1650115785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650115784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b9214fcabd06441b2126022165164a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FileName: 
+  GoodSceneIntent: ' pv3.bill.agreeToSearch'
+  GoodSceneName: 4B
+  BadSceneName: 4A
+  useMic: 0
+  StartAfterSeconds: 8
+  TimeoutAfterSeconds: 26
+  lastUtterance: 
+  buttonPress: {fileID: 0}
 --- !u!1 &1821959794
 GameObject:
   m_ObjectHideFlags: 0

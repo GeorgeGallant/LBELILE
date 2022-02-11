@@ -321,7 +321,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450443119}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -808,6 +808,6 @@ MonoBehaviour:
   BadSceneName: 1C
   useMic: 1
   StartAfterSeconds: 0
-  TimeoutAfterSeconds: 35
+  TimeoutAfterSeconds: 20
   lastUtterance: 
   buttonPress: {fileID: 11400000, guid: cd382a4fff7a725439b4431ff0ffda8c, type: 2}

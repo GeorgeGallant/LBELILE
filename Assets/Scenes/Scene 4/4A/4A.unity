@@ -200,7 +200,6 @@ GameObject:
   - component: {fileID: 185259252}
   - component: {fileID: 185259251}
   - component: {fileID: 185259250}
-  - component: {fileID: 185259249}
   - component: {fileID: 185259248}
   m_Layer: 0
   m_Name: AudioFTO
@@ -306,19 +305,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &185259249
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185259247}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &185259250
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -326,7 +312,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185259247}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -437,7 +423,6 @@ GameObject:
   - component: {fileID: 858338207}
   - component: {fileID: 858338206}
   - component: {fileID: 858338205}
-  - component: {fileID: 858338204}
   - component: {fileID: 858338203}
   m_Layer: 0
   m_Name: AudioBill
@@ -543,19 +528,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!135 &858338204
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858338202}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &858338205
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -563,7 +535,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858338202}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -781,3 +753,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b1935efe20ae2f4dbc72a8eb7c8add0, type: 3}
+--- !u!1 &2019091524 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7004808014119743239, guid: 5b1935efe20ae2f4dbc72a8eb7c8add0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2019091523}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2019091525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019091524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b9214fcabd06441b2126022165164a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FileName: 
+  GoodSceneIntent: ' pv3.bill.agreeToSearch'
+  GoodSceneName: 4B
+  BadSceneName: 4C
+  useMic: 0
+  StartAfterSeconds: 27
+  TimeoutAfterSeconds: 48
+  lastUtterance: 
+  buttonPress: {fileID: 0}

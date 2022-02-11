@@ -195,6 +195,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radio1
       objectReference: {fileID: 0}
+    - target: {fileID: 9208107798930233663, guid: f0953907793864c4d848adb3a4827502,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9208107798930233662, guid: f0953907793864c4d848adb3a4827502, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f0953907793864c4d848adb3a4827502, type: 3}
@@ -791,14 +796,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FileName: 
-  GoodSceneIntent: pv3.dispatch.ackArrive
-  GoodSceneName: 1D
-  BadSceneName: 1C
-  useMic: 1
-  StartAfterSeconds: 0
-  TimeoutAfterSeconds: 35
+  GoodSceneIntent: pv3.bill.identification
+  GoodSceneName: 2A
+  BadSceneName: 1D
+  useMic: 0
+  StartAfterSeconds: 32
+  TimeoutAfterSeconds: 60
   lastUtterance: 
-  buttonPress: {fileID: 11400000, guid: cd382a4fff7a725439b4431ff0ffda8c, type: 2}
+  buttonPress: {fileID: 0}
 --- !u!1 &1373215688
 GameObject:
   m_ObjectHideFlags: 0
