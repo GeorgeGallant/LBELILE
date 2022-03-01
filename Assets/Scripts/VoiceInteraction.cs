@@ -64,6 +64,8 @@ public class VoiceInteraction : MonoBehaviour
 
     public ButtonHandler buttonPress;
 
+    private bool buttonPressed = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,24 +86,21 @@ public class VoiceInteraction : MonoBehaviour
     public void BindXRControllerEvents()
     {
         buttonPress.OnButtonDown += ButtonDown;
-        // buttonPress.OnButtonUp += ButtonUp;
+
     }
 
     public void UnbindXRControllerEvents()
     {
         buttonPress.OnButtonDown -= ButtonDown;
-        // buttonPress.OnButtonUp -= ButtonUp;
+
     }
 
     public void ButtonDown(XRController controller, InputHelpers.Button button)
     {
-        Debug.Log("RADIO BUTTON PRESSED");
+        if (!buttonPressed) { 
         ButtonClick();
-    }
-
-    public void ButtonUp(XRController controller, InputHelpers.Button button)
-    {
-
+        buttonPressed = true;
+        }
     }
 
     // Update is called once per frame
