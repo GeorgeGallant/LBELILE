@@ -1470,6 +1470,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4779030217184562460, guid: ce1f5d525d1419b4a926f56780220752,
         type: 3}
+      propertyPath: timer
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779030217184562460, guid: ce1f5d525d1419b4a926f56780220752,
+        type: 3}
+      propertyPath: useTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779030217184562460, guid: ce1f5d525d1419b4a926f56780220752,
+        type: 3}
       propertyPath: nextSceneName
       value: POV 2
       objectReference: {fileID: 0}
