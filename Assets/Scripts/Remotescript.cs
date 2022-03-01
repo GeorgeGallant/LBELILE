@@ -11,18 +11,21 @@ public class Remotescript : MonoBehaviour
     public Vector3 prefRotation;
     public float timer;
     public bool useTimer;
+    public bool enableButtonPress = false;
 
     public ButtonHandler buttonPress;
 
     public void OnDestroy()
     {
         buttonPress.OnButtonDown -= Clicked;
+        
     }
 
     private void Start()
     {
         this.transform.localPosition = prefPos;
         this.transform.localRotation = Quaternion.Euler(prefRotation);
+        PowerButtonEvent.AddListener<string>(pressPower);
         if (!useTimer) {
             goodToPress(); 
         }
@@ -42,9 +45,17 @@ public class Remotescript : MonoBehaviour
     //a methode to cue once the player is good to press the button
     public void goodToPress()
     {
-        buttonPress.OnButtonDown += Clicked;
+        enableButtonPress = true;
     }
    
+    public void pressPower(object listener)
+    {
+        if (enableButtonPress)
+        {
+            SceneManager.LoadScene(nextSceneName);
+        }
+    }
+
     private void Clicked(XRController controller, InputHelpers.Button button)
     {
         //de attach from hand so it does not go the next scene
