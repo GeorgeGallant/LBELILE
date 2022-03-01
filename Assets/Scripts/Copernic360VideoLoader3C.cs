@@ -13,7 +13,7 @@ using UnityEngine.Video;
 
         private void Awake()
         {
-            string configPath = Path.Combine(Application.streamingAssetsPath,"3C.6dof");
+            string configPath = Path.Combine(Application.streamingAssetsPath,"3CV1.6dof");
             using (var fs = new FileStream(configPath,FileMode.Open, FileAccess.Read))
             {
                 skyboxController = new SkyboxController(videoPlayer.targetTexture,VideoConfiguration.LoadFromStream(fs)
