@@ -282,11 +282,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b9214fcabd06441b2126022165164a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FileName: 
-  GoodSceneIntent: pv3.dispatch.ackCopy
+  GoodSceneIntent: p3v.dispatch.ackCopy
   GoodSceneName: 1C
   BadSceneName: 1B
-  useMic: 1
+  useMic: 0
   StartAfterSeconds: 20
   TimeoutAfterSeconds: 50
   lastUtterance: 

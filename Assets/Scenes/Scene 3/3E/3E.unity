@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FileName: 
-  GoodSceneIntent: ' pv3.bill.convinceToGo'
+  GoodSceneIntent: p3v.bill.convinceToGo
   GoodSceneName: 3A
   BadSceneName: 3A
   useMic: 0

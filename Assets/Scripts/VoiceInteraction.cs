@@ -45,7 +45,7 @@ public class VoiceInteraction : MonoBehaviour
     private static string predictionEndpoint = "https://p360v.cognitiveservices.azure.com/"; // LUIS
 
     // public
-    public string FileName;
+    private string FileName = "HiddenText/AppKey.txt"; // Stephen added this so that it will be a default. 2022/03/02
     // VR Related
 
     public event Action OnRecordMic;
@@ -231,6 +231,7 @@ public class VoiceInteraction : MonoBehaviour
             selectedIntent.Add(score);
             isRecognized = true;
             isRecording = false;
+            Debug.Log("Selected Intent: " + selectedIntent[0] + "(" + selectedIntent[1] + ")");
         }
     }
 
