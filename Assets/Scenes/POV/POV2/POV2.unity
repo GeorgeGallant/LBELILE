@@ -1141,6 +1141,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1132885719}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1132885722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4779030217184562463, guid: ce1f5d525d1419b4a926f56780220752,
+    type: 3}
+  m_PrefabInstance: {fileID: 1132885719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1132885723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132885722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49cbc922cc8e1424b9b46844e16c0e7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gender: male
+  handColor: light
+  dark: {r: 0.3207547, g: 0.20634027, b: 0.07716268, a: 1}
+  medium: {r: 0.509434, g: 0.38350332, b: 0.23789605, a: 1}
+  light: {r: 1, g: 1, b: 1, a: 1}
+  leftController: {fileID: 1132885725}
+  rightController: {fileID: 1132885724}
+  maleLeftHandModel: {fileID: 198286, guid: 7fd4f834ddb58af4c8dc5208428c7108, type: 3}
+  maleRightHandModel: {fileID: 127476, guid: cb27c64c5d221534bad23f83c0b73c45, type: 3}
+  femaleLeftHandModel: {fileID: 161758, guid: 90c313c621b58664f905d09e655cbe88, type: 3}
+  femaleRightHandModel: {fileID: 148612, guid: 222b0c0202b539a478322bad7812b113, type: 3}
+  config: {fileID: 0}
+  changeLeft: 1
+  changeRight: 0
+--- !u!1 &1132885724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4779030218873375125, guid: ce1f5d525d1419b4a926f56780220752,
+    type: 3}
+  m_PrefabInstance: {fileID: 1132885719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1132885725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4779030218862300381, guid: ce1f5d525d1419b4a926f56780220752,
+    type: 3}
+  m_PrefabInstance: {fileID: 1132885719}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1394594541
 GameObject:
   m_ObjectHideFlags: 0
