@@ -285,11 +285,11 @@ MonoBehaviour:
   GoodSceneIntent: p3v.dispatch.ackCopy
   GoodSceneName: 1C
   BadSceneName: 1B
-  useMic: 0
+  useMic: 1
   StartAfterSeconds: 20
   TimeoutAfterSeconds: 50
   lastUtterance: 
-  buttonPress: {fileID: 11400000, guid: 65ead6ea9bb57da4eb269107613427d4, type: 2}
+  buttonPress: {fileID: 11400000, guid: cd382a4fff7a725439b4431ff0ffda8c, type: 2}
 --- !u!114 &1450706426
 MonoBehaviour:
   m_ObjectHideFlags: 0

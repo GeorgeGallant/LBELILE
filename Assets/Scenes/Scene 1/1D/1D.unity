@@ -795,8 +795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b9214fcabd06441b2126022165164a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FileName: HiddenText/AppKey.txt
-  GoodSceneIntent: p3v.bill.identification
+  GoodSceneIntent: p3v.identification
   GoodSceneName: 2A
   BadSceneName: 1D
   useMic: 0

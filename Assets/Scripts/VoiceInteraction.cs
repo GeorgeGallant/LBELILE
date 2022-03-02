@@ -91,8 +91,10 @@ public class VoiceInteraction : MonoBehaviour
 
     public void UnbindXRControllerEvents()
     {
-        buttonPress.OnButtonDown -= ButtonDown;
-
+        if (buttonPress)
+        {
+            buttonPress.OnButtonDown -= ButtonDown;
+        }
     }
 
     public void ButtonDown(XRController controller, InputHelpers.Button button)
