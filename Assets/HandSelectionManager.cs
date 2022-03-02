@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.Video;
-using UnityEngine.Audio;
 
-public class SelectionManger : MonoBehaviour
+
+public class HandSelectionManager : MonoBehaviour
 {
 
     public string gender;
@@ -24,21 +23,20 @@ public class SelectionManger : MonoBehaviour
     public GameObject femaleLeftHandModel;
     public GameObject femaleRightHandModel;
 
-    public List<GameObject> deactivateOnContinue = new List<GameObject>();
-
-    public VideoPlayer video;
-    public List<AudioSource> audio;
-
-    public bool selectionMade = false;
+    public ConfigManager config;
 
     public bool changeLeft = true;
     public bool changeRight = true;
 
+    public void setHands(string gender, string color)
+    {
+        handColor = color;
+        setGender(gender);
+        
+    }
     public void setGender(string selectedGender)
     {
         gender = selectedGender;
-
-        Debug.Log(gender);
 
         if (changeLeft)
         {
@@ -54,7 +52,11 @@ public class SelectionManger : MonoBehaviour
                 newModelL = Instantiate(maleLeftHandModel, leftController.transform).transform;
             }
 
-            Destroy(left.model.gameObject);
+            if (left.model != null)
+            {
+                Destroy(left.model.gameObject);
+            }
+            Destroy(left.model);
             left.model = newModelL;
         }
 
@@ -73,11 +75,21 @@ public class SelectionManger : MonoBehaviour
                 newModelR = Instantiate(maleRightHandModel, rightController.transform).transform;
             }
 
-            Destroy(right.model.gameObject);
+            if (right.model != null)
+            {
+                Destroy(right.model.gameObject);
+            }
+            Destroy(right.model);
             right.model = newModelR;
         }
 
         setColor(handColor);
+
+        if (config)
+        {
+            config.gender = gender;
+        }
+
     }
 
     public void setColor(string selectedColor)
@@ -141,22 +153,11 @@ public class SelectionManger : MonoBehaviour
             }
         }
 
-
-    }
-
-    public void StartVideo()
-    {
-        gameObject.SetActive(false);
-        selectionMade = true;
-        video.Play();
-        foreach(AudioSource sound in audio)
+        if (config)
         {
-            sound.Play(0);
+            config.color = selectedColor;
         }
-        foreach(GameObject go in deactivateOnContinue)
-        {
-            go.SetActive(false);
-        }
+
     }
 
 }
