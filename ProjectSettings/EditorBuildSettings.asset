@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 62204d8cc6152504683ed08a11e06480
+  - enabled: 1
     path: Assets/Scenes/Opening/Opening.unity
     guid: 47e8a7e4545e037469cf771643969ba4
+  - enabled: 1
+    path: Assets/Scenes/POV/POV Start.unity
+    guid: 270cc73c2441502479a2bec6d40a9593
   - enabled: 1
     path: Assets/Scenes/POV/POV1/POV 1.unity
     guid: 1bf3fce20e0ce7944abb7266396beadb
@@ -17,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/POV/POV3/POV3.unity
     guid: 22b4f35159aef4a4ba0c07c5cd66d65b
+  - enabled: 1
+    path: Assets/Scenes/Scene 1/TakeTheCall Start.unity
+    guid: 27cd3ab6f8ab6d14e8ec4437a724c2f2
   - enabled: 1
     path: Assets/Scenes/Scene 1/1A/1A.unity
     guid: 442c576ba5dc4cf40ae9de4cde4901ec
@@ -71,6 +80,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene 4/4D/4D.unity
     guid: fd9801b3a5df9d440b1543cc6f77c6dc
+  - enabled: 1
+    path: Assets/Scenes/TakeTheCall Fail.unity
+    guid: 967df4560ea1baf4b8e2fe87c8aaeb87
+  - enabled: 1
+    path: Assets/Scenes/TakeTheCall Success.unity
+    guid: b4cad0df326d82442ae1a02d5a3e2865
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 24324f00a1802204abacd51563686abd,
       type: 2}
