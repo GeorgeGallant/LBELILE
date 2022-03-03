@@ -286,7 +286,7 @@ MonoBehaviour:
   GoodSceneName: 1C
   BadSceneName: 1B
   useMic: 1
-  StartAfterSeconds: 20
+  StartAfterSeconds: 22
   TimeoutAfterSeconds: 50
   lastUtterance: 
   buttonPress: {fileID: 11400000, guid: cd382a4fff7a725439b4431ff0ffda8c, type: 2}
@@ -331,7 +331,7 @@ PrefabInstance:
     - target: {fileID: 9208107798930233659, guid: f0953907793864c4d848adb3a4827502,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.503
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 9208107798930233659, guid: f0953907793864c4d848adb3a4827502,
         type: 3}
