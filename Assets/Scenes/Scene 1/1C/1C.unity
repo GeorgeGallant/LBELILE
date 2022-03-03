@@ -806,7 +806,7 @@ MonoBehaviour:
   GoodSceneName: 1D
   BadSceneName: 1C
   useMic: 1
-  StartAfterSeconds: 0
+  StartAfterSeconds: 5
   TimeoutAfterSeconds: 20
   lastUtterance: 
   buttonPress: {fileID: 11400000, guid: cd382a4fff7a725439b4431ff0ffda8c, type: 2}
