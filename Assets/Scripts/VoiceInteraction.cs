@@ -260,6 +260,7 @@ public class VoiceInteraction : MonoBehaviour
         queryString["show-all-intents"] = "false";      // show all, default "false"
         queryString["staging"] = "true";                // staging, default true?
         queryString["timezoneOffset"] = "0";            // timezoneOffset, 0? //TODO
+        queryString["log"] = "true";                    // utterance logging at Azure //added 2022-03-04
 
         var predictionEndpointUri = String.Format("{0}luis/prediction/v3.0/apps/{1}/slots/staging/predict?{2}",
                                                    predictionEndpoint,
