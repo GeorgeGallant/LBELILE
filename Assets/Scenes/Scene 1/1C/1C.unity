@@ -138,37 +138,37 @@ PrefabInstance:
     - target: {fileID: 9208107798930233659, guid: f0953907793864c4d848adb3a4827502,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.3
+      value: 0.0852
       objectReference: {fileID: 0}
     - target: {fileID: 9208107798930233659, guid: f0953907793864c4d848adb3a4827502,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.18
+      value: 1.1451
       objectReference: {fileID: 0}
     - target: {fileID: 9208107798930233659, guid: f0953907793864c4d848adb3a4827502,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.336
+      value: 0.4891
       objectReference: {fileID: 0}
     - target: {fileID: 9208107798930233659, guid: f0953907793864c4d848adb3a4827502,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7581858
+      value: -0.55590504
       objectReference: {fileID: 0}
     - target: {fileID: 9208107798930233659, guid: f0953907793864c4d848adb3a4827502,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.64699864
+      value: 0.45258787
       objectReference: {fileID: 0}
     - target: {fileID: 9208107798930233659, guid: f0953907793864c4d848adb3a4827502,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.06946006
+      value: 0.4675428
       objectReference: {fileID: 0}
     - target: {fileID: 9208107798930233659, guid: f0953907793864c4d848adb3a4827502,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.041500796
+      value: 0.5172404
       objectReference: {fileID: 0}
     - target: {fileID: 9208107798930233659, guid: f0953907793864c4d848adb3a4827502,
         type: 3}
@@ -183,7 +183,7 @@ PrefabInstance:
     - target: {fileID: 9208107798930233659, guid: f0953907793864c4d848adb3a4827502,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 9.6
+      value: -70.007
       objectReference: {fileID: 0}
     - target: {fileID: 9208107798930233662, guid: f0953907793864c4d848adb3a4827502,
         type: 3}
@@ -674,7 +674,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810873127}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: ab9a848db3933d44eb5e59e3b7c9ce5b, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 8ad70e69677324644b68948fd49074e2, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
