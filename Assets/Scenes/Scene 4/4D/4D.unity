@@ -285,6 +285,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b1935efe20ae2f4dbc72a8eb7c8add0, type: 3}
+--- !u!1 &261926382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7004808014119743239, guid: 5b1935efe20ae2f4dbc72a8eb7c8add0,
+    type: 3}
+  m_PrefabInstance: {fileID: 261926381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &261926383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261926382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b9214fcabd06441b2126022165164a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GoodSceneIntent: 
+  GoodSceneName: 4A
+  BadSceneName: 4A
+  useMic: 0
+  StartAfterSeconds: 0
+  TimeoutAfterSeconds: 10
+  lastUtterance: 
+  buttonPress: {fileID: 0}
 --- !u!1 &416031324
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +366,6 @@ GameObject:
   - component: {fileID: 621426413}
   - component: {fileID: 621426412}
   - component: {fileID: 621426411}
-  - component: {fileID: 621426410}
   - component: {fileID: 621426409}
   m_Layer: 0
   m_Name: AudioBill
@@ -360,7 +385,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -66566006267400850, guid: 682a08b8bc1f2ee46b0f39864897eb3c,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: fc77b49d7a2258344a6224a456a18fce, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b3d269fbfab1ff34c97f7fca45df6351, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -446,19 +471,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!135 &621426410
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621426408}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &621426411
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -466,7 +478,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621426408}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -547,7 +559,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472290355}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: b0611780f9660f84d93978a0f151d485, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 6f4e15b223c49fd49b9f0bd2acf58749, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -618,7 +630,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 5106803088297752834, guid: 682a08b8bc1f2ee46b0f39864897eb3c,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: eeb55a91835f5b346bc241ee53435363, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 394cc843c6d45f64dafc530bd02170b0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

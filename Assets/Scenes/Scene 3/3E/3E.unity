@@ -148,7 +148,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208398989}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 33b56071eefbce847accdb8a6e54e4f2, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 0229e48535f001941a608fa3dab2b1bf, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -276,12 +276,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b9214fcabd06441b2126022165164a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GoodSceneIntent: p3v.bill.convinceToGo
+  GoodSceneIntent: ' '
   GoodSceneName: 3A
   BadSceneName: 3A
   useMic: 0
-  StartAfterSeconds: 23
-  TimeoutAfterSeconds: 24
+  StartAfterSeconds: 0
+  TimeoutAfterSeconds: 20
   lastUtterance: 
   buttonPress: {fileID: 0}
 --- !u!1 &448081185 stripped
@@ -377,7 +377,6 @@ GameObject:
   - component: {fileID: 1593096393}
   - component: {fileID: 1593096392}
   - component: {fileID: 1593096391}
-  - component: {fileID: 1593096390}
   - component: {fileID: 1593096389}
   m_Layer: 0
   m_Name: AudioBill
@@ -397,7 +396,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6099199430791785725, guid: 1745dce5137db7a43bf316e3d7e17792,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 9d6e7eb32fbe7ef49839e7050678bea7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d340fa9df5d8b2641977067dc375a6a1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -483,19 +482,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!135 &1593096390
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593096388}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1593096391
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -503,7 +489,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593096388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -663,7 +649,6 @@ GameObject:
   - component: {fileID: 2008410588}
   - component: {fileID: 2008410587}
   - component: {fileID: 2008410586}
-  - component: {fileID: 2008410585}
   - component: {fileID: 2008410584}
   m_Layer: 0
   m_Name: AudioFTO
@@ -683,7 +668,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -3825013353142533517, guid: 1745dce5137db7a43bf316e3d7e17792,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 272227ea7ae89f348a5a174eb44da33e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 02c27d3efdb4eba48ae58dc844d6e45a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -769,19 +754,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &2008410585
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2008410583}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2008410586
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -789,7 +761,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008410583}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
