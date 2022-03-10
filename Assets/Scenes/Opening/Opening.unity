@@ -2299,7 +2299,7 @@ PrefabInstance:
     - target: {fileID: 8531898827705222232, guid: 12dd52c6ee1b8a74eac4b48acc00bf26,
         type: 3}
       propertyPath: m_text
-      value: Select Your Hands
+      value: "Select Your Hands and Color, \n   then go to Scene Selection"
       objectReference: {fileID: 0}
     - target: {fileID: 8531898827988143454, guid: 12dd52c6ee1b8a74eac4b48acc00bf26,
         type: 3}
