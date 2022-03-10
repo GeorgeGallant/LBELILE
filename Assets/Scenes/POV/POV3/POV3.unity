@@ -1307,7 +1307,7 @@ MonoBehaviour:
   GoodSceneName: TakeTheCall Start
   BadSceneName: TakeTheCall Start
   useMic: 0
-  StartAfterSeconds: 35
-  TimeoutAfterSeconds: 47
+  StartAfterSeconds: 39
+  TimeoutAfterSeconds: 40
   lastUtterance: 
   buttonPress: {fileID: 0}
