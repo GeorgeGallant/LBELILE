@@ -233,7 +233,8 @@ public class VoiceInteraction : MonoBehaviour
             selectedIntent.Add(score);
             isRecognized = true;
             isRecording = false;
-            Debug.Log("Selected Intent: " + selectedIntent[0] + "(" + selectedIntent[1] + ")");
+            Debug.Log("Selected Intent: " + selectedIntent[0] + "(" + selectedIntent[1] + ")\n"+
+                "Looking for: "+GoodSceneIntent + " to go to " + GoodSceneName);
         }
     }
 

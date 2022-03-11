@@ -280,7 +280,7 @@ MonoBehaviour:
   GoodSceneName: 3A
   BadSceneName: 3A
   useMic: 0
-  StartAfterSeconds: 0
+  StartAfterSeconds: 15
   TimeoutAfterSeconds: 20
   lastUtterance: 
   buttonPress: {fileID: 0}

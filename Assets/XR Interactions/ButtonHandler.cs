@@ -27,11 +27,11 @@ public class ButtonHandler : InputHandler
                 if(pressed)
                 {
                     OnButtonDown?.Invoke(controller, button);
-                    Debug.Log("Button Down");
+                    //Debug.Log("Button Down");
                 } else
                 {
                     OnButtonUp?.Invoke(controller, button);
-                    Debug.Log("Button Up");
+                    //Debug.Log("Button Up");
                 }
             }
         }
