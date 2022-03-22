@@ -1995,7 +1995,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.8396226, g: 0.72242826, b: 0.59011215, a: 0.7490196}
     m_HighlightedColor: {r: 0.8396226, g: 0.72242826, b: 0.59011215, a: 1}
-    m_PressedColor: {r: 0.2830189, g: 0.19853875, b: 0.10279459, a: 1}
+    m_PressedColor: {r: 0.41509432, g: 0.31066805, b: 0.18992524, a: 1}
     m_SelectedColor: {r: 0.8396226, g: 0.72242826, b: 0.59011215, a: 1}
     m_DisabledColor: {r: 0.8396226, g: 0.72242826, b: 0.59011215, a: 1}
     m_ColorMultiplier: 1
@@ -2632,10 +2632,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.3207547, g: 0.20634027, b: 0.07716268, a: 0.7490196}
-    m_HighlightedColor: {r: 0.3207547, g: 0.20634027, b: 0.07716268, a: 1}
+    m_NormalColor: {r: 0.41509432, g: 0.31066805, b: 0.18992524, a: 1}
+    m_HighlightedColor: {r: 0.41509432, g: 0.31066805, b: 0.18992524, a: 1}
     m_PressedColor: {r: 0.1509434, g: 0.09559274, b: 0.03061588, a: 1}
-    m_SelectedColor: {r: 0.3207547, g: 0.20634027, b: 0.07716268, a: 1}
+    m_SelectedColor: {r: 0.41509432, g: 0.31066805, b: 0.18992524, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2715,24 +2715,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gender: male
   handColor: light
-  dark: {r: 0.3207547, g: 0.20634027, b: 0.07716268, a: 1}
-  medium: {r: 0.5377358, g: 0.410258, b: 0.2663314, a: 1}
-  light: {r: 0.8396226, g: 0.72242826, b: 0.59011215, a: 1}
   leftController: {fileID: 0}
   rightController: {fileID: 0}
   maleLeftHandModel: {fileID: 198286, guid: 7fd4f834ddb58af4c8dc5208428c7108, type: 3}
   maleRightHandModel: {fileID: 127476, guid: cb27c64c5d221534bad23f83c0b73c45, type: 3}
   femaleLeftHandModel: {fileID: 161758, guid: 90c313c621b58664f905d09e655cbe88, type: 3}
   femaleRightHandModel: {fileID: 148612, guid: 222b0c0202b539a478322bad7812b113, type: 3}
-  video: {fileID: 0}
-  audio:
-  - {fileID: 0}
-  - {fileID: 0}
-  active: 0
-  selectionMade: 0
+  config: {fileID: 0}
   changeLeft: 1
   changeRight: 0
-  ButtonHandlers: []
 --- !u!1 &8531898828600908274
 GameObject:
   m_ObjectHideFlags: 0
@@ -3092,10 +3083,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.5377358, g: 0.410258, b: 0.2663314, a: 0.7490196}
-    m_HighlightedColor: {r: 0.5377358, g: 0.410258, b: 0.2663314, a: 1}
+    m_NormalColor: {r: 0.58, g: 0.4445255, b: 0.2878832, a: 1}
+    m_HighlightedColor: {r: 0.58, g: 0.4445255, b: 0.2878832, a: 1}
     m_PressedColor: {r: 0.26415092, g: 0.17227232, b: 0.06603773, a: 1}
-    m_SelectedColor: {r: 0.5377358, g: 0.410258, b: 0.2663314, a: 1}
+    m_SelectedColor: {r: 0.58, g: 0.4445255, b: 0.2878832, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1

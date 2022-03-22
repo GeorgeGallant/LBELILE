@@ -10,9 +10,9 @@ public class HandSelectionManager : MonoBehaviour
     public string gender;
     public string handColor;
 
-    public Color dark;
-    public Color medium;
-    public Color light;
+    private Color dark = new Color32(0x6A, 0x4F, 0x30, 0xFF);
+    private Color medium = new Color32(0x94, 0x71, 0x49, 0xFF);
+    private Color light = new Color32(0xFF, 0xFF, 0xFF, 0xFF);
 
     public GameObject leftController;
     public GameObject rightController;
