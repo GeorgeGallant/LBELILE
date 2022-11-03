@@ -405,6 +405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 893628842}
   - component: {fileID: 893628841}
+  - component: {fileID: 893628843}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged
@@ -441,7 +442,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 00
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 0
@@ -461,6 +462,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &893628843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893628840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91afbd0ba0a9b3942bd2471cfae8ca49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: Part 3 PoliceNEW2.mp4
 --- !u!1 &1557192418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,9 +1293,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gender: male
   handColor: light
-  dark: {r: 0.3207547, g: 0.20634027, b: 0.07716268, a: 1}
-  medium: {r: 0.509434, g: 0.38350332, b: 0.23789605, a: 1}
-  light: {r: 1, g: 1, b: 1, a: 1}
   leftController: {fileID: 5637845658131527655}
   rightController: {fileID: 5637845658131527654}
   maleLeftHandModel: {fileID: 198286, guid: 7fd4f834ddb58af4c8dc5208428c7108, type: 3}

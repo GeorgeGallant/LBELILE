@@ -706,6 +706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 780674353}
   - component: {fileID: 780674352}
+  - component: {fileID: 780674354}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged
@@ -762,6 +763,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &780674354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780674351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91afbd0ba0a9b3942bd2471cfae8ca49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: OpeningVideowithMusic.mp4
 --- !u!1 &805528063
 GameObject:
   m_ObjectHideFlags: 0
@@ -2316,9 +2330,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gender: male
   handColor: light
-  dark: {r: 0.3207547, g: 0.20634027, b: 0.07716268, a: 1}
-  medium: {r: 0.509434, g: 0.38350332, b: 0.23789605, a: 1}
-  light: {r: 1, g: 1, b: 1, a: 1}
   leftController: {fileID: 1871181474}
   rightController: {fileID: 1871181473}
   maleLeftHandModel: {fileID: 198286, guid: 7fd4f834ddb58af4c8dc5208428c7108, type: 3}

@@ -314,6 +314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 422828728}
   - component: {fileID: 422828727}
+  - component: {fileID: 422828729}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged
@@ -329,7 +330,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422828726}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: fd599271ad08057469f88efd25cc5c11, type: 3}
+  m_VideoClip: {fileID: 0}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -350,7 +351,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 0
@@ -370,6 +371,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &422828729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422828726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91afbd0ba0a9b3942bd2471cfae8ca49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: OpeningVideowithMusic.mp4
 --- !u!1 &441039126
 GameObject:
   m_ObjectHideFlags: 0
