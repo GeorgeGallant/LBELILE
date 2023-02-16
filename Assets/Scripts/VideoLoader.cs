@@ -6,23 +6,37 @@ using System.IO;
 public class VideoLoader : MonoBehaviour
 {
     VideoPlayer video;
-    private string rootPath;
-    private string path;
-    
+
     public string fileName;
 
     void Awake()
     {
-        video = FindObjectOfType<VideoPlayer>();
-       // video.errorReceived += VideoPlayer_errorReceived;
 
-        if (Application.platform == RuntimePlatform.Android)
+        video = FindObjectOfType<VideoPlayer>();
+        video.errorReceived += Video_errorReceived;
+
+        video.url = Application.persistentDataPath + "/" + fileName;
+        video.Play();
+    }
+
+    private void Video_errorReceived(VideoPlayer source, string message) 
+    {
+
+        switch (Application.platform)
         {
-            rootPath = Application.persistentDataPath;
-            path = Path.Combine(rootPath, fileName);
+            case RuntimePlatform.Android:
+                Debug.Log("/storage/emulated/0/Android/data/"+Application.identifier+"/files");
+                break;
+            case RuntimePlatform.WindowsEditor:
+            case RuntimePlatform.WindowsPlayer:
+                Debug.Log("%userprofile%\\AppData\\LocalLow\\" + Application.companyName + "\\" + Application.productName);
+                break;
+            case RuntimePlatform.OSXEditor:
+                Debug.Log("~/Library/Application Support/" + Application.companyName + "/" + Application.productName);
+                break;
         }
 
-        video.url = path;
-        video.Play();
+        Debug.Log(Application.persistentDataPath + "/" + fileName);
+
     }
 }
