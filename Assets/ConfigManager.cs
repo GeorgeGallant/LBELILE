@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ConfigManager : MonoBehaviour
 {
-
+    public static ConfigManager Instance;
     public string gender;
     public string color;
 
@@ -11,6 +11,13 @@ public class ConfigManager : MonoBehaviour
     // called zero
     void Awake()
     {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
         DontDestroyOnLoad(gameObject);
     } 
 

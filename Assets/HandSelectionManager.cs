@@ -28,6 +28,11 @@ public class HandSelectionManager : MonoBehaviour
     public bool changeLeft = true;
     public bool changeRight = true;
 
+    public void Start()
+    {
+        config = ConfigManager.Instance;
+    }
+
     public void setHands(string gender, string color)
     {
         handColor = color;
