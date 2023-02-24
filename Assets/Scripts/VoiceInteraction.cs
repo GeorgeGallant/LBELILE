@@ -279,7 +279,7 @@ public class VoiceInteraction : MonoBehaviour
     }
     private void pullKeyAndId()
     {
-        KeyFilePath = Application.dataPath + "/" + FileName;
+        KeyFilePath = Application.persistentDataPath + "/" + FileName;
         string [] textfile = File.ReadAllLines(KeyFilePath);
         subscription_key = textfile[1];
         region_name = textfile[3];
