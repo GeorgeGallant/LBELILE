@@ -23,7 +23,7 @@ public class HandSelectionManager : MonoBehaviour
     public GameObject femaleLeftHandModel;
     public GameObject femaleRightHandModel;
 
-    public ConfigManager config;
+    private ConfigManager config;
 
     public bool changeLeft = true;
     public bool changeRight = true;
