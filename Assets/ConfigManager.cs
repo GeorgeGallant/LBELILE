@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.SceneManagement;
 
 public class ConfigManager : MonoBehaviour
@@ -16,6 +17,9 @@ public class ConfigManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        if (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
+            Permission.RequestUserPermission(Permission.Microphone);
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
