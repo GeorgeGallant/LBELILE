@@ -368,6 +368,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &388254453
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7075153465728819489, guid: 3637a3e932e9ff7478de9d07be843bdf,
+        type: 3}
+      propertyPath: m_Name
+      value: SelectionManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979760782190837818, guid: 3637a3e932e9ff7478de9d07be843bdf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979760782190837818, guid: 3637a3e932e9ff7478de9d07be843bdf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.959442
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979760782190837818, guid: 3637a3e932e9ff7478de9d07be843bdf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.20192738
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979760782190837818, guid: 3637a3e932e9ff7478de9d07be843bdf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.3324008
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979760782190837818, guid: 3637a3e932e9ff7478de9d07be843bdf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979760782190837818, guid: 3637a3e932e9ff7478de9d07be843bdf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979760782190837818, guid: 3637a3e932e9ff7478de9d07be843bdf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979760782190837818, guid: 3637a3e932e9ff7478de9d07be843bdf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979760782190837818, guid: 3637a3e932e9ff7478de9d07be843bdf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979760782190837818, guid: 3637a3e932e9ff7478de9d07be843bdf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979760782190837818, guid: 3637a3e932e9ff7478de9d07be843bdf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3637a3e932e9ff7478de9d07be843bdf, type: 3}
 --- !u!1 &1049146456 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7004808013884404477, guid: 5b1935efe20ae2f4dbc72a8eb7c8add0,
@@ -414,9 +483,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gender: male
   handColor: light
-  dark: {r: 0.3207547, g: 0.20634027, b: 0.07716268, a: 1}
-  medium: {r: 0.509434, g: 0.38350332, b: 0.23789605, a: 1}
-  light: {r: 1, g: 1, b: 1, a: 1}
   leftController: {fileID: 1049146456}
   rightController: {fileID: 1483731115}
   maleLeftHandModel: {fileID: 198286, guid: 7fd4f834ddb58af4c8dc5208428c7108, type: 3}
