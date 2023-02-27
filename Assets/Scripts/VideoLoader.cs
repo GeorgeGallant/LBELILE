@@ -15,7 +15,7 @@ public class VideoLoader : MonoBehaviour
         video = FindObjectOfType<VideoPlayer>();
         video.errorReceived += Video_errorReceived;
 
-        video.url = Application.persistentDataPath + "/" + fileName;
+        video.url = Application.persistentDataPath + "/" + fileName + ".mp4";
         video.Play();
     }
 
