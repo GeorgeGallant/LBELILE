@@ -279,11 +279,11 @@ public class VoiceInteraction : MonoBehaviour
     }
     private void pullKeyAndId()
     {
-        KeyFilePath = Application.persistentDataPath + "/" + FileName;
-        string [] textfile = File.ReadAllLines(KeyFilePath);
-        subscription_key = textfile[1];
-        region_name = textfile[3];
-        appId = textfile[5];
-        predictionKey = textfile[7];
+        //KeyFilePath = Application.persistentDataPath + "/" + FileName;
+        //string [] textfile = File.ReadAllLines(KeyFilePath);
+        subscription_key = ConfigManager.SUBSCRIPTION_KEY; // textfile[1];
+        region_name = ConfigManager.REGION_NAME; // textfile[3];
+        appId = ConfigManager.APP_ID; // textfile[5];
+        predictionKey = ConfigManager.PREDICTION_KEY;// textfile[7];
     }
 }

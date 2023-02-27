@@ -8,6 +8,10 @@ public class ConfigManager : MonoBehaviour
     public string gender;
     public string color;
 
+    public static string SUBSCRIPTION_KEY = "c23410a601b74a1782766c68ef3f44f7";
+    public static string REGION_NAME = "canadacentral";
+    public static string APP_ID = "70c9a26e-877c-4d94-a0a0-ff5197d4a2e9";
+    public static string PREDICTION_KEY = "3180862a6aa54c06b16d91bf18279daa";
 
     // called zero
     void Awake()
