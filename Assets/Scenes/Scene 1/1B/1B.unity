@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91afbd0ba0a9b3942bd2471cfae8ca49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName: 1BV2.mp4
+  fileName: 1BV2
 --- !u!1001 &665913260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -399,7 +399,6 @@ MonoBehaviour:
   maleRightHandModel: {fileID: 127476, guid: cb27c64c5d221534bad23f83c0b73c45, type: 3}
   femaleLeftHandModel: {fileID: 161758, guid: 90c313c621b58664f905d09e655cbe88, type: 3}
   femaleRightHandModel: {fileID: 148612, guid: 222b0c0202b539a478322bad7812b113, type: 3}
-  config: {fileID: 0}
   changeLeft: 1
   changeRight: 1
 --- !u!1001 &1536809082

@@ -635,7 +635,6 @@ MonoBehaviour:
   maleRightHandModel: {fileID: 127476, guid: cb27c64c5d221534bad23f83c0b73c45, type: 3}
   femaleLeftHandModel: {fileID: 161758, guid: 90c313c621b58664f905d09e655cbe88, type: 3}
   femaleRightHandModel: {fileID: 148612, guid: 222b0c0202b539a478322bad7812b113, type: 3}
-  config: {fileID: 0}
   changeLeft: 1
   changeRight: 1
 --- !u!1 &1464614037
@@ -827,6 +826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1611772855}
   - component: {fileID: 1611772854}
+  - component: {fileID: 1611772856}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged
@@ -883,3 +883,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1611772856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611772853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91afbd0ba0a9b3942bd2471cfae8ca49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: 3DV1
