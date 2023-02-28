@@ -8,15 +8,37 @@ public class VideoLoader : MonoBehaviour
     VideoPlayer video;
 
     public string fileName;
+    public AudioSource[] audioClips = null;
 
     void Awake()
     {
-
+        PauseAllClips();
         video = FindObjectOfType<VideoPlayer>();
         video.errorReceived += Video_errorReceived;
+        video.prepareCompleted += Video_prepareCompleted;
 
         video.url = Application.persistentDataPath + "/" + fileName + ".mp4";
+        video.Prepare();
+
+    }
+
+    private void Video_prepareCompleted(VideoPlayer source)
+    {
+        video.frame = 0;
         video.Play();
+        foreach (AudioSource clip in audioClips)
+        {
+            clip.time = (float)video.time;
+            clip.Play();
+        }
+    }
+
+    private void PauseAllClips()
+    {
+        foreach (AudioSource clip in audioClips)
+        {
+            clip.Stop();
+        }
     }
 
     private void Video_errorReceived(VideoPlayer source, string message) 
