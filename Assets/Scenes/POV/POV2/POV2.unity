@@ -742,7 +742,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 00
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 0
@@ -775,6 +775,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: Part 2 NewscastNEW
+  audioClips:
+  - {fileID: 109602468}
+  - {fileID: 1652700900}
+  - {fileID: 345336322}
 --- !u!1 &345336321
 GameObject:
   m_ObjectHideFlags: 0

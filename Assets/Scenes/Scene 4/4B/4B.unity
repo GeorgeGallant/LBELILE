@@ -247,6 +247,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: 4BV1
+  audioClips:
+  - {fileID: 1431560213}
+  - {fileID: 1309635998}
 --- !u!1001 &648832320
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -295,6 +295,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: 2B
+  audioClips:
+  - {fileID: 980599949}
 --- !u!1 &454752213
 GameObject:
   m_ObjectHideFlags: 0

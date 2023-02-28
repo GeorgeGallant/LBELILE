@@ -907,7 +907,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 4307333163965849820, guid: 905c76b4d60508540b0d2df843af9e94,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 537d2a5194445314aa7d923a6e63d265, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1486,6 +1486,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286445580}
   m_CullTransparentMesh: 1
+--- !u!82 &1418195103 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9208107798930233662, guid: f0953907793864c4d848adb3a4827502,
+    type: 3}
+  m_PrefabInstance: {fileID: 9208107798967451397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1559497000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,7 +2025,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 00
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 0
@@ -2052,6 +2058,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: 1AV2
+  audioClips:
+  - {fileID: 704916208}
+  - {fileID: 1418195103}
 --- !u!1001 &9208107798967451397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2118,6 +2127,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -70.007
+      objectReference: {fileID: 0}
+    - target: {fileID: 9208107798930233662, guid: f0953907793864c4d848adb3a4827502,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9208107798930233663, guid: f0953907793864c4d848adb3a4827502,
         type: 3}

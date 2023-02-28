@@ -475,6 +475,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: Part 3 PoliceNEW2
+  audioClips:
+  - {fileID: 2035116047}
+  - {fileID: 1557192419}
+  - {fileID: 7900709}
+  - {fileID: 2046566266}
+  - {fileID: 1680675806}
 --- !u!1 &1557192418
 GameObject:
   m_ObjectHideFlags: 0

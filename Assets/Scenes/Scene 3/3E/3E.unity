@@ -203,6 +203,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: 3EV1
+  audioClips:
+  - {fileID: 1593096389}
+  - {fileID: 2008410584}
 --- !u!1001 &448081182
 PrefabInstance:
   m_ObjectHideFlags: 0

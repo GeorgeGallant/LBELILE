@@ -382,6 +382,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: 2A
+  audioClips:
+  - {fileID: 255472151}
 --- !u!1001 &388254453
 PrefabInstance:
   m_ObjectHideFlags: 0

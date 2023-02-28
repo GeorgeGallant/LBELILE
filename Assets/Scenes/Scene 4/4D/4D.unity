@@ -683,6 +683,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: 4DV1
+  audioClips:
+  - {fileID: 621426409}
+  - {fileID: 2068486962}
 --- !u!1 &2068486961
 GameObject:
   m_ObjectHideFlags: 0

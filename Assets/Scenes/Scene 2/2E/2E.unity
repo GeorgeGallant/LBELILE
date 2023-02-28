@@ -203,6 +203,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: 2E
+  audioClips:
+  - {fileID: 527426185}
+  - {fileID: 1370768072}
 --- !u!1 &502714175
 GameObject:
   m_ObjectHideFlags: 0

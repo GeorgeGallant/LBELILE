@@ -1143,6 +1143,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: Part 1 ShadowNEW3
+  audioClips:
+  - {fileID: 1544679165}
+  - {fileID: 817852194}
 --- !u!1 &1863683824
 GameObject:
   m_ObjectHideFlags: 0
