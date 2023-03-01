@@ -381,10 +381,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 618807408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84e5d911a7216724c9381125670b8100, type: 3}
+  m_Script: {fileID: 11500000, guid: 791b80fe016898e4b8ea3d60f025a43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 373289054}
+  videoLoader: {fileID: 373289056}
 --- !u!4 &618807410
 Transform:
   m_ObjectHideFlags: 0
