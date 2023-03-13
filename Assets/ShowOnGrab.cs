@@ -61,8 +61,8 @@ public class ShowOnGrab : MonoBehaviour
     }
 
     public void Grab(SelectEnterEventArgs press)
-    {
-        Debug.Log("GRAB");
+    { 
+        if(press.interactor.name != controller.name) return;
         gameObject.GetComponent<Renderer>().enabled = false;
         controller.GetComponent<XRController>().model.gameObject.SetActive(false);
         selected.SetActive(true);
@@ -70,7 +70,7 @@ public class ShowOnGrab : MonoBehaviour
 
     public void LetGo(SelectExitEventArgs press)
     {
-        Debug.Log("LET GO");
+        if (press.interactor.name != controller.name) return;
         gameObject.GetComponent<Renderer>().enabled = true;
         controller.GetComponent<XRController>().model.gameObject.SetActive(true);
         selected.SetActive(false);
