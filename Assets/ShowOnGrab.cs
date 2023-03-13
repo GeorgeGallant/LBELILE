@@ -15,6 +15,7 @@ public class ShowOnGrab : MonoBehaviour
     public GameObject femaleHand;
     public GameObject subMaleHand;
     public GameObject subFemaleHand;
+    public GameObject[] hideOnGrab;
     GameObject selected;
     public GameObject controller;
 
@@ -63,7 +64,10 @@ public class ShowOnGrab : MonoBehaviour
     public void Grab(SelectEnterEventArgs press)
     { 
         if(press.interactor.name != controller.name) return;
-        gameObject.GetComponent<Renderer>().enabled = false;
+        foreach(GameObject go in hideOnGrab)
+        {
+            go.SetActive(false);
+        }
         controller.GetComponent<XRController>().model.gameObject.SetActive(false);
         selected.SetActive(true);
     }
@@ -71,7 +75,10 @@ public class ShowOnGrab : MonoBehaviour
     public void LetGo(SelectExitEventArgs press)
     {
         if (press.interactor.name != controller.name) return;
-        gameObject.GetComponent<Renderer>().enabled = true;
+        foreach (GameObject go in hideOnGrab)
+        {
+            go.SetActive(true);
+        }
         controller.GetComponent<XRController>().model.gameObject.SetActive(true);
         selected.SetActive(false);
     }
