@@ -222,7 +222,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 0
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -2386,13 +2386,33 @@ PrefabInstance:
       objectReference: {fileID: 794770159}
     - target: {fileID: 9208107798930233658, guid: f0953907793864c4d848adb3a4827502,
         type: 3}
+      propertyPath: m_UseDynamicAttach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9208107798930233658, guid: f0953907793864c4d848adb3a4827502,
+        type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1559497001}
     - target: {fileID: 9208107798930233658, guid: f0953907793864c4d848adb3a4827502,
         type: 3}
+      propertyPath: m_RetainTransformParent
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9208107798930233658, guid: f0953907793864c4d848adb3a4827502,
+        type: 3}
+      propertyPath: m_AddDefaultGrabTransformers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9208107798930233658, guid: f0953907793864c4d848adb3a4827502,
+        type: 3}
       propertyPath: m_StartingHoverFilters.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9208107798930233658, guid: f0953907793864c4d848adb3a4827502,
+        type: 3}
+      propertyPath: m_StartingMultipleGrabTransformers.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9208107798930233658, guid: f0953907793864c4d848adb3a4827502,
         type: 3}
