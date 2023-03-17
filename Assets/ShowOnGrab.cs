@@ -34,6 +34,11 @@ public class ShowOnGrab : MonoBehaviour
 
             case "female":
                 selected = femaleHand;
+                material = subFemaleHand.GetComponent<Renderer>().material;
+                setMaterial(material);
+                break;
+            default:
+                selected = maleHand;
                 material = subMaleHand.GetComponent<Renderer>().material;
                 setMaterial(material);
                 break;
