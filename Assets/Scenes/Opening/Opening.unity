@@ -330,7 +330,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422828726}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: fd599271ad08057469f88efd25cc5c11, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: b3337d6c1832e164a9546442c0f3ec89, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -384,6 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: OpeningVideowithMusic
+  audioClips: []
 --- !u!1 &441039126
 GameObject:
   m_ObjectHideFlags: 0
