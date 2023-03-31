@@ -31,7 +31,7 @@ public class GameOver : MonoBehaviour
         gameObject.SetActive(buttonPressed);
         foreach (GameObject go in showOnEnable)
         {
-            go.SetActive(false);
+            go.SetActive(buttonPressed);
         }
     }
 
@@ -42,9 +42,7 @@ public class GameOver : MonoBehaviour
 
     public void BindXRControllerEvents()
     {
-        Debug.Log("bind");
         buttonPress.OnButtonDown += ButtonDown;
-
     }
 
     public void UnbindXRControllerEvents()
@@ -61,7 +59,7 @@ public class GameOver : MonoBehaviour
         gameObject.SetActive(buttonPressed);
         foreach(GameObject go in showOnEnable)
         {
-            go.SetActive(buttonPress);
+            go.SetActive(buttonPressed);
         }
     }
 
