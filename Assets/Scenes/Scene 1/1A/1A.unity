@@ -440,8 +440,9 @@ PrefabInstance:
       propertyPath: Message
       value: 'Where would you like to go:
 
-        Return to scene selection or restart
-        this scene?'
+
+        Return to scene selection or
+        restart this scene?'
       objectReference: {fileID: 0}
     - target: {fileID: 8760145079672852611, guid: d423b87af4ab9944980c85c653a98ce3,
         type: 3}
@@ -449,6 +450,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8ed87b64ff315904baac81364f495190,
         type: 2}
+    - target: {fileID: 8760145079672852611, guid: d423b87af4ab9944980c85c653a98ce3,
+        type: 3}
+      propertyPath: RestartDestination
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8760145079672852611, guid: d423b87af4ab9944980c85c653a98ce3,
         type: 3}
       propertyPath: showOnEnable.Array.size
@@ -1204,7 +1210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &800997739
 Transform:
   m_ObjectHideFlags: 0
@@ -2030,7 +2036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1519350066
 Transform:
   m_ObjectHideFlags: 0
