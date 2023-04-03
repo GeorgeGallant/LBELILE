@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back To Start
+  m_Text: Select Scenario
 --- !u!1 &8760145078397435518
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 8760145078429793319}
   - component: {fileID: 8760145078429793318}
   m_Layer: 5
-  m_Name: Back To Start
+  m_Name: Start Again
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -412,7 +412,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Retry
+  m_Text: Start Again
 --- !u!1 &8760145079075005309
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 8760145079271884124}
   - component: {fileID: 8760145079271884127}
   m_Layer: 5
-  m_Name: Restart
+  m_Name: Select Scenario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -725,13 +725,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6e6f9360f89c74db00cb7aa6fa5977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Message: 'Game Over
-
-
-    Try Again.'
+  Message: "What would you like to do?\n\n1) Pick a new scenario \n2) Restart the
+    current one"
   Content: {fileID: 8760145079075005283}
-  ReplayDestination: Opening
+  ReplayDestination: Select Scenario
   RestartDestination: 
+  buttonPress: {fileID: 11400000, guid: 8ed87b64ff315904baac81364f495190, type: 2}
+  buttonPressed: 0
+  showOnEnable: []
 --- !u!1 &8760145079914131012
 GameObject:
   m_ObjectHideFlags: 0
