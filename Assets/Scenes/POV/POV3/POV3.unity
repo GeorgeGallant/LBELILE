@@ -1788,15 +1788,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8760145079672852611, guid: d423b87af4ab9944980c85c653a98ce3,
         type: 3}
-      propertyPath: Message
-      value: 'Where would you like to go:
-
-
-        Return to scene selection or
-        restart this scene?'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8760145079672852611, guid: d423b87af4ab9944980c85c653a98ce3,
-        type: 3}
       propertyPath: buttonPress
       value: 
       objectReference: {fileID: 11400000, guid: 8ed87b64ff315904baac81364f495190,
@@ -1804,7 +1795,7 @@ PrefabInstance:
     - target: {fileID: 8760145079672852611, guid: d423b87af4ab9944980c85c653a98ce3,
         type: 3}
       propertyPath: RestartDestination
-      value: 
+      value: POV1
       objectReference: {fileID: 0}
     - target: {fileID: 8760145079672852611, guid: d423b87af4ab9944980c85c653a98ce3,
         type: 3}
