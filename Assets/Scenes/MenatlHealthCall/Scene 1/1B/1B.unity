@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &19940247
+--- !u!1001 &265578038
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -134,11 +134,11 @@ PrefabInstance:
         type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 908755245}
     - target: {fileID: 8075727773203063576, guid: e6f729a306441bd408cc87cca280466b,
         type: 3}
       propertyPath: m_Name
-      value: Radio1 (1)
+      value: Radio1
       objectReference: {fileID: 0}
     - target: {fileID: 8075727773203063577, guid: e6f729a306441bd408cc87cca280466b,
         type: 3}
@@ -206,19 +206,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -70.77
       objectReference: {fileID: 0}
-    - target: {fileID: 8075727773203063581, guid: e6f729a306441bd408cc87cca280466b,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6f729a306441bd408cc87cca280466b, type: 3}
---- !u!82 &19940248 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8075727773203063577, guid: e6f729a306441bd408cc87cca280466b,
-    type: 3}
-  m_PrefabInstance: {fileID: 19940247}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &343792631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -420,7 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fileName: 1BV2
   audioClips:
-  - {fileID: 19940248}
+  - {fileID: 0}
 --- !u!1001 &665913260
 PrefabInstance:
   m_ObjectHideFlags: 0
