@@ -66,7 +66,7 @@ public class GameOver : MonoBehaviour
     public void ResetGame()
     {
         Debug.Log("Load scene " + ReplayDestination);
-        ConfigManager.Instance.goToScene(RestartDestination);
+        ConfigManager.Instance.goToScene(ReplayDestination);
     }
 
     public void RestartScene()
