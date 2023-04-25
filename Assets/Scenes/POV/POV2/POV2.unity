@@ -1215,13 +1215,19 @@ PrefabInstance:
     - target: {fileID: 4779030218873375112, guid: ce1f5d525d1419b4a926f56780220752,
         type: 3}
       propertyPath: ButtonHandlers.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4779030218873375112, guid: ce1f5d525d1419b4a926f56780220752,
         type: 3}
       propertyPath: ButtonHandlers.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: cd382a4fff7a725439b4431ff0ffda8c,
+        type: 2}
+    - target: {fileID: 4779030218873375112, guid: ce1f5d525d1419b4a926f56780220752,
+        type: 3}
+      propertyPath: ButtonHandlers.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8ed87b64ff315904baac81364f495190,
         type: 2}
     - target: {fileID: 4779030218873375113, guid: ce1f5d525d1419b4a926f56780220752,
         type: 3}

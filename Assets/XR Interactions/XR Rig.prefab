@@ -1384,6 +1384,7 @@ MonoBehaviour:
   ButtonHandlers:
   - {fileID: 11400000, guid: bf57c3d1605876c4a8557bf8e368e9f5, type: 2}
   - {fileID: 11400000, guid: cd382a4fff7a725439b4431ff0ffda8c, type: 2}
+  - {fileID: 11400000, guid: 8ed87b64ff315904baac81364f495190, type: 2}
 --- !u!1 &7004808015114240589
 GameObject:
   m_ObjectHideFlags: 0
