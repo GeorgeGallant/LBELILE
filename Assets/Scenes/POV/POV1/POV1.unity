@@ -2014,6 +2014,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 110
       objectReference: {fileID: 0}
+    - target: {fileID: 4779030218803952003, guid: ce1f5d525d1419b4a926f56780220752,
+        type: 3}
+      propertyPath: m_TrackingStateInput.m_Action.m_Id
+      value: aecb7175-9be7-4863-836f-38a27fc08512
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779030218803952003, guid: ce1f5d525d1419b4a926f56780220752,
+        type: 3}
+      propertyPath: m_TrackingStateInput.m_Action.m_Name
+      value: Tracking State Input
+      objectReference: {fileID: 0}
     - target: {fileID: 4779030218862300369, guid: ce1f5d525d1419b4a926f56780220752,
         type: 3}
       propertyPath: m_SelectUsage
