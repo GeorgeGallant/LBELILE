@@ -1707,69 +1707,6 @@ MonoBehaviour:
   m_EnableARRaycasting: 0
   m_OccludeARHitsWith3DObjects: 0
   m_OccludeARHitsWith2DObjects: 0
---- !u!1 &957057239 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8075727773203063576, guid: e6f729a306441bd408cc87cca280466b,
-    type: 3}
-  m_PrefabInstance: {fileID: 8075727773241345314}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &957057240 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8075727772478548930, guid: e6f729a306441bd408cc87cca280466b,
-    type: 3}
-  m_PrefabInstance: {fileID: 8075727773241345314}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957057239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec327e740beb9fa43bab4cd225755d4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &957057245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957057239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f452251c0f44f7049ad2579d3d1711d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonPress: {fileID: 11400000, guid: cd382a4fff7a725439b4431ff0ffda8c, type: 2}
-  controllerName: 
-  down: 0
-  DownActions:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 957057240}
-        m_TargetAssemblyTypeName: ShowOnGrab, Assembly-CSharp
-        m_MethodName: Pressed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  UpActions:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 957057240}
-        m_TargetAssemblyTypeName: ShowOnGrab, Assembly-CSharp
-        m_MethodName: Released
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1211563885
 GameObject:
   m_ObjectHideFlags: 0
@@ -3784,7 +3721,12 @@ PrefabInstance:
         type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 1222064467}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075727772478548930, guid: e6f729a306441bd408cc87cca280466b,
+        type: 3}
+      propertyPath: findControllerInScene
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8075727773203063576, guid: e6f729a306441bd408cc87cca280466b,
         type: 3}
       propertyPath: m_Name
@@ -3845,11 +3787,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -70.77
       objectReference: {fileID: 0}
-    - target: {fileID: 8075727773203063581, guid: e6f729a306441bd408cc87cca280466b,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1559497001}
     - target: {fileID: 8755803558485521825, guid: e6f729a306441bd408cc87cca280466b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3914,11 +3851,7 @@ PrefabInstance:
     - {fileID: 8787034345930635508, guid: e6f729a306441bd408cc87cca280466b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8075727773203063576, guid: e6f729a306441bd408cc87cca280466b,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 957057245}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6f729a306441bd408cc87cca280466b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

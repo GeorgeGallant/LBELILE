@@ -19,13 +19,23 @@ public class ShowOnGrab : MonoBehaviour
     GameObject selected;
     public GameObject controller;
 
+    public findController findControllerInScene = findController.none;
+
+    public enum findController
+    {
+        none,
+        right,
+        left
+    }
+
     private void Awake()
     {
         maleHand.SetActive(false);
         femaleHand.SetActive(false);
         Debug.Log(ConfigManager.Instance.gender);
         Material material;
-        switch (ConfigManager.Instance.gender) {
+        switch (ConfigManager.Instance.gender)
+        {
             case "male":
                 selected = maleHand;
                 material = subMaleHand.GetComponent<Renderer>().material;
@@ -43,9 +53,21 @@ public class ShowOnGrab : MonoBehaviour
                 setMaterial(material);
                 break;
         }
+        if (findControllerInScene != findController.none)
+        {
+            if (findControllerInScene == findController.right)
+            {
+                controller = GameObject.FindGameObjectWithTag("RightController");
+            }
+            {
+                if (findControllerInScene == findController.left)
+                {
+                    controller = GameObject.FindGameObjectWithTag("LeftController");
+                }
+            }
 
-        
 
+        }
     }
 
     private Material setMaterial(Material material)
@@ -67,9 +89,9 @@ public class ShowOnGrab : MonoBehaviour
     }
 
     public void Grab(SelectEnterEventArgs press)
-    { 
-        if(press.interactor.name != controller.name) return;
-        foreach(GameObject go in hideOnGrab)
+    {
+        if (press.interactor.name != controller.name) return;
+        foreach (GameObject go in hideOnGrab)
         {
             go.SetActive(false);
         }
@@ -91,7 +113,7 @@ public class ShowOnGrab : MonoBehaviour
     public void Pressed()
     {
         Debug.Log("PRESS");
-        Animator animator= selected.GetComponent<Animator>();
+        Animator animator = selected.GetComponent<Animator>();
         animator.SetBool("closed", true);
     }
     public void Released()

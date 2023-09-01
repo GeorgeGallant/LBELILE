@@ -141,7 +141,12 @@ PrefabInstance:
         type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 7004808015685104413}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075727772478548930, guid: e6f729a306441bd408cc87cca280466b,
+        type: 3}
+      propertyPath: findControllerInScene
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8075727773203063576, guid: e6f729a306441bd408cc87cca280466b,
         type: 3}
       propertyPath: m_Name
@@ -212,6 +217,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -70.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369806241727746824, guid: e6f729a306441bd408cc87cca280466b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

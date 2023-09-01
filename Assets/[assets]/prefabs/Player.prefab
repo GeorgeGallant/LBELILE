@@ -1190,7 +1190,7 @@ GameObject:
   - component: {fileID: 8847442080993184396}
   m_Layer: 0
   m_Name: LeftController
-  m_TagString: Untagged
+  m_TagString: LeftController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1384,7 +1384,7 @@ GameObject:
   - component: {fileID: 192310054071663275}
   m_Layer: 0
   m_Name: RightController
-  m_TagString: Untagged
+  m_TagString: RightController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
