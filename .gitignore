@@ -39,4 +39,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-*.blend1
+!.blend
+*.blend*
+*.blend*.meta
