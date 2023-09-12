@@ -805,8 +805,9 @@ MonoBehaviour:
     and use your trigger finger to press on the radio talk switch before talking.
     \n\nRespond when appropriate."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f0900246f65156d4d944b4b1ec36492f, type: 2}
+  m_sharedMaterial: {fileID: -3162592899465399683, guid: f0900246f65156d4d944b4b1ec36492f,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3421,66 +3422,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762907521024428793, guid: e6f729a306441bd408cc87cca280466b,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762907521024428793, guid: e6f729a306441bd408cc87cca280466b,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762907521024428793, guid: e6f729a306441bd408cc87cca280466b,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762907521024428793, guid: e6f729a306441bd408cc87cca280466b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.0047
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762907521024428793, guid: e6f729a306441bd408cc87cca280466b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.015
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762907521024428793, guid: e6f729a306441bd408cc87cca280466b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.0013
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762907521024428793, guid: e6f729a306441bd408cc87cca280466b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762907521024428793, guid: e6f729a306441bd408cc87cca280466b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762907521024428793, guid: e6f729a306441bd408cc87cca280466b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762907521024428793, guid: e6f729a306441bd408cc87cca280466b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762907521024428793, guid: e6f729a306441bd408cc87cca280466b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762907521024428793, guid: e6f729a306441bd408cc87cca280466b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3086086962766467355, guid: e6f729a306441bd408cc87cca280466b,
         type: 3}
