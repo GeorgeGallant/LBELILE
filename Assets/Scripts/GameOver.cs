@@ -22,7 +22,7 @@ public class GameOver : MonoBehaviour
     void Awake()
     {
         Content.text = Message;
-        if(RestartDestination == null)
+        if (RestartDestination == null)
         {
             Scene scene = SceneManager.GetActiveScene();
             RestartDestination = scene.name;
@@ -32,6 +32,11 @@ public class GameOver : MonoBehaviour
         foreach (GameObject go in showOnEnable)
         {
             go.SetActive(buttonPressed);
+        }
+        showOnEnable = GameObject.FindGameObjectsWithTag("SelectionRay");
+        foreach (GameObject go in showOnEnable)
+        {
+            go.SetActive(false);
         }
     }
 
@@ -57,7 +62,7 @@ public class GameOver : MonoBehaviour
     {
         buttonPressed = !buttonPressed;
         gameObject.SetActive(buttonPressed);
-        foreach(GameObject go in showOnEnable)
+        foreach (GameObject go in showOnEnable)
         {
             go.SetActive(buttonPressed);
         }

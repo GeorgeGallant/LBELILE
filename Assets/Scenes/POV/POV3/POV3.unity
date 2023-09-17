@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 188081403}
   m_Layer: 0
   m_Name: Ray
-  m_TagString: Untagged
+  m_TagString: SelectionRay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -834,7 +834,7 @@ GameObject:
   - component: {fileID: 637442613}
   m_Layer: 0
   m_Name: Ray
-  m_TagString: Untagged
+  m_TagString: SelectionRay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1372,7 +1372,7 @@ ReflectionProbe:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IntensityMultiplier: 1
+  m_IntensityMultiplier: 0.35
   m_BlendDistance: 1
   m_HDR: 1
   m_BoxProjection: 0
@@ -2325,10 +2325,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 895970484896760509, guid: 91b4bd858ecedb746a9c709671f7d408,
+        type: 3}
+      propertyPath: m_TrackingStateInput.m_Action.m_Id
+      value: 74e68d75-dc60-4eb7-bdd9-f19509b10665
+      objectReference: {fileID: 0}
+    - target: {fileID: 895970484896760509, guid: 91b4bd858ecedb746a9c709671f7d408,
+        type: 3}
+      propertyPath: m_TrackingStateInput.m_Action.m_Name
+      value: Tracking State Input
+      objectReference: {fileID: 0}
     - target: {fileID: 895970485426189857, guid: 91b4bd858ecedb746a9c709671f7d408,
         type: 3}
       propertyPath: m_Name
       value: XR Origin
+      objectReference: {fileID: 0}
+    - target: {fileID: 895970485426189857, guid: 91b4bd858ecedb746a9c709671f7d408,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 895970485426189859, guid: 91b4bd858ecedb746a9c709671f7d408,
         type: 3}
@@ -2506,6 +2521,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2520935392341386079, guid: 0e1105972f9a6d74eb1d83efc84101ce,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5913503697875327964, guid: 0e1105972f9a6d74eb1d83efc84101ce,
         type: 3}

@@ -133,7 +133,7 @@ MonoBehaviour:
   maleLeftHandModel: {fileID: 198286, guid: 7fd4f834ddb58af4c8dc5208428c7108, type: 3}
   maleRightHandModel: {fileID: 127476, guid: cb27c64c5d221534bad23f83c0b73c45, type: 3}
   femaleLeftHandModel: {fileID: 161758, guid: 90c313c621b58664f905d09e655cbe88, type: 3}
-  femaleRightHandModel: {fileID: 148612, guid: 222b0c0202b539a478322bad7812b113, type: 3}
+  femaleRightHandModel: {fileID: 161758, guid: dc07efeefa147974d937a06036af2b76, type: 3}
   changeLeft: 1
   changeRight: 1
 --- !u!1 &3181747328434923154
@@ -345,11 +345,11 @@ GameObject:
   - component: {fileID: 4241733346978190690}
   m_Layer: 0
   m_Name: Ray
-  m_TagString: Untagged
+  m_TagString: SelectionRay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3714505744664215435
 Transform:
   m_ObjectHideFlags: 0
@@ -767,11 +767,11 @@ GameObject:
   - component: {fileID: 1569981478448409751}
   m_Layer: 0
   m_Name: Ray
-  m_TagString: Untagged
+  m_TagString: SelectionRay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5001429576276807471
 Transform:
   m_ObjectHideFlags: 0

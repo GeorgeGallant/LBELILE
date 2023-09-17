@@ -165,7 +165,7 @@ ReflectionProbe:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IntensityMultiplier: 1
+  m_IntensityMultiplier: 0.35
   m_BlendDistance: 1
   m_HDR: 1
   m_BoxProjection: 0
@@ -882,7 +882,7 @@ GameObject:
   - component: {fileID: 1695880829}
   m_Layer: 0
   m_Name: Ray
-  m_TagString: Untagged
+  m_TagString: SelectionRay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1435,7 +1435,7 @@ GameObject:
   - component: {fileID: 2016422667}
   m_Layer: 0
   m_Name: Ray
-  m_TagString: Untagged
+  m_TagString: SelectionRay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
