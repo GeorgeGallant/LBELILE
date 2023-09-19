@@ -37,7 +37,7 @@ public class HandSelectionManager : MonoBehaviour
     {
         handColor = color;
         setGender(gender);
-        
+
     }
     public void setGender(string selectedGender)
     {
@@ -101,7 +101,7 @@ public class HandSelectionManager : MonoBehaviour
     {
         handColor = selectedColor;
 
-        if(changeLeft)
+        if (changeLeft)
         {
             XRController left = leftController.GetComponent<XRController>();
             Material leftMaterial;
@@ -129,7 +129,7 @@ public class HandSelectionManager : MonoBehaviour
             }
         }
 
-        if(changeRight)
+        if (changeRight)
         {
 
             XRController right = rightController.GetComponent<XRController>();
@@ -137,7 +137,7 @@ public class HandSelectionManager : MonoBehaviour
 
             if (gender == "female")
             {
-                rightMaterial = right.model.gameObject.transform.Find("male_hand_high_r").gameObject.GetComponent<Renderer>().material;
+                rightMaterial = right.model.gameObject.transform.Find("female_hand_low_l").gameObject.GetComponent<Renderer>().material;
             }
             else
             {

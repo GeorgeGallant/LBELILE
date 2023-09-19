@@ -46,7 +46,7 @@ public class HandAnimator : MonoBehaviour
             if (grabPressed != lastPressedGrab)
             {
                 grab = grabPressed;
-                
+
             }
 
             lastPressedTrigger = triggerPressed;
