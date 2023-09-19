@@ -2998,11 +2998,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8531898828340937046, guid: 12dd52c6ee1b8a74eac4b48acc00bf26,
         type: 3}
-      propertyPath: femaleRightHandModel
-      value: 
-      objectReference: {fileID: 148612, guid: 222b0c0202b539a478322bad7812b113, type: 3}
-    - target: {fileID: 8531898828340937046, guid: 12dd52c6ee1b8a74eac4b48acc00bf26,
-        type: 3}
       propertyPath: deactivateOnContinue.Array.size
       value: 2
       objectReference: {fileID: 0}
