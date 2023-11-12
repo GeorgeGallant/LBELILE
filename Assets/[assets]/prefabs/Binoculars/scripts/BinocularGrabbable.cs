@@ -9,13 +9,16 @@ public class BinocularGrabbable : MonoBehaviour
     XRGrabInteractable interactable;
 
     public GameObject BinocularObjects;
+    public GameObject zoomObjects;
 
     Camera mainCam;
+    public Camera binocCamera;
 
     public Collider headChecker;
 
     bool binocularEnabled = false;
     bool held = false;
+    public float zoom = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +50,11 @@ public class BinocularGrabbable : MonoBehaviour
         {
             if (heldUp) enableBinocs();
             else disableBinocs();
+        }
+        if (binocularEnabled)
+        {
+            binocCamera.transform.rotation = mainCam.transform.rotation;
+            zoomObjects.transform.position = -binocCamera.transform.forward * zoom;
         }
     }
 
