@@ -43,3 +43,4 @@ sysinfo.txt
 *.blend*
 *.blend*.meta
 UserSettings/*
+*_DoNotShip/
