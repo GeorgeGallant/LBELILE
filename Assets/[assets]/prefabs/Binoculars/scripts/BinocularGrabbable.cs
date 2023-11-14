@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class BinocularGrabbable : MonoBehaviour
 {
     XRGrabInteractable interactable;
 
-    public GameObject BinocularObjects;
+    public GameObject BinocularCamera;
     public GameObject zoomObjects;
 
     Camera mainCam;
@@ -19,6 +20,9 @@ public class BinocularGrabbable : MonoBehaviour
     bool binocularEnabled = false;
     bool held = false;
     public float zoom = 5;
+
+    public UnityEvent onHeldUp = new UnityEvent();
+    public UnityEvent onReleased = new UnityEvent();
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +30,15 @@ public class BinocularGrabbable : MonoBehaviour
         interactable.selectEntered.AddListener(PickedUp);
         interactable.selectExited.AddListener(LetGo);
         mainCam = Camera.main;
-        BinocularObjects.transform.SetParent(null);
+        BinocularCamera.transform.SetParent(null);
+        BinocularCamera.SetActive(false);
+        zoomObjects.SetActive(false);
+
+        var activatables = zoomObjects.GetComponentsInChildren<BinocularActivatable>(true);
+        foreach (var item in activatables)
+        {
+            item.SubscribeActivatable(this);
+        }
     }
 
     void PickedUp(SelectEnterEventArgs args = null)
@@ -62,14 +74,18 @@ public class BinocularGrabbable : MonoBehaviour
     {
         binocularEnabled = true;
         mainCam.enabled = false;
-        BinocularObjects.SetActive(true);
+        BinocularCamera.SetActive(true);
+        zoomObjects.SetActive(true);
+        onHeldUp.Invoke();
     }
 
     void disableBinocs()
     {
         binocularEnabled = false;
         mainCam.enabled = true;
-        BinocularObjects.SetActive(false);
+        BinocularCamera.SetActive(false);
+        zoomObjects.SetActive(false);
+        onReleased.Invoke();
     }
 
     // Update is called once per frame
@@ -80,6 +96,8 @@ public class BinocularGrabbable : MonoBehaviour
 
     void OnDestroy()
     {
-        disableBinocs();
+        mainCam.enabled = true;
+        Destroy(BinocularCamera);
+        Destroy(zoomObjects);
     }
 }
