@@ -628,7 +628,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "1dbe0343cf2847e38bb36bd67339cbbf",
     "m_Id": 0,
-    "m_DisplayName": "sky",
+    "m_DisplayName": "BaseMap",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1309,10 +1309,10 @@
     "m_Guid": {
         "m_GuidSerialized": "414c1907-1f4a-464f-86ac-b48a9333b026"
     },
-    "m_Name": "sky",
+    "m_Name": "BaseMap",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "sky",
-    "m_DefaultReferenceName": "_sky",
+    "m_RefNameGeneratedByDisplayName": "BaseMap",
+    "m_DefaultReferenceName": "_BaseMap",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,

@@ -11,6 +11,7 @@ public class BinocularVideoActivatable : BinocularActivatable
     }
     public override void OnHeldUp()
     {
+        if (loader == null) loader = GetComponent<VideoLoaderV2>();
         loader.playVideo();
         base.OnHeldUp();
     }
