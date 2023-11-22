@@ -11,7 +11,7 @@ public class BinocularActivatable : MonoBehaviour
 
     }
 
-    public void SubscribeActivatable(BinocularGrabbable binocular)
+    public virtual void SubscribeActivatable(BinocularGrabbable binocular)
     {
         binocular.onHeldUp.AddListener(OnHeldUp);
         binocular.onReleased.AddListener(OnReleased);

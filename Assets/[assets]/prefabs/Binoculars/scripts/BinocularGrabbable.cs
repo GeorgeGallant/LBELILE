@@ -94,9 +94,15 @@ public class BinocularGrabbable : MonoBehaviour
         WhileHeld();
     }
 
+    void OnDisable()
+    {
+        disableBinocs();
+    }
+
     void OnDestroy()
     {
         mainCam.enabled = true;
+        onReleased.Invoke();
         Destroy(BinocularCamera);
         Destroy(zoomObjects);
     }
