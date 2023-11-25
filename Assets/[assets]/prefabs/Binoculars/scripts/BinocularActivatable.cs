@@ -3,13 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BinocularActivatable : MonoBehaviour
+public class BinocularActivatable : ComboActivatable
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     public virtual void SubscribeActivatable(BinocularGrabbable binocular)
     {
@@ -22,12 +17,6 @@ public class BinocularActivatable : MonoBehaviour
 
     }
     public virtual void OnReleased()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
     {
 
     }

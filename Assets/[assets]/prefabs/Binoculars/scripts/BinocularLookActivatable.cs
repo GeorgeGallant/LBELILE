@@ -9,18 +9,23 @@ public class BinocularLookActivatable : BinocularActivatable
     bool checkForLook = false;
     public bool looking = false;
     public bool once = true;
+    public bool useLookEvents = false;
     bool looked = false;
     bool releaseEvent = false;
     public float activateLookAngle = 15;
     public float lookTime = 3;
+    public float currentAngle;
     float lookingTime = 0;
     public UnityEvent lookEvent = new UnityEvent();
     public UnityEvent releaseLookEvent = new UnityEvent();
+    public UnityEvent<bool> onLookEvent = new UnityEvent<bool>();
     Transform lookTransform;
 
     void Start()
     {
         lookTransform = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        if (comboActivator)
+            onLookEvent.AddListener(changeActivationState);
     }
 
     public override void OnHeldUp()
@@ -32,23 +37,35 @@ public class BinocularLookActivatable : BinocularActivatable
     public override void OnReleased()
     {
         checkForLook = false;
+        onLookEvent.Invoke(false);
         if (releaseEvent)
         {
             releaseLookEvent.Invoke();
             releaseEvent = false;
-
         }
         base.OnReleased();
     }
     void Update()
     {
-        if ((once && looked) || !checkForLook)
+
+        float lookAngle = Vector3.Angle(lookTransform.forward, Vector3.Normalize(transform.position - lookTransform.position));
+        bool frameLooking = lookAngle < activateLookAngle;
+
+        currentAngle = lookAngle;
+
+        if (looking != frameLooking)
         {
-            looking = false;
+            onLookEvent.Invoke(frameLooking);
+        }
+
+        looking = frameLooking;
+
+        if (!useLookEvents || (once && looked) || !checkForLook)
+        {
+            // if (looking) onLookEvent.Invoke(false);
+            // looking = false;
             return;
         }
-        float lookAngle = Vector3.Angle(lookTransform.forward, Vector3.Normalize(transform.position - lookTransform.position));
-        looking = lookAngle < activateLookAngle;
 
         if (looking)
         {

@@ -9,8 +9,15 @@ public class GlobalVideoHandler : MonoBehaviour
     public static GlobalVideoHandler instance;
     VideoPlayer video;
     public string baseFolder = "";
-    bool playImmediately = false;
-    public static UnityEvent<RenderTexture> onPrepareComplete = new UnityEvent<RenderTexture>();
+    public static UnityEvent<VideoPlayer> onPrepareComplete = new UnityEvent<VideoPlayer>();
+
+    public static VideoPlayer instancePlayer
+    {
+        get
+        {
+            return instance.video;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +38,7 @@ public class GlobalVideoHandler : MonoBehaviour
         instance.video.Prepare();
     }
 
-    static string pathResolver(string URL)
+    public static string pathResolver(string URL)
     {
         return $"{Application.persistentDataPath}/{instance.baseFolder}/{URL}.mp4";
     }
@@ -48,7 +55,8 @@ public class GlobalVideoHandler : MonoBehaviour
         {
             source.targetTexture = new RenderTexture((int)source.width, (int)source.height, 0);
         }
-        onPrepareComplete.Invoke(source.targetTexture);
+        Debug.Log(source);
+        onPrepareComplete.Invoke(source);
     }
 
 
