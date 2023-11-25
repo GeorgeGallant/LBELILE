@@ -1103,7 +1103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looking: 0
-  once: 1
+  once: 0
+  useLookEvents: 0
   activateLookAngle: 30
   lookTime: 3
   currentAngle: 0
