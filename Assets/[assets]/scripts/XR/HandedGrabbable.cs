@@ -26,6 +26,7 @@ public class XRHandedGrabInteractable : XRGrabInteractable
     //  OnSelectEntering - set attachTransform - then call base
     protected override void OnSelectEntering(SelectEnterEventArgs args)
     {
+        if (isSelected) return;
         if (args.interactorObject.Equals(GlobalPlayer.globalLeftController))
         {
             Debug.Log($"Left hand");
