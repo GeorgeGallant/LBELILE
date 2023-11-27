@@ -5,16 +5,28 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class GlobalPlayer : MonoBehaviour
 {
-    public static XRDirectInteractor globalLeftController;
+    public static GlobalPlayer instance;
+    public static XRDirectInteractor globalLeftController
+    {
+        get
+        {
+            return instance.leftController;
+        }
+    }
     public XRDirectInteractor leftController;
-    public static XRDirectInteractor globalRightController;
+    public static XRDirectInteractor globalRightController
+    {
+        get
+        {
+            return instance.rightController;
+        }
+    }
     public XRDirectInteractor rightController;
 
     private void Start()
     {
-        globalLeftController = leftController;
-        globalRightController = rightController;
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
     }
-
 
 }

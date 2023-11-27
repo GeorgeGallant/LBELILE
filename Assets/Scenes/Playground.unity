@@ -343,6 +343,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 296827071596811589, guid: 0e1105972f9a6d74eb1d83efc84101ce,
+        type: 3}
+      propertyPath: m_UseForceGrab
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338340670023011210, guid: 0e1105972f9a6d74eb1d83efc84101ce,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745716182199873857, guid: 0e1105972f9a6d74eb1d83efc84101ce,
+        type: 3}
+      propertyPath: m_UseForceGrab
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1908640511250817605, guid: 0e1105972f9a6d74eb1d83efc84101ce,
         type: 3}
       propertyPath: m_Enabled
@@ -358,6 +373,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4716670602201667768, guid: 0e1105972f9a6d74eb1d83efc84101ce,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928559949379779041, guid: 0e1105972f9a6d74eb1d83efc84101ce,
+        type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 6497821552031699216, guid: 0e20f367198b3d3458a94311b2573a60,
+        type: 3}
     - target: {fileID: 5913503697875327964, guid: 0e1105972f9a6d74eb1d83efc84101ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -408,6 +434,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6374252115563759029, guid: 0e1105972f9a6d74eb1d83efc84101ce,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500400148807758387, guid: 0e1105972f9a6d74eb1d83efc84101ce,
+        type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 1192900377692740658, guid: b72d2fe8f0c7a644187666cc551a8deb,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -632,7 +669,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1129,11 +1166,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Binoculars
-      objectReference: {fileID: 0}
-    - target: {fileID: 2702775359558879940, guid: c6e809e96d9822640aa317a8fa94c5b8,
-        type: 3}
-      propertyPath: m_MovementType
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3353394040979242957, guid: c6e809e96d9822640aa317a8fa94c5b8,
         type: 3}

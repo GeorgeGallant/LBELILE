@@ -96,7 +96,8 @@ public class BinocularGrabbable : MonoBehaviour
 
     void OnDisable()
     {
-        disableBinocs();
+        if (mainCam)
+            disableBinocs();
     }
 
     void OnDestroy()
