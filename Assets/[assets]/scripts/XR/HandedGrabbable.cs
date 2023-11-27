@@ -23,10 +23,16 @@ public class XRHandedGrabInteractable : XRGrabInteractable
         base.Awake();
     }
 
+    public override bool IsSelectableBy(IXRSelectInteractor interactor)
+    {
+        if ((interactor as XRDirectInteractor) == GlobalPlayer.globalLeftController && interactorsSelecting.Contains(GlobalPlayer.globalRightController)) return false;
+        if ((interactor as XRDirectInteractor) == GlobalPlayer.globalRightController && interactorsSelecting.Contains(GlobalPlayer.globalLeftController)) return false;
+        return base.IsSelectableBy(interactor);
+    }
+
     //  OnSelectEntering - set attachTransform - then call base
     protected override void OnSelectEntering(SelectEnterEventArgs args)
     {
-        if (isSelected) return;
         if (args.interactorObject.Equals(GlobalPlayer.globalLeftController))
         {
             Debug.Log($"Left hand");
