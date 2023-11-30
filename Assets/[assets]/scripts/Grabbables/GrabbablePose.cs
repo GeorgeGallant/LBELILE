@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +16,7 @@ public class GrabbablePose : MonoBehaviour
         interactable.selectExited.AddListener(LetGo);
     }
 
-    void PickedUp(SelectEnterEventArgs args = null)
+    protected virtual void PickedUp(SelectEnterEventArgs args = null)
     {
         if (args?.interactorObject == null) return;
 
@@ -26,7 +27,7 @@ public class GrabbablePose : MonoBehaviour
         animator.Play(poseName);
     }
 
-    void LetGo(SelectExitEventArgs args = null)
+    protected virtual void LetGo(SelectExitEventArgs args = null)
     {
         if (args?.interactorObject == null) return;
 
