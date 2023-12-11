@@ -11,16 +11,18 @@ public class VideoLoaderV2 : MonoBehaviour
     public GameObject targetGameObject;
     public bool currentlyPlaying = false;
     public UnityEvent<bool> playStateChanged = new UnityEvent<bool>();
+    public bool playOnAwake = false;
+    public bool loop = false;
 
     void Start()
     {
         GlobalVideoHandler.onPrepareComplete.AddListener(prepareCompleted);
+        if (playOnAwake) playVideo();
     }
 
     public void playVideo()
     {
-        GlobalVideoHandler.PlayVideo(videoURL);
-
+        GlobalVideoHandler.PlayVideo(videoURL, loop: loop);
     }
 
     public void stopVideo()

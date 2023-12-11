@@ -32,10 +32,11 @@ public class GlobalVideoHandler : MonoBehaviour
         video.prepareCompleted += Video_prepareCompleted;
     }
 
-    public static void PlayVideo(string URL, bool playImmediately = true)
+    public static void PlayVideo(string URL, bool playImmediately = true, bool loop = false)
     {
         instance.video.url = pathResolver(URL);
         instance.video.Prepare();
+        instance.video.isLooping = loop;
     }
 
     public static string pathResolver(string URL)
