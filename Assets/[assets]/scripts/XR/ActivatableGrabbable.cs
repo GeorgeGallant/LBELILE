@@ -29,12 +29,12 @@ public class ActivatableGrabbable : MonoBehaviour
 
     }
 
-    private void LetGo(SelectExitEventArgs args = null)
+    protected virtual void LetGo(SelectExitEventArgs args = null)
     {
 
     }
 
-    private void PickedUp(SelectEnterEventArgs args = null)
+    protected virtual void PickedUp(SelectEnterEventArgs args = null)
     {
         if (pose)
         {

@@ -5,12 +5,20 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class XRHandedGrabInteractable : XRGrabInteractable
 {
+    enum Hand
+    {
+        None,
+        Left,
+        Right
+    }
     [SerializeField]
     private Transform LeftHandAttachTransform;
     [SerializeField]
     private Transform RightHandAttachTransform;
 
     private Transform m_OriginalAttachTransform;
+    [SerializeField]
+    Hand restrictGrabbableHand;
 
     protected override void Awake()
     {
@@ -25,8 +33,8 @@ public class XRHandedGrabInteractable : XRGrabInteractable
 
     public override bool IsSelectableBy(IXRSelectInteractor interactor)
     {
-        if ((interactor as XRDirectInteractor) == GlobalPlayer.globalLeftController && interactorsSelecting.Contains(GlobalPlayer.globalRightController)) return false;
-        if ((interactor as XRDirectInteractor) == GlobalPlayer.globalRightController && interactorsSelecting.Contains(GlobalPlayer.globalLeftController)) return false;
+        if ((interactor as XRDirectInteractor) == GlobalPlayer.globalLeftController && (restrictGrabbableHand == Hand.Left || interactorsSelecting.Contains(GlobalPlayer.globalRightController))) return false;
+        if ((interactor as XRDirectInteractor) == GlobalPlayer.globalRightController && (restrictGrabbableHand == Hand.Right || interactorsSelecting.Contains(GlobalPlayer.globalLeftController))) return false;
         return base.IsSelectableBy(interactor);
     }
 
