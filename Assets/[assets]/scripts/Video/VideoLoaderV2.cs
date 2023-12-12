@@ -11,18 +11,20 @@ public class VideoLoaderV2 : MonoBehaviour
     public GameObject targetGameObject;
     public bool currentlyPlaying = false;
     public UnityEvent<bool> playStateChanged = new UnityEvent<bool>();
+    public UnityEvent onVideoFinished = new UnityEvent();
     public bool playOnAwake = false;
     public bool loop = false;
 
     void Start()
     {
         GlobalVideoHandler.onPrepareComplete.AddListener(prepareCompleted);
+        GlobalVideoHandler.onVideoFinished.AddListener(videoFinished);
         if (playOnAwake) playVideo();
     }
 
     public void playVideo()
     {
-        GlobalVideoHandler.PlayVideo(videoURL, loop: loop);
+        GlobalVideoHandler.PlayVideo(videoURL, loop);
     }
 
     public void stopVideo()
@@ -45,5 +47,11 @@ public class VideoLoaderV2 : MonoBehaviour
         if (source.url != GlobalVideoHandler.pathResolver(videoURL)) { changePlayState(false); return; }
         changePlayState(true);
         (targetGameObject == null ? gameObject : targetGameObject).GetComponent<Renderer>().material.SetTexture(targetMaterialProperty == "" ? "_BaseMap" : targetMaterialProperty, source.targetTexture);
+    }
+
+    void videoFinished(VideoPlayer source)
+    {
+        if (source.url != GlobalVideoHandler.pathResolver(videoURL)) { changePlayState(false); return; }
+        onVideoFinished.Invoke();
     }
 }

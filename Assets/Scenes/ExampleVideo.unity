@@ -226,6 +226,9 @@ MonoBehaviour:
   playStateChanged:
     m_PersistentCalls:
       m_Calls: []
+  onVideoFinished:
+    m_PersistentCalls:
+      m_Calls: []
   playOnAwake: 1
   loop: 1
 --- !u!1 &1242191086
@@ -428,6 +431,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseFolder: Fishing
+--- !u!1 &2123698448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2123698449}
+  - component: {fileID: 2123698450}
+  m_Layer: 0
+  m_Name: ScenarioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2123698449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123698448}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2123698450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123698448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7181f3715ceafa1418093f6e515820f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstScenario: {fileID: 0}
+  gameObjectDictionary:
+  - scenarioObject: 0
+    gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
+      type: 3}
+  - scenarioObject: 1
+    gameObject: {fileID: 184354812307002558, guid: c6e809e96d9822640aa317a8fa94c5b8,
+      type: 3}
+  - scenarioObject: 2
+    gameObject: {fileID: 4548223805108125948, guid: e31af35d530af0043bcf17ad7aec68ac,
+      type: 3}
+  - scenarioObject: 3
+    gameObject: {fileID: 1035828444273184424, guid: fd39933c54602ef4aae2280090237a92,
+      type: 3}
 --- !u!1001 &6728085473460422789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -504,3 +565,4 @@ SceneRoots:
   - {fileID: 6728085473460422789}
   - {fileID: 1588065718}
   - {fileID: 65468200}
+  - {fileID: 2123698449}

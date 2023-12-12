@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class GlobalVideoHandler : MonoBehaviour
     VideoPlayer video;
     public string baseFolder = "";
     public static UnityEvent<VideoPlayer> onPrepareComplete = new UnityEvent<VideoPlayer>();
+    public static UnityEvent<VideoPlayer> onVideoFinished = new UnityEvent<VideoPlayer>();
 
     public static VideoPlayer instancePlayer
     {
@@ -30,9 +32,16 @@ public class GlobalVideoHandler : MonoBehaviour
         video = GetComponent<VideoPlayer>();
         video.errorReceived += Video_errorReceived;
         video.prepareCompleted += Video_prepareCompleted;
+        video.loopPointReached += Video_loopPointReached;
     }
 
-    public static void PlayVideo(string URL, bool playImmediately = true, bool loop = false)
+    private void Video_loopPointReached(VideoPlayer source)
+    {
+        if (!video.isLooping)
+            onVideoFinished.Invoke(source);
+    }
+
+    public static void PlayVideo(string URL, bool loop = false)
     {
         instance.video.url = pathResolver(URL);
         instance.video.Prepare();
@@ -64,6 +73,8 @@ public class GlobalVideoHandler : MonoBehaviour
 
     private void Video_errorReceived(VideoPlayer source, string message)
     {
+        Debug.LogError("VIDEO FAILED TO PLAY!");
+        Debug.LogError(message);
     }
     // Update is called once per frame
     void Update()
