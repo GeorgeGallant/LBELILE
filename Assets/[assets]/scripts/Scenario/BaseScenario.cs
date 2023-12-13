@@ -9,6 +9,13 @@ public class BaseScenario : MonoBehaviour
     public VideoLoaderV2 videoLoader;
     public ScenarioObject[] scenarioObjects;
     public BaseScenario videoFinishedScenario;
+    public bool isActive
+    {
+        get
+        {
+            return ScenarioManager.instance.activeScenario == this;
+        }
+    }
     void Start()
     {
         if (videoURL != string.Empty)

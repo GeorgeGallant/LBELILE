@@ -14,8 +14,8 @@ namespace ThirdParty
     public class AzureVoice
     {
         static bool busy = false;
-        public static UnityEngine.Events.UnityEvent<string> intentEvent = new UnityEngine.Events.UnityEvent<string>();
-        public static async Task Listener(ValueWrapper<bool> continueListening)
+        public static UnityEngine.Events.UnityEvent<(Dictionary<string, Intent> intents, string topIntent, string initiator)> intentEvent = new UnityEngine.Events.UnityEvent<(Dictionary<string, Intent> intents, string topIntent, string initiator)>();
+        public static async Task Listener(ValueWrapper<bool> continueListening, string initiator)
         {
             if (busy) return;
             busy = true;
@@ -39,7 +39,7 @@ namespace ThirdParty
                 string utterance = result.Text;
                 UnityEngine.Debug.Log($"{utterance}, {result.Reason}");
                 if (result.Reason == ResultReason.RecognizedSpeech)
-                    await GetIntentFromUtterance(utterance);
+                    await GetIntentFromUtterance(utterance, initiator);
                 finish();
             }
             void cancelled(object sender, SpeechRecognitionCanceledEventArgs e)
@@ -57,7 +57,7 @@ namespace ThirdParty
                 busy = false;
             }
         }
-        public static async Task GetIntentFromUtterance(string utterance)
+        public static async Task GetIntentFromUtterance(string utterance, string initiator)
         {
             var client = new HttpClient();
             var queryString = HttpUtility.ParseQueryString(string.Empty);
@@ -88,11 +88,11 @@ namespace ThirdParty
                 var responseContent = JObject.Parse(strResponseContent).ToObject<IntentResponse>();
 
                 UnityEngine.Debug.Log($"INTENT: {responseContent.prediction.topIntent}");
-                intentEvent.Invoke(responseContent.prediction.topIntent);
+                intentEvent.Invoke((responseContent.prediction.intents, responseContent.prediction.topIntent, initiator));
             }
             catch (Exception e)
             {
-                UnityEngine.Debug.Log(e);
+                UnityEngine.Debug.LogError(e);
                 UnityEngine.Debug.Log(strResponseContent);
             }
         }
