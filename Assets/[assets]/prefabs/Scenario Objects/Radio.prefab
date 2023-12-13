@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5553685975742292128}
   - component: {fileID: 3433399207211446225}
   - component: {fileID: 938842125772090320}
-  - component: {fileID: 7955374080477039657}
+  - component: {fileID: 1274418265093312216}
   m_Layer: 0
   m_Name: Radio
   m_TagString: Untagged
@@ -270,6 +270,7 @@ MonoBehaviour:
   m_AddDefaultGrabTransformers: 1
   LeftHandAttachTransform: {fileID: 1127592222583422891}
   RightHandAttachTransform: {fileID: 4928963069871342548}
+  restrictGrabbableHand: 0
 --- !u!114 &938842125772090320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poseName: Radio
---- !u!114 &7955374080477039657
+--- !u!114 &1274418265093312216
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,7 +293,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8541174378120484427}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36cf8688acab738449da78361000b7e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1707ecef23efea642a3232779c0be5b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   handPoseName: RadioPush
