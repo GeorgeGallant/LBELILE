@@ -20,7 +20,7 @@ public class GrabbablePose : MonoBehaviour
     {
         if (args?.interactorObject == null) return;
 
-        Animator animator = args.interactorObject.transform.gameObject.GetComponentInChildren<Animator>(false));
+        Animator animator = args.interactorObject.transform.gameObject.GetComponentInChildren<Animator>(false);
         if (animator == null) return;
 
         animator.SetBool("grabbing", true);
