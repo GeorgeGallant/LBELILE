@@ -4,18 +4,21 @@ using System.Collections.Generic;
 using ThirdParty;
 using UnityEngine;
 
-public class ScenarioRadioActivatable : BaseScenarioActivatable
+public class SceneRadioActivatable : BaseSceneActivatable
 {
     public string activateIntent;
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
         AzureVoice.intentEvent.AddListener(intentListener);
     }
 
     private void intentListener((Dictionary<string, AzureVoice.Intent> intents, string topIntent, string initiator) o)
     {
         if (scenarioActive) return;
+        if (o.topIntent.ToLower() == activateIntent.ToLower())
+        {
+            activate();
+        }
 
     }
 }

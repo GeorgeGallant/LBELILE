@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ScenarioManager : MonoBehaviour
 {
     public static ScenarioManager instance;
-    public BaseScenario firstScenario;
+    public BaseScene firstScenario;
     public KeyObject[] gameObjectDictionaryCreator = new KeyObject[0];
     public static Dictionary<ScenarioObject, GameObject> gameObjectDictionary = new Dictionary<ScenarioObject, GameObject>();
-    public BaseScenario activeScenario;
+    public BaseScene activeScenario;
 
-    public static BaseScenario ActiveScenario
+    public static BaseScene ActiveScenario
     {
         get
         {
@@ -63,13 +64,14 @@ public class ScenarioManager : MonoBehaviour
 
     public static void enableScenarioObjects(ScenarioObject[] objects)
     {
-        foreach (var go in gameObjectDictionary.Values)
+        foreach (var objectKey in gameObjectDictionary.Keys)
         {
-            go.SetActive(false);
-        }
-        foreach (var objectKey in objects)
-        {
-            gameObjectDictionary[objectKey].SetActive(true);
+            if (objects.Contains(objectKey))
+                gameObjectDictionary[objectKey].SetActive(true);
+            else
+            {
+                gameObjectDictionary[objectKey].SetActive(false);
+            }
         }
     }
 

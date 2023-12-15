@@ -44,6 +44,7 @@ public class GlobalVideoHandler : MonoBehaviour
     public static void PlayVideo(string URL, bool loop = false)
     {
         instance.video.url = pathResolver(URL);
+        instance.video.Stop();
         instance.video.Prepare();
         instance.video.isLooping = loop;
     }
