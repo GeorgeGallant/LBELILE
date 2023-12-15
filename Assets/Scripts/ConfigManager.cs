@@ -27,12 +27,12 @@ public class ConfigManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-    } 
+    }
 
     // called first
     void OnEnable()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        // SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public void goToScene(string name)
@@ -54,7 +54,7 @@ public class ConfigManager : MonoBehaviour
         {
             if (gender != "" && color != "")
             {
-                hands[0].setHands(gender, color);
+                // hands[0].setHands(gender, color);
             }
         }
 
