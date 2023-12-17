@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class HandSelectorUI : MonoBehaviour
 {
-    public HandSelectionManager manager;
+    public HandSelectionManagerV2 manager;
     // Start is called before the first frame update
     void Start()
     {
-        manager = FindObjectOfType<HandSelectionManager>();
+        manager = FindObjectOfType<HandSelectionManagerV2>();
     }
 
     public void setSkinColor(float time)
