@@ -197,7 +197,7 @@ MonoBehaviour:
   m_SmoothScale: 0
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
-  m_ThrowOnDetach: 1
+  m_ThrowOnDetach: 0
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
     serializedVersion: 2
@@ -224,6 +224,8 @@ MonoBehaviour:
   m_AddDefaultGrabTransformers: 1
   LeftHandAttachTransform: {fileID: 7426994255419034282}
   RightHandAttachTransform: {fileID: 1249052949875269321}
+  restrictGrabbableHand: 0
+  forceHeld: 0
 --- !u!65 &4705060766998470265
 BoxCollider:
   m_ObjectHideFlags: 0

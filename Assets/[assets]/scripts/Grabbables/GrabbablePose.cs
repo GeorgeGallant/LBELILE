@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+[RequireComponent(typeof(XRGrabInteractable))]
 public class GrabbablePose : MonoBehaviour
 {
     XRGrabInteractable interactable;
     public string poseName;
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         interactable = gameObject.GetComponent<XRGrabInteractable>();
         interactable.selectEntered.AddListener(PickedUp);
@@ -35,11 +36,5 @@ public class GrabbablePose : MonoBehaviour
         if (animator == null) return;
 
         animator.SetBool("grabbing", false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

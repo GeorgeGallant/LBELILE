@@ -14,9 +14,13 @@ public class BaseSceneActivatable : MonoBehaviour
             return scenarioActivatable.isActive;
         }
     }
-    protected void activate()
+    protected void activateNextScenario()
     {
         activateScenario.startScenario();
+    }
+    public virtual void activate()
+    {
+
     }
     public void setOwnerScenario(BaseScene owner, bool overrideOwner = false)
     {

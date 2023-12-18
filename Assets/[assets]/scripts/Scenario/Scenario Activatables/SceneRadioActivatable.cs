@@ -17,7 +17,7 @@ public class SceneRadioActivatable : BaseSceneActivatable
         if (scenarioActive) return;
         if (o.topIntent.ToLower() == activateIntent.ToLower())
         {
-            activate();
+            activateNextScenario();
         }
 
     }

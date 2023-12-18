@@ -19,6 +19,7 @@ public class XRHandedGrabInteractable : XRGrabInteractable
     private Transform m_OriginalAttachTransform;
     [SerializeField]
     Hand restrictGrabbableHand;
+    public bool forceHeld = false;
 
     protected override void Awake()
     {
@@ -41,12 +42,12 @@ public class XRHandedGrabInteractable : XRGrabInteractable
     //  OnSelectEntering - set attachTransform - then call base
     protected override void OnSelectEntering(SelectEnterEventArgs args)
     {
-        if (args.interactorObject.Equals(GlobalPlayer.globalLeftController))
+        if (args.interactorObject.Equals(GlobalPlayer.globalLeftController) && LeftHandAttachTransform)
         {
             Debug.Log($"Left hand");
             attachTransform.SetPositionAndRotation(LeftHandAttachTransform.position, LeftHandAttachTransform.rotation);
         }
-        else if (args.interactorObject.Equals(GlobalPlayer.globalRightController))
+        else if (args.interactorObject.Equals(GlobalPlayer.globalRightController) && RightHandAttachTransform)
         {
             Debug.Log($"Right hand");
             attachTransform.SetPositionAndRotation(RightHandAttachTransform.position, RightHandAttachTransform.rotation);
@@ -57,5 +58,16 @@ public class XRHandedGrabInteractable : XRGrabInteractable
             attachTransform.SetPositionAndRotation(m_OriginalAttachTransform.position, m_OriginalAttachTransform.rotation);
         }
         base.OnSelectEntering(args);
+    }
+
+    protected override void OnSelectExiting(SelectExitEventArgs args)
+    {
+        if (forceHeld) return;
+        base.OnSelectExiting(args);
+    }
+    protected override void OnSelectExited(SelectExitEventArgs args)
+    {
+        if (forceHeld) return;
+        base.OnSelectExited(args);
     }
 }

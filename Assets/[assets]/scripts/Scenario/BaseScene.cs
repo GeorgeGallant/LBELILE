@@ -11,6 +11,7 @@ public class BaseScene : MonoBehaviour
     public ScenarioObject[] scenarioObjects;
     public BaseScene videoFinishedScenario;
     public bool loopVideo = false;
+    public BaseSceneActivatable[] activatables;
     public bool isActive
     {
         get
@@ -25,6 +26,7 @@ public class BaseScene : MonoBehaviour
         {
             item.setOwnerScenario(this);
         }
+        this.activatables = activatables;
         if (videoURL != string.Empty)
         {
             videoLoader = gameObject.AddComponent<VideoLoaderV2>();
@@ -40,6 +42,10 @@ public class BaseScene : MonoBehaviour
         ScenarioManager.ActiveScenario = this;
         if (videoLoader) videoLoader.playVideo();
         ScenarioManager.enableScenarioObjects(scenarioObjects);
+        foreach (var item in activatables)
+        {
+            item.activate();
+        }
     }
 
     void videoFinished()

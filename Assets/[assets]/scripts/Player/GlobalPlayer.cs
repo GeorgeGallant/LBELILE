@@ -29,4 +29,10 @@ public class GlobalPlayer : MonoBehaviour
         else Destroy(gameObject);
     }
 
+    public static XRDirectInteractor GetOtherHand(XRDirectInteractor hand)
+    {
+        if (hand == globalRightController) return globalLeftController;
+        else return globalRightController;
+    }
+
 }
