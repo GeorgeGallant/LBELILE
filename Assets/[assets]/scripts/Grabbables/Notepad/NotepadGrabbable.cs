@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,10 +16,10 @@ public class NotepadGrabbable : GrabbablePose
     protected override void LetGo(SelectExitEventArgs args = null)
     {
         base.LetGo(args);
+        // var otherHand = GlobalPlayer.GetOtherHand(args.interactorObject as XRDirectInteractor);
+        // args.manager.SelectExit(otherHand as IXRSelectInteractor, penGrabbable);
         penGrabbable.forceHeld = false;
         penGrabbable.gameObject.SetActive(false);
-        var otherHand = GlobalPlayer.GetOtherHand(args.interactorObject as XRDirectInteractor);
-        args.manager.SelectExit(otherHand as IXRSelectInteractor, penGrabbable);
 
 
     }

@@ -62,12 +62,11 @@ public class XRHandedGrabInteractable : XRGrabInteractable
 
     protected override void OnSelectExiting(SelectExitEventArgs args)
     {
-        if (forceHeld) return;
         base.OnSelectExiting(args);
     }
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
-        if (forceHeld) return;
+        if (forceHeld) args.manager.SelectEnter(args.interactorObject, this);
         base.OnSelectExited(args);
     }
 }
