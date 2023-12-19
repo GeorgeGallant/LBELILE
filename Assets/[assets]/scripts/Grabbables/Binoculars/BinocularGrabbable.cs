@@ -7,7 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class BinocularGrabbable : MonoBehaviour
 {
-    XRGrabInteractable interactable;
+    XRHandedGrabInteractable interactable;
 
     public GameObject BinocularCamera;
     public GameObject zoomObjects;
@@ -26,7 +26,7 @@ public class BinocularGrabbable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        interactable = gameObject.GetComponent<XRGrabInteractable>();
+        interactable = gameObject.GetComponent<XRHandedGrabInteractable>();
         interactable.selectEntered.AddListener(PickedUp);
         interactable.selectExited.AddListener(LetGo);
         mainCam = Camera.main;

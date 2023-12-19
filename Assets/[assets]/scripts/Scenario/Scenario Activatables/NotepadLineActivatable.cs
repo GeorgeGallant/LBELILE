@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class NotepadLineActivatable : BaseSceneActivatable
 {
-    public NotepadLine[] lines = new NotepadLine[0];
+    public NotepadLineElement[] lines;
     // Start is called before the first frame update
     void Start()
     {
-
+        lines = gameObject.GetComponentsInChildren<NotepadLineElement>(false);
     }
 
     public override void activate()

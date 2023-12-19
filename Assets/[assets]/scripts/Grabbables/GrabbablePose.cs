@@ -7,12 +7,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 [RequireComponent(typeof(XRGrabInteractable))]
 public class GrabbablePose : MonoBehaviour
 {
-    XRGrabInteractable interactable;
+    protected XRHandedGrabInteractable interactable;
     public string poseName;
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        interactable = gameObject.GetComponent<XRGrabInteractable>();
+        interactable = gameObject.GetComponent<XRHandedGrabInteractable>();
         interactable.selectEntered.AddListener(PickedUp);
         interactable.selectExited.AddListener(LetGo);
     }

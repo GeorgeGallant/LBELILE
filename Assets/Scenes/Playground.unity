@@ -388,6 +388,37 @@ MonoBehaviour:
   secondsTimeCode: 70
   timeCodeWindow: 14
   anytimeAfterTimecode: 0
+--- !u!1 &901233969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 901233970}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &901233970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901233969}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.005, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1231061712}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1100045194
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +502,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100045194}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1231061712 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7942256786809290157, guid: e31af35d530af0043bcf17ad7aec68ac,
+    type: 3}
+  m_PrefabInstance: {fileID: 3157064095276179983}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1242191086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,9 +1042,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Notepad
       objectReference: {fileID: 0}
+    - target: {fileID: 5954381854852418671, guid: e31af35d530af0043bcf17ad7aec68ac,
+        type: 3}
+      propertyPath: m_MovementType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954381854852418671, guid: e31af35d530af0043bcf17ad7aec68ac,
+        type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7942256786809290157, guid: e31af35d530af0043bcf17ad7aec68ac,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 901233970}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9169971990202457608, guid: e31af35d530af0043bcf17ad7aec68ac,
         type: 3}
@@ -1100,11 +1151,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
-        type: 3}
-      propertyPath: m_Name
-      value: Radio
-      objectReference: {fileID: 0}
     - target: {fileID: 8095245982382836601, guid: 914c9dfa5aef0904da3c9254b661782a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1154,6 +1200,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
+        type: 3}
+      propertyPath: m_Name
+      value: Radio
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

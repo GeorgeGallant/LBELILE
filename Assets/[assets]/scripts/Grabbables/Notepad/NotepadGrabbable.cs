@@ -4,31 +4,51 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class NotepadGrabbable : GrabbablePose
+public class NotepadGrabbable : MonoBehaviour
 {
+    XRHandedGrabInteractable interactable;
     public XRHandedGrabInteractable penGrabbable;
-    protected override void Start()
+    public Transform selectorTip;
+    private bool held = false;
+
+    public NotepadLine[] lines;
+    NotepadLine currentSelection;
+    protected void Start()
     {
-        base.Start();
+        interactable = gameObject.GetComponent<XRHandedGrabInteractable>();
+        interactable.selectEntered.AddListener(PickedUp);
+        interactable.selectExited.AddListener(LetGo);
         penGrabbable.gameObject.SetActive(false);
+        lines = GetComponentsInChildren<NotepadLine>();
+        foreach (var item in lines)
+        {
+            item.clear();
+        }
     }
 
-    protected override void LetGo(SelectExitEventArgs args = null)
+    protected void LetGo(SelectExitEventArgs args = null)
     {
-        base.LetGo(args);
+        held = false;
         // var otherHand = GlobalPlayer.GetOtherHand(args.interactorObject as XRDirectInteractor);
         // args.manager.SelectExit(otherHand as IXRSelectInteractor, penGrabbable);
         penGrabbable.forceHeld = false;
         penGrabbable.gameObject.SetActive(false);
-
-
     }
-    protected override void PickedUp(SelectEnterEventArgs args = null)
+    protected void PickedUp(SelectEnterEventArgs args = null)
     {
-        base.PickedUp(args);
+        held = true;
         penGrabbable.gameObject.SetActive(true);
         penGrabbable.forceHeld = true;
         var otherHand = GlobalPlayer.GetOtherHand(args.interactorObject as XRDirectInteractor);
         args.manager.SelectEnter(otherHand as IXRSelectInteractor, penGrabbable);
+    }
+    protected void Update()
+    {
+        if (!held) return;
+        float distanceToBeat = 5000;
+        foreach (var item in lines)
+        {
+            if (!item.available) continue;
+        }
     }
 }
