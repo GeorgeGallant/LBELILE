@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2651105450189201264
 Transform:
   m_ObjectHideFlags: 0
@@ -85,7 +85,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectActionTrigger: 0
   m_HideControllerOnSelect: 0
-  m_AllowHoveredActivate: 0
+  m_AllowHoveredActivate: 1
   m_TargetPriorityMode: 0
   m_PlayAudioClipOnSelectEntered: 0
   m_AudioClipForOnSelectEntered: {fileID: 0}
@@ -510,8 +510,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 6497821552031699216, guid: 0e20f367198b3d3458a94311b2573a60,
-    type: 3}
+  m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -664,8 +663,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 626606706455302601}
-  - component: {fileID: 3042929423373384689}
   - component: {fileID: 2725032797757039758}
+  - component: {fileID: 7867191723127126326}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -690,28 +689,6 @@ Transform:
   - {fileID: 1350170411061528277}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3042929423373384689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6239347369989014381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49cbc922cc8e1424b9b46844e16c0e7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gender: male
-  handColor: light
-  leftController: {fileID: 8938852665060508469}
-  rightController: {fileID: 5562990597638930636}
-  maleLeftHandModel: {fileID: 198286, guid: 7fd4f834ddb58af4c8dc5208428c7108, type: 3}
-  maleRightHandModel: {fileID: 127476, guid: cb27c64c5d221534bad23f83c0b73c45, type: 3}
-  femaleLeftHandModel: {fileID: 161758, guid: 90c313c621b58664f905d09e655cbe88, type: 3}
-  femaleRightHandModel: {fileID: 161758, guid: dc07efeefa147974d937a06036af2b76, type: 3}
-  changeLeft: 1
-  changeRight: 1
 --- !u!114 &2725032797757039758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,6 +703,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftController: {fileID: 8202934410071038336}
   rightController: {fileID: 6350473748674310484}
+--- !u!114 &7867191723127126326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6239347369989014381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee719d187a08674195d865986ff4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.8998078, b: 0.8537736, a: 1}
+    key1: {r: 1, g: 0.7815327, b: 0.6745283, a: 1}
+    key2: {r: 0.9811321, g: 0.8636218, b: 0.61552155, a: 0}
+    key3: {r: 0.1509434, g: 0.054846313, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 10987
+    ctime2: 31226
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 4
+    m_NumAlphaKeys: 2
+  leftController: {fileID: 8938852665060508469}
+  rightController: {fileID: 5562990597638930636}
+  maleLeftHandModel: {fileID: 1444106201599206870, guid: e6d929539b711644dac62834bb23018d,
+    type: 3}
+  maleRightHandModel: {fileID: 6334325437262978871, guid: 9a578d10fdd12f841a24452f600a05df,
+    type: 3}
+  femaleLeftHandModel: {fileID: 2001243371753850504, guid: b72d2fe8f0c7a644187666cc551a8deb,
+    type: 3}
+  femaleRightHandModel: {fileID: 5865717421881052074, guid: 0e20f367198b3d3458a94311b2573a60,
+    type: 3}
 --- !u!1 &7021368599861793441
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,7 +773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2056094377026713861
 Transform:
   m_ObjectHideFlags: 0
@@ -811,7 +840,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectActionTrigger: 0
   m_HideControllerOnSelect: 0
-  m_AllowHoveredActivate: 0
+  m_AllowHoveredActivate: 1
   m_TargetPriorityMode: 0
   m_PlayAudioClipOnSelectEntered: 0
   m_AudioClipForOnSelectEntered: {fileID: 0}
@@ -1248,8 +1277,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 1192900377692740658, guid: b72d2fe8f0c7a644187666cc551a8deb,
-    type: 3}
+  m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
