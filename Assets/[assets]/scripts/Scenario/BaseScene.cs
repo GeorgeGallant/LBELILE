@@ -20,7 +20,7 @@ public class BaseScene : MonoBehaviour
             return ScenarioManager.instance.activeScenario == this;
         }
     }
-    public void Start()
+    protected void Start()
     {
         if (ranStart) return;
         ranStart = true;
@@ -40,10 +40,23 @@ public class BaseScene : MonoBehaviour
         }
 
     }
-    public virtual void startScenario()
+    public virtual void startScene()
     {
+        Start();
+        if (ScenarioManager.ActiveScenario)
+            ScenarioManager.ActiveScenario.deactivateScene();
         ScenarioManager.ActiveScenario = this;
-        if (videoLoader) videoLoader.playVideo();
+        if (videoLoader)
+        {
+            videoLoader.onVideoPrepared.AddListener(activateScene);
+            videoLoader.playVideo();
+        }
+        else activateScene();
+
+    }
+
+    void activateScene()
+    {
         ScenarioManager.enableScenarioObjects(scenarioObjects);
         foreach (var item in activatables)
         {
@@ -51,9 +64,17 @@ public class BaseScene : MonoBehaviour
         }
     }
 
+    protected void deactivateScene()
+    {
+        foreach (var item in activatables)
+        {
+            item.deactivate();
+        }
+    }
+
     void videoFinished()
     {
-        videoFinishedScenario.startScenario();
+        videoFinishedScenario.startScene();
     }
 
 }

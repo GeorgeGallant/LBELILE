@@ -12,6 +12,7 @@ public class VideoLoaderV2 : MonoBehaviour
     public bool currentlyPlaying = false;
     public UnityEvent<bool> playStateChanged = new UnityEvent<bool>();
     public UnityEvent onVideoFinished = new UnityEvent();
+    public UnityEvent onVideoPrepared = new UnityEvent();
     public bool playOnAwake = false;
     public bool loop = false;
 
@@ -48,6 +49,7 @@ public class VideoLoaderV2 : MonoBehaviour
         changePlayState(true);
         (targetGameObject == null ? gameObject : targetGameObject).GetComponent<Renderer>().material.SetTexture(targetMaterialProperty == "" ? "_BaseMap" : targetMaterialProperty, source.targetTexture);
         source.isLooping = loop;
+        onVideoPrepared.Invoke();
     }
 
     void videoFinished(VideoPlayer source)

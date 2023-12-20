@@ -7,7 +7,7 @@ public class NotepadLineActivatable : BaseSceneActivatable
 {
     public NotepadLineElement[] lines;
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
         lines = gameObject.GetComponentsInChildren<NotepadLineElement>(false);
     }

@@ -35,8 +35,7 @@ public class ScenarioManager : MonoBehaviour
     {
         if (!instance) instance = this;
         createObjects();
-        firstScenario.Start();
-        firstScenario.startScenario();
+        firstScenario.startScene();
     }
 
     static void createObjects()
