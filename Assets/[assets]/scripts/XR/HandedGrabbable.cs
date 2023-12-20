@@ -34,8 +34,8 @@ public class XRHandedGrabInteractable : XRGrabInteractable
 
     public override bool IsSelectableBy(IXRSelectInteractor interactor)
     {
-        if ((interactor as XRDirectInteractor) == GlobalPlayer.globalLeftController && (restrictGrabbableHand == Hand.Left || interactorsSelecting.Contains(GlobalPlayer.globalRightController))) return false;
-        if ((interactor as XRDirectInteractor) == GlobalPlayer.globalRightController && (restrictGrabbableHand == Hand.Right || interactorsSelecting.Contains(GlobalPlayer.globalLeftController))) return false;
+        if ((interactor as XRDirectInteractor) == GlobalPlayer.globalLeftController && (restrictGrabbableHand == Hand.Right || interactorsSelecting.Contains(GlobalPlayer.globalRightController))) return false;
+        if ((interactor as XRDirectInteractor) == GlobalPlayer.globalRightController && (restrictGrabbableHand == Hand.Left || interactorsSelecting.Contains(GlobalPlayer.globalLeftController))) return false;
         return base.IsSelectableBy(interactor);
     }
 
