@@ -35,6 +35,7 @@ public class ScenarioManager : MonoBehaviour
     {
         if (!instance) instance = this;
         createObjects();
+        firstScenario.Start();
         firstScenario.startScenario();
     }
 
@@ -50,6 +51,7 @@ public class ScenarioManager : MonoBehaviour
             {
                 go = Instantiate(go);
                 key.gameObject = go;
+                if (keys[i].spawnPosition) go.transform.SetPositionAndRotation(keys[i].spawnPosition.position, keys[i].spawnPosition.rotation);
             }
             go.SetActive(false);
             if (gameObjectDictionary.ContainsKey(key.scenarioObject))
@@ -86,6 +88,7 @@ public struct KeyObject
 {
     public ScenarioObject scenarioObject;
     public GameObject gameObject;
+    public Transform spawnPosition;
 }
 
 public enum ScenarioObject

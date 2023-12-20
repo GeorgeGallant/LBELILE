@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class NotepadGrabbable : MonoBehaviour
@@ -13,6 +14,7 @@ public class NotepadGrabbable : MonoBehaviour
 
     public NotepadLine[] lines;
     NotepadLine currentSelection;
+    Dictionary<NotepadLine, UnityEvent> lineEvents = new Dictionary<NotepadLine, UnityEvent>();
     protected void Start()
     {
         interactable = gameObject.GetComponent<XRHandedGrabInteractable>();
@@ -20,6 +22,19 @@ public class NotepadGrabbable : MonoBehaviour
         interactable.selectExited.AddListener(LetGo);
         penGrabbable.gameObject.SetActive(false);
         lines = GetComponentsInChildren<NotepadLine>();
+        interactable.activated.AddListener(activateEvent);
+        penGrabbable.activated.AddListener(activateEvent);
+
+    }
+
+    private void activateEvent(ActivateEventArgs arg0)
+    {
+        if (!currentSelection) return;
+        lineEvents[currentSelection].Invoke();
+    }
+
+    protected void clearNotepad()
+    {
         foreach (var item in lines)
         {
             item.clear();
@@ -42,13 +57,50 @@ public class NotepadGrabbable : MonoBehaviour
         var otherHand = GlobalPlayer.GetOtherHand(args.interactorObject as XRDirectInteractor);
         args.manager.SelectEnter(otherHand as IXRSelectInteractor, penGrabbable);
     }
+    public void SetLines(NotepadLineElement[] elements)
+    {
+        lineEvents.Clear();
+        clearNotepad();
+        int distance = (lines.Length / (elements.Length + 1)) - 1;
+        int i = 0;
+        foreach (var item in elements)
+        {
+            int lineIndex = (i + 1) * distance;
+            Debug.Log(lineIndex);
+            NotepadLine line = lines[lineIndex];
+            lineEvents.Add(line, item.lineEvent);
+            line.tmp.SetText(item.lineText);
+            Debug.Log(item.lineText);
+            line.available = true;
+            i++;
+        }
+    }
     protected void Update()
     {
-        if (!held) return;
+        if (!held) { if (currentSelection) { currentSelection.circle.enabled = true; currentSelection = null; } return; }
         float distanceToBeat = 5000;
+        NotepadLine newLine = null;
         foreach (var item in lines)
         {
             if (!item.available) continue;
+            float distance = Vector3.Distance(item.bounds.ClosestPointOnBounds(selectorTip.position), selectorTip.position);
+            if (distance < distanceToBeat) { distanceToBeat = distance; newLine = item; }
+        }
+        if (distanceToBeat < 0.1)
+        {
+            if (currentSelection == newLine) return;
+            if (currentSelection)
+                currentSelection.circle.enabled = false;
+            currentSelection = newLine;
+            currentSelection.circle.enabled = true;
+        }
+        else
+        {
+            if (currentSelection)
+            {
+                currentSelection.circle.enabled = false;
+                currentSelection = null;
+            }
         }
     }
 }

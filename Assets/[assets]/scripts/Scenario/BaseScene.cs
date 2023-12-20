@@ -12,6 +12,7 @@ public class BaseScene : MonoBehaviour
     public BaseScene videoFinishedScenario;
     public bool loopVideo = false;
     public BaseSceneActivatable[] activatables;
+    bool ranStart = false;
     public bool isActive
     {
         get
@@ -19,8 +20,10 @@ public class BaseScene : MonoBehaviour
             return ScenarioManager.instance.activeScenario == this;
         }
     }
-    void Start()
+    public void Start()
     {
+        if (ranStart) return;
+        ranStart = true;
         var activatables = GetComponentsInChildren<BaseSceneActivatable>();
         foreach (var item in activatables)
         {

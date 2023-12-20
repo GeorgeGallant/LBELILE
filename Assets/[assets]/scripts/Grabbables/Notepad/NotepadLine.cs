@@ -12,6 +12,7 @@ public class NotepadLine : MonoBehaviour
     {
         tmp.SetText("");
         available = false;
+        circle.enabled = false;
     }
     public void setText(string newText)
     {

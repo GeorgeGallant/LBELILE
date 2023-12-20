@@ -20,7 +20,7 @@ public class BaseSceneActivatable : MonoBehaviour
     }
     public virtual void activate()
     {
-
+        Debug.Log("activate scene activatable");
     }
     public void setOwnerScenario(BaseScene owner, bool overrideOwner = false)
     {
