@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
+[ExecuteAlways]
 public class BaseScene : MonoBehaviour
 {
     public string videoURL;
@@ -22,6 +25,7 @@ public class BaseScene : MonoBehaviour
     }
     protected void Start()
     {
+        if (!Application.isPlaying) return;
         if (ranStart) return;
         ranStart = true;
         var activatables = GetComponentsInChildren<BaseSceneActivatable>();
@@ -75,6 +79,40 @@ public class BaseScene : MonoBehaviour
     void videoFinished()
     {
         videoFinishedScenario.startScene();
+    }
+#if UNITY_EDITOR
+    void setSphereTexture()
+    {
+        try
+        {
+
+            Texture2D debugTexture = new Texture2D(1024, 512);
+            var manager = FindAnyObjectByType<ScenarioManager>();
+            var videoLoader = FindAnyObjectByType<GlobalVideoHandler>();
+            var bytes = System.IO.File.ReadAllBytes($"{Application.persistentDataPath}/{videoLoader.baseFolder}/thumbs/{videoURL}.jpg");
+            ImageConversion.LoadImage(debugTexture, bytes);
+            manager.videoSphere.GetComponent<Renderer>().sharedMaterial.SetTexture("_BaseMap", debugTexture);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError(e);
+        }
+
+    }
+    GameObject previousSelection = null;
+#endif
+
+    void Update()
+    {
+#if UNITY_EDITOR
+        if (Application.isPlaying) return;
+        if (UnityEditor.Selection.activeGameObject != previousSelection && UnityEditor.Selection.activeGameObject == gameObject)
+        {
+            setSphereTexture();
+        }
+        previousSelection = UnityEditor.Selection.activeGameObject;
+
+#endif
     }
 
 }
