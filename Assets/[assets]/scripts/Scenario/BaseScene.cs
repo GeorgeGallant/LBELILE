@@ -8,7 +8,7 @@ public class BaseScene : MonoBehaviour
     public string videoURL;
     [HideInInspector]
     public VideoLoaderV2 videoLoader;
-    public ScenarioObject[] scenarioObjects;
+    public SceneObject[] scenarioObjects;
     public BaseScene videoFinishedScenario;
     public bool loopVideo = false;
     public BaseSceneActivatable[] activatables;
