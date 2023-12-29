@@ -7,15 +7,22 @@ using UnityEngine;
 public class SceneRadioActivatable : BaseSceneActivatable
 {
     public string activateIntent;
-    private void Start()
+    public override void activate()
     {
+        base.activate();
         AzureVoice.intentEvent.AddListener(intentListener);
+    }
+
+    public override void deactivate()
+    {
+        base.deactivate();
+        AzureVoice.intentEvent.RemoveListener(intentListener);
     }
 
     private void intentListener((Dictionary<string, AzureVoice.Intent> intents, string topIntent, string initiator) o)
     {
         if (scenarioActive) return;
-        if (o.topIntent.ToLower() == activateIntent.ToLower())
+        if (o.initiator == "radio" && o.topIntent.ToLower() == activateIntent.ToLower())
         {
             activateNextScenario();
         }
