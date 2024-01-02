@@ -703,6 +703,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftController: {fileID: 8202934410071038336}
   rightController: {fileID: 6350473748674310484}
+  rays:
+  - {fileID: 7021368599861793441}
+  - {fileID: 585335874378895290}
 --- !u!114 &7867191723127126326
 MonoBehaviour:
   m_ObjectHideFlags: 0

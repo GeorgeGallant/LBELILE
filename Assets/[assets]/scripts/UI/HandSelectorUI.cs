@@ -35,4 +35,13 @@ public class HandSelectorUI : MonoBehaviour
     {
 
     }
+
+    void OnEnable()
+    {
+        GlobalPlayer.AddRayUser(this);
+    }
+    void OnDisable()
+    {
+        GlobalPlayer.RemoveRayUser(this);
+    }
 }

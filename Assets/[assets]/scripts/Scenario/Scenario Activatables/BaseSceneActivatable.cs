@@ -20,9 +20,12 @@ public class BaseSceneActivatable : MonoBehaviour
         if (startRan) return;
         startRan = true;
     }
-    protected void activateNextScenario()
+    protected void activateNextScene()
     {
-        activateScenario.startScene();
+        if (activateScenario)
+        {
+            activateScenario.startScene();
+        }
     }
     public virtual void activate()
     {

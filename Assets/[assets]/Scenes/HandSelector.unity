@@ -430,7 +430,7 @@ PrefabInstance:
     - target: {fileID: 4695354193417496168, guid: 2bd83b02b21215940b2d84053ab16fdb,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
-      value: 4294967295
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4872789645602132675, guid: 2bd83b02b21215940b2d84053ab16fdb,
         type: 3}
@@ -445,7 +445,7 @@ PrefabInstance:
     - target: {fileID: 8715642704173692977, guid: 2bd83b02b21215940b2d84053ab16fdb,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
-      value: 4294967295
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

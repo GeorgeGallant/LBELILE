@@ -23,16 +23,53 @@ public class GlobalPlayer : MonoBehaviour
     }
     public XRDirectInteractor rightController;
 
+    public GameObject[] rays;
+    static bool raysEnabled = false;
+    static List<MonoBehaviour> rayUsers = new();
+
     private void Start()
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);
+        UpdateRayState();
     }
 
     public static XRDirectInteractor GetOtherHand(XRDirectInteractor hand)
     {
         if (hand == globalRightController) return globalLeftController;
         else return globalRightController;
+    }
+
+    public static void AddRayUser(MonoBehaviour user)
+    {
+        if (!rayUsers.Contains(user))
+            rayUsers.Add(user);
+        UpdateRayState();
+    }
+    public static void RemoveRayUser(MonoBehaviour user)
+    {
+        if (rayUsers.Contains(user))
+            rayUsers.Remove(user);
+        UpdateRayState();
+    }
+    static void UpdateRayState()
+    {
+        if (raysEnabled && rayUsers.Count == 0)
+        {
+            foreach (var item in instance.rays)
+            {
+                item.SetActive(false);
+                raysEnabled = false;
+            }
+        }
+        else if (!raysEnabled && rayUsers.Count > 0)
+        {
+            foreach (var item in instance.rays)
+            {
+                item.SetActive(true);
+                raysEnabled = true;
+            }
+        }
     }
 
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,22 @@ public class ColliderActivatable : BaseSceneActivatable
         interactable = gameObject.AddComponent<XRSimpleInteractable>();
         interactable.interactionLayers = InteractionLayerMask.NameToLayer("RayInteractibles");
         interactable.colliders.Concat(gameObject.GetComponents<Collider>());
+        interactable.activated.AddListener(selected);
+    }
+
+    private void selected(ActivateEventArgs arg0)
+    {
+        activateNextScene();
+    }
+    public override void activate()
+    {
+        base.activate();
+        GlobalPlayer.AddRayUser(this);
+    }
+
+    public override void deactivate()
+    {
+        base.deactivate();
+        GlobalPlayer.RemoveRayUser(this);
     }
 }
