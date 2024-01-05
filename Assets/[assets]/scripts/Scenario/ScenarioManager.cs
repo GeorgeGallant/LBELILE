@@ -50,7 +50,6 @@ public class ScenarioManager : MonoBehaviour
             {
                 go = Instantiate(go);
                 key.gameObject = go;
-                if (keys[i].spawnPosition) go.transform.SetPositionAndRotation(keys[i].spawnPosition.position, keys[i].spawnPosition.rotation);
             }
             go.SetActive(false);
             if (gameObjectDictionary.ContainsKey(key.scenarioObject))
@@ -63,12 +62,23 @@ public class ScenarioManager : MonoBehaviour
         }
     }
 
-    public static void enableScenarioObjects(ScenarioObject[] objects)
+    public static void enableScenarioObjects(SceneObject[] objects)
     {
+        Dictionary<ScenarioObject, Transform> dict = new Dictionary<ScenarioObject, Transform>();
+        foreach (var item in objects)
+        {
+            dict.Add(item.scenarioObject, item.spawnPosition);
+        }
         foreach (var objectKey in gameObjectDictionary.Keys)
         {
-            if (objects.Contains(objectKey))
+            if (dict.Keys.Contains(objectKey))
+            {
                 gameObjectDictionary[objectKey].SetActive(true);
+                if (dict[objectKey])
+                {
+                    gameObjectDictionary[objectKey].transform.SetPositionAndRotation(dict[objectKey].position, dict[objectKey].rotation);
+                }
+            }
             else
             {
                 gameObjectDictionary[objectKey].SetActive(false);
@@ -81,12 +91,17 @@ public class ScenarioManager : MonoBehaviour
     {
 
     }
+    [System.Serializable]
+    public struct KeyObject
+    {
+        public ScenarioObject scenarioObject;
+        public GameObject gameObject;
+    }
 }
 [System.Serializable]
-public struct KeyObject
+public struct SceneObject
 {
     public ScenarioObject scenarioObject;
-    public GameObject gameObject;
     public Transform spawnPosition;
 }
 

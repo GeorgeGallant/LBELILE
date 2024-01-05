@@ -31,6 +31,7 @@ public class HandSelectionManagerV2 : MonoBehaviour
     public void Start()
     {
         config = ConfigManager.Instance;
+        if (bodyColor == null) setHandColor(0);
         var maleRight = Instantiate(maleRightHandModel, rightController.transform, worldPositionStays: false);
         var maleLeft = Instantiate(maleLeftHandModel, leftController.transform, worldPositionStays: false);
 
