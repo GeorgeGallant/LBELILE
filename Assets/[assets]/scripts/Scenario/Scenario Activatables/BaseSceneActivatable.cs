@@ -12,7 +12,9 @@ public class BaseSceneActivatable : MonoBehaviour
     {
         get
         {
-            return scenarioActivatable.isActive;
+            if (scenarioActivatable)
+                return scenarioActivatable.isActive;
+            else return false;
         }
     }
     protected virtual void Start()

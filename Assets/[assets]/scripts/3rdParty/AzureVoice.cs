@@ -15,7 +15,7 @@ namespace ThirdParty
     {
         static bool busy = false;
         public static UnityEngine.Events.UnityEvent<(Dictionary<string, Intent> intents, string topIntent, string initiator)> intentEvent = new UnityEngine.Events.UnityEvent<(Dictionary<string, Intent> intents, string topIntent, string initiator)>();
-        public static async Task Listener(ValueWrapper<bool> continueListening, string initiator)
+        public static async Task Listener(ValueWrapper<bool> continueListening, string initiator, bool passive = false)
         {
             if (busy) return;
             busy = true;
@@ -27,7 +27,7 @@ namespace ThirdParty
             recognizer.Canceled += cancelled;
             await recognizer.StartContinuousRecognitionAsync();
 
-            while (continueListening.Value) await Task.Delay(100);
+            while (continueListening != null && continueListening.Value) await Task.Delay(100);
 
             UnityEngine.Debug.Log("no longer listening");
 
@@ -40,6 +40,44 @@ namespace ThirdParty
                 UnityEngine.Debug.Log($"{utterance}, {result.Reason}");
                 if (result.Reason == ResultReason.RecognizedSpeech)
                     await GetIntentFromUtterance(utterance, initiator);
+                finish();
+            }
+            void cancelled(object sender, SpeechRecognitionCanceledEventArgs e)
+            {
+                SpeechRecognitionResult result = e.Result;
+                string utterance = result.Text;
+
+                UnityEngine.Debug.Log($"Cancelled: {utterance}, {result.Reason}, {e.ErrorDetails}");
+                finish();
+            }
+            void finish()
+            {
+                recognizer.Recognized -= resultRecieved;
+                recognizer.Canceled -= cancelled;
+                busy = false;
+            }
+        }
+        public static async Task ListenUntil()
+        {
+            if (busy) return;
+            busy = true;
+            var config = SpeechConfig.FromSubscription(ConfigManager.SUBSCRIPTION_KEY, ConfigManager.REGION_NAME);
+
+            using var recognizer = new SpeechRecognizer(config);
+            recognizer.Recognized += resultRecieved;
+            recognizer.Canceled += cancelled;
+
+            await recognizer.RecognizeOnceAsync().ConfigureAwait(false);
+
+            async void resultRecieved(object sender, SpeechRecognitionEventArgs e)
+            {
+                SpeechRecognitionResult result = e.Result;
+                string utterance = result.Text;
+                UnityEngine.Debug.Log($"{utterance}, {result.Reason}");
+                if (result.Reason == ResultReason.RecognizedSpeech)
+                    await GetIntentFromUtterance(utterance, "once");
+                else
+                    intentEvent.Invoke((new Dictionary<string, Intent>(), "No match!", "once"));
                 finish();
             }
             void cancelled(object sender, SpeechRecognitionCanceledEventArgs e)

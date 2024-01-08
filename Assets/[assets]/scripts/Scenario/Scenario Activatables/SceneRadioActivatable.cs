@@ -19,6 +19,17 @@ public class SceneRadioActivatable : BaseSceneActivatable
         AzureVoice.intentEvent.RemoveListener(intentListener);
     }
 
+    void OnEnable()
+    {
+        if (!scenarioActive) return;
+        activate();
+    }
+
+    void OnDisable()
+    {
+        deactivate();
+    }
+
     private void intentListener((Dictionary<string, AzureVoice.Intent> intents, string topIntent, string initiator) o)
     {
         if (scenarioActive) return;
