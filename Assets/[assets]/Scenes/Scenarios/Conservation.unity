@@ -1382,7 +1382,7 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 0}
+  activateScene: {fileID: 2129817804}
 --- !u!1 &410944826
 GameObject:
   m_ObjectHideFlags: 0
@@ -4494,17 +4494,17 @@ MonoBehaviour:
   comboActivateEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1573369613}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 1573369615}
+        m_TargetAssemblyTypeName: BinocularEventActivatable, Assembly-CSharp
+        m_MethodName: setAllowActivate
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   activated: 
 --- !u!1 &1737063829
