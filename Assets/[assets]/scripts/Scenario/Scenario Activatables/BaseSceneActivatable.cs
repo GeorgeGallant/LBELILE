@@ -6,9 +6,9 @@ using UnityEngine.Events;
 public class BaseSceneActivatable : MonoBehaviour
 {
     public UnityEvent activateEvent = new UnityEvent();
-    public BaseScene activateScenario;
+    public BaseScene activateScene;
     bool startRan = false;
-    protected bool scenarioActive
+    protected bool sceneActive
     {
         get
         {
@@ -24,9 +24,9 @@ public class BaseSceneActivatable : MonoBehaviour
     }
     protected void activateNextScene()
     {
-        if (activateScenario)
+        if (activateScene)
         {
-            activateScenario.startScene();
+            activateScene.startScene();
         }
     }
     public virtual void activate()

@@ -19,7 +19,7 @@ public class PassiveListenerActivatable : BaseSceneActivatable
     }
     async void OnEnable()
     {
-        if (!scenarioActive) return;
+        if (!sceneActive) return;
         Debug.Log("now passive listening");
         AzureVoice.intentEvent.AddListener(intentListener);
         await AzureVoice.ListenUntil();
@@ -34,7 +34,7 @@ public class PassiveListenerActivatable : BaseSceneActivatable
 
     private void intentListener((Dictionary<string, AzureVoice.Intent> intents, string topIntent, string initiator) o)
     {
-        if (!scenarioActive) return;
+        if (!sceneActive) return;
         if (o.initiator == "once")
         {
             if (o.topIntent.ToLower() == activateIntent.ToLower())

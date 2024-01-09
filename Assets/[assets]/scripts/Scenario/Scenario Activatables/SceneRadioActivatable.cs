@@ -21,7 +21,7 @@ public class SceneRadioActivatable : BaseSceneActivatable
 
     void OnEnable()
     {
-        if (!scenarioActive) return;
+        if (!sceneActive) return;
         activate();
     }
 
@@ -32,7 +32,7 @@ public class SceneRadioActivatable : BaseSceneActivatable
 
     private void intentListener((Dictionary<string, AzureVoice.Intent> intents, string topIntent, string initiator) o)
     {
-        if (scenarioActive) return;
+        if (sceneActive) return;
         if (o.initiator == "radio" && o.topIntent.ToLower() == activateIntent.ToLower())
         {
             activateNextScene();

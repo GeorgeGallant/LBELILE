@@ -10,14 +10,8 @@ public class NotepadLineElement : MonoBehaviour
 
     void Start()
     {
-        lineEvent.AddListener(test);
         if (videoFinishedScene)
             lineEvent.AddListener(openScene);
-    }
-
-    private void test()
-    {
-        Debug.Log(lineText);
     }
 
     private void openScene()

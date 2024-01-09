@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ComboActivator : MonoBehaviour
+public class ComboActivator : BaseSceneActivatable
 {
     public ComboActivatable[] activatables;
     List<Activator> activators = new List<Activator>();
@@ -11,7 +11,7 @@ public class ComboActivator : MonoBehaviour
 
     public bool[] activated;
 
-    void Start()
+    protected override void Start()
     {
         foreach (var activatable in activatables)
         {
@@ -23,7 +23,7 @@ public class ComboActivator : MonoBehaviour
 
     public void updateCombo(ComboActivatable comboUpdate, bool active)
     {
-        if (comboActivated) return;
+        if (sceneActive && comboActivated) return;
         var activatable = activators.Find(x => x.comboActivatable == comboUpdate);
         if (activatable != null) activatable.activated = active;
         checkCombo();
@@ -41,6 +41,7 @@ public class ComboActivator : MonoBehaviour
         if (!allTrue) return;
         comboActivated = true;
         comboActivateEvent.Invoke();
+        activateNextScene();
     }
 }
 
