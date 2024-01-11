@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 65468199}
   - component: {fileID: 65468198}
   - component: {fileID: 65468201}
+  - component: {fileID: 65468202}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -234,6 +235,18 @@ MonoBehaviour:
       m_Calls: []
   playOnAwake: 1
   loop: 1
+--- !u!114 &65468202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65468197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8c454dfced8ce4b8d013d5e94bd90e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &66748829
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 4D2
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 1898487289}
   loopVideo: 0
   activatables: []
@@ -332,7 +345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 5D
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 2122777601}
   loopVideo: 0
   activatables: []
@@ -383,7 +396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 5F
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 765742091}
   loopVideo: 0
   activatables: []
@@ -583,6 +596,7 @@ MonoBehaviour:
   lineEvent:
     m_PersistentCalls:
       m_Calls: []
+  videoFinishedScene: {fileID: 0}
 --- !u!1 &157695047
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,7 +728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 5G
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 1744953634}
   loopVideo: 0
   activatables: []
@@ -765,7 +779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 3BL
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 765742091}
   loopVideo: 0
   activatables: []
@@ -1150,7 +1164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 3C
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 841281015}
   loopVideo: 0
   activatables: []
@@ -1201,7 +1215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 4G
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 765742091}
   loopVideo: 0
   activatables: []
@@ -1252,7 +1266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 4F
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 1898487289}
   loopVideo: 0
   activatables: []
@@ -1303,7 +1317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 4B
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 1737063831}
   loopVideo: 0
   activatables: []
@@ -1770,7 +1784,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 2D
   videoLoader: {fileID: 0}
-  scenarioObjects: 02000000
+  scenarioObjects:
+  - scenarioObject: 0
+    spawnPosition: {fileID: 0}
   videoFinishedScenario: {fileID: 1931877300}
   loopVideo: 1
   activatables: []
@@ -1805,10 +1821,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 1A
   videoLoader: {fileID: 0}
-  scenarioObjects: 00000000
+  scenarioObjects:
+  - scenarioObject: 0
+    spawnPosition: {fileID: 773032673}
+  - scenarioObject: 0
+    spawnPosition: {fileID: 0}
   videoFinishedScenario: {fileID: 2025262541}
   loopVideo: 0
-  activatables: []
+  activatables:
+  - {fileID: 0}
 --- !u!4 &765742092
 Transform:
   m_ObjectHideFlags: 0
@@ -1818,13 +1839,143 @@ Transform:
   m_GameObject: {fileID: 765742090}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5078049, y: 0.31152076, z: -0.10478604}
+  m_LocalPosition: {x: -1.5078049, y: 0.31152076, z: -0.047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1778183948}
+  - {fileID: 1373357192}
+  - {fileID: 773032673}
   m_Father: {fileID: 940948731}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &773032672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 773032673}
+  - component: {fileID: 773032674}
+  m_Layer: 0
+  m_Name: 1Radio
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &773032673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773032672}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.206, y: -0.969, z: 1.365}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 765742092}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &773032674
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773032672}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.515
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &803722139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,7 +2023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 4E
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 473094385}
   loopVideo: 0
   activatables: []
@@ -2087,7 +2238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 5A
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 1550901325}
   loopVideo: 0
   activatables: []
@@ -2345,7 +2496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 3D
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 765742091}
   loopVideo: 0
   activatables: []
@@ -2707,6 +2858,134 @@ PlayableDirector:
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
+--- !u!1 &1373357191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1373357192}
+  - component: {fileID: 1373357193}
+  m_Layer: 0
+  m_Name: Audio SourceSO
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1373357192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373357191}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.693, y: -1.043, z: 0.204}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 765742092}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1373357193
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373357191}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1386036249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2972,7 +3251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 5H
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 1042947000}
   loopVideo: 0
   activatables: []
@@ -3023,7 +3302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 5B
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 765742091}
   loopVideo: 0
   activatables: []
@@ -3095,6 +3374,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -6703475759535462905, guid: a6a7655f718f7a644a7d5087e7e42e30, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 8926810407900993332, guid: a6a7655f718f7a644a7d5087e7e42e30, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1562930154
@@ -3145,6 +3426,7 @@ MonoBehaviour:
   lineEvent:
     m_PersistentCalls:
       m_Calls: []
+  videoFinishedScene: {fileID: 0}
 --- !u!1 &1583886687
 GameObject:
   m_ObjectHideFlags: 0
@@ -3212,7 +3494,9 @@ PlayableDirector:
   - key: {fileID: 4222582285200704969, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
     value: {fileID: 0}
   - key: {fileID: 4222582285200704969, guid: 977ddd872620fa04f8ba8cbede73e2d8, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1373357193}
+  - key: {fileID: -1759268366442539699, guid: 977ddd872620fa04f8ba8cbede73e2d8, type: 2}
+    value: {fileID: 773032674}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1588065716
@@ -3502,7 +3786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 2C
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 739733962}
   loopVideo: 1
   activatables: []
@@ -3553,7 +3837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 4C
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 70657244}
   loopVideo: 0
   activatables: []
@@ -3604,7 +3888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 3BL
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 765742091}
   loopVideo: 0
   activatables: []
@@ -3684,6 +3968,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -1973665170740074023, guid: 18d6b6459891f9f48b2b7a19bb907a0b, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -474854978342834435, guid: 592529797674f664085e79ad09a2d3b3, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1771053862
@@ -3734,6 +4020,7 @@ MonoBehaviour:
   lineEvent:
     m_PersistentCalls:
       m_Calls: []
+  videoFinishedScene: {fileID: 0}
 --- !u!1 &1778183947
 GameObject:
   m_ObjectHideFlags: 0
@@ -3761,7 +4048,7 @@ Transform:
   m_GameObject: {fileID: 1778183947}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3783,7 +4070,9 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 4222582285200704969, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1373357193}
+  - key: {fileID: 4318906262444906863, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
+    value: {fileID: 773032674}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1778183950
@@ -3800,7 +4089,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   activateScenario: {fileID: 0}
 --- !u!1 &1780303921
 GameObject:
@@ -3849,7 +4150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 2B
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 1706387272}
   loopVideo: 1
   activatables: []
@@ -4150,9 +4451,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 2AwBin
   videoLoader: {fileID: 0}
-  scenarioObjects: 01000000
+  scenarioObjects:
+  - scenarioObject: 1
+    spawnPosition: {fileID: 0}
   videoFinishedScenario: {fileID: 1780303923}
-  loopVideo: 1
+  loopVideo: 0
   activatables: []
 --- !u!1 &1898487287
 GameObject:
@@ -4201,7 +4504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 5E
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 160582081}
   loopVideo: 0
   activatables: []
@@ -4252,7 +4555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 3A
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 2129817804}
   loopVideo: 0
   activatables: []
@@ -4303,7 +4606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 4H
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 250659915}
   loopVideo: 0
   activatables: []
@@ -4354,7 +4657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 4D1
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 0
   activatables: []
@@ -4539,7 +4842,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 1B
   videoLoader: {fileID: 0}
-  scenarioObjects: 00000000
+  scenarioObjects:
+  - scenarioObject: 0
+    spawnPosition: {fileID: 0}
   videoFinishedScenario: {fileID: 1863653290}
   loopVideo: 0
   activatables: []
@@ -4729,7 +5034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 5C
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 1898487289}
   loopVideo: 0
   activatables: []
@@ -4782,19 +5087,15 @@ MonoBehaviour:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
       type: 3}
-    spawnPosition: {fileID: 0}
   - scenarioObject: 1
     gameObject: {fileID: 184354812307002558, guid: c6e809e96d9822640aa317a8fa94c5b8,
       type: 3}
-    spawnPosition: {fileID: 0}
   - scenarioObject: 2
     gameObject: {fileID: 4548223805108125948, guid: e31af35d530af0043bcf17ad7aec68ac,
       type: 3}
-    spawnPosition: {fileID: 0}
   - scenarioObject: 3
     gameObject: {fileID: 1035828444273184424, guid: fd39933c54602ef4aae2280090237a92,
       type: 3}
-    spawnPosition: {fileID: 0}
   activeScenario: {fileID: 0}
   videoSphere: {fileID: 65468197}
 --- !u!1 &2129817802
@@ -4844,7 +5145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 4A
   videoLoader: {fileID: 0}
-  scenarioObjects: 
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 625443159}
   loopVideo: 0
   activatables: []
