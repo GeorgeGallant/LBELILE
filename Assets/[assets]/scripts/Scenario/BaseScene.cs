@@ -25,8 +25,8 @@ public class BaseScene : MonoBehaviour
     }
     protected void Start()
     {
-        if (!Application.isPlaying) return;
         if (ranStart) return;
+        if (!Application.isPlaying) return;
         ranStart = true;
         var activatables = GetComponentsInChildren<BaseSceneActivatable>();
         foreach (var item in activatables)
@@ -61,6 +61,7 @@ public class BaseScene : MonoBehaviour
 
     void activateScene()
     {
+        Debug.Log("activating scenario!");
         ScenarioManager.enableScenarioObjects(scenarioObjects);
         foreach (var item in activatables)
         {

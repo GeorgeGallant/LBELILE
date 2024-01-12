@@ -3,6 +3,7 @@ using Microsoft.CognitiveServices.Speech.Intent;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -126,13 +127,21 @@ namespace ThirdParty
                 var responseContent = JObject.Parse(strResponseContent).ToObject<IntentResponse>();
 
                 UnityEngine.Debug.Log($"INTENT: {responseContent.prediction.topIntent}");
-                intentEvent.Invoke((responseContent.prediction.intents, responseContent.prediction.topIntent, initiator));
+                UnityMainThread.wkr.AddJob(() =>
+                {
+                    intentEvent.Invoke((responseContent.prediction.intents, responseContent.prediction.topIntent, initiator));
+                }
+                );
             }
             catch (Exception e)
             {
                 UnityEngine.Debug.LogError(e);
                 UnityEngine.Debug.Log(strResponseContent);
             }
+        }
+        static private void requestDone((Dictionary<string, AzureVoice.Intent> intents, string topIntent, string initiator) o)
+        {
+            intentEvent.Invoke(o);
         }
         public class IntentResponse
         {

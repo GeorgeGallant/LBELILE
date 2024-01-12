@@ -24,7 +24,7 @@ public class GlobalPlayer : MonoBehaviour
     public XRDirectInteractor rightController;
 
     public GameObject[] rays;
-    static bool raysEnabled = false;
+    static bool raysEnabled = true;
     static List<MonoBehaviour> rayUsers = new();
 
     private void Start()

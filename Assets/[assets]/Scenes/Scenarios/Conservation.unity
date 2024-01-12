@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 65468200}
   - component: {fileID: 65468199}
   - component: {fileID: 65468198}
-  - component: {fileID: 65468201}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -207,33 +206,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &65468201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65468197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fabd9434d27794644aa5945c321e9904, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  videoURL: 1A
-  targetMaterialProperty: 
-  targetGameObject: {fileID: 0}
-  currentlyPlaying: 0
-  playStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  onVideoFinished:
-    m_PersistentCalls:
-      m_Calls: []
-  onVideoPrepared:
-    m_PersistentCalls:
-      m_Calls: []
-  playOnAwake: 1
-  loop: 1
 --- !u!1 &66748829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,7 +1108,7 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 0}
+  activateScene: {fileID: 2025262541}
   activateIntent: p3v.dispatch.ackClear
 --- !u!82 &310660522
 AudioSource:
@@ -4643,7 +4615,7 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 1780303923}
+  activateScene: {fileID: 0}
   activatables:
   - {fileID: 182940747}
   - {fileID: 2066279442}
@@ -5990,10 +5962,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac18267674045b43a50b87098f41500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  video: {fileID: 0}
-  secondsTimeCode: 70
+  video: {fileID: 1491150931}
+  secondsTimeCode: 0
   timeCodeWindow: 14
-  anytimeAfterTimecode: 0
+  anytimeAfterTimecode: 1
 --- !u!1 &2088366683
 GameObject:
   m_ObjectHideFlags: 0
@@ -6080,7 +6052,7 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 0}
+  activateScene: {fileID: 1863653290}
   activateIntent: p3v.dispatch.ackCopy
 --- !u!1 &2122777599
 GameObject:
@@ -6143,6 +6115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2123698449}
   - component: {fileID: 2123698450}
+  - component: {fileID: 2123698451}
   m_Layer: 0
   m_Name: ScenarioManager
   m_TagString: Untagged
@@ -6193,6 +6166,18 @@ MonoBehaviour:
       type: 3}
   activeScenario: {fileID: 0}
   videoSphere: {fileID: 65468197}
+--- !u!114 &2123698451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123698448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7bcf79d870b7143a960d32e48a5728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2129817802
 GameObject:
   m_ObjectHideFlags: 0
