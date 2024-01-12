@@ -9,6 +9,7 @@ public class ComboActivatable : MonoBehaviour
     }
     protected void changeActivationState(bool state)
     {
-        comboActivator.updateCombo(this, state);
+        if (comboActivator)
+            comboActivator.updateCombo(this, state);
     }
 }

@@ -56,6 +56,7 @@ public class BinocularLookActivatable : BinocularActivatable
         if (looking != frameLooking)
         {
             onLookEvent.Invoke(frameLooking);
+            changeActivationState(frameLooking);
         }
 
         looking = frameLooking;

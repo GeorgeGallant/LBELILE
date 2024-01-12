@@ -11,8 +11,9 @@ public class ComboActivator : BaseSceneActivatable
 
     public bool[] activated;
 
-    protected override void Start()
+    public override void activate()
     {
+        base.activate();
         foreach (var activatable in activatables)
         {
             activatable.initialize(this);
