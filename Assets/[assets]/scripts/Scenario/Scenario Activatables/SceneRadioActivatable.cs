@@ -32,7 +32,7 @@ public class SceneRadioActivatable : BaseSceneActivatable
 
     private void intentListener((Dictionary<string, AzureVoice.Intent> intents, string topIntent, string initiator) o)
     {
-        if (sceneActive) return;
+        if (!sceneActive) return;
         if (o.initiator == "radio" && o.topIntent.ToLower() == activateIntent.ToLower())
         {
             activateNextScene();
