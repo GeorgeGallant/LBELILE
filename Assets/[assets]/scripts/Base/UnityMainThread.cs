@@ -11,7 +11,8 @@ internal class UnityMainThread : MonoBehaviour
 
     void Awake()
     {
-        wkr = this;
+        if (!wkr)
+            wkr = this;
     }
 
     void Update()
@@ -20,8 +21,13 @@ internal class UnityMainThread : MonoBehaviour
             jobs.Dequeue().Invoke();
     }
 
-    internal void AddJob(Action newJob)
+    static internal void AddJob(Action newJob)
     {
-        jobs.Enqueue(newJob);
+        if (!wkr)
+        {
+            var go = new GameObject("MainThreadWorker");
+            wkr = go.AddComponent<UnityMainThread>();
+        }
+        wkr.jobs.Enqueue(newJob);
     }
 }

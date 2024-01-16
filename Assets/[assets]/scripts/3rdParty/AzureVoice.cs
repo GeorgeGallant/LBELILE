@@ -127,7 +127,7 @@ namespace ThirdParty
                 var responseContent = JObject.Parse(strResponseContent).ToObject<IntentResponse>();
 
                 UnityEngine.Debug.Log($"INTENT: {responseContent.prediction.topIntent}");
-                UnityMainThread.wkr.AddJob(() =>
+                UnityMainThread.AddJob(() =>
                 {
                     intentEvent.Invoke((responseContent.prediction.intents, responseContent.prediction.topIntent, initiator));
                 }
