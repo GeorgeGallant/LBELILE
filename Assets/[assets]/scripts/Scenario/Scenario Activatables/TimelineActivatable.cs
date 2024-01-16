@@ -2,9 +2,8 @@ using UnityEngine.Playables;
 
 public class TimelineActivatable : BaseSceneActivatable
 {
-    protected override void Start()
+    protected override void StartSetup()
     {
-        base.Start();
         director = gameObject.GetComponent<PlayableDirector>();
     }
     PlayableDirector director;

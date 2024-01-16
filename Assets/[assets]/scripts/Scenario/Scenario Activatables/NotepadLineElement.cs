@@ -7,6 +7,7 @@ public class NotepadLineElement : MonoBehaviour
     public string lineText = "";
     public UnityEvent lineEvent = new UnityEvent();
     public BaseScene videoFinishedScene;
+    public bool selectable = true;
 
     void Start()
     {

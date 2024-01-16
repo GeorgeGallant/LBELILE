@@ -21,7 +21,9 @@ public class BaseSceneActivatable : MonoBehaviour
     {
         if (startRan) return;
         startRan = true;
+        StartSetup();
     }
+    protected virtual void StartSetup() { }
     protected void activateNextScene()
     {
         if (activateScene)

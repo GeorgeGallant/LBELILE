@@ -71,7 +71,7 @@ public class NotepadGrabbable : MonoBehaviour
             lineEvents.Add(line, item.lineEvent);
             line.tmp.SetText(item.lineText);
             Debug.Log(item.lineText);
-            line.available = true;
+            line.available = item.selectable;
             i++;
         }
     }

@@ -9,9 +9,9 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ColliderActivatable : BaseSceneActivatable
 {
     XRSimpleInteractable interactable;
-    protected override void Start()
+
+    protected override void StartSetup()
     {
-        base.Start();
         interactable = gameObject.AddComponent<XRSimpleInteractable>();
         interactable.interactionLayers = InteractionLayerMask.NameToLayer("RayInteractibles");
         interactable.colliders.Concat(gameObject.GetComponents<Collider>());
