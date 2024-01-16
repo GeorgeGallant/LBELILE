@@ -21,10 +21,16 @@ public class NotepadGrabbable : MonoBehaviour
         interactable.selectEntered.AddListener(PickedUp);
         interactable.selectExited.AddListener(LetGo);
         penGrabbable.gameObject.SetActive(false);
+        penGrabbable.selectExited.AddListener(resetPenPos);
         lines = GetComponentsInChildren<NotepadLine>();
         interactable.activated.AddListener(activateEvent);
         penGrabbable.activated.AddListener(activateEvent);
 
+    }
+
+    private void resetPenPos(SelectExitEventArgs arg0)
+    {
+        penGrabbable.gameObject.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
     }
 
     private void activateEvent(ActivateEventArgs arg0)
@@ -44,18 +50,13 @@ public class NotepadGrabbable : MonoBehaviour
     protected void LetGo(SelectExitEventArgs args = null)
     {
         held = false;
-        // var otherHand = GlobalPlayer.GetOtherHand(args.interactorObject as XRDirectInteractor);
-        // args.manager.SelectExit(otherHand as IXRSelectInteractor, penGrabbable);
-        penGrabbable.forceHeld = false;
+        resetPenPos(null);
         penGrabbable.gameObject.SetActive(false);
     }
     protected void PickedUp(SelectEnterEventArgs args = null)
     {
         held = true;
         penGrabbable.gameObject.SetActive(true);
-        penGrabbable.forceHeld = true;
-        var otherHand = GlobalPlayer.GetOtherHand(args.interactorObject as XRDirectInteractor);
-        args.manager.SelectEnter(otherHand as IXRSelectInteractor, penGrabbable);
     }
     public void SetLines(NotepadLineElement[] elements)
     {
@@ -77,7 +78,7 @@ public class NotepadGrabbable : MonoBehaviour
     }
     protected void Update()
     {
-        if (!held) { if (currentSelection) { currentSelection.circle.enabled = true; currentSelection = null; } return; }
+        if (!held || !penGrabbable.isSelected) { if (currentSelection) { currentSelection.circle.enabled = true; currentSelection = null; } return; }
         float distanceToBeat = 5000;
         NotepadLine newLine = null;
         foreach (var item in lines)

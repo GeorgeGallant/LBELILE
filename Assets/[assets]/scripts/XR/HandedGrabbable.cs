@@ -19,7 +19,6 @@ public class XRHandedGrabInteractable : XRGrabInteractable
     private Transform m_OriginalAttachTransform;
     [SerializeField]
     Hand restrictGrabbableHand;
-    public bool forceHeld = false;
 
     protected override void Awake()
     {
@@ -66,7 +65,6 @@ public class XRHandedGrabInteractable : XRGrabInteractable
     }
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
-        if (forceHeld) args.manager.SelectEnter(args.interactorObject, this);
         base.OnSelectExited(args);
     }
 }
