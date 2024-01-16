@@ -58,7 +58,7 @@ namespace ThirdParty
                 busy = false;
             }
         }
-        public static async Task ListenUntil()
+        public static async Task ListenUntil(ValueWrapper<bool> continueListening)
         {
             if (busy) return;
             busy = true;
@@ -72,13 +72,23 @@ namespace ThirdParty
 
             async void resultRecieved(object sender, SpeechRecognitionEventArgs e)
             {
+                if (!continueListening.Value)
+                {
+                    finish();
+                    return;
+                }
                 SpeechRecognitionResult result = e.Result;
                 string utterance = result.Text;
                 UnityEngine.Debug.Log($"{utterance}, {result.Reason}");
                 if (result.Reason == ResultReason.RecognizedSpeech)
                     await GetIntentFromUtterance(utterance, "once");
-                else
-                    intentEvent.Invoke((new Dictionary<string, Intent>(), "No match!", "once"));
+                else if (result.Reason == ResultReason.NoMatch && continueListening.Value)
+                {
+                    UnityEngine.Debug.Log("No utterance, trying again.");
+                    busy = false;
+                    await ListenUntil(continueListening);
+                    return;
+                }
                 finish();
             }
             void cancelled(object sender, SpeechRecognitionCanceledEventArgs e)
