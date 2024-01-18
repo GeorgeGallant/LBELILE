@@ -7,13 +7,13 @@ using UnityEngine;
 public class SceneRadioActivatable : BaseSceneActivatable
 {
     public string activateIntent;
-    public override void activate()
+    public override void activateModifiers()
     {
         base.activate();
         AzureVoice.intentEvent.AddListener(intentListener);
     }
 
-    public override void deactivate()
+    public override void deactivateModifiers()
     {
         base.deactivate();
         AzureVoice.intentEvent.RemoveListener(intentListener);

@@ -7,13 +7,13 @@ public class TimelineActivatable : BaseSceneActivatable
         director = gameObject.GetComponent<PlayableDirector>();
     }
     PlayableDirector director;
-    public override void activate()
+    public override void activateModifiers()
     {
         base.activate();
         director.extrapolationMode = scenarioActivatable.loopVideo ? DirectorWrapMode.Loop : DirectorWrapMode.None;
         director.Play();
     }
-    public override void deactivate()
+    public override void deactivateModifiers()
     {
         base.deactivate();
         director.Stop();

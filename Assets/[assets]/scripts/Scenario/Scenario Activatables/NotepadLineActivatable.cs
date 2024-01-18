@@ -13,9 +13,8 @@ public class NotepadLineActivatable : BaseSceneActivatable
         lines = gameObject.GetComponentsInChildren<NotepadLineElement>(false);
     }
 
-    public override void activate()
+    public override void activateModifiers()
     {
-        base.activate();
         Debug.Log("activate notepad");
         NotepadGrabbable notepad = ScenarioManager.gameObjectDictionary[ScenarioObject.Notepad].GetComponent<NotepadGrabbable>();
         notepad.SetLines(lines);

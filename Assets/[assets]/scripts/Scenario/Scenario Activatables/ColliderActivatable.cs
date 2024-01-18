@@ -22,13 +22,12 @@ public class ColliderActivatable : BaseSceneActivatable
     {
         activateNextScene();
     }
-    public override void activate()
+    public override void activateModifiers()
     {
-        base.activate();
         GlobalPlayer.AddRayUser(this);
     }
 
-    public override void deactivate()
+    public override void deactivateModifiers()
     {
         base.deactivate();
         GlobalPlayer.RemoveRayUser(this);
