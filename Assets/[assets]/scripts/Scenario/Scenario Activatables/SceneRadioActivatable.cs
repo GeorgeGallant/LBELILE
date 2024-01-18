@@ -9,7 +9,6 @@ public class SceneRadioActivatable : BaseSceneActivatable
     public string activateIntent;
     public override void activateModifiers()
     {
-        base.activate();
         AzureVoice.intentEvent.AddListener(intentListener);
     }
 

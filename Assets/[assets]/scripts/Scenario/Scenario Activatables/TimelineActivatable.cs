@@ -9,7 +9,6 @@ public class TimelineActivatable : BaseSceneActivatable
     PlayableDirector director;
     public override void activateModifiers()
     {
-        base.activate();
         director.extrapolationMode = scenarioActivatable.loopVideo ? DirectorWrapMode.Loop : DirectorWrapMode.None;
         director.Play();
     }

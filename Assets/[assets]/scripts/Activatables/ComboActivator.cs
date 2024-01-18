@@ -13,7 +13,6 @@ public class ComboActivator : BaseSceneActivatable
 
     public override void activateModifiers()
     {
-        base.activate();
         foreach (var activatable in activatables)
         {
             activatable.initialize(this);
