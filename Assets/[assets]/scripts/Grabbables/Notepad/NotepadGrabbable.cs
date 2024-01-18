@@ -31,6 +31,7 @@ public class NotepadGrabbable : MonoBehaviour
     private void resetPenPos(SelectExitEventArgs arg0)
     {
         penGrabbable.gameObject.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+        penGrabbable.gameObject.transform.localScale = Vector3.one;
     }
 
     private void activateEvent(ActivateEventArgs arg0)

@@ -10,6 +10,14 @@ public class ScenarioManager : MonoBehaviour
     public KeyObject[] gameObjectDictionaryCreator = new KeyObject[0];
     public static Dictionary<ScenarioObject, GameObject> gameObjectDictionary = new Dictionary<ScenarioObject, GameObject>();
     public BaseScene activeScenario;
+    public List<string> activeKeywords = new List<string>();
+    public static List<string> ActiveKeywords
+    {
+        get
+        {
+            return instance.activeKeywords;
+        }
+    }
 
     public static BaseScene ActiveScenario
     {
@@ -86,11 +94,30 @@ public class ScenarioManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void addKeyword(string keyword)
     {
-
+        if (!activeKeywords.Contains(keyword))
+        {
+            activeKeywords.Add(keyword);
+        }
+        else
+        {
+            Debug.Log($"{keyword} already in keywords");
+        }
     }
+
+    public void removeKeyword(string keyword)
+    {
+        if (activeKeywords.Contains(keyword))
+        {
+            activeKeywords.Remove(keyword);
+        }
+        else
+        {
+            Debug.Log($"{keyword} not in keywords");
+        }
+    }
+
     [System.Serializable]
     public struct KeyObject
     {

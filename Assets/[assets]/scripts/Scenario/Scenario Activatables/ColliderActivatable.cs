@@ -16,21 +16,31 @@ public class ColliderActivatable : BaseSceneActivatable
         interactable.interactionLayers = InteractionLayerMask.NameToLayer("RayInteractibles");
         interactable.colliders.Concat(gameObject.GetComponents<Collider>());
         interactable.activated.AddListener(selected);
+        interactable.colliders.ForEach((collider) =>
+        {
+            collider.enabled = false;
+        });
     }
 
     private void selected(ActivateEventArgs arg0)
     {
         activateNextScene();
     }
-    public override void activate()
+    public override void activateModifiers()
     {
-        base.activate();
         GlobalPlayer.AddRayUser(this);
+        interactable.colliders.ForEach((collider) =>
+        {
+            collider.enabled = true;
+        });
     }
 
-    public override void deactivate()
+    public override void deactivateModifiers()
     {
-        base.deactivate();
         GlobalPlayer.RemoveRayUser(this);
+        interactable.colliders.ForEach((collider) =>
+        {
+            collider.enabled = false;
+        });
     }
 }

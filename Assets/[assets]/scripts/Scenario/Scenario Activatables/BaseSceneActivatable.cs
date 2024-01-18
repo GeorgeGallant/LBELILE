@@ -31,14 +31,38 @@ public class BaseSceneActivatable : MonoBehaviour
             activateScene.startScene();
         }
     }
-    public virtual void activate()
+    bool canActivate
     {
-        Start();
+        get
+        {
+            var modifiers = gameObject.GetComponents<BaseActivatableModifier>();
+            if (modifiers.Length == 0) return true;
+            for (int i = 0; i < modifiers.Length; i++)
+            {
+                if (!modifiers[i].activatable) return false;
+            }
+            return true;
+        }
     }
-    public virtual void deactivate()
+    public void activate()
+    {
+        if (!canActivate) return;
+        Start();
+        activateModifiers();
+    }
+    public virtual void activateModifiers()
     {
 
     }
+    public void deactivate()
+    {
+        deactivateModifiers();
+    }
+    public virtual void deactivateModifiers()
+    {
+
+    }
+
     public void setOwnerScenario(BaseScene owner, bool overrideOwner = false)
     {
         if (scenarioActivatable && overrideOwner)

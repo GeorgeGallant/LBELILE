@@ -8,14 +8,12 @@ public class PassiveListenerActivatable : BaseSceneActivatable
 {
     public string activateIntent;
     ValueWrapper<bool> activeListen = new ValueWrapper<bool>(false);
-    public override void activate()
+    public override void activateModifiers()
     {
-        base.activate();
         OnEnable();
     }
-    public override void deactivate()
+    public override void deactivateModifiers()
     {
-        base.deactivate();
         OnDisable();
     }
     async void OnEnable()

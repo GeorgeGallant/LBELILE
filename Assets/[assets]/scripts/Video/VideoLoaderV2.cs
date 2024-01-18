@@ -44,7 +44,6 @@ public class VideoLoaderV2 : MonoBehaviour
     void prepareCompleted(VideoPlayer source)
     {
         // GlobalVideoHandler.onPrepareComplete.RemoveListener(prepareCompleted);
-        Debug.Log(source);
         if (source.url != GlobalVideoHandler.pathResolver(videoURL)) { changePlayState(false); return; }
         changePlayState(true);
         (targetGameObject == null ? gameObject : targetGameObject).GetComponent<Renderer>().material.SetTexture(targetMaterialProperty == "" ? "_BaseMap" : targetMaterialProperty, source.targetTexture);
