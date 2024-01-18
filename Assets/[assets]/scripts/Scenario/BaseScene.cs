@@ -14,7 +14,7 @@ public class BaseScene : MonoBehaviour
     public SceneObject[] scenarioObjects;
     public BaseScene videoFinishedScenario;
     public bool loopVideo = false;
-    public BaseSceneActivatable[] activatables;
+    BaseSceneActivatable[] activatables;
     bool ranStart = false;
     public bool isActive
     {

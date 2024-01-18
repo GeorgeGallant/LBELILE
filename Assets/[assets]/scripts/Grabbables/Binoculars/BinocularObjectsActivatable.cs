@@ -5,7 +5,7 @@ using UnityEngine;
 public class BinocularObjectsActivatable : BaseSceneActivatable
 {
     public GameObject binocularObjects;
-    public override void activate()
+    public override void activateModifiers()
     {
         base.activate();
         BinocularGrabbable binocular = ScenarioManager.gameObjectDictionary[ScenarioObject.Binoculars].GetComponent<BinocularGrabbable>();
