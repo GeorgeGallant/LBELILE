@@ -14,7 +14,6 @@ public class TimelineActivatable : BaseSceneActivatable
     }
     public override void deactivateModifiers()
     {
-        base.deactivate();
         director.Stop();
     }
 }

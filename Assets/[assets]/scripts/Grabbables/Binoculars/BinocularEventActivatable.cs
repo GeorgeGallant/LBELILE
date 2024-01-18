@@ -26,7 +26,6 @@ public class BinocularEventActivatable : BaseSceneActivatable
 
     public override void deactivateModifiers()
     {
-        base.deactivate();
         ScenarioManager.gameObjectDictionary[ScenarioObject.Binoculars].GetComponent<BinocularGrabbable>().onReleased.RemoveListener(released);
     }
 }

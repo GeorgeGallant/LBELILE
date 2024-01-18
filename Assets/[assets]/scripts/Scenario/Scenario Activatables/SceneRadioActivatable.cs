@@ -14,7 +14,6 @@ public class SceneRadioActivatable : BaseSceneActivatable
 
     public override void deactivateModifiers()
     {
-        base.deactivate();
         AzureVoice.intentEvent.RemoveListener(intentListener);
     }
 

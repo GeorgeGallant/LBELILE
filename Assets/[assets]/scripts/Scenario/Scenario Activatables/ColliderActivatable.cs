@@ -29,7 +29,6 @@ public class ColliderActivatable : BaseSceneActivatable
 
     public override void deactivateModifiers()
     {
-        base.deactivate();
         GlobalPlayer.RemoveRayUser(this);
     }
 }
