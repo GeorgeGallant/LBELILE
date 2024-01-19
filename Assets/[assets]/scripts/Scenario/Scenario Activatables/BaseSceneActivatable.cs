@@ -12,8 +12,8 @@ public class BaseSceneActivatable : MonoBehaviour
     {
         get
         {
-            if (scenarioActivatable)
-                return scenarioActivatable.isActive;
+            if (activatableOwner)
+                return activatableOwner.isActive;
             else return false;
         }
     }
@@ -65,11 +65,11 @@ public class BaseSceneActivatable : MonoBehaviour
 
     public void setOwnerScenario(BaseScene owner, bool overrideOwner = false)
     {
-        if (scenarioActivatable && overrideOwner)
+        if (activatableOwner && overrideOwner)
         {
-            scenarioActivatable = owner;
+            activatableOwner = owner;
         }
-        else scenarioActivatable = owner;
+        else activatableOwner = owner;
     }
-    protected BaseScene scenarioActivatable;
+    internal BaseScene activatableOwner;
 }

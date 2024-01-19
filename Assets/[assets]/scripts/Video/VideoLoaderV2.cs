@@ -13,8 +13,10 @@ public class VideoLoaderV2 : MonoBehaviour
     public UnityEvent<bool> playStateChanged = new UnityEvent<bool>();
     public UnityEvent onVideoFinished = new UnityEvent();
     public UnityEvent onVideoPrepared = new UnityEvent();
+    public UnityEvent videoStopped = new UnityEvent();
     public bool playOnAwake = false;
     public bool loop = false;
+
 
     void Start()
     {
@@ -32,6 +34,7 @@ public class VideoLoaderV2 : MonoBehaviour
     {
         changePlayState(false);
         GlobalVideoHandler.StopVideo(videoURL);
+        videoStopped.Invoke();
     }
 
     void changePlayState(bool newState)

@@ -46,6 +46,7 @@ public class BaseScene : MonoBehaviour
     }
     public virtual void startScene()
     {
+        if (ScenarioManager.ActiveScenario == this) return;
         Start();
         if (ScenarioManager.ActiveScenario)
             ScenarioManager.ActiveScenario.deactivateScene();
@@ -67,6 +68,7 @@ public class BaseScene : MonoBehaviour
         {
             item.activate();
         }
+        videoLoader.onVideoPrepared.RemoveListener(activateScene);
     }
 
     protected void deactivateScene()
