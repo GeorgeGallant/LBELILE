@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class DynamicSceneSwitcher : BaseScene
 {
@@ -14,12 +16,12 @@ public class DynamicSceneSwitcher : BaseScene
     }
     public override void startScene()
     {
-        BaseScene scene = null;
-        for (int i = 0; i < ScenarioManager.ActiveKeywords.Count; i++)
+        var keys = keySceneDict.Keys.ToArray();
+        for (int i = 0; i < keys.Length; i++)
         {
-            if (keySceneDict.TryGetValue(ScenarioManager.ActiveKeywords[i], out scene))
+            if (ScenarioManager.ActiveKeywords.Contains(keys[i]))
             {
-                scene.startScene();
+                keySceneDict[keys[i]].startScene();
                 return;
             }
         }
