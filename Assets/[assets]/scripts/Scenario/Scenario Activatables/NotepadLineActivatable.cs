@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class NotepadLineActivatable : BaseSceneActivatable
 {
-    public NotepadLineElement[] lines;
+    NotepadLineElement[] lines;
     // Start is called before the first frame update
 
     protected override void StartSetup()

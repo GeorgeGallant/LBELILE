@@ -8,7 +8,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class HandSelectionManagerV2 : MonoBehaviour
 {
-
+    public bool forceBodyType = false;
+    public BodyType forcedBodyType = BodyType.Masculine;
     static BodyType bodyType = BodyType.Masculine;
     static Color? bodyColor = null;
 
@@ -42,7 +43,7 @@ public class HandSelectionManagerV2 : MonoBehaviour
         femaleHands = new List<GameObject> { femaleLeft, femaleRight };
 
         if (bodyColor == null) setHandColor(0);
-        setHandGender(bodyType);
+        setHandGender(forceBodyType ? forcedBodyType : bodyType);
 
 
     }

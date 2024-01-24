@@ -9,6 +9,7 @@ public class NotepadGrabbable : MonoBehaviour
 {
     XRHandedGrabInteractable interactable;
     public XRHandedGrabInteractable penGrabbable;
+    Transform penParent;
     public Transform selectorTip;
     private bool held = false;
 
@@ -25,11 +26,12 @@ public class NotepadGrabbable : MonoBehaviour
         lines = GetComponentsInChildren<NotepadLine>();
         interactable.activated.AddListener(activateEvent);
         penGrabbable.activated.AddListener(activateEvent);
-
+        penParent = penGrabbable.gameObject.transform.parent;
     }
 
-    private void resetPenPos(SelectExitEventArgs arg0)
+    private void resetPenPos(SelectExitEventArgs arg0 = null)
     {
+        penGrabbable.gameObject.transform.parent = penParent;
         penGrabbable.gameObject.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
         penGrabbable.gameObject.transform.localScale = Vector3.one;
     }
@@ -51,18 +53,38 @@ public class NotepadGrabbable : MonoBehaviour
     protected void LetGo(SelectExitEventArgs args = null)
     {
         held = false;
-        resetPenPos(null);
+        resetPenPos();
         penGrabbable.gameObject.SetActive(false);
     }
     protected void PickedUp(SelectEnterEventArgs args = null)
     {
         held = true;
         penGrabbable.gameObject.SetActive(true);
+        resetPenPos();
     }
     public void SetLines(NotepadLineElement[] elements)
     {
         lineEvents.Clear();
         clearNotepad();
+        TopToBottomLines(elements);
+    }
+
+    void TopToBottomLines(NotepadLineElement[] elements)
+    {
+        int i = 0;
+        foreach (var item in elements)
+        {
+            int lineIndex = i;
+            NotepadLine line = lines[lineIndex];
+            lineEvents.Add(line, item.lineEvent);
+            line.tmp.SetText(item.lineText);
+            Debug.Log(item.lineText);
+            line.available = item.selectable;
+            i++;
+        }
+    }
+    void CenterAlignedLines(NotepadLineElement[] elements)
+    {
         int distance = (lines.Length / (elements.Length + 1)) - 1;
         int i = 0;
         foreach (var item in elements)

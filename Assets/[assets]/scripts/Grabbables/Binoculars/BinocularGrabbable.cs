@@ -85,7 +85,7 @@ public class BinocularGrabbable : MonoBehaviour
         mainCam.enabled = true;
         BinocularCamera.SetActive(false);
         zoomObjects.SetActive(false);
-        onReleased.Invoke();
+        onReleased?.Invoke();
     }
 
     // Update is called once per frame

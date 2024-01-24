@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class BinocularActivatable : ComboActivatable
 {
-
     public virtual void SubscribeActivatable(BinocularGrabbable binocular)
     {
         binocular.onHeldUp.AddListener(OnHeldUp);
