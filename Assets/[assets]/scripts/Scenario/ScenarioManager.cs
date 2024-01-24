@@ -9,7 +9,7 @@ public class ScenarioManager : MonoBehaviour
     public BaseScene firstScenario;
     public KeyObject[] gameObjectDictionaryCreator = new KeyObject[0];
     public static Dictionary<ScenarioObject, GameObject> gameObjectDictionary = new Dictionary<ScenarioObject, GameObject>();
-    public BaseScene activeScenario;
+    public GenericScene activeScenario;
     public List<string> activeKeywords = new List<string>();
     public static List<string> ActiveKeywords
     {
@@ -19,7 +19,7 @@ public class ScenarioManager : MonoBehaviour
         }
     }
 
-    public static BaseScene ActiveScenario
+    public static GenericScene ActiveScenario
     {
         get
         {

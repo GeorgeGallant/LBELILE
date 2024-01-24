@@ -63,7 +63,7 @@ public class BaseSceneActivatable : MonoBehaviour
 
     }
 
-    public void setOwnerScenario(BaseScene owner, bool overrideOwner = false)
+    public void setOwnerScenario(GenericScene owner, bool overrideOwner = false)
     {
         if (activatableOwner && overrideOwner)
         {
@@ -71,5 +71,5 @@ public class BaseSceneActivatable : MonoBehaviour
         }
         else activatableOwner = owner;
     }
-    internal BaseScene activatableOwner;
+    internal GenericScene activatableOwner;
 }
