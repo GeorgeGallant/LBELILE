@@ -172,6 +172,54 @@ MonoBehaviour:
       m_Calls: []
   activateScene: {fileID: 739733962}
   activateIntent: p3v.fishgame.citeRegulations
+--- !u!1 &51345263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 51345265}
+  - component: {fileID: 51345264}
+  m_Layer: 0
+  m_Name: DynamicSceneRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &51345264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51345263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910213c0b917cf94f88e5688fb38fa0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyScenes:
+  - Key: left
+    scene: {fileID: 1042947000}
+  defaultScene: {fileID: 1744953634}
+--- !u!4 &51345265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51345263}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 274768929}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &65468197
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,6 +633,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &79772021
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -655,6 +704,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &83605526
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -728,22 +778,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383884906c18a364986367c38a180e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineText: Got It.            Let's approach the anglers
+  lineText: Once you have read this,
   lineEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: 
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   videoFinishedScene: {fileID: 1931877300}
   selectable: 1
 --- !u!1 &147792346
@@ -844,7 +882,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 1931877300}
-  selectable: 1
+  selectable: 0
 --- !u!1 &157695047
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,6 +932,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &157695050
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -977,7 +1016,7 @@ MonoBehaviour:
   videoURL: 5G
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 1510818907}
+  videoFinishedScenario: {fileID: 1534687813}
   loopVideo: 0
 --- !u!1 &182940745
 GameObject:
@@ -1190,6 +1229,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &259411532
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -1267,6 +1307,7 @@ Transform:
   - {fileID: 488898945}
   - {fileID: 473094384}
   - {fileID: 1942004133}
+  - {fileID: 51345265}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &297617171
@@ -1318,6 +1359,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &297617174
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -1358,7 +1400,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 310660520}
-  - component: {fileID: 310660521}
   - component: {fileID: 310660522}
   m_Layer: 0
   m_Name: Radio1ADispatch
@@ -1382,23 +1423,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 765742092}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &310660521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310660519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0955f172edec0d94291098e547db483a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 2025262541}
-  activateIntent: p3v.dispatch.ackClear
 --- !u!82 &310660522
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1530,6 +1554,8 @@ Transform:
   - {fileID: 157018027}
   - {fileID: 2048290390}
   - {fileID: 140214485}
+  - {fileID: 1425905006}
+  - {fileID: 1737169132}
   m_Father: {fileID: 739733961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &342013550
@@ -1548,12 +1574,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
-  lines:
-  - {fileID: 1771053864}
-  - {fileID: 1562930156}
-  - {fileID: 157018028}
-  - {fileID: 2048290391}
-  - {fileID: 140214486}
 --- !u!1 &350536085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,7 +1714,7 @@ GameObject:
   - component: {fileID: 407991138}
   - component: {fileID: 407991139}
   m_Layer: 0
-  m_Name: Person 1
+  m_Name: Person right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1750,7 +1770,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2123698450}
+        m_TargetAssemblyTypeName: ScenarioManager, Assembly-CSharp
+        m_MethodName: addKeyword
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
   activateScene: {fileID: 2129817804}
 --- !u!1 &410944826
 GameObject:
@@ -1923,7 +1955,7 @@ MonoBehaviour:
   videoURL: 4G
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 1942004134}
+  videoFinishedScenario: {fileID: 51345264}
   loopVideo: 0
 --- !u!1 &480618188
 GameObject:
@@ -1937,7 +1969,7 @@ GameObject:
   - component: {fileID: 480618191}
   - component: {fileID: 480618190}
   m_Layer: 0
-  m_Name: Person 1
+  m_Name: Truck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1952,7 +1984,7 @@ Transform:
   m_GameObject: {fileID: 480618188}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.078, y: 0, z: 2.85}
+  m_LocalPosition: {x: -3.092, y: 0.114, z: -0.228}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1973,7 +2005,7 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 2129817804}
+  activateScene: {fileID: 454548985}
 --- !u!65 &480618191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2007,7 +2039,7 @@ GameObject:
   - component: {fileID: 485178793}
   - component: {fileID: 485178792}
   m_Layer: 0
-  m_Name: Person 2
+  m_Name: Person left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2042,7 +2074,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2123698450}
+        m_TargetAssemblyTypeName: ScenarioManager, Assembly-CSharp
+        m_MethodName: addKeyword
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
   activateScene: {fileID: 841281015}
 --- !u!65 &485178793
 BoxCollider:
@@ -2357,6 +2401,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &630755946
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -2558,7 +2603,7 @@ GameObject:
   - component: {fileID: 723170482}
   - component: {fileID: 723170481}
   m_Layer: 0
-  m_Name: Person 2
+  m_Name: Truck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2573,7 +2618,7 @@ Transform:
   m_GameObject: {fileID: 723170479}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.861, y: 0, z: 2.894}
+  m_LocalPosition: {x: -3.158, y: 0, z: -0.107}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2594,7 +2639,7 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 841281015}
+  activateScene: {fileID: 454548985}
 --- !u!65 &723170482
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2949,6 +2994,7 @@ Transform:
   m_Children:
   - {fileID: 1778183948}
   - {fileID: 310660520}
+  - {fileID: 1072049385}
   - {fileID: 1633380479}
   m_Father: {fileID: 940948731}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3051,6 +3097,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &816378999
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -3131,6 +3178,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &834981939
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -3317,6 +3365,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &875252421
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -3607,6 +3656,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &986357658
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -3743,7 +3793,7 @@ MonoBehaviour:
   videoURL: 3D
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 2129817804}
+  videoFinishedScenario: {fileID: 0}
   loopVideo: 0
 --- !u!1 &1047510993
 GameObject:
@@ -3794,6 +3844,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1047510996
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -3827,6 +3878,55 @@ PlayableDirector:
     value: {fileID: 1633380480}
   m_ExposedReferences:
     m_References: []
+--- !u!1 &1072049384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1072049385}
+  - component: {fileID: 1072049386}
+  m_Layer: 0
+  m_Name: Radio1activatable
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1072049385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072049384}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 765742092}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1072049386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072049384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0955f172edec0d94291098e547db483a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  activateScene: {fileID: 2025262541}
+  activateIntent: p3v.dispatch.ackClear
 --- !u!1 &1146629198
 GameObject:
   m_ObjectHideFlags: 0
@@ -3925,6 +4025,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1181600245
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -4209,6 +4310,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1297904924
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -4332,6 +4434,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1386036252
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -4530,6 +4633,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1388042976
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -4606,6 +4710,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1416900383
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -4629,6 +4734,56 @@ PlayableDirector:
     value: {fileID: 1633380480}
   m_ExposedReferences:
     m_References: []
+--- !u!1 &1425905005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1425905006}
+  - component: {fileID: 1425905007}
+  m_Layer: 0
+  m_Name: Line (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1425905006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425905005}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 342013549}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1425905007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425905005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383884906c18a364986367c38a180e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineText: touch here with the pen
+  lineEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  videoFinishedScene: {fileID: 1931877300}
+  selectable: 1
 --- !u!1 &1491150929
 GameObject:
   m_ObjectHideFlags: 0
@@ -4686,6 +4841,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onVideoPrepared:
+    m_PersistentCalls:
+      m_Calls: []
+  videoStopped:
     m_PersistentCalls:
       m_Calls: []
   playOnAwake: 0
@@ -4749,8 +4907,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 5H
   videoLoader: {fileID: 0}
-  scenarioObjects: []
-  videoFinishedScenario: {fileID: 765742091}
+  scenarioObjects:
+  - scenarioObject: 0
+    spawnPosition: {fileID: 0}
+  videoFinishedScenario: {fileID: 51345264}
   loopVideo: 0
 --- !u!1 &1527571977
 GameObject:
@@ -4801,6 +4961,54 @@ MonoBehaviour:
       m_Calls: []
   activateScene: {fileID: 739733962}
   activateIntent: p3v.fishgame.citeRegulations
+--- !u!1 &1534687811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1534687812}
+  - component: {fileID: 1534687813}
+  m_Layer: 0
+  m_Name: DynamicSceneLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1534687812
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534687811}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2088366684}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1534687813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534687811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910213c0b917cf94f88e5688fb38fa0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyScenes:
+  - Key: right
+    scene: {fileID: 1042947000}
+  defaultScene: {fileID: 250659915}
 --- !u!1 &1550901323
 GameObject:
   m_ObjectHideFlags: 0
@@ -4901,6 +5109,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1553088565
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -4971,7 +5180,56 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 1931877300}
-  selectable: 1
+  selectable: 0
+--- !u!1 &1566669112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1566669113}
+  - component: {fileID: 1566669114}
+  m_Layer: 0
+  m_Name: Radio1Acivatable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1566669113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566669112}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2025262542}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1566669114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566669112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0955f172edec0d94291098e547db483a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  activateScene: {fileID: 1863653290}
+  activateIntent: p3v.dispatch.ackCopy
 --- !u!1 &1573369613
 GameObject:
   m_ObjectHideFlags: 0
@@ -5070,6 +5328,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1583886690
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -5091,6 +5350,8 @@ PlayableDirector:
     value: {fileID: 1633380480}
   - key: {fileID: 2189605173249289445, guid: 977ddd872620fa04f8ba8cbede73e2d8, type: 2}
     value: {fileID: 310660522}
+  - key: {fileID: 7708954185512843495, guid: 977ddd872620fa04f8ba8cbede73e2d8, type: 2}
+    value: {fileID: 1566669112}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1588065716
@@ -5224,6 +5485,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1617527900
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -5428,6 +5690,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1653612594
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -5556,7 +5819,7 @@ GameObject:
   - component: {fileID: 1690260204}
   - component: {fileID: 1690260203}
   m_Layer: 0
-  m_Name: Person 2
+  m_Name: Person left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5591,7 +5854,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2123698450}
+        m_TargetAssemblyTypeName: ScenarioManager, Assembly-CSharp
+        m_MethodName: addKeyword
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
   activateScene: {fileID: 841281015}
 --- !u!65 &1690260204
 BoxCollider:
@@ -5784,6 +6059,56 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1945787631}
   loopVideo: 0
+--- !u!1 &1737169131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1737169132}
+  - component: {fileID: 1737169133}
+  m_Layer: 0
+  m_Name: Line (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1737169132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737169131}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 342013549}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1737169133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737169131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383884906c18a364986367c38a180e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineText: to approach the anglers
+  lineEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  videoFinishedScene: {fileID: 1931877300}
+  selectable: 1
 --- !u!1 &1744953632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5934,6 +6259,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1767184722
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -6014,7 +6340,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 1931877300}
-  selectable: 1
+  selectable: 0
 --- !u!1 &1778183947
 GameObject:
   m_ObjectHideFlags: 0
@@ -6067,6 +6393,8 @@ PlayableDirector:
     value: {fileID: 1633380480}
   - key: {fileID: -5186253768454551203, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
     value: {fileID: 310660522}
+  - key: {fileID: -6002504286775473385, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
+    value: {fileID: 1072049384}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1778183950
@@ -6085,6 +6413,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!1 &1780303921
 GameObject:
   m_ObjectHideFlags: 0
@@ -6185,6 +6514,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1785523895
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -6273,6 +6603,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1797210313
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -6489,6 +6820,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1834338116
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -6823,7 +7155,7 @@ MonoBehaviour:
   videoURL: 4H
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 841281015}
+  videoFinishedScenario: {fileID: 51345264}
   loopVideo: 0
 --- !u!1 &1945787629
 GameObject:
@@ -6937,7 +7269,7 @@ GameObject:
   - component: {fileID: 1954420359}
   - component: {fileID: 1954420358}
   m_Layer: 0
-  m_Name: Person 1
+  m_Name: Person right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6972,7 +7304,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2123698450}
+        m_TargetAssemblyTypeName: ScenarioManager, Assembly-CSharp
+        m_MethodName: addKeyword
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
   activateScene: {fileID: 2129817804}
 --- !u!65 &1954420359
 BoxCollider:
@@ -7044,6 +7388,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1955669912
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -7114,6 +7459,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1962573937
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -7294,6 +7640,7 @@ Transform:
   m_Children:
   - {fileID: 1583886688}
   - {fileID: 2112281712}
+  - {fileID: 1566669113}
   m_Father: {fileID: 940948731}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2048290389
@@ -7345,7 +7692,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 1931877300}
-  selectable: 1
+  selectable: 0
 --- !u!1 &2060562798
 GameObject:
   m_ObjectHideFlags: 0
@@ -7395,6 +7742,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &2060562801
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -7475,7 +7823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   video: {fileID: 1491150931}
-  secondsTimeCode: 0
+  secondsTimeCode: 90
   timeCodeWindow: 14
   anytimeAfterTimecode: 1
 --- !u!1 &2088366683
@@ -7515,6 +7863,7 @@ Transform:
   - {fileID: 78970771}
   - {fileID: 160582080}
   - {fileID: 1510818906}
+  - {fileID: 1534687812}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2112281711
@@ -7526,7 +7875,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2112281712}
-  - component: {fileID: 2112281713}
   - component: {fileID: 2112281714}
   m_Layer: 0
   m_Name: Radio1B
@@ -7550,23 +7898,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2025262542}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2112281713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112281711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0955f172edec0d94291098e547db483a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 1863653290}
-  activateIntent: p3v.dispatch.ackCopy
 --- !u!82 &2112281714
 AudioSource:
   m_ObjectHideFlags: 0
