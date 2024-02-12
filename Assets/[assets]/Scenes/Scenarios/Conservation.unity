@@ -256,7 +256,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 803722141}
   loopVideo: 0
-  activatables: []
 --- !u!1 &70536211
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +434,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1898487289}
   loopVideo: 0
-  activatables: []
 --- !u!1 &78970770
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +484,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 160582081}
   loopVideo: 0
-  activatables: []
 --- !u!1 &79772018
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +533,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &79772021
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -555,6 +553,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 3093198364568269041, guid: 3a58228b95316fa44b8a3d920f24b6e2, type: 2}
     value: {fileID: 1633380480}
+  - key: {fileID: 1109496035495299567, guid: 3a58228b95316fa44b8a3d920f24b6e2, type: 2}
+    value: {fileID: 1146629198}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &83605523
@@ -606,6 +606,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &83605526
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -696,6 +697,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   videoFinishedScene: {fileID: 1931877300}
+  selectable: 1
 --- !u!1 &157018026
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +747,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 1931877300}
+  selectable: 0
 --- !u!1 &157695047
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,6 +797,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &157695050
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -879,7 +883,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1510818907}
   loopVideo: 0
-  activatables: []
 --- !u!1 &182940745
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,7 +995,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 454548985}
   loopVideo: 0
-  activatables: []
 --- !u!1 &259411529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,6 +1044,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &259411532
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -1170,6 +1173,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &297617174
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -1400,61 +1404,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
-  lines:
-  - {fileID: 1771053864}
-  - {fileID: 1562930156}
-  - {fileID: 157018028}
-  - {fileID: 2048290391}
-  - {fileID: 140214486}
---- !u!1 &347496417
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 347496418}
-  - component: {fileID: 347496419}
-  m_Layer: 0
-  m_Name: Passive
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &347496418
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347496417}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 739733961}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &347496419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347496417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
-  activateIntent: 
 --- !u!1 &350536085
 GameObject:
   m_ObjectHideFlags: 0
@@ -2031,7 +1980,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1042947000}
   loopVideo: 0
-  activatables: []
 --- !u!1 &473094383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2082,7 +2030,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1942004134}
   loopVideo: 0
-  activatables: []
 --- !u!1 &488898944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2133,7 +2080,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 473094385}
   loopVideo: 0
-  activatables: []
 --- !u!1 &499734453
 GameObject:
   m_ObjectHideFlags: 0
@@ -2442,7 +2388,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1737063831}
   loopVideo: 0
-  activatables: []
 --- !u!1 &630755943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2492,6 +2437,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &630755946
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -2849,7 +2795,6 @@ MonoBehaviour:
   LeftHandAttachTransform: {fileID: 0}
   RightHandAttachTransform: {fileID: 0}
   restrictGrabbableHand: 0
-  forceHeld: 0
 --- !u!114 &730346696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2894,7 +2839,6 @@ Transform:
   m_Children:
   - {fileID: 1386036250}
   - {fileID: 342013549}
-  - {fileID: 347496418}
   - {fileID: 1507609338}
   m_Father: {fileID: 410944827}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2914,10 +2858,9 @@ MonoBehaviour:
   videoLoader: {fileID: 0}
   scenarioObjects:
   - scenarioObject: 2
-    spawnPosition: {fileID: 739733961}
+    spawnPosition: {fileID: 1254217920}
   videoFinishedScenario: {fileID: 1931877300}
   loopVideo: 1
-  activatables: []
 --- !u!1 &765742090
 GameObject:
   m_ObjectHideFlags: 0
@@ -2954,7 +2897,6 @@ MonoBehaviour:
     spawnPosition: {fileID: 1254217920}
   videoFinishedScenario: {fileID: 2025262541}
   loopVideo: 0
-  activatables: []
 --- !u!4 &765742092
 Transform:
   m_ObjectHideFlags: 0
@@ -3023,7 +2965,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 473094385}
   loopVideo: 0
-  activatables: []
 --- !u!1 &816378996
 GameObject:
   m_ObjectHideFlags: 0
@@ -3073,6 +3014,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &816378999
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -3281,6 +3223,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &834981939
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -3368,7 +3311,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1550901325}
   loopVideo: 0
-  activatables: []
 --- !u!1 &875252418
 GameObject:
   m_ObjectHideFlags: 0
@@ -3418,6 +3360,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &875252421
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -3708,6 +3651,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &986357658
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -3926,7 +3870,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 2129817804}
   loopVideo: 0
-  activatables: []
 --- !u!1 &1044531026
 GameObject:
   m_ObjectHideFlags: 0
@@ -4104,6 +4047,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1047510996
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -4363,6 +4307,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1181600245
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -4647,6 +4592,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1297904924
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -4721,6 +4667,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1386036252
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -4919,6 +4866,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1388042976
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -4995,6 +4943,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1416900383
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -5075,6 +5024,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onVideoPrepared:
+    m_PersistentCalls:
+      m_Calls: []
+  videoStopped:
     m_PersistentCalls:
       m_Calls: []
   playOnAwake: 0
@@ -5397,7 +5349,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 765742091}
   loopVideo: 0
-  activatables: []
 --- !u!1 &1539630150
 GameObject:
   m_ObjectHideFlags: 0
@@ -5576,7 +5527,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 2122777601}
   loopVideo: 0
-  activatables: []
 --- !u!1 &1553088562
 GameObject:
   m_ObjectHideFlags: 0
@@ -5626,6 +5576,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1553088565
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -5696,6 +5647,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 1931877300}
+  selectable: 0
 --- !u!1 &1573369613
 GameObject:
   m_ObjectHideFlags: 0
@@ -5794,6 +5746,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1583886690
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -5948,6 +5901,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1617527900
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -6152,6 +6106,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1653612594
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -6389,8 +6344,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 739733962}
   loopVideo: 0
-  activatables:
-  - {fileID: 0}
 --- !u!1 &1733739717
 GameObject:
   m_ObjectHideFlags: 0
@@ -6511,7 +6464,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1945787631}
   loopVideo: 0
-  activatables: []
 --- !u!1 &1744953632
 GameObject:
   m_ObjectHideFlags: 0
@@ -6563,7 +6515,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 250659915}
   loopVideo: 0
-  activatables: []
 --- !u!1 &1767184719
 GameObject:
   m_ObjectHideFlags: 0
@@ -6613,6 +6564,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1767184722
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -6693,6 +6645,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 1931877300}
+  selectable: 0
 --- !u!1 &1778183947
 GameObject:
   m_ObjectHideFlags: 0
@@ -6763,6 +6716,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!1 &1780303921
 GameObject:
   m_ObjectHideFlags: 0
@@ -6815,7 +6769,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1706387272}
   loopVideo: 1
-  activatables: []
 --- !u!1 &1785523892
 GameObject:
   m_ObjectHideFlags: 0
@@ -6865,6 +6818,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1785523895
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -6953,6 +6907,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1797210313
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -7120,6 +7075,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1834338116
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -7205,7 +7161,6 @@ MonoBehaviour:
     spawnPosition: {fileID: 1254217920}
   videoFinishedScenario: {fileID: 1780303923}
   loopVideo: 1
-  activatables: []
 --- !u!1 &1898487287
 GameObject:
   m_ObjectHideFlags: 0
@@ -7256,7 +7211,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 78970772}
   loopVideo: 0
-  activatables: []
 --- !u!1 &1921333148
 GameObject:
   m_ObjectHideFlags: 0
@@ -7437,8 +7391,7 @@ MonoBehaviour:
   videoLoader: {fileID: 0}
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1744953634}
-  loopVideo: 0
-  activatables: []
+  loopVideo: 1
 --- !u!1 &1942004132
 GameObject:
   m_ObjectHideFlags: 0
@@ -7489,7 +7442,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 841281015}
   loopVideo: 0
-  activatables: []
 --- !u!1 &1945787629
 GameObject:
   m_ObjectHideFlags: 0
@@ -7540,7 +7492,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 66748831}
   loopVideo: 0
-  activatables: []
 --- !u!1 &1955669909
 GameObject:
   m_ObjectHideFlags: 0
@@ -7590,6 +7541,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1955669912
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -7660,6 +7612,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &1962573937
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -7855,7 +7808,6 @@ MonoBehaviour:
     spawnPosition: {fileID: 0}
   videoFinishedScenario: {fileID: 1863653290}
   loopVideo: 0
-  activatables: []
 --- !u!4 &2025262542
 Transform:
   m_ObjectHideFlags: 0
@@ -7922,6 +7874,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 1931877300}
+  selectable: 0
 --- !u!1 &2060562798
 GameObject:
   m_ObjectHideFlags: 0
@@ -7971,6 +7924,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  syncWithVideo: 1
 --- !u!320 &2060562801
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -8051,7 +8005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   video: {fileID: 1491150931}
-  secondsTimeCode: 0
+  secondsTimeCode: 75
   timeCodeWindow: 14
   anytimeAfterTimecode: 1
 --- !u!1 &2088366683
@@ -8417,7 +8371,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 70657244}
   loopVideo: 0
-  activatables: []
 --- !u!1 &2123698448
 GameObject:
   m_ObjectHideFlags: 0
@@ -8463,7 +8416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7181f3715ceafa1418093f6e515820f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScenario: {fileID: 841281015}
+  firstScenario: {fileID: 739733962}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -8478,6 +8431,7 @@ MonoBehaviour:
     gameObject: {fileID: 1035828444273184424, guid: fd39933c54602ef4aae2280090237a92,
       type: 3}
   activeScenario: {fileID: 0}
+  activeKeywords: []
   videoSphere: {fileID: 65468197}
 --- !u!114 &2123698451
 MonoBehaviour:
@@ -8543,7 +8497,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 625443159}
   loopVideo: 0
-  activatables: []
 --- !u!1001 &6728085473460422789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8606,6 +8559,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867191723127126326, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: forceBodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867191723127126326, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: forcedBodyType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
