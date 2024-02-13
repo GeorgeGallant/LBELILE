@@ -12,6 +12,7 @@ public class NotepadGrabbable : MonoBehaviour
     Transform penParent;
     public Transform selectorTip;
     private bool held = false;
+    float heldTime = 0;
 
     public NotepadLine[] lines;
     NotepadLine currentSelection;
@@ -101,13 +102,21 @@ public class NotepadGrabbable : MonoBehaviour
     }
     protected void Update()
     {
-        if (!held || !penGrabbable.isSelected) { if (currentSelection) { currentSelection.circle.enabled = true; currentSelection = null; } return; }
+        if (!held || !penGrabbable.isSelected) { if (currentSelection) { currentSelection.circle.enabled = false; currentSelection = null; } heldTime = 0; return; }
         float distanceToBeat = 5000;
         NotepadLine newLine = null;
+        heldTime += Time.deltaTime;
         foreach (var item in lines)
         {
             if (!item.available) continue;
             float distance = Vector3.Distance(item.bounds.ClosestPointOnBounds(selectorTip.position), selectorTip.position);
+            if (heldTime > 5)
+            {
+                if (item.available && item.bounds.bounds.Contains(selectorTip.position))
+                {
+                    lineEvents[item].Invoke();
+                }
+            }
             if (distance < distanceToBeat) { distanceToBeat = distance; newLine = item; }
         }
         if (distanceToBeat < 0.1)
