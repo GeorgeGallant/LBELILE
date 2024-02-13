@@ -81,6 +81,9 @@ EditorBuildSettings:
     path: Assets/[assets]/Scenes/Opening.unity
     guid: c6a9f9accb359c941b3f827b54d9ff75
   - enabled: 1
+    path: Assets/[assets]/Scenes/SceneSelection.unity
+    guid: 0fa6e20189a11384cb33a0c78cea7b30
+  - enabled: 1
     path: Assets/[assets]/Scenes/Scenarios/Conservation.unity
     guid: 06165f0a2216875499dab39854543e15
   m_configObjects:

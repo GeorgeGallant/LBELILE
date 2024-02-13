@@ -58,6 +58,7 @@ public class GlobalPlayer : MonoBehaviour
         {
             foreach (var item in instance.rays)
             {
+                if (!item) continue;
                 item.SetActive(false);
                 raysEnabled = false;
             }
@@ -66,6 +67,7 @@ public class GlobalPlayer : MonoBehaviour
         {
             foreach (var item in instance.rays)
             {
+                if (!item) continue;
                 item.SetActive(true);
                 raysEnabled = true;
             }

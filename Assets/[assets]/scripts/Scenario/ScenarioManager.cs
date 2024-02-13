@@ -8,7 +8,14 @@ public class ScenarioManager : MonoBehaviour
     public static ScenarioManager instance;
     public BaseScene firstScenario;
     public KeyObject[] gameObjectDictionaryCreator = new KeyObject[0];
-    public static Dictionary<ScenarioObject, GameObject> gameObjectDictionary = new Dictionary<ScenarioObject, GameObject>();
+    public Dictionary<ScenarioObject, GameObject> gameObjectDictionary = new Dictionary<ScenarioObject, GameObject>();
+    public static Dictionary<ScenarioObject, GameObject> GameObjectDictionary
+    {
+        get
+        {
+            return instance.gameObjectDictionary;
+        }
+    }
     public GenericScene activeScenario;
     public List<string> activeKeywords = new List<string>();
     public static List<string> ActiveKeywords
@@ -60,12 +67,12 @@ public class ScenarioManager : MonoBehaviour
                 key.gameObject = go;
             }
             go.SetActive(false);
-            if (gameObjectDictionary.ContainsKey(key.scenarioObject))
+            if (GameObjectDictionary.ContainsKey(key.scenarioObject))
             {
                 Debug.LogError($"{key.scenarioObject} already has an object associated with it! Check for duplicates!");
                 continue;
             }
-            gameObjectDictionary.Add(key.scenarioObject, go);
+            GameObjectDictionary.Add(key.scenarioObject, go);
             go.transform.SetParent(parent.transform);
         }
     }
@@ -77,19 +84,19 @@ public class ScenarioManager : MonoBehaviour
         {
             dict.Add(item.scenarioObject, item.spawnPosition);
         }
-        foreach (var objectKey in gameObjectDictionary.Keys)
+        foreach (var objectKey in GameObjectDictionary.Keys)
         {
             if (dict.Keys.Contains(objectKey))
             {
-                gameObjectDictionary[objectKey].SetActive(true);
+                GameObjectDictionary[objectKey].SetActive(true);
                 if (dict[objectKey])
                 {
-                    gameObjectDictionary[objectKey].transform.SetPositionAndRotation(dict[objectKey].position, dict[objectKey].rotation);
+                    GameObjectDictionary[objectKey].transform.SetPositionAndRotation(dict[objectKey].position, dict[objectKey].rotation);
                 }
             }
             else
             {
-                gameObjectDictionary[objectKey].SetActive(false);
+                GameObjectDictionary[objectKey].SetActive(false);
             }
         }
     }
