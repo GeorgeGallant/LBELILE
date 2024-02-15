@@ -16,7 +16,7 @@ public class NotepadLineActivatable : BaseSceneActivatable
     public override void activateModifiers()
     {
         Debug.Log("activate notepad");
-        NotepadGrabbable notepad = ScenarioManager.gameObjectDictionary[ScenarioObject.Notepad].GetComponent<NotepadGrabbable>();
+        NotepadGrabbable notepad = ScenarioManager.GameObjectDictionary[ScenarioObject.Notepad].GetComponent<NotepadGrabbable>();
         notepad.SetLines(lines);
     }
 

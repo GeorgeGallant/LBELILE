@@ -7,7 +7,7 @@ public class BinocularObjectsActivatable : BaseSceneActivatable
     public GameObject binocularObjects;
     public override void activateModifiers()
     {
-        BinocularGrabbable binocular = ScenarioManager.gameObjectDictionary[ScenarioObject.Binoculars].GetComponent<BinocularGrabbable>();
+        BinocularGrabbable binocular = ScenarioManager.GameObjectDictionary[ScenarioObject.Binoculars].GetComponent<BinocularGrabbable>();
         binocular.zoomObjects = binocularObjects;
     }
 }

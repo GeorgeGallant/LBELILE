@@ -15,6 +15,7 @@ public class KeywordActivatableModifier : BaseActivatableModifier
             return true;
         }
     }
+    [System.Serializable]
     public struct KeywordModifier
     {
         public string keyword;
