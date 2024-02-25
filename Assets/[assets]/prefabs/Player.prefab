@@ -211,27 +211,27 @@ LineRenderer:
   - {x: 0, y: 0, z: 2.0621023}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.0089
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.32883072
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: -0.49826148
-        outSlope: -0.49826148
+        time: 0.9916687
+        value: 0.94999695
+        inSlope: 0
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.11752576
+        inWeight: 0
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -718,6 +718,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee719d187a08674195d865986ff4291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forceBodyType: 0
+  forcedBodyType: 0
   skinGradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.8998078, b: 0.8537736, a: 1}
@@ -969,27 +971,27 @@ LineRenderer:
   - {x: 0, y: 0, z: 2.0621023}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.0089
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.32883072
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: -0.49826148
-        outSlope: -0.49826148
+        time: 0.9916687
+        value: 0.94999695
+        inSlope: 0
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.11752576
+        inWeight: 0
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2

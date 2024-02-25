@@ -12,6 +12,7 @@ public class ConfigManager : MonoBehaviour
     public static string REGION_NAME = "canadacentral";
     public static string APP_ID = "70c9a26e-877c-4d94-a0a0-ff5197d4a2e9";
     public static string PREDICTION_KEY = "3180862a6aa54c06b16d91bf18279daa";
+  public static string LANGUAGE_RESOURCE_KEY = "8fa7fc6de0b742d98bd4490cc56e3c78";
 
     // called zero
     void Awake()

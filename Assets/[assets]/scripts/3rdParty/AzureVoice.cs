@@ -28,14 +28,21 @@ namespace ThirdParty
             if (busy) return;
             busy = true;
             var config = SpeechConfig.FromSubscription(ConfigManager.SUBSCRIPTION_KEY, ConfigManager.REGION_NAME);
-            var predictionEndpointUri = string.Format("{0}luis/prediction/v3.0/apps/{1}/slots/staging/predict",
-                                                   "https://p360v.cognitiveservices.azure.com/",
-                                                   ConfigManager.APP_ID);
-            var model = LanguageUnderstandingModel.FromAppId(ConfigManager.APP_ID);
-            // var model = LanguageUnderstandingModel.FromEndpoint(predictionEndpointUri);
 
-            using var recognizer = new IntentRecognizer(config);
-            recognizer.AddAllIntents(model);
+            var predictionEndpointUri = "https://p360v2.cognitiveservices.azure.com/";
+     
+            var cluModel = new ConversationalLanguageUnderstandingModel(
+              ConfigManager.LANGUAGE_RESOURCE_KEY, 
+              predictionEndpointUri, 
+              "P360V_1", 
+              "p3vDev1");
+
+            var collection = new LanguageUnderstandingModelCollection();
+            collection.Add(cluModel);
+
+            var recognizer = new IntentRecognizer(config);
+            recognizer.ApplyLanguageModels(collection);
+            recognizer.AddAllIntents(cluModel);
             recognizer.Recognized += resultRecieved;
             recognizer.Canceled += cancelled;
             await recognizer.StartContinuousRecognitionAsync();
@@ -44,7 +51,7 @@ namespace ThirdParty
             {
                 await Task.Delay(100);
             }
-
+            
             UnityEngine.Debug.Log("no longer listening");
 
             await recognizer.StopContinuousRecognitionAsync().ConfigureAwait(false);
