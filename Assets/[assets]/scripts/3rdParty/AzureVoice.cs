@@ -10,6 +10,13 @@ using System.Threading.Tasks;
 using System.Web;
 using UnityEditor.PackageManager;
 
+using Azure.Core;
+using Azure.AI.Language.Conversations;
+using Azure;
+using Microsoft.Extensions.Azure;
+using Microsoft.CognitiveServices.Speech.Audio;
+using System.Diagnostics;
+
 namespace ThirdParty
 {
     public class AzureVoice
@@ -22,30 +29,50 @@ namespace ThirdParty
             busy = true;
             var config = SpeechConfig.FromSubscription(ConfigManager.SUBSCRIPTION_KEY, ConfigManager.REGION_NAME);
 
+            var predictionEndpointUri = "https://p360v2.cognitiveservices.azure.com/";
+     
+            var cluModel = new ConversationalLanguageUnderstandingModel(
+              ConfigManager.LANGUAGE_RESOURCE_KEY, 
+              predictionEndpointUri, 
+              "P360V_1", 
+              "p3vDev1");
 
-            using var recognizer = new SpeechRecognizer(config);
+            var collection = new LanguageUnderstandingModelCollection();
+            collection.Add(cluModel);
+
+            var recognizer = new IntentRecognizer(config);
+            recognizer.ApplyLanguageModels(collection);
+            recognizer.AddAllIntents(cluModel);
             recognizer.Recognized += resultRecieved;
             recognizer.Canceled += cancelled;
             await recognizer.StartContinuousRecognitionAsync();
 
-            while (continueListening != null && continueListening.Value) await Task.Delay(100);
-
+            while (continueListening != null && continueListening.Value)
+            {
+                await Task.Delay(100);
+            }
+            
             UnityEngine.Debug.Log("no longer listening");
 
             await recognizer.StopContinuousRecognitionAsync().ConfigureAwait(false);
 
-            async void resultRecieved(object sender, SpeechRecognitionEventArgs e)
+            void resultRecieved(object sender, IntentRecognitionEventArgs e)
             {
-                SpeechRecognitionResult result = e.Result;
+                IntentRecognitionResult result = e.Result;
                 string utterance = result.Text;
                 UnityEngine.Debug.Log($"{utterance}, {result.Reason}");
-                if (result.Reason == ResultReason.RecognizedSpeech)
-                    await GetIntentFromUtterance(utterance, initiator);
+                var json = result.Properties.GetProperty(PropertyId.LanguageUnderstandingServiceResponse_JsonResult);
+                // if (result.Reason == ResultReason.RecognizedSpeech)
+                // {
+                UnityEngine.Debug.Log(e.Result.IntentId);
+                UnityEngine.Debug.Log(json);
+                // await GetIntentFromUtterance(utterance, initiator);}
+                // }
                 finish();
             }
-            void cancelled(object sender, SpeechRecognitionCanceledEventArgs e)
+            void cancelled(object sender, IntentRecognitionCanceledEventArgs e)
             {
-                SpeechRecognitionResult result = e.Result;
+                IntentRecognitionResult result = e.Result;
                 string utterance = result.Text;
 
                 UnityEngine.Debug.Log($"Cancelled: {utterance}, {result.Reason}, {e.ErrorDetails}");
@@ -58,6 +85,9 @@ namespace ThirdParty
                 busy = false;
             }
         }
+
+
+
         public static async Task ListenUntil(ValueWrapper<bool> continueListening)
         {
             if (busy) return;
