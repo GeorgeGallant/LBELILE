@@ -34,9 +34,40 @@ public class ScenarioManager : MonoBehaviour
         }
         set
         {
-            instance.activeScenario = value;
+            if (instance.occupier == value)
+            {
+                instance.occupier = null;
+                instance.activeScenario = value;
+            }
+            else if (instance.occupier == null) instance.activeScenario = value;
         }
     }
+    public static bool AttemptOccupy(BaseScene scene)
+    {
+        if (!instance.occupier)
+        {
+            instance.occupier = scene;
+            return true;
+        }
+        return false;
+    }
+    public static List<MonoBehaviour> Blockers
+    {
+        get { return instance.blockers; }
+    }
+    public static bool AllowNewScene
+    {
+        get { return Blockers.Count == 0; }
+    }
+    public static BaseScene Occupier
+    {
+        get
+        {
+            return instance.occupier;
+        }
+    }
+    internal List<MonoBehaviour> blockers = new List<MonoBehaviour>();
+    internal BaseScene occupier;
     public GameObject videoSphere;
     public static GameObject VideoSphere
     {

@@ -55,6 +55,7 @@ namespace ThirdParty
             UnityEngine.Debug.Log("no longer listening");
 
             await recognizer.StopContinuousRecognitionAsync().ConfigureAwait(false);
+            busy = false;
 
             void resultRecieved(object sender, IntentRecognitionEventArgs e)
             {
@@ -70,8 +71,10 @@ namespace ThirdParty
                     intent = e.Result.IntentId;
                     // await GetIntentFromUtterance(utterance, initiator);}
                 }
-                intentEvent.Invoke((intent, initiator));
-                finish();
+                UnityMainThread.AddJob(() =>
+                {
+                    intentEvent.Invoke((intent, initiator));
+                });
             }
             void cancelled(object sender, IntentRecognitionCanceledEventArgs e)
             {

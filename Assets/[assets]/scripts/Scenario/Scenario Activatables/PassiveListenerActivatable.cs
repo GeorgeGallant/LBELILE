@@ -29,7 +29,8 @@ public class PassiveListenerActivatable : BaseSceneActivatable
     void OnDisable()
     {
         AzureVoice.intentEvent.RemoveListener(intentListener);
-        Debug.Log("no longer passive listening");
+        if (activeListen.Value)
+            Debug.Log("no longer passive listening");
         activeListen.Value = false;
 
     }
@@ -37,12 +38,16 @@ public class PassiveListenerActivatable : BaseSceneActivatable
     private void intentListener((string topIntent, string initiator) o)
     {
         if (!sceneActive) return;
-        if (o.initiator == "once")
+        if (o.initiator == "passive")
         {
-            Debug.Log(o.topIntent);
-            if (o.topIntent.ToLower() == activateIntent.ToLower())
+            var intent = o.topIntent;
+            Debug.Log(intent);
+            if (intent.ToLower() == activateIntent.ToLower())
+            {
+                OnDisable();
                 activateNextScene();
-            else if (gameObject.activeInHierarchy) OnEnable();
+            }
+            // else if (gameObject.activeInHierarchy) OnEnable();
         }
         else if (intents.Length > 0)
         {
@@ -51,8 +56,12 @@ public class PassiveListenerActivatable : BaseSceneActivatable
                 var check = item.checkIntents(o.topIntent);
                 if (check.hadIntent)
                 {
-                    check.activateScene.startScene();
-                    break;
+                    if (check.activateScene)
+                    {
+                        OnDisable();
+                        check.activateScene.startScene();
+                        break;
+                    }
                 }
             }
         }

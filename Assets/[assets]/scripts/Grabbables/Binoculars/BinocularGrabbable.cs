@@ -77,6 +77,7 @@ public class BinocularGrabbable : MonoBehaviour
         BinocularCamera.SetActive(true);
         zoomObjects.SetActive(true);
         onHeldUp.Invoke();
+        ScenarioManager.Blockers.Add(this);
     }
 
     void disableBinocs()
@@ -86,6 +87,7 @@ public class BinocularGrabbable : MonoBehaviour
         BinocularCamera.SetActive(false);
         zoomObjects.SetActive(false);
         onReleased?.Invoke();
+        ScenarioManager.Blockers.Remove(this);
     }
 
     // Update is called once per frame

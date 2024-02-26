@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [ExecuteAlways]
 public class GenericScene : BaseScene
@@ -46,7 +47,36 @@ public class GenericScene : BaseScene
     }
     public override void startScene()
     {
+        if (ScenarioManager.Occupier) return;
         if (ScenarioManager.ActiveScenario == this) return;
+
+
+
+        if (ScenarioManager.AllowNewScene)
+        {
+            StartScene();
+        }
+        else
+        {
+            if (ScenarioManager.AttemptOccupy(this))
+            {
+                StartCoroutine(AwaitStart());
+            }
+        }
+    }
+
+    IEnumerator AwaitStart()
+    {
+        while (!ScenarioManager.AllowNewScene)
+        {
+            yield return null;
+        }
+        StartScene();
+        yield return null;
+    }
+
+    void StartScene()
+    {
         Start();
         if (ScenarioManager.ActiveScenario)
             ScenarioManager.ActiveScenario.deactivateScene();
@@ -57,7 +87,6 @@ public class GenericScene : BaseScene
             videoLoader.playVideo();
         }
         else activateScene();
-
     }
 
     protected void activateScene()
