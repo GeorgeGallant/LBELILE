@@ -22,7 +22,7 @@ namespace ThirdParty
     public class AzureVoice
     {
         static bool busy = false;
-        public static UnityEngine.Events.UnityEvent<(Dictionary<string, Intent> intents, string topIntent, string initiator)> intentEvent = new UnityEngine.Events.UnityEvent<(Dictionary<string, Intent> intents, string topIntent, string initiator)>();
+        public static UnityEngine.Events.UnityEvent<(string topIntent, string initiator)> intentEvent = new UnityEngine.Events.UnityEvent<(string topIntent, string initiator)>();
         public static async Task Listener(ValueWrapper<bool> continueListening, string initiator, bool passive = false)
         {
             if (busy) return;
@@ -30,11 +30,11 @@ namespace ThirdParty
             var config = SpeechConfig.FromSubscription(ConfigManager.SUBSCRIPTION_KEY, ConfigManager.REGION_NAME);
 
             var predictionEndpointUri = "https://p360v2.cognitiveservices.azure.com/";
-     
+
             var cluModel = new ConversationalLanguageUnderstandingModel(
-              ConfigManager.LANGUAGE_RESOURCE_KEY, 
-              predictionEndpointUri, 
-              "P360V_1", 
+              ConfigManager.LANGUAGE_RESOURCE_KEY,
+              predictionEndpointUri,
+              "P360V_1",
               "p3vDev1");
 
             var collection = new LanguageUnderstandingModelCollection();
@@ -51,7 +51,7 @@ namespace ThirdParty
             {
                 await Task.Delay(100);
             }
-            
+
             UnityEngine.Debug.Log("no longer listening");
 
             await recognizer.StopContinuousRecognitionAsync().ConfigureAwait(false);
@@ -61,13 +61,16 @@ namespace ThirdParty
                 IntentRecognitionResult result = e.Result;
                 string utterance = result.Text;
                 UnityEngine.Debug.Log($"{utterance}, {result.Reason}");
-                var json = result.Properties.GetProperty(PropertyId.LanguageUnderstandingServiceResponse_JsonResult);
-                // if (result.Reason == ResultReason.RecognizedSpeech)
-                // {
-                UnityEngine.Debug.Log(e.Result.IntentId);
-                UnityEngine.Debug.Log(json);
-                // await GetIntentFromUtterance(utterance, initiator);}
-                // }
+                string intent = "No Intent";
+                var json = result.Properties.GetProperty(PropertyId.SpeechServiceResponse_JsonResult);
+                if (result.Reason == ResultReason.RecognizedIntent)
+                {
+                    UnityEngine.Debug.Log(e.Result.IntentId);
+                    UnityEngine.Debug.Log(json);
+                    intent = e.Result.IntentId;
+                    // await GetIntentFromUtterance(utterance, initiator);}
+                }
+                intentEvent.Invoke((intent, initiator));
                 finish();
             }
             void cancelled(object sender, IntentRecognitionCanceledEventArgs e)
@@ -87,7 +90,8 @@ namespace ThirdParty
         }
 
 
-
+        /*
+        // old logic, just use above
         public static async Task ListenUntil(ValueWrapper<bool> continueListening)
         {
             if (busy) return;
@@ -136,6 +140,10 @@ namespace ThirdParty
                 busy = false;
             }
         }
+        */
+
+        // also old
+        /*
         public static async Task GetIntentFromUtterance(string utterance, string initiator)
         {
             var client = new HttpClient();
@@ -179,6 +187,7 @@ namespace ThirdParty
                 UnityEngine.Debug.Log(strResponseContent);
             }
         }
+        
         static private void requestDone((Dictionary<string, AzureVoice.Intent> intents, string topIntent, string initiator) o)
         {
             intentEvent.Invoke(o);
@@ -230,6 +239,6 @@ namespace ThirdParty
             public string label { get; set; }
             public double score { get; set; }
         }
-
+        */
     }
 }
