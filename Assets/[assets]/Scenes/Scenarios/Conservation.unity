@@ -778,12 +778,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383884906c18a364986367c38a180e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineText: Once you have read this,
+  lineText: When ready
   lineEvent:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 1931877300}
-  selectable: 1
+  selectable: 0
 --- !u!1 &147792346
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,12 +809,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147792346}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 630755944}
+  m_Father: {fileID: 803722140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &147792348
 MonoBehaviour:
@@ -2228,7 +2228,7 @@ MonoBehaviour:
   videoURL: 4F
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 473094385}
+  videoFinishedScenario: {fileID: 803722141}
   loopVideo: 0
 --- !u!1 &562499187
 GameObject:
@@ -2381,8 +2381,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 147792347}
+  m_Children: []
   m_Father: {fileID: 803722140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &630755945
@@ -3029,6 +3028,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 630755944}
+  - {fileID: 147792347}
   m_Father: {fileID: 274768929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &803722141
@@ -5939,7 +5939,7 @@ MonoBehaviour:
   videoLoader: {fileID: 0}
   scenarioObjects: []
   videoFinishedScenario: {fileID: 739733962}
-  loopVideo: 0
+  loopVideo: 1
 --- !u!1 &1733739717
 GameObject:
   m_ObjectHideFlags: 0
@@ -6108,7 +6108,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 1931877300}
-  selectable: 1
+  selectable: 0
 --- !u!1 &1744953632
 GameObject:
   m_ObjectHideFlags: 0
@@ -7406,7 +7406,7 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 4222582285200704969, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
     value: {fileID: 0}
-  - key: {fileID: 9184494005643236177, guid: 62935487f2be576478affb24477b8bb0, type: 2}
+  - key: {fileID: -6968962732052334398, guid: 62935487f2be576478affb24477b8bb0, type: 2}
     value: {fileID: 1633380480}
   m_ExposedReferences:
     m_References: []
@@ -8090,7 +8090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7181f3715ceafa1418093f6e515820f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScenario: {fileID: 1863653290}
+  firstScenario: {fileID: 2129817804}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,

@@ -358,7 +358,7 @@ MonoBehaviour:
   m_TrackProperties:
     volume: 1
     stereoPan: 0
-    spatialBlend: 0
+    spatialBlend: 1
 --- !u!74 &8154460535768782812
 AnimationClip:
   m_ObjectHideFlags: 0
