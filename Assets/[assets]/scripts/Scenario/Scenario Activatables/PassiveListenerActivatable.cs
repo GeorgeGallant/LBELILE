@@ -4,10 +4,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PassiveListenerActivatable : BaseSceneActivatable
+public class PassiveListenerActivatable : BaseIntentActivatable
 {
-    public IntentEvents[] intents;
-    public string activateIntent;
+
     ValueWrapper<bool> activeListen = new ValueWrapper<bool>(false);
     public override void activateModifiers()
     {
@@ -47,23 +46,25 @@ public class PassiveListenerActivatable : BaseSceneActivatable
                 OnDisable();
                 activateNextScene();
             }
-            // else if (gameObject.activeInHierarchy) OnEnable();
-        }
-        else if (intents.Length > 0)
-        {
-            foreach (var item in intents)
+            else if (intents.Length > 0)
             {
-                var check = item.checkIntents(o.topIntent);
-                if (check.hadIntent)
+                foreach (var item in intents)
                 {
-                    if (check.activateScene)
+                    var check = item.checkIntents(o.topIntent);
+                    if (check.hadIntent)
                     {
-                        OnDisable();
-                        check.activateScene.startScene();
-                        break;
+                        if (check.activateScene)
+                        {
+                            OnDisable();
+                            check.activateScene.startScene();
+                            break;
+                        }
                     }
                 }
+                badAttempt(o.topIntent);
             }
+            else badAttempt(o.topIntent);
+            // else if (gameObject.activeInHierarchy) OnEnable();
         }
 
     }
