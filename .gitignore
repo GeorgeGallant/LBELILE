@@ -8,6 +8,7 @@
 [Ll]ogs/
 [Hh]iddenText/
 Assets/AssetStoreTools*
+Assets/Packages/*
 
 # Visual Studio cache directory
 .vs/
