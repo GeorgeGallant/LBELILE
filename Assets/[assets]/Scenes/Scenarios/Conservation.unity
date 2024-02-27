@@ -171,6 +171,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 739733962}
+  intents: []
   activateIntent: p3v.fishgame.citeRegulations
 --- !u!1 &51345263
 GameObject:
@@ -352,8 +353,8 @@ MonoBehaviour:
   videoURL: 4D2
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 803722141}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!1 &70536211
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,8 +532,8 @@ MonoBehaviour:
   videoURL: 5D
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 1898487289}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!1 &78970770
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,7 +583,7 @@ MonoBehaviour:
   videoURL: 5F
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 160582081}
+  videoFinishedScenario: {fileID: 1898487289}
   loopVideo: 0
 --- !u!1 &79772018
 GameObject:
@@ -831,7 +832,8 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 739733962}
+  activateScene: {fileID: 473094385}
+  intents: []
   activateIntent: p3v.fishgame.citeRegulations
 --- !u!1 &157018026
 GameObject:
@@ -1178,7 +1180,8 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 739733962}
+  activateScene: {fileID: 625443159}
+  intents: []
   activateIntent: p3v.fishgame.citeRegulations
 --- !u!1 &259411529
 GameObject:
@@ -2349,8 +2352,8 @@ MonoBehaviour:
   videoURL: 4B
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 1737063831}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!1 &630755943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2484,6 +2487,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 739733962}
+  intents: []
   activateIntent: p3v.fishgame.citeRegulations
 --- !u!1 &711702641
 GameObject:
@@ -2940,7 +2944,7 @@ MonoBehaviour:
   scenarioObjects:
   - scenarioObject: 2
     spawnPosition: {fileID: 1254217920}
-  videoFinishedScenario: {fileID: 1931877300}
+  videoFinishedScenario: {fileID: 0}
   loopVideo: 1
 --- !u!1 &765742090
 GameObject:
@@ -2976,8 +2980,8 @@ MonoBehaviour:
   scenarioObjects:
   - scenarioObject: 0
     spawnPosition: {fileID: 1254217920}
-  videoFinishedScenario: {fileID: 2025262541}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!4 &765742092
 Transform:
   m_ObjectHideFlags: 0
@@ -3046,8 +3050,8 @@ MonoBehaviour:
   videoURL: 4E
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 473094385}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!1 &816378996
 GameObject:
   m_ObjectHideFlags: 0
@@ -3265,8 +3269,8 @@ MonoBehaviour:
   videoURL: 5A
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 1550901325}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!1 &857917392
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,6 +3319,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 739733962}
+  intents: []
   activateIntent: p3v.fishgame.citeRegulations
 --- !u!1 &875252418
 GameObject:
@@ -3744,6 +3749,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 739733962}
+  intents: []
   activateIntent: p3v.fishgame.citeRegulations
 --- !u!1 &1042946998
 GameObject:
@@ -3926,6 +3932,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 2025262541}
+  intents: []
   activateIntent: p3v.dispatch.ackClear
 --- !u!1 &1146629198
 GameObject:
@@ -3975,6 +3982,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 739733962}
+  intents: []
   activateIntent: p3v.fishgame.citeRegulations
 --- !u!1 &1181600242
 GameObject:
@@ -4383,8 +4391,9 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 739733962}
-  activateIntent: p3v.fishgame.citeRegulations
+  activateScene: {fileID: 1780303923}
+  intents: []
+  activateIntent: p3v.fishgame.haveAuthority
 --- !u!1 &1386036249
 GameObject:
   m_ObjectHideFlags: 0
@@ -4907,9 +4916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoURL: 5H
   videoLoader: {fileID: 0}
-  scenarioObjects:
-  - scenarioObject: 0
-    spawnPosition: {fileID: 0}
+  scenarioObjects: []
   videoFinishedScenario: {fileID: 51345264}
   loopVideo: 0
 --- !u!1 &1527571977
@@ -4960,6 +4967,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 739733962}
+  intents: []
   activateIntent: p3v.fishgame.citeRegulations
 --- !u!1 &1534687811
 GameObject:
@@ -5058,8 +5066,8 @@ MonoBehaviour:
   videoURL: 5B
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 2122777601}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!1 &1553088562
 GameObject:
   m_ObjectHideFlags: 0
@@ -5229,6 +5237,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 1863653290}
+  intents: []
   activateIntent: p3v.dispatch.ackCopy
 --- !u!1 &1573369613
 GameObject:
@@ -5938,7 +5947,7 @@ MonoBehaviour:
   videoURL: 2C
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 739733962}
+  videoFinishedScenario: {fileID: 0}
   loopVideo: 1
 --- !u!1 &1733739717
 GameObject:
@@ -6057,8 +6066,8 @@ MonoBehaviour:
   videoURL: 4C
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 1945787631}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!1 &1737169131
 GameObject:
   m_ObjectHideFlags: 0
@@ -6209,6 +6218,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 739733962}
+  intents: []
   activateIntent: p3v.fishgame.citeRegulations
 --- !u!1 &1767184719
 GameObject:
@@ -6463,7 +6473,7 @@ MonoBehaviour:
   videoURL: 2B
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 1706387272}
+  videoFinishedScenario: {fileID: 0}
   loopVideo: 1
 --- !u!1 &1785523892
 GameObject:
@@ -6770,6 +6780,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 739733962}
+  intents: []
   activateIntent: p3v.fishgame.citeRegulations
 --- !u!1 &1834338113
 GameObject:
@@ -6904,7 +6915,7 @@ MonoBehaviour:
   scenarioObjects:
   - scenarioObject: 1
     spawnPosition: {fileID: 1254217920}
-  videoFinishedScenario: {fileID: 1780303923}
+  videoFinishedScenario: {fileID: 0}
   loopVideo: 1
 --- !u!1 &1870285921
 GameObject:
@@ -6954,6 +6965,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 739733962}
+  intents: []
   activateIntent: p3v.fishgame.citeRegulations
 --- !u!1 &1898487287
 GameObject:
@@ -7106,6 +7118,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 739733962}
+  intents: []
   activateIntent: p3v.fishgame.citeRegulations
 --- !u!1 &1942004132
 GameObject:
@@ -7206,8 +7219,8 @@ MonoBehaviour:
   videoURL: 4D1
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 66748831}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!1 &1954340234
 GameObject:
   m_ObjectHideFlags: 0
@@ -7256,6 +7269,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 739733962}
+  intents: []
   activateIntent: p3v.fishgame.citeRegulations
 --- !u!1 &1954420356
 GameObject:
@@ -7538,7 +7552,8 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 739733962}
+  activateScene: {fileID: 78970772}
+  intents: []
   activateIntent: p3v.fishgame.citeRegulations
 --- !u!1 &2009423693
 GameObject:
@@ -7588,6 +7603,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 739733962}
+  intents: []
   activateIntent: p3v.fishgame.citeRegulations
 --- !u!1 &2025262540
 GameObject:
@@ -7623,8 +7639,8 @@ MonoBehaviour:
   scenarioObjects:
   - scenarioObject: 0
     spawnPosition: {fileID: 0}
-  videoFinishedScenario: {fileID: 1863653290}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!4 &2025262542
 Transform:
   m_ObjectHideFlags: 0
@@ -8043,8 +8059,8 @@ MonoBehaviour:
   videoURL: 5C
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 70657244}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!1 &2123698448
 GameObject:
   m_ObjectHideFlags: 0
@@ -8090,7 +8106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7181f3715ceafa1418093f6e515820f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScenario: {fileID: 2129817804}
+  firstScenario: {fileID: 765742091}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -8169,8 +8185,8 @@ MonoBehaviour:
   videoURL: 4A
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 625443159}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!1001 &6728085473460422789
 PrefabInstance:
   m_ObjectHideFlags: 0
