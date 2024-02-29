@@ -4,10 +4,9 @@ using ThirdParty;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class SceneRadioActivatable : BaseSceneActivatable
+public class SceneRadioActivatable : BaseIntentActivatable
 {
-    public IntentEvents[] intents;
-    public string activateIntent;
+
     public override void activateModifiers()
     {
         AzureVoice.intentEvent.AddListener(intentListener);
@@ -47,32 +46,9 @@ public class SceneRadioActivatable : BaseSceneActivatable
                     break;
                 }
             }
+            badAttempt(o.topIntent);
         }
+        else badAttempt(o.topIntent);
 
-    }
-}
-[System.Serializable]
-public class IntentEvents
-{
-    [Header("Optional")]
-    public string name = "";
-    public string[] intents;
-    public BaseScene activateScene;
-    public UnityEvent intentEvent;
-    int amount = 0;
-    public int requiredAmount = 0;
-    public (bool hadIntent, BaseScene activateScene) checkIntents(string intent)
-    {
-        foreach (var item in intents)
-        {
-            if (item.ToLower() == intent.ToLower())
-            {
-                amount++;
-                if (amount < requiredAmount) return (false, null);
-                intentEvent.Invoke();
-                return (true, activateScene);
-            }
-        }
-        return (false, null);
     }
 }
