@@ -170,9 +170,12 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 739733962}
+  activateScene: {fileID: 1898487289}
   intents: []
-  activateIntent: p3v.fishgame.citeRegulations
+  activateIntent: p3v.fishgame.checkCatch
+  attemptsAllowed: 1
+  badAttemptScene: {fileID: 70657244}
+  ignoreNoSpeech: 1
 --- !u!1 &51345263
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +837,10 @@ MonoBehaviour:
       m_Calls: []
   activateScene: {fileID: 473094385}
   intents: []
-  activateIntent: p3v.fishgame.citeRegulations
+  activateIntent: p3v.fishgame.giveWarning
+  attemptsAllowed: 1
+  badAttemptScene: {fileID: 488898946}
+  ignoreNoSpeech: 1
 --- !u!1 &157018026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,8 +1137,8 @@ MonoBehaviour:
   videoURL: 3BR
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 454548985}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!1 &252023699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,8 +1187,30 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 625443159}
-  intents: []
-  activateIntent: p3v.fishgame.citeRegulations
+  intents:
+  - name: 
+    intents: []
+    activateScene: {fileID: 0}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    requiredAmount: 0
+  activateIntent: 'p3v.fishgame.identification '
+  attemptsAllowed: 1
+  badAttemptScene: {fileID: 0}
+  ignoreNoSpeech: 1
 --- !u!1 &259411529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,8 +1936,8 @@ MonoBehaviour:
   videoURL: 3C
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 1042947000}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!1 &473094383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2486,9 +2514,12 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 739733962}
+  activateScene: {fileID: 1945787631}
   intents: []
-  activateIntent: p3v.fishgame.citeRegulations
+  activateIntent: p3v.fishgame.getPermit
+  attemptsAllowed: 1
+  badAttemptScene: {fileID: 625443159}
+  ignoreNoSpeech: 1
 --- !u!1 &711702641
 GameObject:
   m_ObjectHideFlags: 0
@@ -3318,9 +3349,12 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 739733962}
+  activateScene: {fileID: 803722141}
   intents: []
-  activateIntent: p3v.fishgame.citeRegulations
+  activateIntent: p3v.fishgame.checkCatch
+  attemptsAllowed: 1
+  badAttemptScene: {fileID: 625443159}
+  ignoreNoSpeech: 1
 --- !u!1 &875252418
 GameObject:
   m_ObjectHideFlags: 0
@@ -3748,9 +3782,12 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 739733962}
+  activateScene: {fileID: 1737063831}
   intents: []
-  activateIntent: p3v.fishgame.citeRegulations
+  activateIntent: p3v.fishgame.getPermit
+  attemptsAllowed: 1
+  badAttemptScene: {fileID: 1550901325}
+  ignoreNoSpeech: 1
 --- !u!1 &1042946998
 GameObject:
   m_ObjectHideFlags: 0
@@ -3934,6 +3971,9 @@ MonoBehaviour:
   activateScene: {fileID: 2025262541}
   intents: []
   activateIntent: p3v.dispatch.ackClear
+  attemptsAllowed: 3
+  badAttemptScene: {fileID: 0}
+  ignoreNoSpeech: 1
 --- !u!1 &1146629198
 GameObject:
   m_ObjectHideFlags: 0
@@ -3984,6 +4024,9 @@ MonoBehaviour:
   activateScene: {fileID: 739733962}
   intents: []
   activateIntent: p3v.fishgame.citeRegulations
+  attemptsAllowed: 2
+  badAttemptScene: {fileID: 1780303923}
+  ignoreNoSpeech: 1
 --- !u!1 &1181600242
 GameObject:
   m_ObjectHideFlags: 0
@@ -4394,6 +4437,9 @@ MonoBehaviour:
   activateScene: {fileID: 1780303923}
   intents: []
   activateIntent: p3v.fishgame.haveAuthority
+  attemptsAllowed: 1
+  badAttemptScene: {fileID: 1863653290}
+  ignoreNoSpeech: 1
 --- !u!1 &1386036249
 GameObject:
   m_ObjectHideFlags: 0
@@ -4966,9 +5012,12 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 739733962}
+  activateScene: {fileID: 803722141}
   intents: []
-  activateIntent: p3v.fishgame.citeRegulations
+  activateIntent: 'p3v.fishgame.checkCatch '
+  attemptsAllowed: 1
+  badAttemptScene: {fileID: 66748831}
+  ignoreNoSpeech: 1
 --- !u!1 &1534687811
 GameObject:
   m_ObjectHideFlags: 0
@@ -5239,6 +5288,9 @@ MonoBehaviour:
   activateScene: {fileID: 1863653290}
   intents: []
   activateIntent: p3v.dispatch.ackCopy
+  attemptsAllowed: 3
+  badAttemptScene: {fileID: 1780303923}
+  ignoreNoSpeech: 1
 --- !u!1 &1573369613
 GameObject:
   m_ObjectHideFlags: 0
@@ -6168,8 +6220,8 @@ MonoBehaviour:
   videoURL: 3BL
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 250659915}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!1 &1762188006
 GameObject:
   m_ObjectHideFlags: 0
@@ -6186,7 +6238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1762188007
 Transform:
   m_ObjectHideFlags: 0
@@ -6220,6 +6272,9 @@ MonoBehaviour:
   activateScene: {fileID: 739733962}
   intents: []
   activateIntent: p3v.fishgame.citeRegulations
+  attemptsAllowed: 0
+  badAttemptScene: {fileID: 0}
+  ignoreNoSpeech: 1
 --- !u!1 &1767184719
 GameObject:
   m_ObjectHideFlags: 0
@@ -6779,9 +6834,12 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 739733962}
+  activateScene: {fileID: 1780303923}
   intents: []
-  activateIntent: p3v.fishgame.citeRegulations
+  activateIntent: 'p3v.fishgame.haveAuthority '
+  attemptsAllowed: 1
+  badAttemptScene: {fileID: 1863653290}
+  ignoreNoSpeech: 1
 --- !u!1 &1834338113
 GameObject:
   m_ObjectHideFlags: 0
@@ -6933,7 +6991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1870285922
 Transform:
   m_ObjectHideFlags: 0
@@ -6967,6 +7025,9 @@ MonoBehaviour:
   activateScene: {fileID: 739733962}
   intents: []
   activateIntent: p3v.fishgame.citeRegulations
+  attemptsAllowed: 0
+  badAttemptScene: {fileID: 0}
+  ignoreNoSpeech: 1
 --- !u!1 &1898487287
 GameObject:
   m_ObjectHideFlags: 0
@@ -7068,8 +7129,8 @@ MonoBehaviour:
   videoURL: 3A
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 1744953634}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
 --- !u!1 &1933839020
 GameObject:
   m_ObjectHideFlags: 0
@@ -7117,9 +7178,12 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 739733962}
+  activateScene: {fileID: 1550901325}
   intents: []
-  activateIntent: p3v.fishgame.citeRegulations
+  activateIntent: p3v.fishgame.identification
+  attemptsAllowed: 1
+  badAttemptScene: {fileID: 841281015}
+  ignoreNoSpeech: 1
 --- !u!1 &1942004132
 GameObject:
   m_ObjectHideFlags: 0
@@ -7268,9 +7332,12 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 739733962}
+  activateScene: {fileID: 1737063831}
   intents: []
-  activateIntent: p3v.fishgame.citeRegulations
+  activateIntent: p3v.fishgame.getStatusCard
+  attemptsAllowed: 1
+  badAttemptScene: {fileID: 2129817804}
+  ignoreNoSpeech: 1
 --- !u!1 &1954420356
 GameObject:
   m_ObjectHideFlags: 0
@@ -7552,9 +7619,12 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 78970772}
+  activateScene: {fileID: 160582081}
   intents: []
-  activateIntent: p3v.fishgame.citeRegulations
+  activateIntent: p3v.fishgame.giveWarning
+  attemptsAllowed: 1
+  badAttemptScene: {fileID: 78970772}
+  ignoreNoSpeech: 1
 --- !u!1 &2009423693
 GameObject:
   m_ObjectHideFlags: 0
@@ -7602,9 +7672,12 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 739733962}
+  activateScene: {fileID: 1898487289}
   intents: []
-  activateIntent: p3v.fishgame.citeRegulations
+  activateIntent: p3v.fishgame.checkCatch
+  attemptsAllowed: 1
+  badAttemptScene: {fileID: 1550901325}
+  ignoreNoSpeech: 1
 --- !u!1 &2025262540
 GameObject:
   m_ObjectHideFlags: 0
