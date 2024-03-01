@@ -1035,7 +1035,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 182940746}
-  - component: {fileID: 182940747}
   m_Layer: 11
   m_Name: Fishers
   m_TagString: Untagged
@@ -1060,33 +1059,6 @@ Transform:
   - {fileID: 979090375}
   m_Father: {fileID: 1182760485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &182940747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 182940745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d670693c2f802bb43b52d2c25248166d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  looking: 0
-  once: 0
-  useLookEvents: 0
-  activateLookAngle: 30
-  lookTime: 3
-  currentAngle: 0
-  lookEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  releaseLookEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onLookEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &250659913
 GameObject:
   m_ObjectHideFlags: 0
@@ -5291,55 +5263,6 @@ MonoBehaviour:
   attemptsAllowed: 3
   badAttemptScene: {fileID: 1780303923}
   ignoreNoSpeech: 1
---- !u!1 &1573369613
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1573369614}
-  - component: {fileID: 1573369615}
-  m_Layer: 0
-  m_Name: BinocularReleaseEvent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1573369614
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573369613}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1863653289}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1573369615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573369613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01398678f88a951449771d04e6d002bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 1780303923}
-  allowActivate: 0
 --- !u!1 &1583886687
 GameObject:
   m_ObjectHideFlags: 0
@@ -6001,74 +5924,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
---- !u!1 &1733739717
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1733739718}
-  - component: {fileID: 1733739719}
-  m_Layer: 0
-  m_Name: ComboActivator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1733739718
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733739717}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.310905, y: 0.22507095, z: 9.035628}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2066279441}
-  m_Father: {fileID: 1863653289}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1733739719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733739717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 788fbf3c6cbf1634986a4ac0be2b2e8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
-  activatables:
-  - {fileID: 182940747}
-  - {fileID: 2066279442}
-  comboActivateEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1573369615}
-        m_TargetAssemblyTypeName: BinocularEventActivatable, Assembly-CSharp
-        m_MethodName: setAllowActivate
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  activated: 
 --- !u!1 &1737063829
 GameObject:
   m_ObjectHideFlags: 0
@@ -6951,8 +6806,6 @@ Transform:
   m_Children:
   - {fileID: 1553088563}
   - {fileID: 1182760485}
-  - {fileID: 1733739718}
-  - {fileID: 1573369614}
   - {fileID: 1319569135}
   m_Father: {fileID: 410944827}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7867,54 +7720,6 @@ PlayableDirector:
     value: {fileID: 1633380480}
   m_ExposedReferences:
     m_References: []
---- !u!1 &2066279440
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2066279441}
-  - component: {fileID: 2066279442}
-  m_Layer: 0
-  m_Name: VideoWatcher
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2066279441
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066279440}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1733739718}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2066279442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066279440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ac18267674045b43a50b87098f41500, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  video: {fileID: 1491150931}
-  secondsTimeCode: 90
-  timeCodeWindow: 14
-  anytimeAfterTimecode: 1
 --- !u!1 &2088366683
 GameObject:
   m_ObjectHideFlags: 0
