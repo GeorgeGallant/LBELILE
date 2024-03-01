@@ -24,7 +24,7 @@ public class IntentEvents
 {
     [Header("Optional")]
     public string name = "";
-    public string[] intents;
+    public string[] intents = new string[1];
     public BaseScene activateScene;
     public UnityEvent intentEvent;
     int amount = 0;

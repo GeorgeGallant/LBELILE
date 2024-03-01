@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using ThirdParty;
 using TMPro;
@@ -41,7 +42,7 @@ public class PassiveListenerActivatable : BaseIntentActivatable
         {
             var intent = o.topIntent;
             Debug.Log(intent);
-            if (intent.ToLower() == activateIntent.ToLower())
+            if (intent != string.Empty && intent.ToLower() == activateIntent.ToLower())
             {
                 OnDisable();
                 activateNextScene();
