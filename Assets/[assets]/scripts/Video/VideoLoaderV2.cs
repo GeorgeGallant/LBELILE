@@ -12,7 +12,7 @@ public class VideoLoaderV2 : MonoBehaviour
     public bool currentlyPlaying = false;
     public UnityEvent<bool> playStateChanged = new UnityEvent<bool>();
     public UnityEvent onVideoFinished = new UnityEvent();
-    public UnityEvent onVideoPrepared = new UnityEvent();
+    public UnityEvent<double> onVideoPrepared = new UnityEvent<double>();
     public UnityEvent videoStopped = new UnityEvent();
     public bool playOnAwake = false;
     public bool loop = false;
@@ -44,14 +44,14 @@ public class VideoLoaderV2 : MonoBehaviour
         currentlyPlaying = newState;
     }
 
-    void prepareCompleted(VideoPlayer source)
+    void prepareCompleted(VideoPlayer source, double seek)
     {
         // GlobalVideoHandler.onPrepareComplete.RemoveListener(prepareCompleted);
         if (source.url != GlobalVideoHandler.pathResolver(videoURL)) { changePlayState(false); return; }
         changePlayState(true);
         (targetGameObject == null ? gameObject : targetGameObject).GetComponent<Renderer>().material.SetTexture(targetMaterialProperty == "" ? "_BaseMap" : targetMaterialProperty, source.targetTexture);
         source.isLooping = loop;
-        onVideoPrepared.Invoke();
+        onVideoPrepared.Invoke(seek);
     }
 
     void videoFinished(VideoPlayer source)

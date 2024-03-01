@@ -89,7 +89,7 @@ public class GenericScene : BaseScene
         else activateScene();
     }
 
-    protected void activateScene()
+    protected void activateScene(double seek = 0)
     {
         Debug.Log("activating scenario!");
         ScenarioManager.enableScenarioObjects(scenarioObjects);

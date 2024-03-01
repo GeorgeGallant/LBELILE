@@ -16,9 +16,14 @@ public class TimelineActivatable : BaseSceneActivatable
         if (syncWithVideo)
         {
             var video = gameObject.GetComponentInParent<VideoLoaderV2>();
-            video.onVideoPrepared.AddListener(director.Play);
+            video.onVideoPrepared.AddListener(directorPlayWithSeek);
             video.videoStopped.AddListener(director.Stop);
         }
+    }
+    void directorPlayWithSeek(double seek)
+    {
+        director.Play();
+        director.time = seek;
     }
     public override void deactivateModifiers()
     {
@@ -26,7 +31,7 @@ public class TimelineActivatable : BaseSceneActivatable
         if (syncWithVideo)
         {
             var video = gameObject.GetComponentInParent<VideoLoaderV2>();
-            video.onVideoPrepared.RemoveListener(director.Play);
+            video.onVideoPrepared.RemoveListener(directorPlayWithSeek);
             video.videoStopped.RemoveListener(director.Stop);
         }
     }

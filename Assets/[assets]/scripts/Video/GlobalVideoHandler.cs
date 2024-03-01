@@ -10,8 +10,21 @@ public class GlobalVideoHandler : MonoBehaviour
     public static GlobalVideoHandler instance;
     VideoPlayer video;
     public string baseFolder = "";
-    public static UnityEvent<VideoPlayer> onPrepareComplete = new UnityEvent<VideoPlayer>();
+    public static UnityEvent<VideoPlayer, double> onPrepareComplete = new UnityEvent<VideoPlayer, double>();
     public static UnityEvent<VideoPlayer> onVideoFinished = new UnityEvent<VideoPlayer>();
+
+    protected double seekTo = 0;
+    public static double SeekTo
+    {
+        get
+        {
+            return instance.seekTo;
+        }
+        set
+        {
+            instance.seekTo = value;
+        }
+    }
 
     public static VideoPlayer instancePlayer
     {
@@ -33,6 +46,16 @@ public class GlobalVideoHandler : MonoBehaviour
         video.errorReceived += Video_errorReceived;
         video.prepareCompleted += Video_prepareCompleted;
         video.loopPointReached += Video_loopPointReached;
+        video.seekCompleted += Video_seekComplete;
+    }
+
+    private void Video_seekComplete(VideoPlayer source)
+    {
+        if (source.targetTexture == null || source.targetTexture.height != source.height || source.targetTexture.width != source.width)
+        {
+            source.targetTexture = new RenderTexture((int)source.width, (int)source.height, 0);
+        }
+        onPrepareComplete.Invoke(source, seekTo);
     }
 
     private void Video_loopPointReached(VideoPlayer source)
@@ -62,12 +85,17 @@ public class GlobalVideoHandler : MonoBehaviour
 
     private void Video_prepareCompleted(VideoPlayer source)
     {
+        if (seekTo > 0)
+        {
+            instance.video.time = seekTo;
+            seekTo = 0;
+            return;
+        }
         if (source.targetTexture == null || source.targetTexture.height != source.height || source.targetTexture.width != source.width)
         {
             source.targetTexture = new RenderTexture((int)source.width, (int)source.height, 0);
         }
-        Debug.Log(source);
-        onPrepareComplete.Invoke(source);
+        onPrepareComplete.Invoke(source, 0);
     }
 
 
