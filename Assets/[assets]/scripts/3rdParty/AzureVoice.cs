@@ -22,8 +22,8 @@ namespace ThirdParty
     public class AzureVoice
     {
         static bool busy = false;
-        public static UnityEngine.Events.UnityEvent<(string topIntent, string initiator)> intentEvent = new UnityEngine.Events.UnityEvent<(string topIntent, string initiator)>();
-        public static async Task Listener(ValueWrapper<bool> continueListening, string initiator, bool passive = false)
+        public static UnityEngine.Events.UnityEvent<(string topIntent, string initiator, string scene)> intentEvent = new UnityEngine.Events.UnityEvent<(string topIntent, string initiator, string scene)>();
+        public static async Task Listener(ValueWrapper<bool> continueListening, string initiator, string relevantScene)
         {
             // if (busy) return;
             busy = true;
@@ -79,7 +79,7 @@ namespace ThirdParty
                 }
                 UnityMainThread.AddJob(() =>
                 {
-                    intentEvent.Invoke((intent, initiator));
+                    intentEvent.Invoke((intent, initiator, relevantScene));
                     IntentRecorder.RecordIntent((utterance, intent, initiator));
                 });
             }

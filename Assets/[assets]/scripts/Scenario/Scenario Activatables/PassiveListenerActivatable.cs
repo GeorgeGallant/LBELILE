@@ -23,7 +23,7 @@ public class PassiveListenerActivatable : BaseIntentActivatable
         Debug.Log("now passive listening");
         AzureVoice.intentEvent.AddListener(intentListener);
         activeListen.Value = true;
-        await AzureVoice.Listener(activeListen, "passive");
+        await AzureVoice.Listener(activeListen, "passive", activatableOwner.gameObject.name);
     }
 
     void OnDisable()
@@ -35,9 +35,10 @@ public class PassiveListenerActivatable : BaseIntentActivatable
 
     }
 
-    private void intentListener((string topIntent, string initiator) o)
+    private void intentListener((string topIntent, string initiator, string scene) o)
     {
         if (!sceneActive) return;
+        if (o.scene != activatableOwner.gameObject.name) return;
         if (o.initiator == "passive")
         {
             var intent = o.topIntent;

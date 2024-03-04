@@ -8,7 +8,7 @@ public class RadioActivatableGrabbable : ActivatableGrabbable
     {
         base.Activated(args);
         pressed.Value = true;
-        await AzureVoice.Listener(pressed, "radio");
+        await AzureVoice.Listener(pressed, "radio", ScenarioManager.ActiveScenario.gameObject.name);
     }
 
     protected override void Deactivate(DeactivateEventArgs args = null)
