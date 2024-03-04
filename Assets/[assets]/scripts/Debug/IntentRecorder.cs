@@ -20,6 +20,7 @@ public class IntentRecorder : MonoBehaviour
 
     public static void RecordIntent((string speech, string intentRecognized, string initiator) i)
     {
+        if (i.intentRecognized.ToLower() == "no speech") return;
         if (!instance)
         {
             if (warned) return;
