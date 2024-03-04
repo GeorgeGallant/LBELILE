@@ -1171,14 +1171,22 @@ MonoBehaviour:
   - name: ID and Reason
     intents:
     - p3v.fishgame.idPlusReason
-    activateScene: {fileID: 1737063831}
+    activateScene: {fileID: 625443159}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
+  - name: 'ID '
+    intents:
+    - 'p3v.identification '
+    activateScene: {fileID: 625443159}
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
   activateIntent: 'p3v.fishgame.identification '
   attemptsAllowed: 1
-  badAttemptScene: {fileID: 0}
+  badAttemptScene: {fileID: 2129817804}
   ignoreNoSpeech: 1
 --- !u!1 &259411529
 GameObject:
@@ -2623,7 +2631,7 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 1737063831}
+  activateScene: {fileID: 66748831}
   intents:
   - name: Ask for licence
     intents:
@@ -3466,7 +3474,7 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 1737063831}
+  activateScene: {fileID: 803722141}
   intents: []
   activateIntent: p3v.fishgame.checkCatch
   attemptsAllowed: 1
@@ -7334,7 +7342,7 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 1737063831}
+  activateScene: {fileID: 66748831}
   intents: []
   activateIntent: p3v.fishgame.getStatusCard
   attemptsAllowed: 1
@@ -8141,7 +8149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7181f3715ceafa1418093f6e515820f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScenario: {fileID: 625443159}
+  firstScenario: {fileID: 2129817804}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
