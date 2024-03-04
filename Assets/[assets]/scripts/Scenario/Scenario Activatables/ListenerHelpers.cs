@@ -10,6 +10,11 @@ public class BaseIntentActivatable : BaseSceneActivatable
     public BaseScene badAttemptScene;
     public bool ignoreNoSpeech = true;
 
+    protected override void StartSetup()
+    {
+        activateIntent = activateIntent.Trim();
+    }
+
     protected void badAttempt(string attempt)
     {
         if (!badAttemptScene || (ignoreNoSpeech && attempt == "No speech")) return;
@@ -33,7 +38,7 @@ public class IntentEvents
     {
         foreach (var item in intents)
         {
-            if (item.ToLower() == intent.ToLower())
+            if (item.Trim().ToLower() == intent.ToLower())
             {
                 amount++;
                 if (amount < requiredAmount) return (false, null);

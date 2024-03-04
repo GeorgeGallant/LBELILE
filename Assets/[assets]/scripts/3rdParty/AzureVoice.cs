@@ -45,16 +45,18 @@ namespace ThirdParty
             recognizer.AddAllIntents(cluModel);
             recognizer.Recognized += resultRecieved;
             recognizer.Canceled += cancelled;
+            UnityEngine.Debug.Log("Azure listening and busy");
             await recognizer.StartContinuousRecognitionAsync();
 
             while (continueListening != null && continueListening.Value)
             {
-                await Task.Delay(100);
+                await Task.Delay(1);
             }
 
             UnityEngine.Debug.Log("no longer listening");
 
             await recognizer.StopContinuousRecognitionAsync().ConfigureAwait(false);
+            UnityEngine.Debug.Log("Azure no longer busy");
             busy = false;
 
             void resultRecieved(object sender, IntentRecognitionEventArgs e)
@@ -78,6 +80,7 @@ namespace ThirdParty
                 UnityMainThread.AddJob(() =>
                 {
                     intentEvent.Invoke((intent, initiator));
+                    IntentRecorder.RecordIntent((utterance, intent, initiator));
                 });
             }
             void cancelled(object sender, IntentRecognitionCanceledEventArgs e)
