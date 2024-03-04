@@ -12,6 +12,7 @@ public class GlobalVideoHandler : MonoBehaviour
     public string baseFolder = "";
     public static UnityEvent<VideoPlayer, double> onPrepareComplete = new UnityEvent<VideoPlayer, double>();
     public static UnityEvent<VideoPlayer> onVideoFinished = new UnityEvent<VideoPlayer>();
+    Dictionary<string, RenderTexture> resRTs = new Dictionary<string, RenderTexture>();
 
     protected double seekTo = 0;
     public static double SeekTo
@@ -49,11 +50,36 @@ public class GlobalVideoHandler : MonoBehaviour
         video.seekCompleted += Video_seekComplete;
     }
 
+    private RenderTexture getRenderTextureForResolution(int h, int w)
+    {
+        string key = $"{h}-{w}";
+        RenderTexture rtOut;
+        if (!resRTs.TryGetValue(key, out rtOut))
+        {
+            rtOut = new RenderTexture(w, h, 0);
+            resRTs.Add(key, rtOut);
+        }
+        return rtOut;
+    }
+
     private void Video_seekComplete(VideoPlayer source)
     {
-        if (source.targetTexture == null || source.targetTexture.height != source.height || source.targetTexture.width != source.width)
+        if (source.targetTexture == null
+         || source.targetTexture.height != source.height || source.targetTexture.width != source.width
+         )
         {
-            source.targetTexture = new RenderTexture((int)source.width, (int)source.height, 0);
+            source.targetTexture = getRenderTextureForResolution((int)source.height, (int)source.width);
+        }
+        else
+        {
+            // if (source.targetTexture.height != source.height)
+            // {
+            //     source.targetTexture.height = (int)source.height;
+            // }
+            // if (source.targetTexture.width != source.width)
+            // {
+            //     source.targetTexture.width = (int)source.width;
+            // }
         }
         onPrepareComplete.Invoke(source, seekTo);
     }
@@ -93,7 +119,7 @@ public class GlobalVideoHandler : MonoBehaviour
         }
         if (source.targetTexture == null || source.targetTexture.height != source.height || source.targetTexture.width != source.width)
         {
-            source.targetTexture = new RenderTexture((int)source.width, (int)source.height, 0);
+            source.targetTexture = getRenderTextureForResolution((int)source.height, (int)source.width);
         }
         onPrepareComplete.Invoke(source, 0);
     }
