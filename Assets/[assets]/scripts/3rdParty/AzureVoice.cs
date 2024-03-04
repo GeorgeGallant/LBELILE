@@ -25,7 +25,7 @@ namespace ThirdParty
         public static UnityEngine.Events.UnityEvent<(string topIntent, string initiator)> intentEvent = new UnityEngine.Events.UnityEvent<(string topIntent, string initiator)>();
         public static async Task Listener(ValueWrapper<bool> continueListening, string initiator, bool passive = false)
         {
-            if (busy) return;
+            // if (busy) return;
             busy = true;
             var config = SpeechConfig.FromSubscription(ConfigManager.SUBSCRIPTION_KEY, ConfigManager.REGION_NAME);
 
