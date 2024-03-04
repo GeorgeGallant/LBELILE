@@ -31,25 +31,25 @@ public class SceneRadioActivatable : BaseIntentActivatable
     private void intentListener((string topIntent, string initiator, string scene) o)
     {
         if (!sceneActive) return;
-        if (o.scene != activatableOwner.gameObject.name)
-            if (o.initiator == "radio" && o.topIntent.ToLower() == activateIntent.ToLower())
+        if (o.scene != activatableOwner.gameObject.name) return;
+        if (o.initiator == "radio" && o.topIntent.ToLower() == activateIntent.ToLower())
+        {
+            activateNextScene();
+        }
+        else if (intents.Length > 0)
+        {
+            foreach (var item in intents)
             {
-                activateNextScene();
-            }
-            else if (intents.Length > 0)
-            {
-                foreach (var item in intents)
+                var check = item.checkIntents(o.topIntent);
+                if (check.hadIntent)
                 {
-                    var check = item.checkIntents(o.topIntent);
-                    if (check.hadIntent)
-                    {
-                        check.activateScene.startScene();
-                        break;
-                    }
+                    check.activateScene.startScene();
+                    break;
                 }
-                badAttempt(o.topIntent);
             }
-            else badAttempt(o.topIntent);
+            badAttempt(o.topIntent);
+        }
+        else badAttempt(o.topIntent);
 
     }
 }

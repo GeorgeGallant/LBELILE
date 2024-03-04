@@ -17,17 +17,19 @@ public class PassiveListenerActivatable : BaseIntentActivatable
     {
         OnDisable();
     }
-    async void OnEnable()
+    protected async override void OnEnable()
     {
         if (!sceneActive) return;
+        base.OnEnable();
         Debug.Log("now passive listening");
         AzureVoice.intentEvent.AddListener(intentListener);
         activeListen.Value = true;
         await AzureVoice.Listener(activeListen, "passive", activatableOwner.gameObject.name);
     }
 
-    void OnDisable()
+    protected override void OnDisable()
     {
+        base.OnDisable();
         AzureVoice.intentEvent.RemoveListener(intentListener);
         if (activeListen.Value)
             Debug.Log("no longer passive listening");

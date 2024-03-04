@@ -21,6 +21,7 @@ namespace ThirdParty
 {
     public class AzureVoice
     {
+        public static Dictionary<string, string> intentDestinations = new Dictionary<string, string>();
         static bool busy = false;
         public static UnityEngine.Events.UnityEvent<(string topIntent, string initiator, string scene)> intentEvent = new UnityEngine.Events.UnityEvent<(string topIntent, string initiator, string scene)>();
         public static async Task Listener(ValueWrapper<bool> continueListening, string initiator, string relevantScene)
@@ -77,10 +78,13 @@ namespace ThirdParty
                 {
                     intent = "No speech";
                 }
+                string destination = "null";
+                intentDestinations.TryGetValue(intent, out destination);
+
                 UnityMainThread.AddJob(() =>
                 {
+                    IntentRecorder.RecordIntent((utterance, intent, initiator, json, destination));
                     intentEvent.Invoke((intent, initiator, relevantScene));
-                    IntentRecorder.RecordIntent((utterance, intent, initiator));
                 });
             }
             void cancelled(object sender, IntentRecognitionCanceledEventArgs e)
