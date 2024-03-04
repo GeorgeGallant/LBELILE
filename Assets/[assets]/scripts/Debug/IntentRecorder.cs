@@ -33,7 +33,8 @@ public class IntentRecorder : MonoBehaviour
             speech = i.speech,
             intentRecognized = i.intentRecognized,
             initiator = i.initiator,
-            timestamp = System.DateTime.Now.ToString()
+            timestamp = System.DateTime.Now.ToString(),
+            scene = ScenarioManager.instance.activeScenario.gameObject.name
         };
         instance.record.Add(newRecord);
         Debug.Log(newRecord);
@@ -70,6 +71,7 @@ public class IntentRecorder : MonoBehaviour
         public string intentRecognized;
         public string initiator;
         public string timestamp;
+        public string scene;
 
     }
 }
