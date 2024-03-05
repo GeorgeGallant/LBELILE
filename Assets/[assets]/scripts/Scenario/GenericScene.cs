@@ -60,6 +60,7 @@ public class GenericScene : BaseScene
         {
             if (ScenarioManager.AttemptOccupy(this))
             {
+                Debug.Log("Awaiting occupier to go away before starting scene.");
                 StartCoroutine(AwaitStart());
             }
         }
@@ -67,8 +68,15 @@ public class GenericScene : BaseScene
 
     IEnumerator AwaitStart()
     {
+        float timeSinceLast = 1;
         while (!ScenarioManager.AllowNewScene)
         {
+            timeSinceLast -= Time.deltaTime;
+            if (timeSinceLast <= 0)
+            {
+                Debug.Log("Awaiting occupier to go away.");
+                timeSinceLast = 1;
+            }
             yield return null;
         }
         StartScene();
@@ -77,6 +85,7 @@ public class GenericScene : BaseScene
 
     void StartScene()
     {
+        Debug.Log("Starting new scene");
         Start();
         if (ScenarioManager.ActiveScenario)
             ScenarioManager.ActiveScenario.deactivateScene();
