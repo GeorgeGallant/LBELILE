@@ -48,7 +48,7 @@ public class GenericScene : BaseScene
     public override void startScene()
     {
         if (ScenarioManager.Occupier) return;
-        if (ScenarioManager.ActiveScenario == this) return;
+        // if (ScenarioManager.ActiveScenario == this) return;
 
 
 
