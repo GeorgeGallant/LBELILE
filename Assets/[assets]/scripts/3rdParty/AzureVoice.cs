@@ -31,28 +31,28 @@ namespace ThirdParty
             var config = SpeechConfig.FromSubscription(ConfigManager.SUBSCRIPTION_KEY, ConfigManager.REGION_NAME);
 
             var predictionEndpointUri = "https://p360v2.cognitiveservices.azure.com/";
-      /*
+
+            // var cluModel = new ConversationalLanguageUnderstandingModel(
+            //   ConfigManager.LANGUAGE_RESOURCE_KEY,
+            //   predictionEndpointUri,
+            //   "P360V_1",
+            //   "p3vDev1");
+
             var cluModel = new ConversationalLanguageUnderstandingModel(
               ConfigManager.LANGUAGE_RESOURCE_KEY,
               predictionEndpointUri,
-              "P360V_1",
-              "p3vDev1");
-      */
-      var cluModel = new ConversationalLanguageUnderstandingModel(
-        ConfigManager.LANGUAGE_RESOURCE_KEY,
-        predictionEndpointUri,
-        "P360V_fishgame",
-        "P360V_fishgame");
+              "P360V_fishgame",
+              "P360V_fishgame");
 
-      var collection = new LanguageUnderstandingModelCollection();
+            var collection = new LanguageUnderstandingModelCollection();
             collection.Add(cluModel);
 
-      /****
-       * This was added by Stephen on 2024-03-05 to limit the intents
-       * Ideally this should be loaded when the conservation scene is loaded (or each scene)
-       * 
-       *****/
-      string[] validSceneIntents = {
+            /****
+             * This was added by Stephen on 2024-03-05 to limit the intents
+             * Ideally this should be loaded when the conservation scene is loaded (or each scene)
+             * 
+             *****/
+            string[] validSceneIntents = {
           "p3v.dispatch.ackArrive",
           "p3v.dispatch.ackClear",
           "p3v.dispatch.ackCopy",
@@ -72,15 +72,15 @@ namespace ThirdParty
             var recognizer = new IntentRecognizer(config);
             recognizer.ApplyLanguageModels(collection);
 
-      /****
-       * This was modified by Stephen on 2024-03-05 manage limited intents instead of all 
-       ****/
+            /****
+             * This was modified by Stephen on 2024-03-05 manage limited intents instead of all 
+             ****/
             // recognizer.AddAllIntents(cluModel);
-            foreach(string intent in validSceneIntents)
+            foreach (string intent in validSceneIntents)
             {
-                recognizer.AddIntents(cluModel,intent);
+                recognizer.AddAllIntents(cluModel, intent);
             }
-      /**** end modification ****/
+            /**** end modification ****/
 
             recognizer.Recognized += resultRecieved;
             recognizer.Canceled += cancelled;
