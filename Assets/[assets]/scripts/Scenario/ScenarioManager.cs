@@ -86,7 +86,7 @@ public class ScenarioManager : MonoBehaviour
 
     static (Vector3 pos, Quaternion rot) getSpawn()
     {
-        var pos = Camera.main.transform.forward * 0.15f;
+        var pos = Camera.main.transform.forward * 0.25f;
         pos.y = Camera.main.transform.position.y;
         Quaternion rot = Quaternion.LookRotation((pos - Camera.main.transform.position).normalized);
         return (pos, rot);
@@ -121,7 +121,7 @@ public class ScenarioManager : MonoBehaviour
         Dictionary<ScenarioObject, (Vector3 pos, Quaternion rot)> dict = new Dictionary<ScenarioObject, (Vector3 pos, Quaternion rot)>();
         foreach (var item in objects)
         {
-            if (item.spawnInFront || item.spawnPosition)
+            if (item.spawnInFront || item.spawnPosition != null)
                 dict.Add(item.scenarioObject, item.spawnInFront ? getSpawn() : (item.spawnPosition.position, item.spawnPosition.rotation));
         }
         foreach (var objectKey in GameObjectDictionary.Keys)

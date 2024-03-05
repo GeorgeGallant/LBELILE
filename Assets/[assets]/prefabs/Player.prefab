@@ -859,6 +859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d85324391cc7874c8ccdb354512bcb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOffset: {fileID: 2476610379051080789}
   leftController: {fileID: 8202934410071038336}
   rightController: {fileID: 6350473748674310484}
   rays:
