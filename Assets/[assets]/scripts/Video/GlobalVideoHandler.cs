@@ -134,6 +134,6 @@ public class GlobalVideoHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (video.isPaused) video.Play();
     }
 }
