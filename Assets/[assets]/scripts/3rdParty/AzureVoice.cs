@@ -41,9 +41,41 @@ namespace ThirdParty
             var collection = new LanguageUnderstandingModelCollection();
             collection.Add(cluModel);
 
+      /****
+       * This was added by Stephen on 2024-03-05 to limit the intents
+       * Ideally this should be loaded when the conservation scene is loaded (or each scene)
+       * 
+       *****/
+      var validSceneIntents = [
+          "p3v.dispatch.ackArrive",
+          "p3v.dispatch.ackClear",
+          "p3v.dispatch.ackCopy",
+          "p3v.fishgame.checkCatch",
+          "p3v.fishgame.citeRegulations",
+          "p3v.fishgame.getPermit",
+          "p3v.fishgame.getStatusCard",
+          "p3v.fishgame.giveTicket",
+          "p3v.fishgame.giveWarning",
+          "p3v.fishgame.haveAuthority",
+          "p3v.fishgame.identification",
+          "p3v.fishgame.idPlusReason",
+          "p3v.fishgame.letItGo",
+          "p3v.fishgame.giveReason"
+          ];
+
             var recognizer = new IntentRecognizer(config);
             recognizer.ApplyLanguageModels(collection);
-            recognizer.AddAllIntents(cluModel);
+
+      /****
+       * This was modified by Stephen on 2024-03-05 manage limited intents instead of all 
+       ****/
+            // recognizer.AddAllIntents(cluModel);
+            foreach(string intent in validSceneIntents)
+            {
+                recognizer.AddAllIntents(cluModel,intent);
+            }
+      /**** end modification ****/
+
             recognizer.Recognized += resultRecieved;
             recognizer.Canceled += cancelled;
             // UnityEngine.Debug.Log("Azure listening and busy");
