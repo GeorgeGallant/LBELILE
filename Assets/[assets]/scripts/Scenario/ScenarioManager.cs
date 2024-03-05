@@ -84,6 +84,14 @@ public class ScenarioManager : MonoBehaviour
         firstScenario.startScene();
     }
 
+    static (Vector3 pos, Quaternion rot) getSpawn()
+    {
+        var pos = Camera.main.transform.forward * 0.15f;
+        pos.y = Camera.main.transform.position.y;
+        Quaternion rot = Quaternion.LookRotation((pos - Camera.main.transform.position).normalized);
+        return (pos, rot);
+    }
+
     static void createObjects()
     {
         GameObject parent = new GameObject("Scenario Objects");
@@ -110,19 +118,20 @@ public class ScenarioManager : MonoBehaviour
 
     public static void enableScenarioObjects(SceneObject[] objects)
     {
-        Dictionary<ScenarioObject, Transform> dict = new Dictionary<ScenarioObject, Transform>();
+        Dictionary<ScenarioObject, (Vector3 pos, Quaternion rot)> dict = new Dictionary<ScenarioObject, (Vector3 pos, Quaternion rot)>();
         foreach (var item in objects)
         {
-            dict.Add(item.scenarioObject, item.spawnPosition);
+            if (item.spawnInFront || item.spawnPosition)
+                dict.Add(item.scenarioObject, item.spawnInFront ? getSpawn() : (item.spawnPosition.position, item.spawnPosition.rotation));
         }
         foreach (var objectKey in GameObjectDictionary.Keys)
         {
             if (dict.Keys.Contains(objectKey))
             {
                 GameObjectDictionary[objectKey].SetActive(true);
-                if (dict[objectKey])
+                if (dict.ContainsKey(objectKey))
                 {
-                    GameObjectDictionary[objectKey].transform.SetPositionAndRotation(dict[objectKey].position, dict[objectKey].rotation);
+                    GameObjectDictionary[objectKey].transform.SetPositionAndRotation(dict[objectKey].pos, dict[objectKey].rot);
                 }
             }
             else
@@ -168,6 +177,7 @@ public struct SceneObject
 {
     public ScenarioObject scenarioObject;
     public Transform spawnPosition;
+    public bool spawnInFront;
 }
 
 public enum ScenarioObject
