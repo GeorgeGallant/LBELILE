@@ -58,6 +58,7 @@ public class GenericScene : BaseScene
 
         if (ScenarioManager.AllowNewScene)
         {
+            Debug.Log("Scene allowed, starting scene");
             StartScene();
         }
         else
