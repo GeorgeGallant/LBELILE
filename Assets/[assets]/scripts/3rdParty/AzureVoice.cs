@@ -31,14 +31,20 @@ namespace ThirdParty
             var config = SpeechConfig.FromSubscription(ConfigManager.SUBSCRIPTION_KEY, ConfigManager.REGION_NAME);
 
             var predictionEndpointUri = "https://p360v2.cognitiveservices.azure.com/";
-
+      /*
             var cluModel = new ConversationalLanguageUnderstandingModel(
               ConfigManager.LANGUAGE_RESOURCE_KEY,
               predictionEndpointUri,
               "P360V_1",
               "p3vDev1");
+      */
+      var cluModel = new ConversationalLanguageUnderstandingModel(
+        ConfigManager.LANGUAGE_RESOURCE_KEY,
+        predictionEndpointUri,
+        "P360V_fishgame",
+        "P360V_fishgame");
 
-            var collection = new LanguageUnderstandingModelCollection();
+      var collection = new LanguageUnderstandingModelCollection();
             collection.Add(cluModel);
 
       /****
@@ -72,7 +78,7 @@ namespace ThirdParty
             // recognizer.AddAllIntents(cluModel);
             foreach(string intent in validSceneIntents)
             {
-                recognizer.AddIntent(cluModel,intent);
+                recognizer.AddIntents(cluModel,intent);
             }
       /**** end modification ****/
 
