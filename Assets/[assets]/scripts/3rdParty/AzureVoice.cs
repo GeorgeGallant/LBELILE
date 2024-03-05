@@ -46,7 +46,7 @@ namespace ThirdParty
             recognizer.AddAllIntents(cluModel);
             recognizer.Recognized += resultRecieved;
             recognizer.Canceled += cancelled;
-            UnityEngine.Debug.Log("Azure listening and busy");
+            // UnityEngine.Debug.Log("Azure listening and busy");
             await recognizer.StartContinuousRecognitionAsync();
 
             while (continueListening != null && continueListening.Value)
@@ -54,10 +54,10 @@ namespace ThirdParty
                 await Task.Delay(1);
             }
 
-            UnityEngine.Debug.Log("no longer listening");
+            // UnityEngine.Debug.Log("no longer listening");
 
             await recognizer.StopContinuousRecognitionAsync().ConfigureAwait(false);
-            UnityEngine.Debug.Log("Azure no longer busy");
+            // UnityEngine.Debug.Log("Azure no longer busy");
             busy = false;
 
             void resultRecieved(object sender, IntentRecognitionEventArgs e)
@@ -69,8 +69,7 @@ namespace ThirdParty
                 var json = result.Properties.GetProperty(PropertyId.SpeechServiceResponse_JsonResult);
                 if (result.Reason == ResultReason.RecognizedIntent)
                 {
-                    UnityEngine.Debug.Log(e.Result.IntentId);
-                    UnityEngine.Debug.Log(json);
+                    UnityEngine.Debug.Log($"Speech: {utterance}, Intent: {e.Result.IntentId}");
                     intent = e.Result.IntentId;
                     // await GetIntentFromUtterance(utterance, initiator);}
                 }
