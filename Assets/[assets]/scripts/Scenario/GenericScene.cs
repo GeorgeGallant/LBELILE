@@ -47,6 +47,7 @@ public class GenericScene : BaseScene
     }
     public override void startScene()
     {
+        Debug.Log("attempting to switch scenes");
         if (ScenarioManager.Occupier)
         {
             Debug.Log("Occupier prevented scene change");
