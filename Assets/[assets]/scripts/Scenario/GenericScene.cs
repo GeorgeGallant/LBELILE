@@ -110,7 +110,8 @@ public class GenericScene : BaseScene
 
     void videoFinished()
     {
-        videoFinishedScenario.startScene();
+        if (videoFinishedScenario)
+            videoFinishedScenario.startScene();
     }
 #if UNITY_EDITOR
     void setSphereTexture()

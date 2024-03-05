@@ -24,6 +24,7 @@ public class ColliderActivatable : BaseSceneActivatable
 
     private void selected(ActivateEventArgs arg0)
     {
+        activateEvent.Invoke();
         activateNextScene();
     }
     public override void activateModifiers()
