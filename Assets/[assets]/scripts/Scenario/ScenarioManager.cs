@@ -118,11 +118,16 @@ public class ScenarioManager : MonoBehaviour
 
     public static void enableScenarioObjects(SceneObject[] objects)
     {
-        Dictionary<ScenarioObject, (Vector3 pos, Quaternion rot)> dict = new Dictionary<ScenarioObject, (Vector3 pos, Quaternion rot)>();
+        Dictionary<ScenarioObject, (Vector3 pos, Quaternion rot, bool use)> dict = new Dictionary<ScenarioObject, (Vector3 pos, Quaternion rot, bool use)>();
         foreach (var item in objects)
         {
             if (item.spawnInFront || item.spawnPosition != null)
-                dict.Add(item.scenarioObject, item.spawnInFront ? getSpawn() : (item.spawnPosition.position, item.spawnPosition.rotation));
+            {
+                var spawnPoint = getSpawn();
+                dict.Add(item.scenarioObject, item.spawnInFront ? (spawnPoint.pos, spawnPoint.rot, true) : (item.spawnPosition.position, item.spawnPosition.rotation, true));
+            }
+            else
+                dict.Add(item.scenarioObject, (Vector3.zero, Quaternion.identity, false));
         }
         foreach (var objectKey in GameObjectDictionary.Keys)
         {
@@ -131,7 +136,8 @@ public class ScenarioManager : MonoBehaviour
                 GameObjectDictionary[objectKey].SetActive(true);
                 if (dict.ContainsKey(objectKey))
                 {
-                    GameObjectDictionary[objectKey].transform.SetPositionAndRotation(dict[objectKey].pos, dict[objectKey].rot);
+                    if (dict[objectKey].use)
+                        GameObjectDictionary[objectKey].transform.SetPositionAndRotation(dict[objectKey].pos, dict[objectKey].rot);
                 }
             }
             else
