@@ -39,14 +39,15 @@ public class PassiveListenerActivatable : BaseIntentActivatable
 
     private void intentListener((string topIntent, string initiator, string scene) o)
     {
+        Debug.Log($"Intent: {o.topIntent}, Scene: {o.scene} equal to {activatableOwner.gameObject.name}?, Initiator: {o.initiator}");
         if (!sceneActive) return;
         if (o.scene != activatableOwner.gameObject.name) return;
         if (o.initiator == "passive")
         {
             var intent = o.topIntent;
-            Debug.Log(intent);
             if (intent != string.Empty && intent.ToLower() == activateIntent.ToLower())
             {
+                Debug.Log("Activate Scene intent hit");
                 OnDisable();
                 activateNextScene();
             }
@@ -57,8 +58,10 @@ public class PassiveListenerActivatable : BaseIntentActivatable
                     var check = item.checkIntents(o.topIntent);
                     if (check.hadIntent)
                     {
+                        Debug.Log("Had intent");
                         if (check.activateScene)
                         {
+                            Debug.Log("Intent hit");
                             OnDisable();
                             check.activateScene.startScene();
                             break;
