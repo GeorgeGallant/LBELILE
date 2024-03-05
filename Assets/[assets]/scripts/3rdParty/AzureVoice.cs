@@ -46,7 +46,7 @@ namespace ThirdParty
        * Ideally this should be loaded when the conservation scene is loaded (or each scene)
        * 
        *****/
-      var validSceneIntents = [
+      string[] validSceneIntents = {
           "p3v.dispatch.ackArrive",
           "p3v.dispatch.ackClear",
           "p3v.dispatch.ackCopy",
@@ -61,7 +61,7 @@ namespace ThirdParty
           "p3v.fishgame.idPlusReason",
           "p3v.fishgame.letItGo",
           "p3v.fishgame.giveReason"
-          ];
+      };
 
             var recognizer = new IntentRecognizer(config);
             recognizer.ApplyLanguageModels(collection);
