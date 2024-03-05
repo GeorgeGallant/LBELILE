@@ -1,3 +1,4 @@
+using ThirdParty;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,6 +10,37 @@ public class BaseIntentActivatable : BaseSceneActivatable
     int attempts = 0;
     public BaseScene badAttemptScene;
     public bool ignoreNoSpeech = true;
+
+    protected virtual void OnEnable()
+    {
+        if (activateIntent != string.Empty)
+            AzureVoice.intentDestinations.Add(activateIntent, activateScene.gameObject.name);
+        foreach (var item in intents)
+        {
+            foreach (var intent in item.intents)
+            {
+                AzureVoice.intentDestinations.Add(intent, item.activateScene.gameObject.name);
+            }
+        }
+    }
+
+    protected virtual void OnDisable()
+    {
+        if (activateIntent != string.Empty)
+            AzureVoice.intentDestinations.Remove(activateIntent);
+        foreach (var item in intents)
+        {
+            foreach (var intent in item.intents)
+            {
+                AzureVoice.intentDestinations.Remove(intent);
+            }
+        }
+    }
+
+    protected override void StartSetup()
+    {
+        activateIntent = activateIntent.Trim();
+    }
 
     protected void badAttempt(string attempt)
     {
@@ -33,7 +65,7 @@ public class IntentEvents
     {
         foreach (var item in intents)
         {
-            if (item.ToLower() == intent.ToLower())
+            if (item.Trim().ToLower() == intent.ToLower())
             {
                 amount++;
                 if (amount < requiredAmount) return (false, null);

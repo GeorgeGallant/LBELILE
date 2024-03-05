@@ -84,6 +84,14 @@ public class ScenarioManager : MonoBehaviour
         firstScenario.startScene();
     }
 
+    static (Vector3 pos, Quaternion rot) getSpawn()
+    {
+        var pos = Camera.main.transform.forward * 0.25f;
+        pos.y = Camera.main.transform.position.y;
+        Quaternion rot = Quaternion.LookRotation((pos - Camera.main.transform.position).normalized);
+        return (pos, rot);
+    }
+
     static void createObjects()
     {
         GameObject parent = new GameObject("Scenario Objects");
@@ -110,19 +118,26 @@ public class ScenarioManager : MonoBehaviour
 
     public static void enableScenarioObjects(SceneObject[] objects)
     {
-        Dictionary<ScenarioObject, Transform> dict = new Dictionary<ScenarioObject, Transform>();
+        Dictionary<ScenarioObject, (Vector3 pos, Quaternion rot, bool use)> dict = new Dictionary<ScenarioObject, (Vector3 pos, Quaternion rot, bool use)>();
         foreach (var item in objects)
         {
-            dict.Add(item.scenarioObject, item.spawnPosition);
+            if (item.spawnInFront || item.spawnPosition != null)
+            {
+                var spawnPoint = getSpawn();
+                dict.Add(item.scenarioObject, item.spawnInFront ? (spawnPoint.pos, spawnPoint.rot, true) : (item.spawnPosition.position, item.spawnPosition.rotation, true));
+            }
+            else
+                dict.Add(item.scenarioObject, (Vector3.zero, Quaternion.identity, false));
         }
         foreach (var objectKey in GameObjectDictionary.Keys)
         {
             if (dict.Keys.Contains(objectKey))
             {
                 GameObjectDictionary[objectKey].SetActive(true);
-                if (dict[objectKey])
+                if (dict.ContainsKey(objectKey))
                 {
-                    GameObjectDictionary[objectKey].transform.SetPositionAndRotation(dict[objectKey].position, dict[objectKey].rotation);
+                    if (dict[objectKey].use)
+                        GameObjectDictionary[objectKey].transform.SetPositionAndRotation(dict[objectKey].pos, dict[objectKey].rot);
                 }
             }
             else
@@ -168,6 +183,7 @@ public struct SceneObject
 {
     public ScenarioObject scenarioObject;
     public Transform spawnPosition;
+    public bool spawnInFront;
 }
 
 public enum ScenarioObject

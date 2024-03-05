@@ -17,20 +17,23 @@ public class SceneRadioActivatable : BaseIntentActivatable
         AzureVoice.intentEvent.RemoveListener(intentListener);
     }
 
-    void OnEnable()
+    protected virtual void OnEnable()
     {
         if (!sceneActive) return;
+        base.OnEnable();
         activate();
     }
 
-    void OnDisable()
+    protected virtual void OnDisable()
     {
+        base.OnDisable();
         deactivate();
     }
 
-    private void intentListener((string topIntent, string initiator) o)
+    private void intentListener((string topIntent, string initiator, string scene) o)
     {
         if (!sceneActive) return;
+        if (o.scene != activatableOwner.gameObject.name) return;
         if (o.initiator == "radio" && o.topIntent.ToLower() == activateIntent.ToLower())
         {
             activateNextScene();

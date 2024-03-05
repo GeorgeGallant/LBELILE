@@ -301,7 +301,7 @@ Transform:
   m_GameObject: {fileID: 65468197}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -568,7 +568,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 875252419}
-  - {fileID: 1870285922}
+  - {fileID: 401553417}
   m_Father: {fileID: 2088366684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &78970772
@@ -657,6 +657,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 3093198364568269041, guid: 3a58228b95316fa44b8a3d920f24b6e2, type: 2}
     value: {fileID: 1633380480}
+  - key: {fileID: -1433203499663885491, guid: 3a58228b95316fa44b8a3d920f24b6e2, type: 2}
+    value: {fileID: 1146629198}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &83605523
@@ -736,6 +738,8 @@ PlayableDirector:
     value: {fileID: 1386543058}
   - key: {fileID: -1973665170740074023, guid: 18d6b6459891f9f48b2b7a19bb907a0b, type: 2}
     value: {fileID: 1633380480}
+  - key: {fileID: 5822443644529584775, guid: 18d6b6459891f9f48b2b7a19bb907a0b, type: 2}
+    value: {fileID: 708627779}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &140214484
@@ -836,7 +840,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 473094385}
-  intents: []
+  intents:
+  - name: p3v.fishgame.giveTicket
+    intents:
+    - p3v.fishgame.giveTicket
+    activateScene: {fileID: 1942004134}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
   activateIntent: p3v.fishgame.giveWarning
   attemptsAllowed: 1
   badAttemptScene: {fileID: 488898946}
@@ -1057,6 +1069,7 @@ Transform:
   m_Children:
   - {fileID: 1491150930}
   - {fileID: 979090375}
+  - {fileID: 539616495}
   m_Father: {fileID: 1182760485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &250659913
@@ -1160,28 +1173,41 @@ MonoBehaviour:
       m_Calls: []
   activateScene: {fileID: 625443159}
   intents:
-  - name: 
-    intents: []
-    activateScene: {fileID: 0}
+  - name: ID and Reason
+    intents:
+    - p3v.fishgame.idPlusReason
+    activateScene: {fileID: 625443159}
     intentEvent:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    requiredAmount: 0
+        m_Calls: []
+    requiredAmount: 1
+  - name: 'ID '
+    intents:
+    - 'p3v.identification '
+    activateScene: {fileID: 625443159}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
+  - name: ID-reason-status card
+    intents:
+    - p3v.fishgame.getStatusCard
+    activateScene: {fileID: 66748831}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
+  - name: ID-reason-Permit
+    intents:
+    - p3v.fishgame.getPermit
+    activateScene: {fileID: 1945787631}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
   activateIntent: 'p3v.fishgame.identification '
   attemptsAllowed: 1
-  badAttemptScene: {fileID: 0}
+  badAttemptScene: {fileID: 2129817804}
   ignoreNoSpeech: 1
 --- !u!1 &259411529
 GameObject:
@@ -1705,6 +1731,67 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &401553416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 401553417}
+  - component: {fileID: 401553418}
+  m_Layer: 0
+  m_Name: Passive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &401553417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401553416}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 78970771}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &401553418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401553416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  activateScene: {fileID: 160582081}
+  intents:
+  - name: p3v.fishgame.giveTicket
+    intents:
+    - p3v.fishgame.giveTicket
+    activateScene: {fileID: 1510818907}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
+  activateIntent: p3v.fishgame.giveWarning
+  attemptsAllowed: 1
+  badAttemptScene: {fileID: 78970772}
+  ignoreNoSpeech: 1
 --- !u!1 &407991136
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,7 +2300,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1797210311}
-  - {fileID: 1762188007}
+  - {fileID: 1966445510}
   m_Father: {fileID: 274768929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &488898946
@@ -2233,6 +2320,147 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 803722141}
   loopVideo: 0
+--- !u!1 &539616494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 539616495}
+  - component: {fileID: 539616497}
+  - component: {fileID: 539616496}
+  m_Layer: 11
+  m_Name: birds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &539616495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539616494}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 182940746}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &539616496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539616494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e9baf2d6543544eaff301c220caf8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &539616497
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539616494}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: fca9e24a8bf18c549bd7d5674924ddff, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &562499187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2437,6 +2665,8 @@ PlayableDirector:
     value: {fileID: 1386543058}
   - key: {fileID: 7946109937130627039, guid: e14098953b8868f4388c1c17c6dac8b4, type: 2}
     value: {fileID: 1633380480}
+  - key: {fileID: -3543675925574520061, guid: e14098953b8868f4388c1c17c6dac8b4, type: 2}
+    value: {fileID: 147792346}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &708627779
@@ -2486,9 +2716,17 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 1945787631}
-  intents: []
-  activateIntent: p3v.fishgame.getPermit
+  activateScene: {fileID: 66748831}
+  intents:
+  - name: Ask for licence
+    intents:
+    - p3v.fishgame.getPermit
+    activateScene: {fileID: 1945787631}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
+  activateIntent: p3v.fishgame.getStatusCard
   attemptsAllowed: 1
   badAttemptScene: {fileID: 625443159}
   ignoreNoSpeech: 1
@@ -2685,7 +2923,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &730346692
 Transform:
   m_ObjectHideFlags: 0
@@ -2947,6 +3185,7 @@ MonoBehaviour:
   scenarioObjects:
   - scenarioObject: 2
     spawnPosition: {fileID: 1254217920}
+    spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
 --- !u!1 &765742090
@@ -2983,6 +3222,7 @@ MonoBehaviour:
   scenarioObjects:
   - scenarioObject: 0
     spawnPosition: {fileID: 1254217920}
+    spawnInFront: 1
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
 --- !u!4 &765742092
@@ -3134,6 +3374,8 @@ PlayableDirector:
     value: {fileID: 1386543058}
   - key: {fileID: 2117851715713753762, guid: b24d24b996f9f114a91219172f74ba34, type: 2}
     value: {fileID: 1633380480}
+  - key: {fileID: 7162803477661342616, guid: b24d24b996f9f114a91219172f74ba34, type: 2}
+    value: {fileID: 1527571977}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &834981936
@@ -3219,6 +3461,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 8493337825731455549, guid: 2ada62a4aa2c2ff4b8a158b494f1f7a8, type: 2}
     value: {fileID: 70536213}
+  - key: {fileID: -8921078051395980181, guid: 2ada62a4aa2c2ff4b8a158b494f1f7a8, type: 2}
+    value: {fileID: 2009423693}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &841281013
@@ -3412,6 +3656,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -875460412591806284, guid: 37f6366ff1060ce4682de1cb56e505a4, type: 2}
     value: {fileID: 70536213}
+  - key: {fileID: -6892690899524399703, guid: 37f6366ff1060ce4682de1cb56e505a4, type: 2}
+    value: {fileID: 401553416}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &940948730
@@ -3754,7 +4000,7 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 1737063831}
+  activateScene: {fileID: 2122777601}
   intents: []
   activateIntent: p3v.fishgame.getPermit
   attemptsAllowed: 1
@@ -3891,6 +4137,8 @@ PlayableDirector:
     value: {fileID: 1386543058}
   - key: {fileID: -4494811139237831707, guid: 046ee346cc4858244ac6c4c3815ffb8a, type: 2}
     value: {fileID: 1633380480}
+  - key: {fileID: -1905429512221959937, guid: 046ee346cc4858244ac6c4c3815ffb8a, type: 2}
+    value: {fileID: 857917392}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1072049384
@@ -3919,7 +4167,7 @@ Transform:
   m_GameObject: {fileID: 1072049384}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.627}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4082,6 +4330,8 @@ PlayableDirector:
     value: {fileID: 350536087}
   - key: {fileID: 5209151106288294663, guid: 150c558424a35674699e1e9b45e100e4, type: 2}
     value: {fileID: 70536213}
+  - key: {fileID: 8304037470482062104, guid: 150c558424a35674699e1e9b45e100e4, type: 2}
+    value: {fileID: 27506477}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1182760484
@@ -4686,6 +4936,8 @@ PlayableDirector:
     value: {fileID: 1386543058}
   - key: {fileID: 6904558200260717685, guid: 093236942e8f27a49b8856e8c23c31d3, type: 2}
     value: {fileID: 1633380480}
+  - key: {fileID: 1966535364662962502, guid: 093236942e8f27a49b8856e8c23c31d3, type: 2}
+    value: {fileID: 252023699}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1416900380
@@ -4935,7 +5187,7 @@ MonoBehaviour:
   videoURL: 5H
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 51345264}
+  videoFinishedScenario: {fileID: 1534687813}
   loopVideo: 0
 --- !u!1 &1527571977
 GameObject:
@@ -5158,6 +5410,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -6703475759535462905, guid: a6a7655f718f7a644a7d5087e7e42e30, type: 2}
     value: {fileID: 1633380480}
+  - key: {fileID: 7071720250611012448, guid: a6a7655f718f7a644a7d5087e7e42e30, type: 2}
+    value: {fileID: 1319569134}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1562930154
@@ -5420,6 +5674,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseFolder: Fishing
+--- !u!1 &1606305078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1606305079}
+  - component: {fileID: 1606305080}
+  m_Layer: 0
+  m_Name: IntentRecorder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1606305079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606305078}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.01585102, y: 0.54044914, z: 0.97304654}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1606305080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606305078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2acaa0f0d3a091d4d9e98eb34e5d08e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1617527897
 GameObject:
   m_ObjectHideFlags: 0
@@ -5755,6 +6053,8 @@ PlayableDirector:
     value: {fileID: 1386543058}
   - key: {fileID: 3170275788842931657, guid: 156ba52cdee453145b6bd1f540f024d4, type: 2}
     value: {fileID: 1633380480}
+  - key: {fileID: -5026989699590418830, guid: 156ba52cdee453145b6bd1f540f024d4, type: 2}
+    value: {fileID: 1954340234}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1683616005
@@ -6126,59 +6426,6 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
---- !u!1 &1762188006
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1762188007}
-  - component: {fileID: 1762188008}
-  m_Layer: 0
-  m_Name: Passive
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1762188007
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762188006}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 488898945}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1762188008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762188006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 739733962}
-  intents: []
-  activateIntent: p3v.fishgame.citeRegulations
-  attemptsAllowed: 0
-  badAttemptScene: {fileID: 0}
-  ignoreNoSpeech: 1
 --- !u!1 &1767184719
 GameObject:
   m_ObjectHideFlags: 0
@@ -6258,6 +6505,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -474854978342834435, guid: 592529797674f664085e79ad09a2d3b3, type: 2}
     value: {fileID: 350536087}
+  - key: {fileID: -4470909145750161979, guid: 592529797674f664085e79ad09a2d3b3, type: 2}
+    value: {fileID: 1007155772}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1771053862
@@ -6521,6 +6770,8 @@ PlayableDirector:
     value: {fileID: 350536087}
   - key: {fileID: 1460147919013534006, guid: cc121f71106d11c4b9a8f641d6bdf07f, type: 2}
     value: {fileID: 70536213}
+  - key: {fileID: -3580470565196725959, guid: cc121f71106d11c4b9a8f641d6bdf07f, type: 2}
+    value: {fileID: 1989616491}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1797210310
@@ -6606,6 +6857,8 @@ PlayableDirector:
     value: {fileID: 1386543058}
   - key: {fileID: 5513344711820590645, guid: 360463aeb26548b45879176162f48512, type: 2}
     value: {fileID: 1633380480}
+  - key: {fileID: 5506276238574995029, guid: 360463aeb26548b45879176162f48512, type: 2}
+    value: {fileID: 1966445509}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1829075800
@@ -6876,61 +7129,9 @@ MonoBehaviour:
   scenarioObjects:
   - scenarioObject: 1
     spawnPosition: {fileID: 1254217920}
+    spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
---- !u!1 &1870285921
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1870285922}
-  - component: {fileID: 1870285923}
-  m_Layer: 0
-  m_Name: Passive
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1870285922
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870285921}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 78970771}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1870285923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870285921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 739733962}
-  intents: []
-  activateIntent: p3v.fishgame.citeRegulations
-  attemptsAllowed: 0
-  badAttemptScene: {fileID: 0}
-  ignoreNoSpeech: 1
 --- !u!1 &1898487287
 GameObject:
   m_ObjectHideFlags: 0
@@ -7082,7 +7283,31 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 1550901325}
-  intents: []
+  intents:
+  - name: p3v.fishgame.idPlusReason
+    intents:
+    - p3v.fishgame.idPlusReason
+    activateScene: {fileID: 1550901325}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
+  - name: p3v.fishgame.getPermit
+    intents:
+    - p3v.fishgame.getPermit
+    activateScene: {fileID: 2122777601}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
+  - name: p3v.identification
+    intents:
+    - p3v.identification
+    activateScene: {fileID: 1550901325}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
   activateIntent: p3v.fishgame.identification
   attemptsAllowed: 1
   badAttemptScene: {fileID: 841281015}
@@ -7235,7 +7460,7 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 1737063831}
+  activateScene: {fileID: 66748831}
   intents: []
   activateIntent: p3v.fishgame.getStatusCard
   attemptsAllowed: 1
@@ -7392,6 +7617,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -6968962732052334398, guid: 62935487f2be576478affb24477b8bb0, type: 2}
     value: {fileID: 1633380480}
+  - key: {fileID: 1823094064105117530, guid: 62935487f2be576478affb24477b8bb0, type: 2}
+    value: {fileID: 1830652373}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1962573934
@@ -7473,8 +7700,71 @@ PlayableDirector:
     value: {fileID: 350536087}
   - key: {fileID: 5832560680667218831, guid: 8e9cfcb4a39ad2c4c99594aefe6d7da8, type: 2}
     value: {fileID: 70536213}
+  - key: {fileID: -1922809551739781781, guid: 8e9cfcb4a39ad2c4c99594aefe6d7da8, type: 2}
+    value: {fileID: 1933839020}
   m_ExposedReferences:
     m_References: []
+--- !u!1 &1966445509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966445510}
+  - component: {fileID: 1966445511}
+  m_Layer: 0
+  m_Name: Passive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1966445510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966445509}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 488898945}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1966445511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966445509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  activateScene: {fileID: 473094385}
+  intents:
+  - name: p3v.fishgame.giveTicket
+    intents:
+    - p3v.fishgame.giveTicket
+    activateScene: {fileID: 1942004134}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
+  activateIntent: p3v.fishgame.giveWarning
+  attemptsAllowed: 1
+  badAttemptScene: {fileID: 488898946}
+  ignoreNoSpeech: 1
 --- !u!1 &1989616491
 GameObject:
   m_ObjectHideFlags: 0
@@ -7523,7 +7813,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 160582081}
-  intents: []
+  intents:
+  - name: p3v.fishgame.giveTicket
+    intents:
+    - p3v.fishgame.giveTicket
+    activateScene: {fileID: 1510818907}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
   activateIntent: p3v.fishgame.giveWarning
   attemptsAllowed: 1
   badAttemptScene: {fileID: 78970772}
@@ -7615,6 +7913,7 @@ MonoBehaviour:
   scenarioObjects:
   - scenarioObject: 0
     spawnPosition: {fileID: 0}
+    spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
 --- !u!4 &2025262542
@@ -8034,7 +8333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7181f3715ceafa1418093f6e515820f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScenario: {fileID: 765742091}
+  firstScenario: {fileID: 1945787631}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -8199,3 +8498,4 @@ SceneRoots:
   - {fileID: 2088366684}
   - {fileID: 730346692}
   - {fileID: 1254217920}
+  - {fileID: 1606305079}

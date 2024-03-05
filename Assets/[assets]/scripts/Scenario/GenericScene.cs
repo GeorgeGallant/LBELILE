@@ -47,19 +47,26 @@ public class GenericScene : BaseScene
     }
     public override void startScene()
     {
-        if (ScenarioManager.Occupier) return;
-        if (ScenarioManager.ActiveScenario == this) return;
+        Debug.Log("attempting to switch scenes");
+        if (ScenarioManager.Occupier)
+        {
+            Debug.Log("Occupier prevented scene change");
+            return;
+        }
+        // if (ScenarioManager.ActiveScenario == this) return;
 
 
 
         if (ScenarioManager.AllowNewScene)
         {
+            Debug.Log("Scene allowed, starting scene");
             StartScene();
         }
         else
         {
             if (ScenarioManager.AttemptOccupy(this))
             {
+                Debug.Log("Awaiting occupier to go away before starting scene.");
                 StartCoroutine(AwaitStart());
             }
         }
@@ -67,8 +74,15 @@ public class GenericScene : BaseScene
 
     IEnumerator AwaitStart()
     {
+        float timeSinceLast = 1;
         while (!ScenarioManager.AllowNewScene)
         {
+            timeSinceLast -= Time.deltaTime;
+            if (timeSinceLast <= 0)
+            {
+                Debug.Log("Awaiting occupier to go away.");
+                timeSinceLast = 1;
+            }
             yield return null;
         }
         StartScene();
@@ -77,6 +91,7 @@ public class GenericScene : BaseScene
 
     void StartScene()
     {
+        Debug.Log("Starting new scene");
         Start();
         if (ScenarioManager.ActiveScenario)
             ScenarioManager.ActiveScenario.deactivateScene();
@@ -110,7 +125,8 @@ public class GenericScene : BaseScene
 
     void videoFinished()
     {
-        videoFinishedScenario.startScene();
+        if (videoFinishedScenario)
+            videoFinishedScenario.startScene();
     }
 #if UNITY_EDITOR
     void setSphereTexture()

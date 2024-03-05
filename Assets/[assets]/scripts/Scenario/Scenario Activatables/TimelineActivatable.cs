@@ -23,7 +23,8 @@ public class TimelineActivatable : BaseSceneActivatable
     void directorPlayWithSeek(double seek)
     {
         director.Play();
-        director.time = seek;
+        if (seek != 0)
+            director.time = seek;
     }
     public override void deactivateModifiers()
     {

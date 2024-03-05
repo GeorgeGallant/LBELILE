@@ -21,40 +21,81 @@ namespace ThirdParty
 {
     public class AzureVoice
     {
+        public static Dictionary<string, string> intentDestinations = new Dictionary<string, string>();
         static bool busy = false;
-        public static UnityEngine.Events.UnityEvent<(string topIntent, string initiator)> intentEvent = new UnityEngine.Events.UnityEvent<(string topIntent, string initiator)>();
-        public static async Task Listener(ValueWrapper<bool> continueListening, string initiator, bool passive = false)
+        public static UnityEngine.Events.UnityEvent<(string topIntent, string initiator, string scene)> intentEvent = new UnityEngine.Events.UnityEvent<(string topIntent, string initiator, string scene)>();
+        public static async Task Listener(ValueWrapper<bool> continueListening, string initiator, string relevantScene)
         {
-            if (busy) return;
+            // if (busy) return;
             busy = true;
             var config = SpeechConfig.FromSubscription(ConfigManager.SUBSCRIPTION_KEY, ConfigManager.REGION_NAME);
 
             var predictionEndpointUri = "https://p360v2.cognitiveservices.azure.com/";
 
+            // var cluModel = new ConversationalLanguageUnderstandingModel(
+            //   ConfigManager.LANGUAGE_RESOURCE_KEY,
+            //   predictionEndpointUri,
+            //   "P360V_1",
+            //   "p3vDev1");
+
             var cluModel = new ConversationalLanguageUnderstandingModel(
               ConfigManager.LANGUAGE_RESOURCE_KEY,
               predictionEndpointUri,
-              "P360V_1",
-              "p3vDev1");
+              "P360V_fishgame",
+              "P360V_fishgame");
 
             var collection = new LanguageUnderstandingModelCollection();
             collection.Add(cluModel);
 
+            /****
+             * This was added by Stephen on 2024-03-05 to limit the intents
+             * Ideally this should be loaded when the conservation scene is loaded (or each scene)
+             * 
+             *****/
+            string[] validSceneIntents = {
+          "p3v.dispatch.ackArrive",
+          "p3v.dispatch.ackClear",
+          "p3v.dispatch.ackCopy",
+          "p3v.fishgame.checkCatch",
+          "p3v.fishgame.citeRegulations",
+          "p3v.fishgame.getPermit",
+          "p3v.fishgame.getStatusCard",
+          "p3v.fishgame.giveTicket",
+          "p3v.fishgame.giveWarning",
+          "p3v.fishgame.haveAuthority",
+          "p3v.fishgame.identification",
+          "p3v.fishgame.idPlusReason",
+          "p3v.fishgame.letItGo",
+          "p3v.fishgame.giveReason"
+      };
+
             var recognizer = new IntentRecognizer(config);
             recognizer.ApplyLanguageModels(collection);
-            recognizer.AddAllIntents(cluModel);
+
+            /****
+             * This was modified by Stephen on 2024-03-05 manage limited intents instead of all 
+             ****/
+            // recognizer.AddAllIntents(cluModel);
+            foreach (string intent in validSceneIntents)
+            {
+                recognizer.AddAllIntents(cluModel, intent);
+            }
+            /**** end modification ****/
+
             recognizer.Recognized += resultRecieved;
             recognizer.Canceled += cancelled;
+            // UnityEngine.Debug.Log("Azure listening and busy");
             await recognizer.StartContinuousRecognitionAsync();
 
             while (continueListening != null && continueListening.Value)
             {
-                await Task.Delay(100);
+                await Task.Delay(1);
             }
 
-            UnityEngine.Debug.Log("no longer listening");
+            // UnityEngine.Debug.Log("no longer listening");
 
             await recognizer.StopContinuousRecognitionAsync().ConfigureAwait(false);
+            // UnityEngine.Debug.Log("Azure no longer busy");
             busy = false;
 
             void resultRecieved(object sender, IntentRecognitionEventArgs e)
@@ -66,8 +107,7 @@ namespace ThirdParty
                 var json = result.Properties.GetProperty(PropertyId.SpeechServiceResponse_JsonResult);
                 if (result.Reason == ResultReason.RecognizedIntent)
                 {
-                    UnityEngine.Debug.Log(e.Result.IntentId);
-                    UnityEngine.Debug.Log(json);
+                    UnityEngine.Debug.Log($"Speech: {utterance}, Intent: {e.Result.IntentId}");
                     intent = e.Result.IntentId;
                     // await GetIntentFromUtterance(utterance, initiator);}
                 }
@@ -75,9 +115,13 @@ namespace ThirdParty
                 {
                     intent = "No speech";
                 }
+                string destination = "null";
+                intentDestinations.TryGetValue(intent, out destination);
+
                 UnityMainThread.AddJob(() =>
                 {
-                    intentEvent.Invoke((intent, initiator));
+                    IntentRecorder.RecordIntent((utterance, intent, initiator, json, destination));
+                    intentEvent.Invoke((intent, initiator, relevantScene));
                 });
             }
             void cancelled(object sender, IntentRecognitionCanceledEventArgs e)

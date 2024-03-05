@@ -13,7 +13,7 @@ public class VoiceInteractionTester : MonoBehaviour
         if (Input.GetKeyDown(keyCode))
         {
             pressed.Value = true;
-            await AzureVoice.Listener(pressed, "tester");
+            await AzureVoice.Listener(pressed, "tester", ScenarioManager.ActiveScenario.name);
         }
         if (Input.GetKeyUp(keyCode))
         {

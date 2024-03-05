@@ -6,6 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class GlobalPlayer : MonoBehaviour
 {
     public static GlobalPlayer instance;
+    public Transform playerOffset;
+    bool offsetSet = false;
     public static XRDirectInteractor globalLeftController
     {
         get
@@ -32,6 +34,7 @@ public class GlobalPlayer : MonoBehaviour
         if (instance == null) instance = this;
         else Destroy(gameObject);
         UpdateRayState();
+
     }
 
     public static XRDirectInteractor GetOtherHand(XRDirectInteractor hand)
@@ -73,5 +76,12 @@ public class GlobalPlayer : MonoBehaviour
             }
         }
     }
-
+    void Update()
+    {
+        if (!offsetSet && playerOffset && Camera.main.transform.position.x != 0)
+        {
+            playerOffset.localPosition = new Vector3(-Camera.main.transform.position.x, 0, -Camera.main.transform.position.z);
+            offsetSet = true;
+        }
+    }
 }
