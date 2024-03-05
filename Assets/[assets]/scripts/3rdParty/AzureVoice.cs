@@ -72,7 +72,7 @@ namespace ThirdParty
             // recognizer.AddAllIntents(cluModel);
             foreach(string intent in validSceneIntents)
             {
-                recognizer.AddAllIntents(cluModel,intent);
+                recognizer.AddIntent(cluModel,intent);
             }
       /**** end modification ****/
 
