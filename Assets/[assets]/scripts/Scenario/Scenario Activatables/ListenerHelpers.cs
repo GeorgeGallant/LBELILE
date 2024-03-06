@@ -44,7 +44,7 @@ public class BaseIntentActivatable : BaseSceneActivatable
 
     protected void badAttempt(string attempt)
     {
-        if (!badAttemptScene || (ignoreNoSpeech && attempt == "No speech")) return;
+        if (!sceneActive || !badAttemptScene || (ignoreNoSpeech && attempt == "No speech")) return;
         if (attempts >= attemptsAllowed) badAttemptScene.startScene();
         else attempts++;
 

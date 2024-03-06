@@ -72,8 +72,9 @@ public class PassiveListenerActivatable : BaseIntentActivatable
                         {
                             Debug.Log("Intent hit");
                             OnDisable();
+                            Debug.Log(check.activateScene.gameObject.name);
                             check.activateScene.startScene();
-                            break;
+                            return;
                         }
                     }
                 }
