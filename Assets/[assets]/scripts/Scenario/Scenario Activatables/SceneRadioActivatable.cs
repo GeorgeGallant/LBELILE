@@ -17,14 +17,14 @@ public class SceneRadioActivatable : BaseIntentActivatable
         AzureVoice.intentEvent.RemoveListener(intentListener);
     }
 
-    protected virtual void OnEnable()
+    protected override void OnEnable()
     {
         if (!sceneActive) return;
         base.OnEnable();
         activate();
     }
 
-    protected virtual void OnDisable()
+    protected override void OnDisable()
     {
         base.OnDisable();
         deactivate();
@@ -40,15 +40,18 @@ public class SceneRadioActivatable : BaseIntentActivatable
         }
         else if (intents.Length > 0)
         {
+            bool foundScene = false;
             foreach (var item in intents)
             {
                 var check = item.checkIntents(o.topIntent);
                 if (check.hadIntent)
                 {
                     check.activateScene.startScene();
+                    foundScene = true;
                     break;
                 }
             }
+            if (foundScene) return;
             badAttempt(o.topIntent);
         }
         else badAttempt(o.topIntent);

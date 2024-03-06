@@ -8,7 +8,19 @@ using UnityEngine.Video;
 public class GlobalVideoHandler : MonoBehaviour
 {
     public static GlobalVideoHandler instance;
-    VideoPlayer video;
+    [SerializeField]
+    protected VideoPlayer video;
+    [SerializeField]
+    protected VideoPlayer videoalt;
+    protected VideoPlayer activePlayer;
+    protected VideoPlayer altPlayer
+    {
+        get
+        {
+            if (activePlayer == video) return videoalt;
+            else return video;
+        }
+    }
     public string baseFolder = "";
     public static UnityEvent<VideoPlayer, double> onPrepareComplete = new UnityEvent<VideoPlayer, double>();
     public static UnityEvent<VideoPlayer> onVideoFinished = new UnityEvent<VideoPlayer>();
@@ -43,11 +55,15 @@ public class GlobalVideoHandler : MonoBehaviour
             Destroy(gameObject);
             return;
         };
-        video = GetComponent<VideoPlayer>();
         video.errorReceived += Video_errorReceived;
         video.prepareCompleted += Video_prepareCompleted;
         video.loopPointReached += Video_loopPointReached;
         video.seekCompleted += Video_seekComplete;
+        videoalt.errorReceived += Video_errorReceived;
+        videoalt.prepareCompleted += Video_prepareCompleted;
+        videoalt.loopPointReached += Video_loopPointReached;
+        videoalt.seekCompleted += Video_seekComplete;
+        activePlayer = video;
     }
 
     private RenderTexture getRenderTextureForResolution(int h, int w)
@@ -92,10 +108,11 @@ public class GlobalVideoHandler : MonoBehaviour
 
     public static void PlayVideo(string URL, bool loop = false)
     {
-        instance.video.Stop();
-        instance.video.url = pathResolver(URL);
-        instance.video.Prepare();
-        instance.video.isLooping = loop;
+        instance.activePlayer.Stop();
+        instance.activePlayer = instance.altPlayer;
+        instance.activePlayer.url = pathResolver(URL);
+        instance.activePlayer.Prepare();
+        instance.activePlayer.isLooping = loop;
     }
 
     public static string pathResolver(string URL)
@@ -105,8 +122,11 @@ public class GlobalVideoHandler : MonoBehaviour
 
     public static void StopVideo(string URL)
     {
-        if (instance.video.url == pathResolver(URL))
-            instance.video.Stop();
+        if (instance.activePlayer.url == pathResolver(URL))
+        {
+            instance.activePlayer.Stop();
+            instance.activePlayer = instance.altPlayer;
+        }
     }
 
     private void Video_prepareCompleted(VideoPlayer source)
@@ -134,6 +154,6 @@ public class GlobalVideoHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (video.isPaused) video.Play();
+        if (activePlayer.isPaused) activePlayer.Play();
     }
 }
