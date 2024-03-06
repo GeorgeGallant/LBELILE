@@ -17,14 +17,14 @@ public class SceneRadioActivatable : BaseIntentActivatable
         AzureVoice.intentEvent.RemoveListener(intentListener);
     }
 
-    protected virtual void OnEnable()
+    protected override void OnEnable()
     {
         if (!sceneActive) return;
         base.OnEnable();
         activate();
     }
 
-    protected virtual void OnDisable()
+    protected override void OnDisable()
     {
         base.OnDisable();
         deactivate();
