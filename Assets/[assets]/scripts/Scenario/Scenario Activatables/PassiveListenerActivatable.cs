@@ -58,6 +58,7 @@ public class PassiveListenerActivatable : BaseIntentActivatable
             }
             else if (intents.Length > 0)
             {
+                bool foundScene = false;
                 foreach (var item in intents)
                 {
                     foreach (var itemIntent in item.intents)
@@ -74,10 +75,12 @@ public class PassiveListenerActivatable : BaseIntentActivatable
                             OnDisable();
                             Debug.Log(check.activateScene.gameObject.name);
                             check.activateScene.startScene();
-                            return;
+                            foundScene = true;
+                            break;
                         }
                     }
                 }
+                if (foundScene) return;
                 string[] intentArray = intentList.ToArray();
                 Debug.Log($"Could not find intent: {o.topIntent} inside {string.Join(',', intentArray)}");
                 badAttempt(o.topIntent);
