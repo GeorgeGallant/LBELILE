@@ -17,7 +17,7 @@ public class BaseSceneActivatable : MonoBehaviour
             else return false;
         }
     }
-    protected virtual void Start()
+    private void Start()
     {
         if (startRan) return;
         startRan = true;
