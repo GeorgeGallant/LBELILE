@@ -40,15 +40,18 @@ public class SceneRadioActivatable : BaseIntentActivatable
         }
         else if (intents.Length > 0)
         {
+            bool foundScene = false;
             foreach (var item in intents)
             {
                 var check = item.checkIntents(o.topIntent);
                 if (check.hadIntent)
                 {
                     check.activateScene.startScene();
+                    foundScene = true;
                     break;
                 }
             }
+            if (foundScene) return;
             badAttempt(o.topIntent);
         }
         else badAttempt(o.topIntent);
