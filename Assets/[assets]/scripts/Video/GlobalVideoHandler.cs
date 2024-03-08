@@ -7,6 +7,13 @@ using UnityEngine.Video;
 
 public class GlobalVideoHandler : MonoBehaviour
 {
+    public static VideoPlayer ActivePlayer
+    {
+        get
+        {
+            return instance.activePlayer;
+        }
+    }
     public static GlobalVideoHandler instance;
     [SerializeField]
     protected VideoPlayer video;
@@ -154,6 +161,6 @@ public class GlobalVideoHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (activePlayer.isPaused) activePlayer.Play();
+
     }
 }
