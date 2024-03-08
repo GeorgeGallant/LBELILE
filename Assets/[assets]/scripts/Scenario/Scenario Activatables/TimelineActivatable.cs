@@ -9,7 +9,6 @@ public class TimelineActivatable : BaseSceneActivatable
     protected override void StartSetup()
     {
         director = gameObject.GetComponent<PlayableDirector>();
-        videoLoader = gameObject.GetComponentInParent<VideoLoaderV2>();
     }
     PlayableDirector director;
     public override void activateModifiers()
@@ -18,6 +17,7 @@ public class TimelineActivatable : BaseSceneActivatable
         director.Play();
         if (syncWithVideo)
         {
+            if (!videoLoader) videoLoader = gameObject.GetComponentInParent<VideoLoaderV2>();
             videoLoader.onVideoPrepared.AddListener(directorPlayWithSeek);
             videoLoader.videoStopped.AddListener(director.Stop);
         }
@@ -44,10 +44,11 @@ public class TimelineActivatable : BaseSceneActivatable
     {
         if (syncWithVideo && videoPlaying)
         {
-            if (Mathf.Abs((float)(director.time - GlobalVideoHandler.ActivePlayer.time)) > 0.01)
+            if (Mathf.Abs((float)(director.time - GlobalVideoHandler.ActivePlayer.time)) > 0.1)
             {
                 if (GlobalVideoHandler.ActivePlayer.url != GlobalVideoHandler.pathResolver(videoLoader.videoURL)) { videoPlaying = false; director.Stop(); return; }
                 director.time = GlobalVideoHandler.ActivePlayer.time;
+                director.Play();
             }
         }
     }
