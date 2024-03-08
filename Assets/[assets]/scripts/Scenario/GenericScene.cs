@@ -16,6 +16,10 @@ public class GenericScene : BaseScene
     public bool loopVideo = false;
     BaseSceneActivatable[] activatables;
     bool ranStart = false;
+    //TEMP TEMP TEMP
+    //TODO
+    public bool hasBirds = true;
+    static BirdSounds birdSounds;
     public bool isActive
     {
         get
@@ -42,6 +46,9 @@ public class GenericScene : BaseScene
             videoLoader.targetGameObject = ScenarioManager.VideoSphere;
             videoLoader.onVideoFinished.AddListener(videoFinished);
         }
+
+        if (!birdSounds)
+            birdSounds = FindAnyObjectByType<BirdSounds>();
 
     }
     public override void startScene()
@@ -95,6 +102,8 @@ public class GenericScene : BaseScene
         if (ScenarioManager.ActiveScenario)
             ScenarioManager.ActiveScenario.deactivateScene();
         ScenarioManager.ActiveScenario = this;
+        if (hasBirds) birdSounds.PlayBirds();
+        else birdSounds.StopBirds();
         if (videoLoader)
         {
             videoLoader.onVideoPrepared.AddListener(activateScene);
