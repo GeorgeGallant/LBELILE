@@ -410,6 +410,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &70536211
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,6 +590,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &78970770
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,6 +642,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1898487289}
   loopVideo: 0
+  hasBirds: 1
 --- !u!1 &79772018
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,7 +841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383884906c18a364986367c38a180e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineText: When ready
+  lineText: When ready grab the
   lineEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1140,6 +1143,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1534687813}
   loopVideo: 0
+  hasBirds: 1
 --- !u!1 &182940745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,7 +1175,6 @@ Transform:
   m_Children:
   - {fileID: 1491150930}
   - {fileID: 979090375}
-  - {fileID: 539616495}
   m_Father: {fileID: 1182760485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &250659913
@@ -1226,6 +1229,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &252023699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2310,6 +2314,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &473094383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2360,6 +2365,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 51345264}
   loopVideo: 0
+  hasBirds: 1
 --- !u!1 &479042161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2708,147 +2714,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 803722141}
   loopVideo: 0
---- !u!1 &539616494
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 539616495}
-  - component: {fileID: 539616497}
-  - component: {fileID: 539616496}
-  m_Layer: 11
-  m_Name: birds
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &539616495
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539616494}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 182940746}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &539616496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539616494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8e9baf2d6543544eaff301c220caf8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!82 &539616497
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539616494}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fca9e24a8bf18c549bd7d5674924ddff, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  hasBirds: 1
 --- !u!1 &562499187
 GameObject:
   m_ObjectHideFlags: 0
@@ -3020,6 +2886,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &630755943
 GameObject:
   m_ObjectHideFlags: 0
@@ -3680,6 +3547,7 @@ MonoBehaviour:
     spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &765742090
 GameObject:
   m_ObjectHideFlags: 0
@@ -3717,6 +3585,7 @@ MonoBehaviour:
     spawnInFront: 1
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 0
 --- !u!4 &765742092
 Transform:
   m_ObjectHideFlags: 0
@@ -3792,6 +3661,7 @@ MonoBehaviour:
     spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &816378996
 GameObject:
   m_ObjectHideFlags: 0
@@ -4015,6 +3885,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &857917392
 GameObject:
   m_ObjectHideFlags: 0
@@ -4654,6 +4525,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 0
+  hasBirds: 1
 --- !u!1 &1047510993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4840,10 +4712,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 739733962}
-  intents: []
+  intents:
+  - name: Added intents
+    intents:
+    - p3v.fishgame.haveAuthority
+    - p3v.fishgame.checkCatch
+    - p3v.fishgame.getPermit
+    activateScene: {fileID: 739733962}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   activateIntent: p3v.fishgame.citeRegulations
   attemptsAllowed: 2
-  badAttemptScene: {fileID: 1780303923}
+  badAttemptScene: {fileID: 1706387272}
   ignoreNoSpeech: 1
 --- !u!1 &1160805889
 GameObject:
@@ -6173,7 +6055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383884906c18a364986367c38a180e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineText: touch here with the pen
+  lineText: 'pen & touch here  '
   lineEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6305,6 +6187,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1534687813}
   loopVideo: 0
+  hasBirds: 1
 --- !u!1 &1527571977
 GameObject:
   m_ObjectHideFlags: 0
@@ -6457,6 +6340,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &1553088562
 GameObject:
   m_ObjectHideFlags: 0
@@ -7163,6 +7047,79 @@ PlayableDirector:
     value: {fileID: 1954340234}
   m_ExposedReferences:
     m_References: []
+--- !u!1001 &1661894116
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.9537103
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2428186
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.7346132
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255998683006697932, guid: 253e06c68d3618f41981c9639e8795bd,
+        type: 3}
+      propertyPath: m_Name
+      value: birds
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664955451962322665, guid: 253e06c68d3618f41981c9639e8795bd,
+        type: 3}
+      propertyPath: MaxVolume
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 253e06c68d3618f41981c9639e8795bd, type: 3}
 --- !u!1 &1683616005
 GameObject:
   m_ObjectHideFlags: 0
@@ -7379,6 +7336,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &1737063829
 GameObject:
   m_ObjectHideFlags: 0
@@ -7430,6 +7388,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &1737169131
 GameObject:
   m_ObjectHideFlags: 0
@@ -7532,6 +7491,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &1767184719
 GameObject:
   m_ObjectHideFlags: 0
@@ -7791,6 +7751,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &1785523892
 GameObject:
   m_ObjectHideFlags: 0
@@ -8168,7 +8129,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 1780303923}
-  intents: []
+  intents:
+  - name: Added intents
+    intents:
+    - p3v.fishgame.getPermit
+    - p3v.fishgame.citeRegulations
+    - p3v.fishgame.checkCatch
+    activateScene: {fileID: 1780303923}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   activateIntent: 'p3v.fishgame.haveAuthority '
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1863653290}
@@ -8308,6 +8279,7 @@ MonoBehaviour:
     spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &1898487287
 GameObject:
   m_ObjectHideFlags: 0
@@ -8363,6 +8335,7 @@ MonoBehaviour:
     spawnInFront: 0
   videoFinishedScenario: {fileID: 78970772}
   loopVideo: 0
+  hasBirds: 1
 --- !u!1 &1931877298
 GameObject:
   m_ObjectHideFlags: 0
@@ -8415,6 +8388,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &1933839020
 GameObject:
   m_ObjectHideFlags: 0
@@ -8542,6 +8516,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 51345264}
   loopVideo: 0
+  hasBirds: 1
 --- !u!1 &1945787629
 GameObject:
   m_ObjectHideFlags: 0
@@ -8593,6 +8568,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &1954340234
 GameObject:
   m_ObjectHideFlags: 0
@@ -9096,6 +9072,7 @@ MonoBehaviour:
     spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 0
 --- !u!4 &2025262542
 Transform:
   m_ObjectHideFlags: 0
@@ -9548,6 +9525,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1 &2123698448
 GameObject:
   m_ObjectHideFlags: 0
@@ -9593,7 +9571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7181f3715ceafa1418093f6e515820f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScenario: {fileID: 66748831}
+  firstScenario: {fileID: 765742091}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -9674,6 +9652,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
+  hasBirds: 1
 --- !u!1001 &6728085473460422789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9751,6 +9730,7 @@ SceneRoots:
   - {fileID: 1267572845}
   - {fileID: 65468200}
   - {fileID: 2123698449}
+  - {fileID: 1661894116}
   - {fileID: 940948731}
   - {fileID: 410944827}
   - {fileID: 418241344}
