@@ -13,6 +13,7 @@ public class NotepadGrabbable : MonoBehaviour
     public Transform selectorTip;
     private bool held = false;
     float heldTime = 0;
+    public float penHeldTime = 2;
 
     public NotepadLine[] lines;
     NotepadLine currentSelection;
@@ -110,7 +111,7 @@ public class NotepadGrabbable : MonoBehaviour
         {
             if (!item.available) continue;
             float distance = Vector3.Distance(item.bounds.ClosestPointOnBounds(selectorTip.position), selectorTip.position);
-            if (heldTime > 5)
+            if (heldTime > penHeldTime)
             {
                 if (item.available && item.bounds.bounds.Contains(selectorTip.position))
                 {
