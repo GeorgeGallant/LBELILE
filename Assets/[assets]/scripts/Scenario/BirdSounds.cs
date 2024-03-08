@@ -34,7 +34,6 @@ public class BirdSounds : MonoBehaviour
     void Update()
     {
         if (!updateVolume) return;
-        Debug.Log("adjusting bird volume");
 
         currentLerp += Time.deltaTime / fadeTime * Mathf.Sign(targetLerp - currentLerp);
         currentLerp = Mathf.Clamp01(currentLerp);
