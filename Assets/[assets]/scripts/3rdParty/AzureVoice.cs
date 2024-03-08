@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
-using UnityEditor.PackageManager;
 
 using Azure.Core;
 using Azure.AI.Language.Conversations;
