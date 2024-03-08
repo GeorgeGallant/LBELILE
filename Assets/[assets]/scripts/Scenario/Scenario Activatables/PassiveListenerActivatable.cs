@@ -49,8 +49,8 @@ public class PassiveListenerActivatable : BaseIntentActivatable
         if (o.initiator == "passive")
         {
             var intent = o.topIntent;
-            if (intent != string.Empty) intentList.Add(o.topIntent);
-            if (intent != string.Empty && intent.ToLower() == activateIntent.ToLower())
+            if (activateIntent != string.Empty) intentList.Add(activateIntent);
+            if (activateIntent != string.Empty && intent.ToLower() == activateIntent.ToLower())
             {
                 Debug.Log("Activate Scene intent hit");
                 OnDisable();
