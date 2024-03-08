@@ -6477,6 +6477,8 @@ PlayableDirector:
     value: {fileID: 1633380480}
   - key: {fileID: 1966535364662962502, guid: 093236942e8f27a49b8856e8c23c31d3, type: 2}
     value: {fileID: 252023699}
+  - key: {fileID: -8873273711012323082, guid: 093236942e8f27a49b8856e8c23c31d3, type: 2}
+    value: {fileID: 1633380480}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1416900380
@@ -9728,6 +9730,8 @@ PlayableDirector:
     value: {fileID: 70536213}
   - key: {fileID: -1922809551739781781, guid: 8e9cfcb4a39ad2c4c99594aefe6d7da8, type: 2}
     value: {fileID: 1933839020}
+  - key: {fileID: 5046827590844590481, guid: 8e9cfcb4a39ad2c4c99594aefe6d7da8, type: 2}
+    value: {fileID: 70536213}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1966445509
@@ -10587,7 +10591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7181f3715ceafa1418093f6e515820f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScenario: {fileID: 1112931148}
+  firstScenario: {fileID: 841281015}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
