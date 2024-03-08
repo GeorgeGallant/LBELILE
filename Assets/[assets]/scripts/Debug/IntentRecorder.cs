@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -56,7 +57,11 @@ public class IntentRecorder : MonoBehaviour
             intents = record.ToArray()
         });
         string timestamp = System.DateTime.Now.ToString();
-        string path = Path.Combine(Application.persistentDataPath, "intentLogs", $"{timestamp} - {SceneManager.GetActiveScene().name}.json".ReplaceInvalidFileNameCharacters("-"));
+        string pattern = "[\\~#%&*{}/:<>?|\"-]";
+        Regex regEx = new Regex(pattern);
+        string filename = $"{timestamp} - {SceneManager.GetActiveScene().name}.json";
+        string sanitized = Regex.Replace(regEx.Replace(filename, "-"), @"/s+", "-");
+        string path = Path.Combine(Application.persistentDataPath, "intentLogs", sanitized);
         var file = new FileInfo(path);
         file.Directory.Create();
         File.WriteAllText(file.FullName, jsonOutput);
