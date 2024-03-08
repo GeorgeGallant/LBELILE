@@ -8,14 +8,18 @@ public class BirdSounds : MonoBehaviour
     float targetLerp;
     float currentLerp;
     bool updateVolume = false;
+    bool startRan = false;
     AudioSource audioSource;
     void Start()
     {
+        if (startRan) return;
         MaxVolume = Mathf.Clamp01(MaxVolume);
         audioSource = GetComponent<AudioSource>();
+        startRan = true;
     }
     public void PlayBirds()
     {
+        Start();
         if (targetLerp == 1) return;
         audioSource.Play();
         targetLerp = 1;
