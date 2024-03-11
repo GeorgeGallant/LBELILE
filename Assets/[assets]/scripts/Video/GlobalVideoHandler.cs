@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Video;
@@ -75,35 +76,33 @@ public class GlobalVideoHandler : MonoBehaviour
 
     private RenderTexture getRenderTextureForResolution(int h, int w)
     {
+        if (h == 0 || w == 0) return resRTs.Values.ToArray()[0];
         string key = $"{h}-{w}";
         RenderTexture rtOut;
         if (!resRTs.TryGetValue(key, out rtOut))
         {
             rtOut = new RenderTexture(w, h, 0);
             resRTs.Add(key, rtOut);
+            Debug.Log($"Creating a new render texture with key {key}");
         }
         return rtOut;
     }
 
-    private void Video_seekComplete(VideoPlayer source)
+    void getTexture(VideoPlayer source)
     {
         if (source.targetTexture == null
-         || source.targetTexture.height != source.height || source.targetTexture.width != source.width
-         )
+                 || source.targetTexture.height != source.height || source.targetTexture.width != source.width
+                 )
         {
             source.targetTexture = getRenderTextureForResolution((int)source.height, (int)source.width);
         }
-        else
-        {
-            // if (source.targetTexture.height != source.height)
-            // {
-            //     source.targetTexture.height = (int)source.height;
-            // }
-            // if (source.targetTexture.width != source.width)
-            // {
-            //     source.targetTexture.width = (int)source.width;
-            // }
-        }
+        if (altPlayer.targetTexture == null) altPlayer.targetTexture = source.targetTexture;
+    }
+
+    private void Video_seekComplete(VideoPlayer source)
+    {
+        getTexture(source);
+
         onPrepareComplete.Invoke(source, seekTo);
     }
 
@@ -142,12 +141,10 @@ public class GlobalVideoHandler : MonoBehaviour
         {
             instance.video.time = seekTo;
             seekTo = 0;
+            Debug.Log($"Seeking to {seekTo}");
             return;
         }
-        if (source.targetTexture == null || source.targetTexture.height != source.height || source.targetTexture.width != source.width)
-        {
-            source.targetTexture = getRenderTextureForResolution((int)source.height, (int)source.width);
-        }
+        getTexture(source);
         onPrepareComplete.Invoke(source, 0);
     }
 
