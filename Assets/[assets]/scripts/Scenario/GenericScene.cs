@@ -102,8 +102,11 @@ public class GenericScene : BaseScene
         if (ScenarioManager.ActiveScenario)
             ScenarioManager.ActiveScenario.deactivateScene();
         ScenarioManager.ActiveScenario = this;
-        if (hasBirds) birdSounds.PlayBirds();
-        else birdSounds.StopBirds();
+        if (birdSounds)
+        {
+            if (hasBirds) birdSounds.PlayBirds();
+            else birdSounds.StopBirds();
+        }
         if (videoLoader)
         {
             videoLoader.onVideoPrepared.AddListener(activateScene);
