@@ -7,6 +7,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class BinocularGrabbable : MonoBehaviour
 {
+    public static List<object> blockers = new List<object>();
+    public GameObject waitText;
     XRHandedGrabInteractable interactable;
 
     public GameObject BinocularCamera;
@@ -54,9 +56,18 @@ public class BinocularGrabbable : MonoBehaviour
 
     void WhileHeld()
     {
-        if (!held) return;
+        if (!held)
+        {
+            waitText.SetActive(false);
+            return;
+        }
 
-        var heldUp = headChecker.bounds.Contains(mainCam.transform.position) && Vector3.Angle(mainCam.transform.forward, transform.forward) < 30;
+        bool holdingToHead = headChecker.bounds.Contains(mainCam.transform.position) && Vector3.Angle(mainCam.transform.forward, transform.forward) < 30;
+
+        bool heldUp = blockers.Count == 0 && holdingToHead;
+
+        if (waitText)
+            waitText.SetActive(!heldUp && holdingToHead);
 
         if (heldUp != binocularEnabled)
         {
