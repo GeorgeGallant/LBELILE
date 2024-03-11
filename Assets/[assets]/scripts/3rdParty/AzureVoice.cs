@@ -103,7 +103,6 @@ namespace ThirdParty
                 string utterance = result.Text;
                 UnityEngine.Debug.Log($"{utterance}, {result.Reason}");
                 string intent = "No intent";
-                var json = result.Properties.GetProperty(PropertyId.SpeechServiceResponse_JsonResult);
                 if (result.Reason == ResultReason.RecognizedIntent)
                 {
                     UnityEngine.Debug.Log($"Speech: {utterance}, Intent: {e.Result.IntentId}");
@@ -119,7 +118,7 @@ namespace ThirdParty
 
                 UnityMainThread.AddJob(() =>
                 {
-                    IntentRecorder.RecordIntent((utterance, intent, initiator, json, destination));
+                    IntentRecorder.RecordIntent((utterance, intent, initiator, destination));
                     intentEvent.Invoke((intent, initiator, relevantScene));
                 });
             }
