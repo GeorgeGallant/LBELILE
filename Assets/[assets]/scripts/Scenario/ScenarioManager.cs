@@ -9,6 +9,9 @@ public class ScenarioManager : MonoBehaviour
     public BaseScene firstScenario;
     public KeyObject[] gameObjectDictionaryCreator = new KeyObject[0];
     public Dictionary<ScenarioObject, GameObject> gameObjectDictionary = new Dictionary<ScenarioObject, GameObject>();
+    public string cluProjectName;
+    public string cluDeploymentName;
+
     public static Dictionary<ScenarioObject, GameObject> GameObjectDictionary
     {
         get

@@ -10658,7 +10658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7181f3715ceafa1418093f6e515820f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScenario: {fileID: 700443780}
+  firstScenario: {fileID: 1945787631}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -10672,6 +10672,8 @@ MonoBehaviour:
   - scenarioObject: 3
     gameObject: {fileID: 1035828444273184424, guid: fd39933c54602ef4aae2280090237a92,
       type: 3}
+  cluProjectName: P360V_1
+  cluDeploymentName: p3vDev1
   activeScenario: {fileID: 0}
   activeKeywords: []
   videoSphere: {fileID: 65468197}

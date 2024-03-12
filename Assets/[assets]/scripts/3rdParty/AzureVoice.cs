@@ -31,15 +31,19 @@ namespace ThirdParty
 
             var predictionEndpointUri = "https://p360v2.cognitiveservices.azure.com/";
 
-/*** 
- * This needs to load the language model on a per-scenario basis
- * Replace the constant "P360V_fishgame" with a variable that is set when the scenario is chosen
- * ***/
+            /*** 
+             * This needs to load the language model on a per-scenario basis
+             * 
+             * ***/
             var cluModel = new ConversationalLanguageUnderstandingModel(
               ConfigManager.LANGUAGE_RESOURCE_KEY,
               predictionEndpointUri,
-              "P360V_fishgame",
-              "P360V_fishgame");
+              ScenarioManager.instance.cluProjectName,
+              ScenarioManager.instance.cluDeploymentName) ;
+            // "P360V_1",
+            // "p3vDev1"); ;
+            //  "P360V_fishgame",
+            //  "P360V_fishgame");
 
             var collection = new LanguageUnderstandingModelCollection();
             collection.Add(cluModel);
