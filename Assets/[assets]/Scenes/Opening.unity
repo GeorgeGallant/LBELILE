@@ -377,7 +377,12 @@ PrefabInstance:
     - target: {fileID: 5792835505755134914, guid: 2bd83b02b21215940b2d84053ab16fdb,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6822145528774884473, guid: 2bd83b02b21215940b2d84053ab16fdb,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -480,7 +485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &315368921
 Transform:
   m_ObjectHideFlags: 0
@@ -893,7 +898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &603739745
 Transform:
   m_ObjectHideFlags: 0
@@ -2809,16 +2814,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1123640108865596939, guid: b17db76a1ed46954991600a1660cbef0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1340062728771331063, guid: b17db76a1ed46954991600a1660cbef0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1837486778818553026, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2852,7 +2847,7 @@ PrefabInstance:
     - target: {fileID: 1837486778818553026, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1371
+      value: 1120
       objectReference: {fileID: 0}
     - target: {fileID: 1837486778818553026, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
@@ -2918,16 +2913,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2885635966152276165, guid: b17db76a1ed46954991600a1660cbef0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5785981549412941777, guid: b17db76a1ed46954991600a1660cbef0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
