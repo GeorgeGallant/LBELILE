@@ -3119,6 +3119,54 @@ PlayableDirector:
     value: {fileID: 1432397553}
   m_ExposedReferences:
     m_References: []
+--- !u!1 &666302015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 666302016}
+  - component: {fileID: 666302017}
+  m_Layer: 0
+  m_Name: BinocularObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &666302016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666302015}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1863653289}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &666302017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666302015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b730aff66fce87441aa819816f135522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  activateScene: {fileID: 0}
 --- !u!1 &685991062
 GameObject:
   m_ObjectHideFlags: 0
@@ -6662,6 +6710,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
+  - name: Harvest Card
+    intents:
+    - p3v.fishgame.harvestCard
+    activateScene: {fileID: 1041521910}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
   activateIntent: p3v.fishgame.letItGo
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1112931148}
@@ -6720,6 +6776,14 @@ MonoBehaviour:
     - p3v.fishgame.giveTicket
     - p3v.fishgame.giveWarning
     activateScene: {fileID: 1112931148}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
+  - name: Harvest Card
+    intents:
+    - p3v.fishgame.harvestCard
+    activateScene: {fileID: 1041521910}
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -7176,6 +7240,8 @@ PlayableDirector:
     value: {fileID: 1633380480}
   - key: {fileID: 7071720250611012448, guid: a6a7655f718f7a644a7d5087e7e42e30, type: 2}
     value: {fileID: 1319569134}
+  - key: {fileID: 6274067827480151253, guid: a6a7655f718f7a644a7d5087e7e42e30, type: 2}
+    value: {fileID: 666302015}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1562930154
@@ -9121,6 +9187,7 @@ Transform:
   - {fileID: 1182760485}
   - {fileID: 1319569135}
   - {fileID: 1652230995}
+  - {fileID: 666302016}
   m_Father: {fileID: 410944827}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1863653290
@@ -10591,7 +10658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7181f3715ceafa1418093f6e515820f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScenario: {fileID: 841281015}
+  firstScenario: {fileID: 700443780}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
