@@ -117,7 +117,7 @@ public class GenericScene : BaseScene
 
     protected void activateScene(double seek = 0)
     {
-        Debug.Log("activating scenario!");
+        Debug.Log($"Arriving in scene {gameObject.name}");
         ScenarioManager.enableScenarioObjects(scenarioObjects);
         foreach (var item in activatables)
         {
