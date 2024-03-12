@@ -31,12 +31,10 @@ namespace ThirdParty
 
             var predictionEndpointUri = "https://p360v2.cognitiveservices.azure.com/";
 
-            // var cluModel = new ConversationalLanguageUnderstandingModel(
-            //   ConfigManager.LANGUAGE_RESOURCE_KEY,
-            //   predictionEndpointUri,
-            //   "P360V_1",
-            //   "p3vDev1");
-
+/*** 
+ * This needs to load the language model on a per-scenario basis
+ * Replace the constant "P360V_fishgame" with a variable that is set when the scenario is chosen
+ * ***/
             var cluModel = new ConversationalLanguageUnderstandingModel(
               ConfigManager.LANGUAGE_RESOURCE_KEY,
               predictionEndpointUri,
@@ -46,40 +44,9 @@ namespace ThirdParty
             var collection = new LanguageUnderstandingModelCollection();
             collection.Add(cluModel);
 
-            /****
-             * This was added by Stephen on 2024-03-05 to limit the intents
-             * Ideally this should be loaded when the conservation scene is loaded (or each scene)
-             * 
-             *****/
-            string[] validSceneIntents = {
-          "p3v.dispatch.ackArrive",
-          "p3v.dispatch.ackClear",
-          "p3v.dispatch.ackCopy",
-          "p3v.fishgame.checkCatch",
-          "p3v.fishgame.citeRegulations",
-          "p3v.fishgame.getPermit",
-          "p3v.fishgame.getStatusCard",
-          "p3v.fishgame.giveTicket",
-          "p3v.fishgame.giveWarning",
-          "p3v.fishgame.haveAuthority",
-          "p3v.fishgame.identification",
-          "p3v.fishgame.idPlusReason",
-          "p3v.fishgame.letItGo",
-          "p3v.fishgame.giveReason"
-      };
-
             var recognizer = new IntentRecognizer(config);
             recognizer.ApplyLanguageModels(collection);
-
-            /****
-             * This was modified by Stephen on 2024-03-05 manage limited intents instead of all 
-             ****/
-            // recognizer.AddAllIntents(cluModel);
-            foreach (string intent in validSceneIntents)
-            {
-                recognizer.AddAllIntents(cluModel, intent);
-            }
-            /**** end modification ****/
+            recognizer.AddAllIntents(cluModel);
 
             recognizer.Recognized += resultRecieved;
             recognizer.Canceled += cancelled;
