@@ -426,7 +426,7 @@ PrefabInstance:
     - target: {fileID: 7060062245888310346, guid: 673737b307c6d92469fb7337e4ff771f,
         type: 3}
       propertyPath: GoodSceneIntent
-      value: p3v.bill.justification
+      value: p3v.bill.helpResolve
       objectReference: {fileID: 0}
     - target: {fileID: 7060062245888310346, guid: 673737b307c6d92469fb7337e4ff771f,
         type: 3}
