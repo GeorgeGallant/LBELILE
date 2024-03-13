@@ -5,76 +5,76 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Opening/Opening.unity
     guid: 47e8a7e4545e037469cf771643969ba4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Opening/Select Scenario.unity
     guid: 205677f1a9e02054b899c26557137653
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/POV/POV1/POV1.unity
     guid: 1bf3fce20e0ce7944abb7266396beadb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/POV/POV2/POV2.unity
     guid: 50b0e495b2a6de146bf559e3e05346a7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/POV/POV3/POV3.unity
     guid: 22b4f35159aef4a4ba0c07c5cd66d65b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Test scenes/TakeTheCall Start.unity
     guid: 27cd3ab6f8ab6d14e8ec4437a724c2f2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 1/1A/1A.unity
     guid: 442c576ba5dc4cf40ae9de4cde4901ec
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 1/1B/1B.unity
     guid: 8999c2a592e84284281c38c7f0657a39
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 1/1C/1C.unity
     guid: 10ea28bc572ffe04d973a621b69d978b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 1/1D/1D.unity
     guid: 599aac96cf847f24bb83638668537c81
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 2/2A/2A.unity
     guid: d2caaf1a25f48834cabd2db8413a5185
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 2/2B/2B.unity
     guid: 4f7d2d7b0d9365e4d8382fd37affedfb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 2/2C/2C.unity
     guid: 6e32ce3b7af0a99498c94a765736ec31
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 2/2D/2D.unity
     guid: 0e4972d956c0998429aaf0b522b3e7d4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 2/2E/2E.unity
     guid: 850917099920de145ac58a13de8104d2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 3/3A/3A.unity
     guid: b3b6a0dac1431084eb44f136684cac75
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 3/3B/3B.unity
     guid: 5fe9edb71a77cc343b01898f1baf722a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 3/3C/3C.unity
     guid: f89a3908007bcfc4a91f597754aed02b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 3/3D/3D.unity
     guid: abab841ead6799343b1b748bf96237ad
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 3/3E/3E.unity
     guid: 7f8a376dc34f42d45ba2e8f61ccc061f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 4/4A/4A.unity
     guid: 4c0c53744e2f1bd40838f20db758bec1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 4/4B/4B.unity
     guid: 16615f4caf63aeb4690a245865b41e4f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 4/4C/4C.unity
     guid: 5857247f207c45e499d85047bbc78fcc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenatlHealthCall/Scene 4/4D/4D.unity
     guid: fd9801b3a5df9d440b1543cc6f77c6dc
   - enabled: 1

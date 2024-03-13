@@ -1,22 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5628942597100613281
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
-  m_Name: AudioPlayableAsset
-  m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 55ed9652b84aba640ae2e6f509087523, type: 3}
-  m_Loop: 0
-  m_bufferingTime: 0.1
-  m_ClipProperties:
-    volume: 1
 --- !u!114 &-1936261476263260766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -41,8 +24,8 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 0
     m_ClipIn: 0
-    m_Asset: {fileID: -5628942597100613281}
-    m_Duration: 11.177833333333334
+    m_Asset: {fileID: 4247954023985887278}
+    m_Duration: 46.279583333333335
     m_TimeScale: 1
     m_ParentTrack: {fileID: -1936261476263260766}
     m_EaseInDuration: 0
@@ -106,36 +89,14 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: 4DBillNEW
+    m_DisplayName: POVPart 1 ShadowMaleVO
   m_Markers:
     m_Objects: []
   m_TrackProperties:
     volume: 1
     stereoPan: 0
     spatialBlend: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
-  m_Name: 4DMH
-  m_EditorClassIdentifier: 
-  m_Version: 0
-  m_Tracks:
-  - {fileID: -1936261476263260766}
-  - {fileID: 8687257629724047911}
-  m_FixedDuration: 0
-  m_EditorSettings:
-    m_Framerate: 60
-    m_ScenePreview: 1
-  m_DurationMode: 0
-  m_MarkerTrack: {fileID: 0}
---- !u!114 &3066134548081732591
+--- !u!114 &-570324531288442154
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +108,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 6aa7dcf51ea3040468776f2ddc9307eb, type: 3}
+  m_Clip: {fileID: 8300000, guid: e36b4792c7f916a41b368982f17efe05, type: 3}
+  m_Loop: 0
+  m_bufferingTime: 0.1
+  m_ClipProperties:
+    volume: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
+  m_Name: POV1
+  m_EditorClassIdentifier: 
+  m_Version: 0
+  m_Tracks:
+  - {fileID: -1936261476263260766}
+  - {fileID: 8687257629724047911}
+  m_FixedDuration: 0
+  m_EditorSettings:
+    m_Framerate: 60
+    m_ScenePreview: 1
+  m_DurationMode: 0
+  m_MarkerTrack: {fileID: 0}
+--- !u!114 &4247954023985887278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
+  m_Name: AudioPlayableAsset
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 8300000, guid: 8bebe08933f94b1408f81eaf82f3a0c3, type: 3}
   m_Loop: 0
   m_bufferingTime: 0.1
   m_ClipProperties:
@@ -176,8 +176,8 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 0
     m_ClipIn: 0
-    m_Asset: {fileID: 3066134548081732591}
-    m_Duration: 11.177833333333334
+    m_Asset: {fileID: -570324531288442154}
+    m_Duration: 46.279583333333335
     m_TimeScale: 1
     m_ParentTrack: {fileID: 8687257629724047911}
     m_EaseInDuration: 0
@@ -241,7 +241,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: 4DFTONEW
+    m_DisplayName: POVPart 1 ShadowSwoosh
   m_Markers:
     m_Objects: []
   m_TrackProperties:
