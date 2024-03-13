@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &9212365 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1964703682119717794, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1998626865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &182072418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -281,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7181f3715ceafa1418093f6e515820f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScenario: {fileID: 1814442498}
+  firstScenario: {fileID: 2033993130}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -804,6 +810,7 @@ GameObject:
   - component: {fileID: 1322274888}
   - component: {fileID: 1322274890}
   - component: {fileID: 1322274889}
+  - component: {fileID: 1322274891}
   m_Layer: 0
   m_Name: Timeline
   m_TagString: Untagged
@@ -900,8 +907,40 @@ PlayableDirector:
     value: {fileID: 1887160042}
   - key: {fileID: 3048050865200910274, guid: 882465bd94304c44e957f64fe8933120, type: 2}
     value: {fileID: 1949174576}
+  - key: {fileID: -4050896824210697423, guid: 882465bd94304c44e957f64fe8933120, type: 2}
+    value: {fileID: 1322274891}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &1322274891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322274887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 1e35e18368ef3c34585c56a510805a76, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1998626866}
+          m_TargetAssemblyTypeName: StandaloneMenu, Assembly-CSharp
+          m_MethodName: PromptMenu
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1509785528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1013,6 +1052,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 0
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!4 &1700476860
 Transform:
   m_ObjectHideFlags: 0
@@ -1088,6 +1130,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 0
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1887160041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,6 +1411,98 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &1998626865
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2033993131}
+    m_Modifications:
+    - target: {fileID: 1964703682119717794, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964703682119717794, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964703682119717794, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964703682119717794, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964703682119717794, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964703682119717794, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964703682119717794, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964703682119717794, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964703682119717794, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964703682119717794, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486187846933419519, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
+        type: 3}
+      propertyPath: m_Name
+      value: StandaloneMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5518126932278816740, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 16.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757522293086529236, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
+        type: 3}
+      propertyPath: m_text
+      value: 'Go Back to Scene Selection
+
+'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f2ef4dd5710dd5c4eba2eb02f465105e, type: 3}
+--- !u!114 &1998626866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4578992263051810000, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1998626865}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29df81f666528d41898079545985271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1999384641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,6 +1645,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 0
   hasBirds: 0
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!4 &2033993131
 Transform:
   m_ObjectHideFlags: 0
@@ -1522,6 +1662,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1322274888}
+  - {fileID: 9212365}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
