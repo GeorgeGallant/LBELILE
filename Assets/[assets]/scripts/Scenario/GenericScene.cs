@@ -20,6 +20,9 @@ public class GenericScene : BaseScene
     //TODO
     public bool hasBirds = true;
     static BirdSounds birdSounds;
+    public Vector3 spherePosition;
+    public float sphereYaw = 0;
+    public float sphereScale = 8;
     public bool isActive
     {
         get
@@ -60,6 +63,10 @@ public class GenericScene : BaseScene
             return;
         }
         // if (ScenarioManager.ActiveScenario == this) return;
+
+        ScenarioManager.VideoSphere.transform.position = spherePosition;
+        ScenarioManager.VideoSphere.transform.eulerAngles = new Vector3(0, sphereYaw, 0);
+        ScenarioManager.VideoSphere.transform.localScale = Vector3.one * sphereScale;
 
 
 
