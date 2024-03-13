@@ -9,9 +9,17 @@ public class RemotePowerButtonActivatable : BaseSceneActivatable
     }
     public override void activateModifiers()
     {
-        remote.powerButtonEvent.AddListener(powerActivate);
+        OnEnable();
     }
     public override void deactivateModifiers()
+    {
+        OnDisable();
+    }
+    void OnEnable()
+    {
+        remote.powerButtonEvent.AddListener(powerActivate);
+    }
+    void OnDisable()
     {
         remote.powerButtonEvent.RemoveListener(powerActivate);
     }
