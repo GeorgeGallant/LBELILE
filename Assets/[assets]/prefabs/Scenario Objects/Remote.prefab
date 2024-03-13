@@ -31,6 +31,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 372621020312785938}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2356548197821978688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 68644879994294466}
+  - component: {fileID: 5565593652906483602}
+  m_Layer: 0
+  m_Name: PowerButtonCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &68644879994294466
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2356548197821978688}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.01084, y: 0.00528, z: 0.07329}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 372621020312785938}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &5565593652906483602
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2356548197821978688}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.0075
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &189548840358720505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111,6 +164,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6534829129491125345}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e19e4d466df84e34eb2b65331faab098,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 68644879994294466}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e19e4d466df84e34eb2b65331faab098,
         type: 3}
@@ -128,6 +185,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4324904376545063617}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e19e4d466df84e34eb2b65331faab098,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5873005331308522721}
   m_SourcePrefab: {fileID: 100100000, guid: e19e4d466df84e34eb2b65331faab098, type: 3}
 --- !u!4 &372621020312785938 stripped
 Transform:
@@ -344,7 +405,6 @@ MonoBehaviour:
   LeftHandAttachTransform: {fileID: 6534829129491125345}
   RightHandAttachTransform: {fileID: 7798405636318629307}
   restrictGrabbableHand: 0
-  forceHeld: 0
 --- !u!114 &4324904376545063617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,6 +418,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poseName: Remote
+--- !u!114 &5873005331308522721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035828444273184424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d04a8dc4715934f8f4403d47d09272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerButtonCollider: {fileID: 5565593652906483602}
+  powerButtonEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &7798405636318629307 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1253996098385199550, guid: e19e4d466df84e34eb2b65331faab098,
