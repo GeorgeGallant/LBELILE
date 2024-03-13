@@ -7,6 +7,8 @@ TagManager:
   - RightController
   - LeftController
   - SelectionRay
+  - IndexTipLeft
+  - IndexTipRight
   layers:
   - Default
   - TransparentFX
