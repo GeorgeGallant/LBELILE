@@ -64,9 +64,6 @@ public class GenericScene : BaseScene
         }
         // if (ScenarioManager.ActiveScenario == this) return;
 
-        ScenarioManager.VideoSphere.transform.position = spherePosition;
-        ScenarioManager.VideoSphere.transform.eulerAngles = new Vector3(0, sphereYaw, 0);
-        ScenarioManager.VideoSphere.transform.localScale = Vector3.one * sphereScale;
 
 
 
@@ -106,6 +103,9 @@ public class GenericScene : BaseScene
     {
         Debug.Log("Starting new scene");
         Start();
+        ScenarioManager.VideoSphere.transform.position = spherePosition;
+        ScenarioManager.VideoSphere.transform.eulerAngles = new Vector3(0, sphereYaw, 0);
+        ScenarioManager.VideoSphere.transform.localScale = Vector3.one * sphereScale;
         if (ScenarioManager.ActiveScenario)
             ScenarioManager.ActiveScenario.deactivateScene();
         ScenarioManager.ActiveScenario = this;
