@@ -411,6 +411,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &70536211
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,6 +594,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &78970770
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +649,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 1898487289}
   loopVideo: 0
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &79772018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,6 +1153,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 1534687813}
   loopVideo: 0
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &182940745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1292,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &252023699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2369,6 +2384,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &473094383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,6 +2438,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 51345264}
   loopVideo: 0
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &479042161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2769,6 +2790,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 803722141}
   loopVideo: 0
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &562499187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2941,6 +2965,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &630755943
 GameObject:
   m_ObjectHideFlags: 0
@@ -3275,6 +3302,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &708627779
 GameObject:
   m_ObjectHideFlags: 0
@@ -3795,6 +3825,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &765742090
 GameObject:
   m_ObjectHideFlags: 0
@@ -3833,6 +3866,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 0
+  spherePosition: {x: 0, y: 1, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!4 &765742092
 Transform:
   m_ObjectHideFlags: 0
@@ -3909,6 +3945,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &816378996
 GameObject:
   m_ObjectHideFlags: 0
@@ -4133,6 +4172,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &857917392
 GameObject:
   m_ObjectHideFlags: 0
@@ -4670,6 +4712,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1007155772
 GameObject:
   m_ObjectHideFlags: 0
@@ -4824,6 +4869,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 51345264}
   loopVideo: 0
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1042946998
 GameObject:
   m_ObjectHideFlags: 0
@@ -4876,6 +4924,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 0
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1047510993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5066,6 +5117,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1133058592
 GameObject:
   m_ObjectHideFlags: 0
@@ -6919,6 +6973,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 1534687813}
   loopVideo: 0
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1527571977
 GameObject:
   m_ObjectHideFlags: 0
@@ -7169,6 +7226,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1553088562
 GameObject:
   m_ObjectHideFlags: 0
@@ -8167,6 +8227,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1717435293
 GameObject:
   m_ObjectHideFlags: 0
@@ -8269,6 +8332,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1737169131
 GameObject:
   m_ObjectHideFlags: 0
@@ -8372,6 +8438,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1767184719
 GameObject:
   m_ObjectHideFlags: 0
@@ -8632,6 +8701,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1785523892
 GameObject:
   m_ObjectHideFlags: 0
@@ -9211,6 +9283,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1898487287
 GameObject:
   m_ObjectHideFlags: 0
@@ -9267,6 +9342,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 78970772}
   loopVideo: 0
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1931877298
 GameObject:
   m_ObjectHideFlags: 0
@@ -9320,6 +9398,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1933839020
 GameObject:
   m_ObjectHideFlags: 0
@@ -9448,6 +9529,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 51345264}
   loopVideo: 0
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1945787629
 GameObject:
   m_ObjectHideFlags: 0
@@ -9500,6 +9584,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &1954340234
 GameObject:
   m_ObjectHideFlags: 0
@@ -10067,6 +10154,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 0
+  spherePosition: {x: 0, y: 1, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!4 &2025262542
 Transform:
   m_ObjectHideFlags: 0
@@ -10076,7 +10166,7 @@ Transform:
   m_GameObject: {fileID: 2025262540}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10613,6 +10703,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1 &2123698448
 GameObject:
   m_ObjectHideFlags: 0
@@ -10742,6 +10835,9 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 1
+  spherePosition: {x: 0, y: 0, z: 0}
+  sphereYaw: 0
+  sphereScale: 8
 --- !u!1001 &6728085473460422789
 PrefabInstance:
   m_ObjectHideFlags: 0

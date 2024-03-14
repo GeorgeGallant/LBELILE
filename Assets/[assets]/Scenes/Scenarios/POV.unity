@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7181f3715ceafa1418093f6e515820f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScenario: {fileID: 2033993130}
+  firstScenario: {fileID: 1814442498}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
