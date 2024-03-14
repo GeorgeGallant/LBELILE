@@ -1,5 +1,3 @@
-using UnityEngine.tvOS;
-
 public class RemotePowerButtonActivatable : BaseSceneActivatable
 {
     RemoteGrabbable remote;
