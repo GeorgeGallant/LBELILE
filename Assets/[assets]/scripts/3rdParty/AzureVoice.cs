@@ -76,6 +76,9 @@ namespace ThirdParty
                 string intent = "No intent";
                 if (result.Reason == ResultReason.RecognizedIntent)
                 {
+					/* look at pulling this key from the Result for the file-saved log
+					* e.Result.LanguageUnderstandingServiceResponse_JsonResult
+					*/
                     UnityEngine.Debug.Log($"Speech: {utterance}, Intent: {e.Result.IntentId}");
                     intent = e.Result.IntentId;
                     // await GetIntentFromUtterance(utterance, initiator);}
@@ -89,6 +92,9 @@ namespace ThirdParty
 
                 UnityMainThread.AddJob(() =>
                 {
+					/* look at pulling this key from the Result for the file-saved log
+					* e.Result.LanguageUnderstandingServiceResponse_JsonResult
+					*/
                     IntentRecorder.RecordIntent((utterance, intent, initiator, destination));
                     intentEvent.Invoke((intent, initiator, relevantScene));
                 });
