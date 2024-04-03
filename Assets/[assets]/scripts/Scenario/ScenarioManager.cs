@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Security;
 using UnityEngine;
 
 public class ScenarioManager : MonoBehaviour
@@ -8,9 +9,12 @@ public class ScenarioManager : MonoBehaviour
     public static ScenarioManager instance;
     public BaseScene firstScenario;
     public KeyObject[] gameObjectDictionaryCreator = new KeyObject[0];
+    public SoundScapeInitializer[] soundScapeCreator = new SoundScapeInitializer[0];
     public Dictionary<ScenarioObject, GameObject> gameObjectDictionary = new Dictionary<ScenarioObject, GameObject>();
+    public Dictionary<string, SoundScape> soundScapeDictionary = new Dictionary<string, SoundScape>();
     public string cluProjectName;
     public string cluDeploymentName;
+    public string playingSoundscape;
 
     public static Dictionary<ScenarioObject, GameObject> GameObjectDictionary
     {
@@ -84,6 +88,7 @@ public class ScenarioManager : MonoBehaviour
     {
         if (!instance) instance = this;
         createObjects();
+        createSoundscapes();
         firstScenario.startScene();
     }
 
@@ -94,11 +99,50 @@ public class ScenarioManager : MonoBehaviour
         Quaternion rot = Quaternion.LookRotation((pos - Camera.main.transform.position).normalized);
         return (pos, rot);
     }
+    public static void playSoundscape(string key)
+    {
+        if (key == instance.playingSoundscape) return;
+        var dict = instance.soundScapeDictionary;
+        var arr = dict.Values.ToArray();
+        if (arr.Length == 0) return;
+        foreach (var item in arr)
+        {
+            item.StopSoundscape();
+        }
+        key = key.Trim();
+        if (key == "") return;
+        SoundScape ss;
+        var exists = dict.TryGetValue(key, out ss);
+        if (exists)
+        {
+            ss.PlaySoundscape();
+        }
+        else Debug.LogError($"No soundscape key: {key}");
+        instance.playingSoundscape = key;
+    }
 
-    static void createObjects()
+    void createSoundscapes()
+    {
+        GameObject parent = new GameObject("Soundscape Objects");
+        var keys = soundScapeCreator;
+        if (keys.Length == 0) return;
+        for (int i = 0; i < keys.Length; i++)
+        {
+            var key = keys[i];
+            var go = new GameObject(key.keyName, typeof(SoundScape));
+            go.transform.SetParent(parent.transform);
+            go.GetComponent<AudioSource>().clip = key.clip;
+            var ss = go.GetComponent<SoundScape>();
+            ss.fadeTime = key.fadeTime;
+            ss.MaxVolume = key.maxVolume;
+            soundScapeDictionary.Add(key.keyName, ss);
+        }
+    }
+
+    void createObjects()
     {
         GameObject parent = new GameObject("Scenario Objects");
-        var keys = instance.gameObjectDictionaryCreator;
+        var keys = gameObjectDictionaryCreator;
         for (int i = 0; i < keys.Length; i++)
         {
             var key = keys[i];
@@ -179,6 +223,14 @@ public class ScenarioManager : MonoBehaviour
     {
         public ScenarioObject scenarioObject;
         public GameObject gameObject;
+    }
+    [System.Serializable]
+    public class SoundScapeInitializer
+    {
+        public string keyName = "";
+        public AudioClip clip = null;
+        public float maxVolume = 0.4f;
+        public float fadeTime = 1;
     }
 }
 [System.Serializable]

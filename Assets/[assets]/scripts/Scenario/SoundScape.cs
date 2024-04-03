@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-public class BirdSounds : MonoBehaviour
+public class SoundScape : MonoBehaviour
 {
     public float MaxVolume = 0.4f;
     public float fadeTime = 1;
@@ -17,7 +17,7 @@ public class BirdSounds : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         startRan = true;
     }
-    public void PlayBirds()
+    public void PlaySoundscape()
     {
         Start();
         if (targetLerp == 1) return;
@@ -25,7 +25,7 @@ public class BirdSounds : MonoBehaviour
         targetLerp = 1;
         updateVolume = true;
     }
-    public void StopBirds()
+    public void StopSoundscape()
     {
         if (targetLerp == 0) return;
         targetLerp = 0;
