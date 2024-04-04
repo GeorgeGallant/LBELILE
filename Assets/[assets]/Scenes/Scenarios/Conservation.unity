@@ -2083,6 +2083,7 @@ GameObject:
   - component: {fileID: 407991137}
   - component: {fileID: 407991138}
   - component: {fileID: 407991139}
+  - component: {fileID: 407991140}
   m_Layer: 0
   m_Name: Person right
   m_TagString: Untagged
@@ -2133,7 +2134,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407991136}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88c0239b76fda784e95ce5118a944678, type: 3}
   m_Name: 
@@ -2153,6 +2154,22 @@ MonoBehaviour:
           m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
+  activateScene: {fileID: 2129817804}
+--- !u!114 &407991140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407991136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8225a115b3e0c4f4f8bc7a436a7be100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateEvent:
+    m_PersistentCalls:
+      m_Calls: []
   activateScene: {fileID: 2129817804}
 --- !u!1 &410944826
 GameObject:
@@ -8031,6 +8048,7 @@ GameObject:
   - component: {fileID: 1690260202}
   - component: {fileID: 1690260204}
   - component: {fileID: 1690260203}
+  - component: {fileID: 1690260205}
   m_Layer: 0
   m_Name: Person left
   m_TagString: Untagged
@@ -8060,7 +8078,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690260201}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88c0239b76fda784e95ce5118a944678, type: 3}
   m_Name: 
@@ -8102,6 +8120,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 62.29, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1690260205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690260201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8225a115b3e0c4f4f8bc7a436a7be100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  activateScene: {fileID: 841281015}
 --- !u!1 &1706387270
 GameObject:
   m_ObjectHideFlags: 0
@@ -10678,7 +10712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7181f3715ceafa1418093f6e515820f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScenario: {fileID: 765742091}
+  firstScenario: {fileID: 1931877300}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -10829,10 +10863,75 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3132494778276944307, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: availableColor.a
+      value: 0.44705883
+      objectReference: {fileID: 0}
+    - target: {fileID: 3132494778276944307, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: availableColor.g
+      value: 0.7921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 3132494778276944307, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: availableColor.r
+      value: 0.3647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 3132494778276944307, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: unavailableColor.a
+      value: 0.44705883
+      objectReference: {fileID: 0}
+    - target: {fileID: 3132494778276944307, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: unavailableColor.b
+      value: 0.23113209
+      objectReference: {fileID: 0}
+    - target: {fileID: 3132494778276944307, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: unavailableColor.g
+      value: 0.24867904
+      objectReference: {fileID: 0}
+    - target: {fileID: 3132494778276944307, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: unavailableColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6239347369989014381, guid: 35269e6af55402c40971b1b5ef7066d5,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989802386502659834, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: availableColor.a
+      value: 0.44705883
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989802386502659834, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: availableColor.g
+      value: 0.7921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989802386502659834, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: availableColor.r
+      value: 0.3647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989802386502659834, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: unavailableColor.a
+      value: 0.44705883
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989802386502659834, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: unavailableColor.b
+      value: 0.23137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989802386502659834, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: unavailableColor.g
+      value: 0.24705882
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

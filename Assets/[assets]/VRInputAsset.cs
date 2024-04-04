@@ -29,7 +29,7 @@ public partial class @VRInputAsset: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""LeftThumbstick"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""9ac8ff50-fa96-48fe-8f58-af7881d713c2"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
@@ -38,7 +38,7 @@ public partial class @VRInputAsset: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""RightThumbstick"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""3447b00d-80af-465c-b69d-6e4c16ec4bbf"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
@@ -50,7 +50,7 @@ public partial class @VRInputAsset: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7ff36ba9-8332-4235-b8d8-066be77a1a0a"",
-                    ""path"": ""<XRController>{LeftHand}/{Primary2DAxis}"",
+                    ""path"": ""<XRController>{LeftHand}/primary2DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -61,7 +61,7 @@ public partial class @VRInputAsset: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""fcbfac58-b5a6-4d7a-b9a3-abba502c583c"",
-                    ""path"": ""<XRController>{RightHand}/{Primary2DAxis}"",
+                    ""path"": ""<OculusTouchController>/thumbstick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -72,7 +72,13 @@ public partial class @VRInputAsset: IInputActionCollection2, IDisposable
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""New control scheme"",
+            ""bindingGroup"": ""New control scheme"",
+            ""devices"": []
+        }
+    ]
 }");
         // VRInput
         m_VRInput = asset.FindActionMap("VRInput", throwIfNotFound: true);
@@ -189,6 +195,15 @@ public partial class @VRInputAsset: IInputActionCollection2, IDisposable
         }
     }
     public VRInputActions @VRInput => new VRInputActions(this);
+    private int m_NewcontrolschemeSchemeIndex = -1;
+    public InputControlScheme NewcontrolschemeScheme
+    {
+        get
+        {
+            if (m_NewcontrolschemeSchemeIndex == -1) m_NewcontrolschemeSchemeIndex = asset.FindControlSchemeIndex("New control scheme");
+            return asset.controlSchemes[m_NewcontrolschemeSchemeIndex];
+        }
+    }
     public interface IVRInputActions
     {
         void OnLeftThumbstick(InputAction.CallbackContext context);
