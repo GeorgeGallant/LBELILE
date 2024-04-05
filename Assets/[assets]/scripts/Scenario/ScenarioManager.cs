@@ -131,7 +131,9 @@ public class ScenarioManager : MonoBehaviour
             var key = keys[i];
             var go = new GameObject(key.keyName, typeof(SoundScape));
             go.transform.SetParent(parent.transform);
-            go.GetComponent<AudioSource>().clip = key.clip;
+            var audiosource = go.GetComponent<AudioSource>();
+            audiosource.clip = key.clip;
+            audiosource.loop = true;
             var ss = go.GetComponent<SoundScape>();
             ss.fadeTime = key.fadeTime;
             ss.MaxVolume = key.maxVolume;
