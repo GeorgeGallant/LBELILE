@@ -38,6 +38,7 @@ public class ColliderActivatable : BaseSceneActivatable
 
     public override void deactivateModifiers()
     {
+        if (!startRan) return;
         GlobalPlayer.RemoveRayUser(this);
         interactable.colliders.ForEach((collider) =>
         {

@@ -410,10 +410,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &70536211
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,10 +593,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &78970770
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,10 +648,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1898487289}
   loopVideo: 0
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &79772018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,10 +1152,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1534687813}
   loopVideo: 0
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &182940745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,10 +1291,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &252023699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,6 +2083,7 @@ GameObject:
   - component: {fileID: 407991137}
   - component: {fileID: 407991138}
   - component: {fileID: 407991139}
+  - component: {fileID: 407991140}
   m_Layer: 0
   m_Name: Person right
   m_TagString: Untagged
@@ -2133,7 +2134,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407991136}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88c0239b76fda784e95ce5118a944678, type: 3}
   m_Name: 
@@ -2153,6 +2154,22 @@ MonoBehaviour:
           m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
+  activateScene: {fileID: 2129817804}
+--- !u!114 &407991140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407991136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8225a115b3e0c4f4f8bc7a436a7be100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateEvent:
+    m_PersistentCalls:
+      m_Calls: []
   activateScene: {fileID: 2129817804}
 --- !u!1 &410944826
 GameObject:
@@ -2383,10 +2400,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &473094383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2437,10 +2454,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 51345264}
   loopVideo: 0
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &479042161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2789,10 +2806,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 803722141}
   loopVideo: 0
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &562499187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2964,10 +2981,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &630755943
 GameObject:
   m_ObjectHideFlags: 0
@@ -3301,10 +3318,10 @@ MonoBehaviour:
     spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &708627779
 GameObject:
   m_ObjectHideFlags: 0
@@ -3824,10 +3841,10 @@ MonoBehaviour:
     spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &765742090
 GameObject:
   m_ObjectHideFlags: 0
@@ -3865,10 +3882,10 @@ MonoBehaviour:
     spawnInFront: 1
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 0
   spherePosition: {x: 0, y: 1, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: 
 --- !u!4 &765742092
 Transform:
   m_ObjectHideFlags: 0
@@ -3944,10 +3961,10 @@ MonoBehaviour:
     spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &816378996
 GameObject:
   m_ObjectHideFlags: 0
@@ -4171,10 +4188,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &857917392
 GameObject:
   m_ObjectHideFlags: 0
@@ -4711,10 +4728,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &1007155772
 GameObject:
   m_ObjectHideFlags: 0
@@ -4868,10 +4885,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 51345264}
   loopVideo: 0
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &1042946998
 GameObject:
   m_ObjectHideFlags: 0
@@ -4923,10 +4940,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 0
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &1047510993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5116,10 +5133,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &1133058592
 GameObject:
   m_ObjectHideFlags: 0
@@ -6972,10 +6989,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 1534687813}
   loopVideo: 0
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &1527571977
 GameObject:
   m_ObjectHideFlags: 0
@@ -7225,10 +7242,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &1553088562
 GameObject:
   m_ObjectHideFlags: 0
@@ -7937,79 +7954,6 @@ PlayableDirector:
     value: {fileID: 1954340234}
   m_ExposedReferences:
     m_References: []
---- !u!1001 &1661894116
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.9537103
-      objectReference: {fileID: 0}
-    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.2428186
-      objectReference: {fileID: 0}
-    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.7346132
-      objectReference: {fileID: 0}
-    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2337761721318070397, guid: 253e06c68d3618f41981c9639e8795bd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6255998683006697932, guid: 253e06c68d3618f41981c9639e8795bd,
-        type: 3}
-      propertyPath: m_Name
-      value: birds
-      objectReference: {fileID: 0}
-    - target: {fileID: 6664955451962322665, guid: 253e06c68d3618f41981c9639e8795bd,
-        type: 3}
-      propertyPath: MaxVolume
-      value: 0.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 253e06c68d3618f41981c9639e8795bd, type: 3}
 --- !u!1 &1683616005
 GameObject:
   m_ObjectHideFlags: 0
@@ -8104,6 +8048,7 @@ GameObject:
   - component: {fileID: 1690260202}
   - component: {fileID: 1690260204}
   - component: {fileID: 1690260203}
+  - component: {fileID: 1690260205}
   m_Layer: 0
   m_Name: Person left
   m_TagString: Untagged
@@ -8133,7 +8078,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690260201}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88c0239b76fda784e95ce5118a944678, type: 3}
   m_Name: 
@@ -8175,6 +8120,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 62.29, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1690260205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690260201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8225a115b3e0c4f4f8bc7a436a7be100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  activateScene: {fileID: 841281015}
 --- !u!1 &1706387270
 GameObject:
   m_ObjectHideFlags: 0
@@ -8226,10 +8187,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &1717435293
 GameObject:
   m_ObjectHideFlags: 0
@@ -8331,10 +8292,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &1737169131
 GameObject:
   m_ObjectHideFlags: 0
@@ -8437,10 +8398,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &1767184719
 GameObject:
   m_ObjectHideFlags: 0
@@ -8700,10 +8661,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &1785523892
 GameObject:
   m_ObjectHideFlags: 0
@@ -9282,10 +9243,10 @@ MonoBehaviour:
     spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &1898487287
 GameObject:
   m_ObjectHideFlags: 0
@@ -9341,10 +9302,10 @@ MonoBehaviour:
     spawnInFront: 0
   videoFinishedScenario: {fileID: 78970772}
   loopVideo: 0
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &1931877298
 GameObject:
   m_ObjectHideFlags: 0
@@ -9397,10 +9358,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &1933839020
 GameObject:
   m_ObjectHideFlags: 0
@@ -9528,10 +9489,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 51345264}
   loopVideo: 0
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &1945787629
 GameObject:
   m_ObjectHideFlags: 0
@@ -9583,10 +9544,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &1954340234
 GameObject:
   m_ObjectHideFlags: 0
@@ -10153,10 +10114,10 @@ MonoBehaviour:
     spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 0
   spherePosition: {x: 0, y: 1, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: 
 --- !u!4 &2025262542
 Transform:
   m_ObjectHideFlags: 0
@@ -10702,10 +10663,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1 &2123698448
 GameObject:
   m_ObjectHideFlags: 0
@@ -10765,8 +10726,14 @@ MonoBehaviour:
   - scenarioObject: 3
     gameObject: {fileID: 1035828444273184424, guid: fd39933c54602ef4aae2280090237a92,
       type: 3}
+  soundScapeCreator:
+  - keyName: birds
+    clip: {fileID: 8300000, guid: fca9e24a8bf18c549bd7d5674924ddff, type: 3}
+    maxVolume: 0.4
+    fadeTime: 1
   cluProjectName: P360V_1
   cluDeploymentName: p3vDev1
+  playingSoundscape: 
   activeScenario: {fileID: 0}
   activeKeywords: []
   videoSphere: {fileID: 65468197}
@@ -10834,10 +10801,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: birds
 --- !u!1001 &6728085473460422789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10915,7 +10882,6 @@ SceneRoots:
   - {fileID: 1267572845}
   - {fileID: 65468200}
   - {fileID: 2123698449}
-  - {fileID: 1661894116}
   - {fileID: 940948731}
   - {fileID: 410944827}
   - {fileID: 418241344}

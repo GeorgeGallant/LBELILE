@@ -7,7 +7,7 @@ public class BaseSceneActivatable : MonoBehaviour
 {
     public UnityEvent activateEvent = new UnityEvent();
     public BaseScene activateScene;
-    bool startRan = false;
+    internal bool startRan = false;
     protected bool sceneActive
     {
         get
@@ -35,6 +35,7 @@ public class BaseSceneActivatable : MonoBehaviour
     {
         get
         {
+            if (!enabled) return false;
             var modifiers = gameObject.GetComponents<BaseActivatableModifier>();
             if (modifiers.Length == 0) return true;
             for (int i = 0; i < modifiers.Length; i++)

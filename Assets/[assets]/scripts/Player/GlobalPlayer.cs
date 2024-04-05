@@ -24,16 +24,36 @@ public class GlobalPlayer : MonoBehaviour
         }
     }
     public XRDirectInteractor rightController;
+    public static VRInputAsset Controls
+    {
+        get
+        {
+            return instance.controls;
+        }
+    }
+
+    VRInputAsset controls;
 
     public GameObject[] rays;
+    public Teleporter[] teleporters;
     static bool raysEnabled = true;
+    static bool teleportEnabled = false;
     static List<MonoBehaviour> rayUsers = new();
+    static List<TeleportActivatable> teleportUsers = new();
+    public static TeleportActivatable[] TeleportUsers;
+
+    private void Awake()
+    {
+        controls = new VRInputAsset();
+        controls.Enable();
+    }
 
     private void Start()
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);
         UpdateRayState();
+        UpdateTeleportState();
 
     }
 
@@ -73,6 +93,40 @@ public class GlobalPlayer : MonoBehaviour
                 if (!item) continue;
                 item.SetActive(true);
                 raysEnabled = true;
+            }
+        }
+    }
+    public static void AddTeleportUser(TeleportActivatable user)
+    {
+        if (!teleportUsers.Contains(user))
+            teleportUsers.Add(user);
+        UpdateTeleportState();
+    }
+    public static void RemoveTeleportUser(TeleportActivatable user)
+    {
+        if (teleportUsers.Contains(user))
+            teleportUsers.Remove(user);
+        UpdateTeleportState();
+    }
+    static void UpdateTeleportState()
+    {
+        if (teleportEnabled && teleportUsers.Count == 0)
+        {
+            foreach (var item in instance.teleporters)
+            {
+                if (!item) continue;
+                item.setDisable();
+                teleportEnabled = false;
+            }
+        }
+        else if (!raysEnabled && teleportUsers.Count > 0)
+        {
+            foreach (var item in instance.teleporters)
+            {
+                if (!item) continue;
+                item.setEnable();
+                teleportEnabled = true;
+                TeleportUsers = teleportUsers.ToArray();
             }
         }
     }

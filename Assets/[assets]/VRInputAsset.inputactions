@@ -1,0 +1,60 @@
+{
+    "name": "VRInputAsset",
+    "maps": [
+        {
+            "name": "VRInput",
+            "id": "ab014218-38d3-46ee-8b02-077943d0c46b",
+            "actions": [
+                {
+                    "name": "LeftThumbstick",
+                    "type": "PassThrough",
+                    "id": "9ac8ff50-fa96-48fe-8f58-af7881d713c2",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "RightThumbstick",
+                    "type": "PassThrough",
+                    "id": "3447b00d-80af-465c-b69d-6e4c16ec4bbf",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7ff36ba9-8332-4235-b8d8-066be77a1a0a",
+                    "path": "<XRController>{LeftHand}/primary2DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftThumbstick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fcbfac58-b5a6-4d7a-b9a3-abba502c583c",
+                    "path": "<OculusTouchController>/thumbstick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightThumbstick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "New control scheme",
+            "bindingGroup": "New control scheme",
+            "devices": []
+        }
+    ]
+}
