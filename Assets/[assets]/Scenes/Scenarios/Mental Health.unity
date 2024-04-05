@@ -602,7 +602,7 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 0
-  spherePosition: {x: 0, y: 0, z: 0}
+  spherePosition: {x: 0, y: 1, z: 0}
   sphereYaw: 75
   sphereScale: 8
 --- !u!4 &168777827
@@ -1837,7 +1837,7 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 0
-  spherePosition: {x: 0, y: 0, z: 0}
+  spherePosition: {x: 0, y: 1, z: 0}
   sphereYaw: 75
   sphereScale: 8
 --- !u!4 &785001454
@@ -4263,7 +4263,7 @@ MonoBehaviour:
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   hasBirds: 0
-  spherePosition: {x: 0, y: 0, z: 0}
+  spherePosition: {x: 0, y: 1, z: 0}
   sphereYaw: 75
   sphereScale: 8
 --- !u!1 &1666726161
@@ -4403,7 +4403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7181f3715ceafa1418093f6e515820f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScenario: {fileID: 1659591667}
+  firstScenario: {fileID: 168777826}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
