@@ -19,7 +19,7 @@ public class IntentRecorder : MonoBehaviour
         instance = this;
     }
 
-    public static void RecordIntent((string speech, string intentRecognized, string initiator, string intentDestination) i)
+    public static void RecordIntent((string speech, string intentRecognized, string initiator, string intentDestination, string modelUsed, long timeStart, long timeEnd, string jsonResult) i)
     {
         if (i.intentRecognized.ToLower() == "no speech") return;
         if (!instance)
@@ -37,6 +37,11 @@ public class IntentRecorder : MonoBehaviour
             timestamp = System.DateTime.Now.ToString(),
             scene = ScenarioManager.instance.activeScenario.gameObject.name,
             destination = i.intentDestination,
+            modelUsed = i.modelUsed,
+            timeStart = i.timeStart,
+            timeEnd = i.timeEnd,
+            processTime = i.timeEnd - i.timeStart,
+            intentResult = i.jsonResult,
         };
         instance.record.Add(newRecord);
         Debug.Log(newRecord);
@@ -79,6 +84,11 @@ public class IntentRecorder : MonoBehaviour
         public string timestamp;
         public string scene;
         public string destination;
+        public string modelUsed;
+        public long timeStart;
+        public long timeEnd;
+        public long processTime;
+        public string intentResult;
 
     }
 }

@@ -23,11 +23,39 @@ namespace ThirdParty
         public static Dictionary<string, string> intentDestinations = new Dictionary<string, string>();
         static bool busy = false;
         public static UnityEngine.Events.UnityEvent<(string topIntent, string initiator, string scene)> intentEvent = new UnityEngine.Events.UnityEvent<(string topIntent, string initiator, string scene)>();
+
+        static bool flip = false;
+
         public static async Task Listener(ValueWrapper<bool> continueListening, string initiator, string relevantScene)
+        {
+            bool useOld = false;
+            if (ScenarioManager.instance)
+                switch (ScenarioManager.instance.modelMode)
+                {
+                    case ModelMode.Old: { useOld = true; break; }
+                    case ModelMode.FlipFlop: { useOld = flip; flip = !flip; break; }
+                    case ModelMode.Random:
+                        { useOld = UnityEngine.Random.value > 0.5f; break; }
+                    default: break;
+                }
+
+            UnityEngine.Debug.Log(useOld ? "Using old" : "Using new");
+
+            if (!useOld)
+            {
+                await NewModel(continueListening, initiator, relevantScene);
+            }
+            else await OldModel(continueListening, initiator, relevantScene);
+
+
+        }
+
+        static async Task NewModel(ValueWrapper<bool> continueListening, string initiator, string relevantScene)
         {
             // if (busy) return;
             busy = true;
             var config = SpeechConfig.FromSubscription(ConfigManager.SUBSCRIPTION_KEY, ConfigManager.REGION_NAME);
+            long timeStart = DateTimeOffset.Now.ToUnixTimeMilliseconds();
 
             var predictionEndpointUri = "https://p360v2.cognitiveservices.azure.com/";
 
@@ -39,7 +67,7 @@ namespace ThirdParty
               ConfigManager.LANGUAGE_RESOURCE_KEY,
               predictionEndpointUri,
               ScenarioManager.instance.cluProjectName,
-              ScenarioManager.instance.cluDeploymentName) ;
+              ScenarioManager.instance.cluDeploymentName);
             // "P360V_1",
             // "p3vDev1"); ;
             //  "P360V_fishgame",
@@ -74,12 +102,14 @@ namespace ThirdParty
                 string utterance = result.Text;
                 UnityEngine.Debug.Log($"{utterance}, {result.Reason}");
                 string intent = "No intent";
+                object IntentResult = null;
                 if (result.Reason == ResultReason.RecognizedIntent)
                 {
-					/* look at pulling this key from the Result for the file-saved log
+                    /* look at pulling this key from the Result for the file-saved log
 					* e.Result.LanguageUnderstandingServiceResponse_JsonResult
 					*/
-                    UnityEngine.Debug.Log($"Speech: {utterance}, Intent: {e.Result.IntentId}");
+                    IntentResult = e.Result.Properties.GetProperty(PropertyId.LanguageUnderstandingServiceResponse_JsonResult);
+                    UnityEngine.Debug.Log($"Speech: {utterance}, Intent: {e.Result.IntentId}, Json: {IntentResult}");
                     intent = e.Result.IntentId;
                     // await GetIntentFromUtterance(utterance, initiator);}
                 }
@@ -89,13 +119,14 @@ namespace ThirdParty
                 }
                 string destination = "null";
                 intentDestinations.TryGetValue(intent, out destination);
+                long timeEnd = DateTimeOffset.Now.ToUnixTimeMilliseconds();
 
                 UnityMainThread.AddJob(() =>
                 {
-					/* look at pulling this key from the Result for the file-saved log
+                    /* look at pulling this key from the Result for the file-saved log
 					* e.Result.LanguageUnderstandingServiceResponse_JsonResult
 					*/
-                    IntentRecorder.RecordIntent((utterance, intent, initiator, destination));
+                    IntentRecorder.RecordIntent((utterance, intent, initiator, destination, "New", timeStart, timeEnd, null));
                     intentEvent.Invoke((intent, initiator, relevantScene));
                 });
             }
@@ -115,45 +146,57 @@ namespace ThirdParty
             }
         }
 
-
-        /*
-        // old logic, just use above
-        public static async Task ListenUntil(ValueWrapper<bool> continueListening)
+        static async Task OldModel(ValueWrapper<bool> continueListening, string initiator, string relevantScene)
         {
-            if (busy) return;
-            busy = true;
             var config = SpeechConfig.FromSubscription(ConfigManager.SUBSCRIPTION_KEY, ConfigManager.REGION_NAME);
+            long timeStart = DateTimeOffset.Now.ToUnixTimeMilliseconds();
 
-            using var recognizer = new SpeechRecognizer(config);
+            var recognizer = new SpeechRecognizer(config);
+
             recognizer.Recognized += resultRecieved;
             recognizer.Canceled += cancelled;
 
-            await recognizer.RecognizeOnceAsync().ConfigureAwait(false);
+            await recognizer.StartContinuousRecognitionAsync();
+
+            while (continueListening != null && continueListening.Value)
+            {
+                await Task.Delay(1);
+            }
+
+            await recognizer.StopContinuousRecognitionAsync().ConfigureAwait(false);
 
             async void resultRecieved(object sender, SpeechRecognitionEventArgs e)
             {
-                if (!continueListening.Value)
-                {
-                    finish();
-                    return;
-                }
-                SpeechRecognitionResult result = e.Result;
+                var result = e.Result;
                 string utterance = result.Text;
                 UnityEngine.Debug.Log($"{utterance}, {result.Reason}");
-                if (result.Reason == ResultReason.RecognizedSpeech)
-                    await GetIntentFromUtterance(utterance, "once");
-                else if (result.Reason == ResultReason.NoMatch && continueListening.Value)
+
+                var predictionEndpointUri = "https://p360v.cognitiveservices.azure.com/";
+
+                string strPrediction = await GetIntentFromUtterance(ConfigManager.PREDICTION_KEY, predictionEndpointUri, "70c9a26e-877c-4d94-a0a0-ff5197d4a2e9", utterance);
+
+                var predictionResult = JObject.Parse(strPrediction);
+                var topIntent = predictionResult["prediction"]["topIntent"];
+                var score = predictionResult["prediction"]["intents"][topIntent.ToString()]["score"];
+
+                UnityEngine.Debug.Log($"{topIntent} was the intent");
+
+                string destination = "null";
+                intentDestinations.TryGetValue(topIntent.ToString(), out destination);
+                long timeEnd = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+
+                UnityMainThread.AddJob(() =>
                 {
-                    UnityEngine.Debug.Log("No utterance, trying again.");
-                    busy = false;
-                    await ListenUntil(continueListening);
-                    return;
-                }
-                finish();
+                    /* look at pulling this key from the Result for the file-saved log
+					* e.Result.LanguageUnderstandingServiceResponse_JsonResult
+					*/
+                    IntentRecorder.RecordIntent((utterance, topIntent.ToString(), initiator, destination, "Old", timeStart, timeEnd, predictionResult.ToString()));
+                    intentEvent.Invoke((topIntent.ToString(), initiator, relevantScene));
+                });
             }
             void cancelled(object sender, SpeechRecognitionCanceledEventArgs e)
             {
-                SpeechRecognitionResult result = e.Result;
+                var result = e.Result;
                 string utterance = result.Text;
 
                 UnityEngine.Debug.Log($"Cancelled: {utterance}, {result.Reason}, {e.ErrorDetails}");
@@ -165,106 +208,42 @@ namespace ThirdParty
                 recognizer.Canceled -= cancelled;
                 busy = false;
             }
-        }
-        */
-
-        // also old
-        /*
-        public static async Task GetIntentFromUtterance(string utterance, string initiator)
-        {
-            var client = new HttpClient();
-            var queryString = HttpUtility.ParseQueryString(string.Empty);
-
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", ConfigManager.PREDICTION_KEY);
-
-            // query string preparation
-            queryString["query"] = utterance;               // utterance
-            queryString["verbose"] = "true";                // verbose, default true
-            queryString["show-all-intents"] = "false";      // show all, default "false"
-            queryString["staging"] = "true";                // staging, default true?
-            queryString["timezoneOffset"] = "0";            // timezoneOffset, 0? //TODO
-            queryString["log"] = "true";                    // utterance logging at Azure //added 2022-03-04
-
-            var predictionEndpointUri = string.Format("{0}luis/prediction/v3.0/apps/{1}/slots/staging/predict?{2}",
-                                                   "https://p360v.cognitiveservices.azure.com/",
-                                                   ConfigManager.APP_ID,
-                                                   queryString);
-            UnityEngine.Debug.Log("Getting Prediction");
-            var response = await client.GetAsync(predictionEndpointUri);
-
-            UnityEngine.Debug.Log("Reading content");
-            var strResponseContent = await response.Content.ReadAsStringAsync();
-
-            UnityEngine.Debug.Log("Parsing content");
-            try
+            async Task<string> GetIntentFromUtterance(string predictionKey,
+                                          string predictionEndpoint,
+                                          string appId,
+                                          string utterance)
             {
-                var responseContent = JObject.Parse(strResponseContent).ToObject<IntentResponse>();
+                var client = new HttpClient();
+                var queryString = HttpUtility.ParseQueryString(string.Empty);
 
-                UnityEngine.Debug.Log($"INTENT: {responseContent.prediction.topIntent}");
-                UnityMainThread.AddJob(() =>
-                {
-                    intentEvent.Invoke((responseContent.prediction.intents, responseContent.prediction.topIntent, initiator));
-                }
-                );
-            }
-            catch (Exception e)
-            {
-                UnityEngine.Debug.LogError(e);
-                UnityEngine.Debug.Log(strResponseContent);
+                // The request header contains your subscription key
+                client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", predictionKey);
+
+                // query string preparation
+                queryString["query"] = utterance;               // utterance
+                queryString["verbose"] = "true";                // verbose, default true
+                queryString["show-all-intents"] = "false";      // show all, default "false"
+                queryString["staging"] = "true";                // staging, default true?
+                queryString["timezoneOffset"] = "0";            // timezoneOffset, 0? //TODO
+                queryString["log"] = "true";                    // utterance logging at Azure //added 2022-03-04
+
+                var predictionEndpointUri = String.Format("{0}luis/prediction/v3.0/apps/{1}/slots/staging/predict?{2}",
+                                                           predictionEndpoint,
+                                                           appId,
+                                                           queryString);
+
+
+                // connection
+                var response = await client.GetAsync(predictionEndpointUri);
+
+                // response
+                var strResponseContent = await response.Content.ReadAsStringAsync();
+
+                // return the JSON
+                return strResponseContent.ToString();
             }
         }
-        
-        static private void requestDone((Dictionary<string, AzureVoice.Intent> intents, string topIntent, string initiator) o)
-        {
-            intentEvent.Invoke(o);
-        }
-        public class IntentResponse
-        {
-            public string query { get; set; }
-            public Prediction prediction { get; set; }
-            public Sentiment sentiment { get; set; }
-        }
 
-        public class Prediction
-        {
-            public string topIntent { get; set; }
-            public Dictionary<string, Intent> intents { get; set; }
-            public Entities entities { get; set; }
-        }
 
-        public class Intent
-        {
-            public double score { get; set; }
-        }
-
-        public class Entities
-        {
-            public List<string> personName { get; set; }
-            [JsonProperty("$instance")]
-            public Instance instance { get; set; }
-        }
-
-        public class Instance
-        {
-            public List<PersonName> personName { get; set; }
-        }
-
-        public class PersonName
-        {
-            public string type { get; set; }
-            public string text { get; set; }
-            public int startIndex { get; set; }
-            public int length { get; set; }
-            public int modelTypeId { get; set; }
-            public string modelType { get; set; }
-            public List<string> recognitionSources { get; set; }
-        }
-
-        public class Sentiment
-        {
-            public string label { get; set; }
-            public double score { get; set; }
-        }
-        */
     }
 }
