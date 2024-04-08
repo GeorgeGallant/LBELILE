@@ -3,10 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Security;
 using UnityEngine;
-
+public enum ModelMode
+{
+    New,
+    Old,
+    FlipFlop,
+    Random
+}
 public class ScenarioManager : MonoBehaviour
 {
     public static ScenarioManager instance;
+    public ModelMode modelMode;
     public BaseScene firstScenario;
     public KeyObject[] gameObjectDictionaryCreator = new KeyObject[0];
     public SoundScapeInitializer[] soundScapeCreator = new SoundScapeInitializer[0];
@@ -132,6 +139,7 @@ public class ScenarioManager : MonoBehaviour
             var go = new GameObject(key.keyName, typeof(SoundScape));
             go.transform.SetParent(parent.transform);
             var audiosource = go.GetComponent<AudioSource>();
+
             audiosource.clip = key.clip;
             audiosource.loop = true;
             var ss = go.GetComponent<SoundScape>();
