@@ -22,10 +22,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 28.35
+    m_Start: 27.149484075623718
     m_ClipIn: 0
-    m_Asset: {fileID: 546723732645007188}
-    m_Duration: 4.491583333333334
+    m_Asset: {fileID: -262333241780795567}
+    m_Duration: 8.662395833333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8272000747166535224}
     m_EaseInDuration: 0
@@ -223,10 +223,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 31.466666666666665
+    m_Start: 34.86666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 4773363573685240437}
-    m_Duration: 13.077833333333277
+    m_Duration: 9.677833333333275
     m_TimeScale: 1
     m_ParentTrack: {fileID: -6002504286775473385}
     m_EaseInDuration: 0
@@ -405,6 +405,23 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events: []
+--- !u!114 &-262333241780795567
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
+  m_Name: AudioPlayableAsset
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 8300000, guid: 9a39466b540bbe244af5f20267c6f309, type: 3}
+  m_Loop: 0
+  m_bufferingTime: 0.1
+  m_ClipProperties:
+    volume: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,23 +446,6 @@ MonoBehaviour:
     m_ScenePreview: 1
   m_DurationMode: 0
   m_MarkerTrack: {fileID: 0}
---- !u!114 &546723732645007188
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
-  m_Name: AudioPlayableAsset
-  m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: c5b305c6c1274d64ea205883d4ee34e3, type: 3}
-  m_Loop: 0
-  m_bufferingTime: 0.1
-  m_ClipProperties:
-    volume: 0.708
 --- !u!114 &4222582285200704969
 MonoBehaviour:
   m_ObjectHideFlags: 1
