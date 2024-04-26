@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 0}
+  firstScenario: {fileID: 240740420}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -509,7 +509,7 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 0}
+  activateScene: {fileID: 85922430}
 --- !u!1 &240740419
 GameObject:
   m_ObjectHideFlags: 0
@@ -2298,7 +2298,7 @@ MonoBehaviour:
           m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
-  activateScene: {fileID: 0}
+  activateScene: {fileID: 1456940467}
 --- !u!65 &1222950602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3023,7 +3023,7 @@ MonoBehaviour:
           m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
-  activateScene: {fileID: 0}
+  activateScene: {fileID: 1456940467}
 --- !u!65 &1968498257
 BoxCollider:
   m_ObjectHideFlags: 0
