@@ -15,11 +15,13 @@ public class RemotePowerButtonActivatable : BaseSceneActivatable
     }
     void OnEnable()
     {
-        remote.powerButtonEvent.AddListener(powerActivate);
+        if (remote)
+            remote.powerButtonEvent.AddListener(powerActivate);
     }
     void OnDisable()
     {
-        remote.powerButtonEvent.RemoveListener(powerActivate);
+        if (remote)
+            remote.powerButtonEvent.RemoveListener(powerActivate);
     }
 
     private void powerActivate()
