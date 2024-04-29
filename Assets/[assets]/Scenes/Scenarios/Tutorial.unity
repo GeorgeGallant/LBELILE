@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 240740420}
+  firstScenario: {fileID: 1456940467}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -559,7 +559,7 @@ PrefabInstance:
     - target: {fileID: 946197476065405080, guid: bcf35aab934bba44995458ca5bb89c3d,
         type: 3}
       propertyPath: baseFolder
-      value: Fishing
+      value: TrainingVideos
       objectReference: {fileID: 0}
     - target: {fileID: 4325995998345829168, guid: bcf35aab934bba44995458ca5bb89c3d,
         type: 3}
@@ -809,7 +809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb15da2cf0b0ea44b9b40fd30583976b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoURL: 1A
+  videoURL: 1ARadioandIntro
   videoLoader: {fileID: 0}
   scenarioObjects:
   - scenarioObject: 0
