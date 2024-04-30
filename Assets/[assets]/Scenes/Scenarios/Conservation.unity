@@ -3911,7 +3911,7 @@ MonoBehaviour:
   scenarioObjects:
   - scenarioObject: 0
     spawnPosition: {fileID: 1254217920}
-    spawnInFront: 1
+    spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   spherePosition: {x: 0, y: 1, z: 0}
@@ -5112,7 +5112,7 @@ MonoBehaviour:
   intents: []
   activateIntent: p3v.dispatch.ackClear
   attemptsAllowed: 3
-  badAttemptScene: {fileID: 0}
+  badAttemptScene: {fileID: 765742091}
   ignoreNoSpeech: 1
 --- !u!1 &1112931146
 GameObject:
@@ -8609,7 +8609,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1778183947}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: d08b30be336a6b2458ec08ee500223c8, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -8622,6 +8622,16 @@ PlayableDirector:
   - key: {fileID: -6114071388293558855, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
     value: {fileID: 1325990202}
   - key: {fileID: -8272000747166535224, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
+    value: {fileID: 310660522}
+  - key: {fileID: 2666589833420491900, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 4222582285200704969, guid: d08b30be336a6b2458ec08ee500223c8, type: 2}
+    value: {fileID: 1633380480}
+  - key: {fileID: -6002504286775473385, guid: d08b30be336a6b2458ec08ee500223c8, type: 2}
+    value: {fileID: 1072049384}
+  - key: {fileID: -6114071388293558855, guid: d08b30be336a6b2458ec08ee500223c8, type: 2}
+    value: {fileID: 1325990202}
+  - key: {fileID: -8272000747166535224, guid: d08b30be336a6b2458ec08ee500223c8, type: 2}
     value: {fileID: 310660522}
   m_ExposedReferences:
     m_References: []

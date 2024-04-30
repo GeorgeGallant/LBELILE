@@ -437,9 +437,9 @@ MonoBehaviour:
   m_Version: 0
   m_Tracks:
   - {fileID: 4222582285200704969}
+  - {fileID: -8272000747166535224}
   - {fileID: -6002504286775473385}
   - {fileID: -6114071388293558855}
-  - {fileID: -8272000747166535224}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -471,7 +471,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 6054397828846380260}
-    m_Duration: 70.38333333333334
+    m_Duration: 44.54449999999994
     m_TimeScale: 1
     m_ParentTrack: {fileID: 4222582285200704969}
     m_EaseInDuration: 0
