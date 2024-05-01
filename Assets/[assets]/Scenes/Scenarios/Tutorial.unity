@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 1456940467}
+  firstScenario: {fileID: 492640052}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -291,8 +291,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: fca9e24a8bf18c549bd7d5674924ddff, type: 3}
     maxVolume: 0.4
     fadeTime: 1
-  cluProjectName: P360V_1
-  cluDeploymentName: p3vDev1
+  cluProjectName: P360V_fishgame
+  cluDeploymentName: P360V_fishgame
   playingSoundscape: 
   activeScenario: {fileID: 0}
   activeKeywords: []
@@ -360,8 +360,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 157066888}
-  intents: []
-  activateIntent: p3v.fishgame.checkCatch
+  intents:
+  - name: check Catch
+    intents:
+    - p3v.fishgame.checkCatch
+    activateScene: {fileID: 157066888}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
+  activateIntent: p3v.fishgame.haveAuthority
   attemptsAllowed: 1
   badAttemptScene: {fileID: 492640052}
   ignoreNoSpeech: 1
@@ -762,64 +770,6 @@ Transform:
   m_Children:
   - {fileID: 1151973127}
   - {fileID: 760259359}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &240740419
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 240740421}
-  - component: {fileID: 240740420}
-  m_Layer: 0
-  m_Name: IntroRadioCE1A
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &240740420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240740419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb15da2cf0b0ea44b9b40fd30583976b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  videoURL: 1ARadioandIntro
-  videoLoader: {fileID: 0}
-  scenarioObjects:
-  - scenarioObject: 0
-    spawnPosition: {fileID: 0}
-    spawnInFront: 0
-  videoFinishedScenario: {fileID: 0}
-  loopVideo: 1
-  spherePosition: {x: 0, y: 1, z: 0}
-  sphereYaw: 0
-  sphereScale: 8
-  soundscapeKey: 
---- !u!4 &240740421
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240740419}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1526797831}
-  - {fileID: 1686673171}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &246833911
@@ -2827,7 +2777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb15da2cf0b0ea44b9b40fd30583976b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoURL: 1ARadioRepeat
+  videoURL: 1ARadio
   videoLoader: {fileID: 0}
   scenarioObjects:
   - scenarioObject: 0
@@ -3545,91 +3495,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1468914660}
   m_CullTransparentMesh: 1
---- !u!1 &1526797830
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1526797831}
-  - component: {fileID: 1526797833}
-  - component: {fileID: 1526797832}
-  m_Layer: 0
-  m_Name: Timeline
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1526797831
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526797830}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 240740421}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1526797832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526797830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d709ffd1b0c753438f2912bd49b3089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
-  syncWithVideo: 1
---- !u!320 &1526797833
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526797830}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
-  m_InitialState: 0
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 4222582285200704969, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
-    value: {fileID: 317775439}
-  - key: {fileID: -6002504286775473385, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
-    value: {fileID: 1686673170}
-  - key: {fileID: -6114071388293558855, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
-    value: {fileID: 1317097677}
-  - key: {fileID: -8272000747166535224, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
-    value: {fileID: 509570817}
-  - key: {fileID: 2666589833420491900, guid: 3824f3db86c03b7479d92090755df2b6, type: 2}
-    value: {fileID: 1426891657}
-  - key: {fileID: 4222582285200704969, guid: d08b30be336a6b2458ec08ee500223c8, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -6002504286775473385, guid: d08b30be336a6b2458ec08ee500223c8, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -6114071388293558855, guid: d08b30be336a6b2458ec08ee500223c8, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -8272000747166535224, guid: d08b30be336a6b2458ec08ee500223c8, type: 2}
-    value: {fileID: 0}
-  m_ExposedReferences:
-    m_References: []
 --- !u!1 &1662029061
 GameObject:
   m_ObjectHideFlags: 0
@@ -3711,59 +3576,6 @@ PlayableDirector:
     value: {fileID: 618258929}
   m_ExposedReferences:
     m_References: []
---- !u!1 &1686673170
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1686673171}
-  - component: {fileID: 1686673172}
-  m_Layer: 0
-  m_Name: Radio1activatable
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1686673171
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686673170}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 240740421}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1686673172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686673170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0955f172edec0d94291098e547db483a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 492640052}
-  intents: []
-  activateIntent: p3v.dispatch.ackClear
-  attemptsAllowed: 3
-  badAttemptScene: {fileID: 1100407506}
-  ignoreNoSpeech: 1
 --- !u!1 &1722105086
 GameObject:
   m_ObjectHideFlags: 0
@@ -4457,7 +4269,6 @@ SceneRoots:
   - {fileID: 189269047}
   - {fileID: 352560458}
   - {fileID: 49066584}
-  - {fileID: 240740421}
   - {fileID: 1100407507}
   - {fileID: 492640053}
   - {fileID: 157066889}

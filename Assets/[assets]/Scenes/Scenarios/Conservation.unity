@@ -10787,8 +10787,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: fca9e24a8bf18c549bd7d5674924ddff, type: 3}
     maxVolume: 0.4
     fadeTime: 1
-  cluProjectName: P360V_1
-  cluDeploymentName: p3vDev1
+  cluProjectName: P360V_fishgame
+  cluDeploymentName: P360V_fishgame
   playingSoundscape: 
   activeScenario: {fileID: 0}
   activeKeywords: []
