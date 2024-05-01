@@ -3206,7 +3206,7 @@ GameObject:
   - component: {fileID: 666302016}
   - component: {fileID: 666302017}
   m_Layer: 0
-  m_Name: BinocularObject
+  m_Name: BinocularActivatable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5517,7 +5517,7 @@ GameObject:
   - component: {fileID: 1182760485}
   - component: {fileID: 1182760486}
   m_Layer: 11
-  m_Name: BinocularObjects
+  m_Name: BinocularVisualObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7863,7 +7863,7 @@ GameObject:
   - component: {fileID: 1652230995}
   - component: {fileID: 1652230996}
   m_Layer: 0
-  m_Name: SeekObject
+  m_Name: BinocularReleaseVideoPlayback
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
