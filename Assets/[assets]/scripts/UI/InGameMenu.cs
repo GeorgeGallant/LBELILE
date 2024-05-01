@@ -27,4 +27,9 @@ public class InGameMenu : MonoBehaviour
     {
         ChangeMenuState(!menuGO.activeInHierarchy);
     }
+
+    void OnDestroy()
+    {
+        menuButton.OnButtonDown -= ToggleMenuState;
+    }
 }
