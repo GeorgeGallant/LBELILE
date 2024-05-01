@@ -126,8 +126,8 @@ namespace ThirdParty
                     /* look at pulling this key from the Result for the file-saved log
 					* e.Result.LanguageUnderstandingServiceResponse_JsonResult
 					*/
-                    IntentRecorder.RecordIntent((utterance, intent, initiator, destination, "New", timeStart, timeEnd, null));
                     intentEvent.Invoke((intent, initiator, relevantScene));
+                    IntentRecorder.RecordIntent((utterance, intent, initiator, destination, "New", timeStart, timeEnd, null));
                 });
             }
             void cancelled(object sender, IntentRecognitionCanceledEventArgs e)
@@ -190,8 +190,8 @@ namespace ThirdParty
                     /* look at pulling this key from the Result for the file-saved log
 					* e.Result.LanguageUnderstandingServiceResponse_JsonResult
 					*/
-                    IntentRecorder.RecordIntent((utterance, topIntent.ToString(), initiator, destination, "Old", timeStart, timeEnd, predictionResult.ToString()));
                     intentEvent.Invoke((topIntent.ToString(), initiator, relevantScene));
+                    IntentRecorder.RecordIntent((utterance, topIntent.ToString(), initiator, destination, "Old", timeStart, timeEnd, predictionResult.ToString()));
                 });
             }
             void cancelled(object sender, SpeechRecognitionCanceledEventArgs e)
