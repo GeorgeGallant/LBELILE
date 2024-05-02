@@ -14,12 +14,18 @@ public class BaseIntentActivatable : BaseSceneActivatable
     protected virtual void OnEnable()
     {
         if (activateIntent != string.Empty)
-            AzureVoice.intentDestinations.Add(activateIntent, activateScene.gameObject.name);
+        {
+            if (activateScene != null)
+                AzureVoice.intentDestinations.Add(activateIntent, activateScene.gameObject.name);
+            else Debug.LogWarning($"Activate intent {activateIntent} has no activate scene!");
+        }
         foreach (var item in intents)
         {
             foreach (var intent in item.intents)
             {
-                AzureVoice.intentDestinations.Add(intent, item.activateScene.gameObject.name);
+                if (item.activateScene != null)
+                    AzureVoice.intentDestinations.Add(intent, item.activateScene.gameObject.name);
+                else Debug.LogWarning($"{item.name} has no activate scene!");
             }
         }
     }
