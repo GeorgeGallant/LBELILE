@@ -20,7 +20,7 @@ public class BinocularVideoActivatable : BinocularActivatable
     public override void OnReleased()
     {
         loader.stopVideo();
-        if (ScenarioManager.ActiveScenario.videoLoader)
+        if (ScenarioManager.ActiveScenario.videoLoader && !ScenarioManager.Occupier)
             ScenarioManager.ActiveScenario.videoLoader.playVideo();
         base.OnReleased();
     }
