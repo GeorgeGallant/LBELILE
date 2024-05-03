@@ -9,15 +9,16 @@ public class PassiveListenerActivatable : BaseIntentActivatable
 {
 
     ValueWrapper<bool> activeListen = new ValueWrapper<bool>(false);
+    public bool getLastIntentWhenInactive = false;
     public override void activateModifiers()
     {
-        OnEnable();
+        activateListener();
     }
     public override void deactivateModifiers()
     {
-        OnDisable();
+        deactivateListener();
     }
-    protected async override void OnEnable()
+    async void activateListener()
     {
         if (!sceneActive) return;
         base.OnEnable();
@@ -26,16 +27,25 @@ public class PassiveListenerActivatable : BaseIntentActivatable
         activeListen.Value = true;
         await AzureVoice.Listener(activeListen, "passive", activatableOwner.gameObject.name);
     }
-
-    protected override void OnDisable()
+    void deactivateListener()
     {
-        base.OnDisable();
         AzureVoice.intentEvent.RemoveListener(intentListener);
         if (activeListen.Value)
         {
             Debug.Log("no longer passive listening");
             activeListen.Value = false;
         }
+    }
+    protected override void OnEnable()
+    {
+        activateListener();
+    }
+
+    protected override void OnDisable()
+    {
+        if (!getLastIntentWhenInactive) deactivateListener();
+        base.OnDisable();
+
 
     }
 
@@ -86,6 +96,7 @@ public class PassiveListenerActivatable : BaseIntentActivatable
                 badAttempt(o.topIntent);
             }
             else badAttempt(o.topIntent);
+            if (!gameObject.activeInHierarchy) deactivateListener();
             // else if (gameObject.activeInHierarchy) OnEnable();
         }
 
