@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 492640052}
+  firstScenario: {fileID: 1100407506}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -516,8 +516,8 @@ MonoBehaviour:
   videoLoader: {fileID: 0}
   scenarioObjects:
   - scenarioObject: 2
-    spawnPosition: {fileID: 0}
-    spawnInFront: 1
+    spawnPosition: {fileID: 635191581}
+    spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   spherePosition: {x: 0, y: 1, z: 0}
@@ -2948,7 +2948,7 @@ MonoBehaviour:
   scenarioObjects:
   - scenarioObject: 0
     spawnPosition: {fileID: 635191581}
-    spawnInFront: 1
+    spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   spherePosition: {x: 0, y: 1, z: 0}
