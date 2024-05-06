@@ -176,6 +176,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 70657244}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &37337503
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +918,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 488898946}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &157018026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,6 +1382,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 2129817804}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &259411529
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,6 +2075,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 78970772}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &407991136
 GameObject:
   m_ObjectHideFlags: 0
@@ -3415,6 +3419,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 625443159}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &711702641
 GameObject:
   m_ObjectHideFlags: 0
@@ -4277,6 +4282,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 625443159}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &875252418
 GameObject:
   m_ObjectHideFlags: 0
@@ -4817,6 +4823,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1550901325}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1013757300
 GameObject:
   m_ObjectHideFlags: 0
@@ -5317,6 +5324,7 @@ MonoBehaviour:
   attemptsAllowed: 2
   badAttemptScene: {fileID: 1706387272}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1155756819
 GameObject:
   m_ObjectHideFlags: 0
@@ -5979,6 +5987,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1325990202
 GameObject:
   m_ObjectHideFlags: 0
@@ -6825,6 +6834,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1112931148}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1486858914
 GameObject:
   m_ObjectHideFlags: 0
@@ -6895,6 +6905,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1112931148}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1491150929
 GameObject:
   m_ObjectHideFlags: 0
@@ -7078,6 +7089,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 66748831}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1534687811
 GameObject:
   m_ObjectHideFlags: 0
@@ -9099,6 +9111,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1863653290}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1834338113
 GameObject:
   m_ObjectHideFlags: 0
@@ -9481,6 +9494,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 841281015}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1942004132
 GameObject:
   m_ObjectHideFlags: 0
@@ -9651,6 +9665,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 2129817804}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1954420356
 GameObject:
   m_ObjectHideFlags: 0
@@ -9952,6 +9967,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 488898946}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1981512013
 GameObject:
   m_ObjectHideFlags: 0
@@ -10005,6 +10021,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 625443159}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1989616491
 GameObject:
   m_ObjectHideFlags: 0
@@ -10066,6 +10083,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 78970772}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &2009423693
 GameObject:
   m_ObjectHideFlags: 0
@@ -10119,6 +10137,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1550901325}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &2025262540
 GameObject:
   m_ObjectHideFlags: 0
@@ -10311,6 +10330,8 @@ PlayableDirector:
     value: {fileID: 1386543058}
   - key: {fileID: 4888799501424692325, guid: 61b34984f9430be4dad10ce8947c381a, type: 2}
     value: {fileID: 1633380480}
+  - key: {fileID: -3602594237532528292, guid: 61b34984f9430be4dad10ce8947c381a, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &2070595111
@@ -10768,7 +10789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 1863653290}
+  firstScenario: {fileID: 803722141}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
