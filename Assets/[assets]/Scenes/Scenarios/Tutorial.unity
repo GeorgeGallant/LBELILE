@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 0}
+  firstScenario: {fileID: 1100407506}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -291,8 +291,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: fca9e24a8bf18c549bd7d5674924ddff, type: 3}
     maxVolume: 0.3
     fadeTime: 1
-  cluProjectName: P360V_fishgame
-  cluDeploymentName: P360V_fishgame
+  cluProjectName: P360V_tutorial
+  cluDeploymentName: P360V_tutorial
   playingSoundscape: 
   activeScenario: {fileID: 0}
   activeKeywords: []
@@ -373,6 +373,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 492640052}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 1
 --- !u!1 &85922429
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +411,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 1, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: ' '
+  soundscapeKey: birds
 --- !u!4 &85922431
 Transform:
   m_ObjectHideFlags: 0
@@ -522,7 +523,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 1, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: ' '
+  soundscapeKey: birds
 --- !u!4 &157066889
 Transform:
   m_ObjectHideFlags: 0
@@ -714,6 +715,7 @@ MonoBehaviour:
   attemptsAllowed: 3
   badAttemptScene: {fileID: 438277093}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &225866207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,6 +1619,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 438277093}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &641799619
 GameObject:
   m_ObjectHideFlags: 0
@@ -4604,7 +4607,7 @@ MonoBehaviour:
   activateEvent:
     m_PersistentCalls:
       m_Calls: []
-  activateScene: {fileID: 492640052}
+  activateScene: {fileID: 0}
   seekTime: 22.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
