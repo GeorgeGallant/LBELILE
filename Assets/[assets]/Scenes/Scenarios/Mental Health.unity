@@ -176,6 +176,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1353046878}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &92274352
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +565,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 968718089}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &168777825
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +758,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 586719952}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &283399774
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,6 +812,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 134299424}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &286343922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,6 +1013,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &303184589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303184590}
+  m_Layer: 0
+  m_Name: DefaultSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &303184590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303184589}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &315176333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,6 +1834,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 412597883}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &785001452
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,6 +2295,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1127379840}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &968718087
 GameObject:
   m_ObjectHideFlags: 0
@@ -2711,6 +2748,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 2070124132}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1127379838
 GameObject:
   m_ObjectHideFlags: 0
@@ -2818,6 +2856,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1637706487}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1280885064
 GameObject:
   m_ObjectHideFlags: 0
@@ -3611,6 +3650,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1022779688}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1458228482
 GameObject:
   m_ObjectHideFlags: 0
@@ -3700,6 +3740,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 785722263}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1499199874
 GameObject:
   m_ObjectHideFlags: 0
@@ -4258,8 +4299,8 @@ MonoBehaviour:
   videoLoader: {fileID: 0}
   scenarioObjects:
   - scenarioObject: 0
-    spawnPosition: {fileID: 0}
-    spawnInFront: 1
+    spawnPosition: {fileID: 303184590}
+    spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   spherePosition: {x: 0, y: 1, z: 0}
@@ -4404,7 +4445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 168777826}
+  firstScenario: {fileID: 1659591667}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -4688,6 +4729,7 @@ MonoBehaviour:
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1499199876}
   ignoreNoSpeech: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &1852501285
 GameObject:
   m_ObjectHideFlags: 0
@@ -5463,3 +5505,4 @@ SceneRoots:
   - {fileID: 1458228483}
   - {fileID: 1865246189}
   - {fileID: 724765754}
+  - {fileID: 303184590}

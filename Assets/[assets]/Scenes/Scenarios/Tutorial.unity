@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 1787299815}
+  firstScenario: {fileID: 492640052}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -1617,6 +1617,37 @@ MonoBehaviour:
   badAttemptScene: {fileID: 438277093}
   ignoreNoSpeech: 1
   getLastIntentWhenInactive: 0
+--- !u!1 &635191580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 635191581}
+  m_Layer: 0
+  m_Name: DefaultSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &635191581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635191580}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &641799619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2916,7 +2947,7 @@ MonoBehaviour:
   videoLoader: {fileID: 0}
   scenarioObjects:
   - scenarioObject: 0
-    spawnPosition: {fileID: 0}
+    spawnPosition: {fileID: 635191581}
     spawnInFront: 1
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
@@ -4624,3 +4655,4 @@ SceneRoots:
   - {fileID: 438277094}
   - {fileID: 225866209}
   - {fileID: 658509576}
+  - {fileID: 635191581}
