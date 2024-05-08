@@ -9,6 +9,7 @@ public class PassiveListenerActivatable : BaseIntentActivatable
 {
 
     ValueWrapper<bool> activeListen = new ValueWrapper<bool>(false);
+    bool listening = false;
     public bool getLastIntentWhenInactive = false;
     public override void activateModifiers()
     {
@@ -21,8 +22,10 @@ public class PassiveListenerActivatable : BaseIntentActivatable
     async void activateListener()
     {
         if (!sceneActive) return;
+        if (activeListen.Value) return;
         base.OnEnable();
         Debug.Log("now passive listening");
+        listening = true;
         AzureVoice.intentEvent.AddListener(intentListener);
         activeListen.Value = true;
         await AzureVoice.Listener(activeListen, "passive", activatableOwner.gameObject.name);
@@ -47,6 +50,11 @@ public class PassiveListenerActivatable : BaseIntentActivatable
         base.OnDisable();
 
 
+    }
+
+    void OnDestroy()
+    {
+        deactivateListener();
     }
 
     private void intentListener((string topIntent, string initiator, string scene) o)
