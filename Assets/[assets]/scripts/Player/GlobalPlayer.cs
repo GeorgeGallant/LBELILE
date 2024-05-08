@@ -36,7 +36,19 @@ public class GlobalPlayer : MonoBehaviour
 
     public GameObject[] rays;
     public Teleporter[] teleporters;
-    static bool raysEnabled = true;
+    static bool raysEnabled
+    {
+        get
+        {
+            if (!instance) return false;
+            return instance.RaysEnabled;
+        }
+        set
+        {
+            instance.RaysEnabled = value;
+        }
+    }
+    protected bool RaysEnabled = true;
     static bool teleportEnabled = false;
     static List<MonoBehaviour> rayUsers = new();
     static List<TeleportActivatable> teleportUsers = new();
@@ -77,6 +89,7 @@ public class GlobalPlayer : MonoBehaviour
     }
     static void UpdateRayState()
     {
+        if (!instance) return;
         if (raysEnabled && rayUsers.Count == 0)
         {
             foreach (var item in instance.rays)
