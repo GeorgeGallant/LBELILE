@@ -511,7 +511,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!1 &151797490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,7 +1221,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!1 &418594464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,7 +1276,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!1 &426744709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,7 +1549,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!1 &639900711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,7 +1780,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!1 &773667957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,7 +1930,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!4 &785722264
 Transform:
   m_ObjectHideFlags: 0
@@ -2350,7 +2350,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!1 &997771906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,7 +2802,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!1 &1160053033
 GameObject:
   m_ObjectHideFlags: 0
@@ -3386,7 +3386,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!1 &1352353042
 GameObject:
   m_ObjectHideFlags: 0
@@ -3528,7 +3528,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!1 &1354090701
 GameObject:
   m_ObjectHideFlags: 0
@@ -3795,7 +3795,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!1001 &1550349701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4069,7 +4069,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!1 &1647422067
 GameObject:
   m_ObjectHideFlags: 0
@@ -4445,7 +4445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 1659591667}
+  firstScenario: {fileID: 1022779688}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -4459,7 +4459,11 @@ MonoBehaviour:
   - scenarioObject: 3
     gameObject: {fileID: 1035828444273184424, guid: fd39933c54602ef4aae2280090237a92,
       type: 3}
-  soundScapeCreator: []
+  soundScapeCreator:
+  - keyName: city
+    clip: {fileID: 8300000, guid: d2e4d0369f24106459f858babd90c1fa, type: 3}
+    maxVolume: 0.3
+    fadeTime: 1
   cluProjectName: P360V_mentalhealth
   cluDeploymentName: P360V_mentalhealth
   playingSoundscape: 
@@ -5103,7 +5107,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!1 &2020278661
 GameObject:
   m_ObjectHideFlags: 0
@@ -5400,7 +5404,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!1 &2107978018
 GameObject:
   m_ObjectHideFlags: 0
