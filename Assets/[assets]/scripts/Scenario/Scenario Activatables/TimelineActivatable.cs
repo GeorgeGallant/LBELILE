@@ -22,12 +22,10 @@ public class TimelineActivatable : BaseSceneActivatable
             videoLoader.videoStopped.AddListener(director.Stop);
         }
     }
-    void directorPlayWithSeek(double seek)
+    void directorPlayWithSeek()
     {
         director.Play();
         if (syncWithVideo) videoPlaying = true;
-        if (seek != 0)
-            director.time = seek;
     }
     public override void deactivateModifiers()
     {

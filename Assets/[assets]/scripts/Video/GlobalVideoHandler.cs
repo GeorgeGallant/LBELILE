@@ -30,22 +30,16 @@ public class GlobalVideoHandler : MonoBehaviour
         }
     }
     public string baseFolder = "";
-    public static UnityEvent<VideoPlayer, double> onPrepareComplete = new UnityEvent<VideoPlayer, double>();
+    public static UnityEvent<VideoPlayer> onPrepareComplete = new UnityEvent<VideoPlayer>();
     public static UnityEvent<VideoPlayer> onVideoFinished = new UnityEvent<VideoPlayer>();
     Dictionary<string, RenderTexture> resRTs = new Dictionary<string, RenderTexture>();
-
-    protected double seekTo = 0;
-    public static double SeekTo
+    public static bool Seeking
     {
-        get
-        {
-            return instance.seekTo;
-        }
-        set
-        {
-            instance.seekTo = value;
-        }
+        get { return instance.seeking; }
+        set { instance.seeking = value; }
     }
+    protected bool seeking = false;
+
 
     public static VideoPlayer instancePlayer
     {
@@ -102,8 +96,9 @@ public class GlobalVideoHandler : MonoBehaviour
     private void Video_seekComplete(VideoPlayer source)
     {
         getTexture(source);
+        seeking = false;
 
-        onPrepareComplete.Invoke(source, seekTo);
+        onPrepareComplete.Invoke(source);
     }
 
     private void Video_loopPointReached(VideoPlayer source)
@@ -137,15 +132,9 @@ public class GlobalVideoHandler : MonoBehaviour
 
     private void Video_prepareCompleted(VideoPlayer source)
     {
-        if (seekTo > 0)
-        {
-            instance.video.time = seekTo;
-            seekTo = 0;
-            Debug.Log($"Seeking to {seekTo}");
-            return;
-        }
-        getTexture(source);
-        onPrepareComplete.Invoke(source, 0);
+        onPrepareComplete.Invoke(source);
+        if (!seeking)
+            getTexture(source);
     }
 
 

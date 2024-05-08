@@ -15,6 +15,6 @@ public class BincoularReleaseSceneSeek : BaseSceneActivatable
     }
     private void released()
     {
-        GlobalVideoHandler.SeekTo = seekTime;
+        activatableOwner.videoLoader.seekTo = seekTime;
     }
 }
