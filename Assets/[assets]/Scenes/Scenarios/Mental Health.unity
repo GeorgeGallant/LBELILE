@@ -2951,9 +2951,9 @@ PlayableDirector:
   - key: {fileID: -6951509629770474640, guid: 20b7475f27be63a4aa7a42fbc2992d03, type: 2}
     value: {fileID: 0}
   - key: {fileID: -8688151182744937621, guid: a031ac67bc40b5b4db6eb481c0afef53, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1343815904}
   - key: {fileID: -4494811139237831707, guid: a031ac67bc40b5b4db6eb481c0afef53, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 552100386}
   - key: {fileID: -1905429512221959937, guid: a031ac67bc40b5b4db6eb481c0afef53, type: 2}
     value: {fileID: 1826810894}
   m_ExposedReferences:
@@ -3129,7 +3129,7 @@ PlayableDirector:
   - key: {fileID: 2117851715713753762, guid: 678857547da196a4795a011f95dd4b9c, type: 2}
     value: {fileID: 552100386}
   - key: {fileID: 7162803477661342616, guid: 678857547da196a4795a011f95dd4b9c, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 188381951}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1343815902
@@ -4445,7 +4445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 1022779688}
+  firstScenario: {fileID: 1659591667}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,

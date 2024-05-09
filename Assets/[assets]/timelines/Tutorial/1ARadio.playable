@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Markers:
     m_Objects: []
   m_TrackProperties:
-    volume: 0.63108313
+    volume: 0.6725102
     stereoPan: 0
     spatialBlend: 0
 --- !u!114 &-7066294951323119518
@@ -240,10 +240,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 41.50473340381868
+    m_Start: 44.3290625
     m_ClipIn: 0
     m_Asset: {fileID: 4773363573685240437}
-    m_Duration: 46.58326659618131
+    m_Duration: 43.758937499999995
     m_TimeScale: 1
     m_ParentTrack: {fileID: -6002504286775473385}
     m_EaseInDuration: 0
@@ -672,7 +672,7 @@ MonoBehaviour:
   m_TrackProperties:
     volume: 1
     stereoPan: 0
-    spatialBlend: 0.06705475
+    spatialBlend: 0.083538055
 --- !u!114 &4773363573685240437
 MonoBehaviour:
   m_ObjectHideFlags: 1

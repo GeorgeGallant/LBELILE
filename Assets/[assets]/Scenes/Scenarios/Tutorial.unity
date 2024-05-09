@@ -712,10 +712,10 @@ MonoBehaviour:
   activateScene: {fileID: 225866208}
   intents: []
   activateIntent: p3v.bill.convinceToGo
-  attemptsAllowed: 3
+  attemptsAllowed: 1
   badAttemptScene: {fileID: 438277093}
   ignoreNoSpeech: 1
-  getLastIntentWhenInactive: 1
+  getLastIntentWhenInactive: 0
 --- !u!1 &225866207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,7 +2277,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 85922430}
-  selectable: 1
+  selectable: 0
 --- !u!1 &772869578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2686,6 +2686,7 @@ MonoBehaviour:
   onVideoPrepared:
     m_PersistentCalls:
       m_Calls: []
+  seekTo: 0
   videoStopped:
     m_PersistentCalls:
       m_Calls: []
@@ -3554,7 +3555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1317097678
 Transform:
   m_ObjectHideFlags: 0
@@ -4022,9 +4023,9 @@ PlayableDirector:
   - key: {fileID: -6289691710267659544, guid: 239cabe166349cd4cb5da15ace6e5cce, type: 2}
     value: {fileID: 0}
   - key: {fileID: -6289691710267659544, guid: 8823af1d0de5a7c48ae0d4a01fe50ebf, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 317775439}
   - key: {fileID: 5330903851808626045, guid: 8823af1d0de5a7c48ae0d4a01fe50ebf, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1426891657}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1741920229
@@ -4636,7 +4637,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
-  seekTime: 22.1
+  seekTime: 30
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

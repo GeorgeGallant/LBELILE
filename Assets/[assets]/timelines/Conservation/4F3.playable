@@ -135,10 +135,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 2.183333333333333
+    m_Start: 2.316666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 708036266801782128}
-    m_Duration: 8.5251874999995
+    m_Duration: 14.733708333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8207538391226090689}
     m_EaseInDuration: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Version: 3
   m_AnimClip: {fileID: 0}
   m_Locked: 0
-  m_Muted: 0
+  m_Muted: 1
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
   m_Parent: {fileID: 11400000}

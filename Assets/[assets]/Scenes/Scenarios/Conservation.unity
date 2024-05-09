@@ -4784,7 +4784,7 @@ MonoBehaviour:
   activateScene: {fileID: 2025262541}
   intents: []
   activateIntent: p3v.dispatch.ackClear
-  attemptsAllowed: 3
+  attemptsAllowed: 1
   badAttemptScene: {fileID: 765742091}
   ignoreNoSpeech: 1
 --- !u!1 &1112931146
@@ -6631,6 +6631,7 @@ MonoBehaviour:
   onVideoPrepared:
     m_PersistentCalls:
       m_Calls: []
+  seekTo: 0
   videoStopped:
     m_PersistentCalls:
       m_Calls: []
@@ -7131,7 +7132,7 @@ MonoBehaviour:
   activateScene: {fileID: 1863653290}
   intents: []
   activateIntent: p3v.dispatch.ackCopy
-  attemptsAllowed: 3
+  attemptsAllowed: 1
   badAttemptScene: {fileID: 1780303923}
   ignoreNoSpeech: 1
 --- !u!1 &1583886687
