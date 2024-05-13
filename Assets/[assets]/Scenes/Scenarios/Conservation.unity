@@ -7579,7 +7579,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
-  seekTime: 8
+  seekTime: 12
 --- !u!1 &1653612591
 GameObject:
   m_ObjectHideFlags: 0

@@ -408,7 +408,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  spherePosition: {x: 0, y: 1, z: 0}
+  spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
   soundscapeKey: birds
@@ -520,7 +520,7 @@ MonoBehaviour:
     spawnInFront: 0
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  spherePosition: {x: 0, y: 1, z: 0}
+  spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
   soundscapeKey: birds
@@ -1297,7 +1297,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  spherePosition: {x: 0, y: 1, z: 0}
+  spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: -50.07
   sphereScale: 8
   soundscapeKey: ' '
@@ -1356,7 +1356,7 @@ MonoBehaviour:
     spawnInFront: 1
   videoFinishedScenario: {fileID: 0}
   loopVideo: 0
-  spherePosition: {x: 0, y: 1, z: 0}
+  spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
   soundscapeKey: birds
@@ -4143,7 +4143,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  spherePosition: {x: 0, y: 1, z: 0}
+  spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: -50.3
   sphereScale: 8
   soundscapeKey: ' '
