@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0
+    m_Start: 0.5
     m_ClipIn: 0
     m_Asset: {fileID: -7066294951323119518}
     m_Duration: 57.15710416666667

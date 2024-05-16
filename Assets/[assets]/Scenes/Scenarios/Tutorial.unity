@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 1100407506}
+  firstScenario: {fileID: 1787299815}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -289,6 +289,10 @@ MonoBehaviour:
   soundScapeCreator:
   - keyName: birds
     clip: {fileID: 8300000, guid: fca9e24a8bf18c549bd7d5674924ddff, type: 3}
+    maxVolume: 0.3
+    fadeTime: 1
+  - keyName: city
+    clip: {fileID: 8300000, guid: d2e4d0369f24106459f858babd90c1fa, type: 3}
     maxVolume: 0.3
     fadeTime: 1
   cluProjectName: P360V_tutorial
@@ -745,15 +749,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb15da2cf0b0ea44b9b40fd30583976b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoURL: 4EWrapUp
+  videoURL: 4EWrapUpNew
   videoLoader: {fileID: 0}
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
   spherePosition: {x: 0, y: 0, z: 0}
-  sphereYaw: 53.4
+  sphereYaw: -50
   sphereScale: 8
-  soundscapeKey: birds
+  soundscapeKey: city
 --- !u!4 &225866209
 Transform:
   m_ObjectHideFlags: 0
@@ -1300,7 +1304,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: -50.07
   sphereScale: 8
-  soundscapeKey: ' '
+  soundscapeKey: city
 --- !u!4 &438277094
 Transform:
   m_ObjectHideFlags: 0
@@ -4146,7 +4150,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: -50.3
   sphereScale: 8
-  soundscapeKey: ' '
+  soundscapeKey: city
 --- !u!4 &1787299816
 Transform:
   m_ObjectHideFlags: 0
