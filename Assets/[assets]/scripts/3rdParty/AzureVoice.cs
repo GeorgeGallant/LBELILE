@@ -127,7 +127,7 @@ namespace ThirdParty
 					* e.Result.LanguageUnderstandingServiceResponse_JsonResult
 					*/
                     intentEvent.Invoke((intent, initiator, relevantScene));
-                    IntentRecorder.RecordIntent((utterance, intent, initiator, destination, "New", timeStart, timeEnd, null));
+                    IntentRecorder.RecordIntent((utterance, intent, initiator, destination, "New", timeStart, timeEnd, IntentResult.ToString()));
                 });
             }
             void cancelled(object sender, IntentRecognitionCanceledEventArgs e)
