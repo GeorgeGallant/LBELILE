@@ -10,7 +10,7 @@ public class HandSelectionManagerV2 : MonoBehaviour
 {
     public bool forceBodyType = false;
     public BodyType forcedBodyType = BodyType.Masculine;
-    static BodyType bodyType = BodyType.Masculine;
+    public static BodyType bodyType = BodyType.Masculine;
     static Color? bodyColor = null;
 
     public Gradient skinGradient = new Gradient();
@@ -69,6 +69,7 @@ public class HandSelectionManagerV2 : MonoBehaviour
                 femaleHands.ForEach(x => x.SetActive(true));
                 break;
         }
+        bodyType = newBodyType;
 
     }
 
