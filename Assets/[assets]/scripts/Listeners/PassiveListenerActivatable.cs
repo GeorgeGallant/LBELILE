@@ -67,14 +67,7 @@ public class PassiveListenerActivatable : BaseIntentActivatable
         if (o.initiator == "passive")
         {
             var intent = o.topIntent;
-            if (activateIntent != string.Empty) intentList.Add(activateIntent);
-            if (activateIntent != string.Empty && intent.ToLower() == activateIntent.ToLower())
-            {
-                Debug.Log("Activate Scene intent hit");
-                OnDisable();
-                activateNextScene();
-            }
-            else if (intents.Length > 0)
+            if (intents.Length > 0)
             {
                 bool foundScene = false;
                 foreach (var item in intents)
@@ -83,7 +76,7 @@ public class PassiveListenerActivatable : BaseIntentActivatable
                     {
                         intentList.Add(itemIntent);
                     }
-                    var check = item.checkIntents(o.topIntent);
+                    var check = item.checkIntents(intent);
                     if (check.hadIntent)
                     {
                         Debug.Log("Had intent");

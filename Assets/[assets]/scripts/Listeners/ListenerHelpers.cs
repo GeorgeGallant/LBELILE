@@ -2,10 +2,9 @@ using ThirdParty;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BaseIntentActivatable : BaseSceneActivatable
+public class BaseIntentActivatable : BaseActivatable
 {
     public IntentEvents[] intents;
-    public string activateIntent;
     public int attemptsAllowed = 0;
     int attempts = 0;
     public BaseScene badAttemptScene;
@@ -13,12 +12,6 @@ public class BaseIntentActivatable : BaseSceneActivatable
 
     protected virtual void OnEnable()
     {
-        if (activateIntent != string.Empty)
-        {
-            if (activateScene != null)
-                AzureVoice.intentDestinations.Add(activateIntent, activateScene.gameObject.name);
-            else Debug.LogWarning($"Activate intent {activateIntent} has no activate scene!");
-        }
         foreach (var item in intents)
         {
             foreach (var intent in item.intents)
@@ -32,8 +25,6 @@ public class BaseIntentActivatable : BaseSceneActivatable
 
     protected virtual void OnDisable()
     {
-        if (activateIntent != string.Empty)
-            AzureVoice.intentDestinations.Remove(activateIntent);
         foreach (var item in intents)
         {
             foreach (var intent in item.intents)
@@ -43,14 +34,9 @@ public class BaseIntentActivatable : BaseSceneActivatable
         }
     }
 
-    protected override void StartSetup()
-    {
-        activateIntent = activateIntent.Trim();
-    }
-
     protected void badAttempt(string attempt)
     {
-        if (!sceneActive || !badAttemptScene || (ignoreNoSpeech && attempt == "No speech")) return;
+        if (!badAttemptScene || (ignoreNoSpeech && attempt == "No speech")) return;
         if (attempts >= attemptsAllowed) badAttemptScene.startScene();
         else attempts++;
 

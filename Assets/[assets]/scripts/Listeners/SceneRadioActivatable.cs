@@ -34,10 +34,6 @@ public class SceneRadioActivatable : BaseIntentActivatable
     {
         if (!sceneActive) return;
         if (o.scene != activatableOwner.gameObject.name) return;
-        if (o.initiator == "radio" && o.topIntent.ToLower() == activateIntent.ToLower())
-        {
-            activateNextScene();
-        }
         else if (intents.Length > 0)
         {
             bool foundScene = false;
