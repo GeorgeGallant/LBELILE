@@ -59,7 +59,6 @@ public class PassiveListenerActivatable : BaseIntentActivatable
 
     private void intentListener((string topIntent, string initiator, string scene) o)
     {
-        Debug.Log("If an intent was found, at least this should appear");
         Debug.Log($"Intent: {o.topIntent}, Scene: {o.scene} equal to {activatableOwner.gameObject.name}?, Initiator: {o.initiator}");
         List<string> intentList = new List<string>();
         if (!sceneActive) return;

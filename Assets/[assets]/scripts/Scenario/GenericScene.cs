@@ -14,7 +14,7 @@ public class GenericScene : BaseScene
     public SceneObject[] scenarioObjects;
     public BaseScene videoFinishedScenario;
     public bool loopVideo = false;
-    BaseSceneActivatable[] activatables;
+    BaseActivatable[] activatables;
     bool ranStart = false;
     public Vector3 spherePosition;
     public float sphereYaw = 0;
@@ -32,7 +32,7 @@ public class GenericScene : BaseScene
         if (ranStart) return;
         if (!Application.isPlaying) return;
         ranStart = true;
-        var activatables = GetComponentsInChildren<BaseSceneActivatable>();
+        var activatables = GetComponentsInChildren<BaseActivatable>();
         foreach (var item in activatables)
         {
             item.setOwnerScenario(this);
