@@ -97,9 +97,6 @@ public class GenericScene : BaseScene
     {
         Debug.Log("Starting new scene");
         Start();
-        ScenarioManager.VideoSphere.transform.position = spherePosition;
-        ScenarioManager.VideoSphere.transform.eulerAngles = new Vector3(0, sphereYaw, 0);
-        ScenarioManager.VideoSphere.transform.localScale = Vector3.one * sphereScale;
         if (ScenarioManager.ActiveScenario)
             ScenarioManager.ActiveScenario.deactivateScene();
         ScenarioManager.ActiveScenario = this;
@@ -114,6 +111,9 @@ public class GenericScene : BaseScene
     protected void activateScene()
     {
         Debug.Log($"Arriving in scene {gameObject.name}");
+        ScenarioManager.VideoSphere.transform.position = spherePosition;
+        ScenarioManager.VideoSphere.transform.eulerAngles = new Vector3(0, sphereYaw, 0);
+        ScenarioManager.VideoSphere.transform.localScale = Vector3.one * sphereScale;
         ScenarioManager.enableScenarioObjects(scenarioObjects);
         ScenarioManager.playSoundscape(soundscapeKey);
         foreach (var item in activatables)
