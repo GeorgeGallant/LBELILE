@@ -41,6 +41,7 @@ public class PassiveListenerActivatable : BaseIntentActivatable
     }
     protected override void OnEnable()
     {
+        base.OnEnable();
         activateListener();
     }
 
@@ -79,6 +80,11 @@ public class PassiveListenerActivatable : BaseIntentActivatable
                     if (check.hadIntent)
                     {
                         Debug.Log("Had intent");
+                        if (check.needMoreIntents)
+                        {
+                            Debug.Log("Need more intents");
+                            continue;
+                        }
                         if (check.activateScene)
                         {
                             Debug.Log("Intent hit");
@@ -88,6 +94,10 @@ public class PassiveListenerActivatable : BaseIntentActivatable
                             foundScene = true;
                             break;
                         }
+                    }
+                    else if (check.needMoreIntents)
+                    {
+                        Debug.Log("Intent recognized but already used");
                     }
                 }
                 if (foundScene) return;

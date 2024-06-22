@@ -42,9 +42,18 @@ public class SceneRadioActivatable : BaseIntentActivatable
                 var check = item.checkIntents(o.topIntent);
                 if (check.hadIntent)
                 {
+                    if (check.needMoreIntents)
+                    {
+                        Debug.Log("Need more intents");
+                        continue;
+                    }
                     check.activateScene.startScene();
                     foundScene = true;
                     break;
+                }
+                else if (check.needMoreIntents)
+                {
+                    Debug.Log("Intent recognized but already used");
                 }
             }
             if (foundScene) return;
