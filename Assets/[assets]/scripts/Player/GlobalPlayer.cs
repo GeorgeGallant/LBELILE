@@ -8,8 +8,19 @@ public class GlobalPlayer : MonoBehaviour
 {
     public static GlobalPlayer instance;
     public static bool debugMode = false;
+    public static bool heartRateEnabled
+    {
+        get { return HeartRateEnabled; }
+        set
+        {
+            HeartRateEnabled = value;
+            instance.heartRateText.gameObject.SetActive(HeartRateEnabled);
+        }
+    }
+    private static bool HeartRateEnabled = false;
     public bool forceDebug = false;
     public TextMeshPro debugText;
+    public TextMeshPro heartRateText;
     public Transform playerOffset;
     bool offsetSet = false;
     public static XRDirectInteractor globalLeftController
@@ -71,6 +82,7 @@ public class GlobalPlayer : MonoBehaviour
         UpdateRayState();
         UpdateTeleportState();
         instance.debugText.gameObject.SetActive(false);
+        instance.heartRateText.gameObject.SetActive(HeartRateEnabled);
 
     }
 
@@ -155,6 +167,12 @@ public class GlobalPlayer : MonoBehaviour
             instance.debugText.gameObject.SetActive(true);
             instance.debugText.SetText(intent);
         }
+    }
+    public static void RecieveHeartRate(int heartRate)
+    {
+        heartRateEnabled = true;
+        instance.heartRateText.SetText(heartRate.ToString());
+
     }
     void Update()
     {

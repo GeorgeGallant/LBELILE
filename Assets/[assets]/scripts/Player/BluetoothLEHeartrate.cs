@@ -69,6 +69,10 @@ public class BluetoothLEHeartrate : MonoBehaviour
     {
         devicesConnected.Remove(address);
         Debug.Log($"{address} disconnected!");
+        if (devicesConnected.Count == 0)
+        {
+            GlobalPlayer.heartRateEnabled = false;
+        }
     }
 
     private void CharacteristicAction(string deviceAddress, string serviceUUID, string characteristicUUID)
@@ -88,12 +92,8 @@ public class BluetoothLEHeartrate : MonoBehaviour
     {
         if (data.Length > 0)
         {
-            for (int i = 0; i < data.Length; i++)
-            {
-                Debug.Log($"Data at {i}: {data[i]}");
-            }
-            // int heartRate = data[1];
-            // Debug.Log($"Heart Rate: {heartRate}");
+            int heartRate = data[1];
+            GlobalPlayer.RecieveHeartRate(heartRate);
         }
     }
 
