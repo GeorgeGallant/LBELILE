@@ -72,9 +72,10 @@ public class IntentEvents
                 {
                     usedIntents.Add(intent);
                     if (usedIntents.Count < requiredAmount)
-                        return (true, null, true);
-                    else
+                    {
                         ScenarioManager.PlayFeedbackSound();
+                        return (true, null, true);
+                    }
                 }
                 else if (requiredAmount > 1 && usedIntents.Contains(intent))
                 {
