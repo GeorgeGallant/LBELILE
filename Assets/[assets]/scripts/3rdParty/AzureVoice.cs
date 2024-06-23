@@ -103,12 +103,12 @@ namespace ThirdParty
                 UnityEngine.Debug.Log($"{utterance}, {result.Reason}");
                 string intent = "No intent";
                 object IntentResult = null;
+                IntentResult = e.Result.Properties.GetProperty(PropertyId.LanguageUnderstandingServiceResponse_JsonResult);
                 if (result.Reason == ResultReason.RecognizedIntent)
                 {
                     /* look at pulling this key from the Result for the file-saved log
 					* e.Result.LanguageUnderstandingServiceResponse_JsonResult
 					*/
-                    IntentResult = e.Result.Properties.GetProperty(PropertyId.LanguageUnderstandingServiceResponse_JsonResult);
                     UnityEngine.Debug.Log($"Speech: {utterance}, Intent: {e.Result.IntentId}, Json: {IntentResult}");
                     intent = e.Result.IntentId;
                     // await GetIntentFromUtterance(utterance, initiator);}
@@ -117,17 +117,23 @@ namespace ThirdParty
                 {
                     intent = "No speech";
                 }
+                IntentResultStruct conversationResult = JsonConvert.DeserializeObject<IntentResultStruct>(IntentResult.ToString());
                 string destination = "null";
                 intentDestinations.TryGetValue(intent, out destination);
                 long timeEnd = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+                if (conversationResult.result.prediction.intents.FindIndex(x => x.category == "None" && x.confidenceScore > 0.6) != -1)
+                {
+                    UnityEngine.Debug.Log($"Top intent was {intent} but None had a score over 60%");
+                    intent = "None";
+                }
 
                 UnityMainThread.AddJob(() =>
                 {
                     /* look at pulling this key from the Result for the file-saved log
-					* e.Result.LanguageUnderstandingServiceResponse_JsonResult
-					*/
+                    * e.Result.LanguageUnderstandingServiceResponse_JsonResult
+                    */
                     intentEvent.Invoke((intent, initiator, relevantScene));
-                    IntentRecorder.RecordIntent((utterance, intent, initiator, destination, "New", timeStart, timeEnd, IntentResult.ToString()));
+                    IntentRecorder.RecordIntent((utterance, intent, initiator, destination, "New", timeStart, timeEnd, IntentResult != null ? IntentResult.ToString() : ""));
                 });
             }
             void cancelled(object sender, IntentRecognitionCanceledEventArgs e)
@@ -246,4 +252,28 @@ namespace ThirdParty
 
 
     }
+}
+public struct Intent
+{
+    public string category;
+    public double confidenceScore;
+}
+
+public struct Prediction
+{
+    public string topIntent;
+    public string projectKind;
+    public List<Intent> intents;
+}
+
+public struct Result
+{
+    public string query;
+    public Prediction prediction;
+}
+
+public struct IntentResultStruct
+{
+    public string kind;
+    public Result result;
 }

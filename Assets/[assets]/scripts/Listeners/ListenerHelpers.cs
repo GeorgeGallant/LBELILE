@@ -3,7 +3,7 @@ using ThirdParty;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BaseIntentActivatable : BaseActivatable
+public abstract class BaseIntentActivatable : BaseActivatable
 {
     public IntentEvents[] intents;
     public int attemptsAllowed = 0;
@@ -11,6 +11,7 @@ public class BaseIntentActivatable : BaseActivatable
     public BaseScene badAttemptScene;
     public bool ignoreNoSpeech = true;
     bool listenerEnabled = false;
+    bool dictPopulated = false;
 
     protected virtual void OnEnable()
     {
@@ -20,12 +21,16 @@ public class BaseIntentActivatable : BaseActivatable
             {
                 Debug.LogWarning("More intents required than there are intents!");
             }
-            foreach (var intent in item.intents)
+            if (!dictPopulated)
             {
-                if (!sceneActive) return;
-                if (item.activateScene != null)
-                    AzureVoice.intentDestinations.Add(intent, item.activateScene.gameObject.name);
-                else Debug.LogWarning($"{item.name} has no activate scene!");
+                foreach (var intent in item.intents)
+                {
+                    if (!sceneActive) return;
+                    if (item.activateScene != null)
+                        AzureVoice.intentDestinations.Add(intent, item.activateScene.gameObject.name);
+                    else Debug.LogWarning($"{item.name} has no activate scene!");
+                }
+                dictPopulated = true;
             }
         }
     }
@@ -40,6 +45,7 @@ public class BaseIntentActivatable : BaseActivatable
             {
                 AzureVoice.intentDestinations.Remove(intent);
             }
+            dictPopulated = false;
         }
     }
 
