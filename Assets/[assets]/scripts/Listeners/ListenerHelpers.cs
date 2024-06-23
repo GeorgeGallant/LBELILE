@@ -64,6 +64,7 @@ public class IntentEvents
     internal List<string> usedIntents = new List<string>();
     public (bool hadIntent, BaseScene activateScene, bool needMoreIntents) checkIntents(string intent)
     {
+        GlobalPlayer.ReceiveIntent(intent);
         foreach (var item in intents)
         {
             if (item.Trim().ToLower() == intent.ToLower())
