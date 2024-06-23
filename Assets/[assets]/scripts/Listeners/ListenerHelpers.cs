@@ -18,7 +18,6 @@ public class BaseIntentActivatable : BaseActivatable
         listenerEnabled = true;
         foreach (var item in intents)
         {
-            Debug.Log($"Length: {item.intents.Length} | Required: {item.requiredAmount}");
             if (item.intents.Length < item.requiredAmount)
             {
                 Debug.LogWarning("More intents required than there are intents!");
