@@ -37,6 +37,7 @@ public class BaseIntentActivatable : BaseActivatable
         listenerEnabled = false;
         foreach (var item in intents)
         {
+            item.usedIntents.Clear();
             foreach (var intent in item.intents)
             {
                 AzureVoice.intentDestinations.Remove(intent);
@@ -61,7 +62,7 @@ public class IntentEvents
     public BaseScene activateScene;
     public UnityEvent intentEvent;
     public int requiredAmount = 0;
-    private List<string> usedIntents = new List<string>();
+    internal List<string> usedIntents = new List<string>();
     public (bool hadIntent, BaseScene activateScene, bool needMoreIntents) checkIntents(string intent)
     {
         foreach (var item in intents)
@@ -73,6 +74,8 @@ public class IntentEvents
                     usedIntents.Add(intent);
                     if (usedIntents.Count < requiredAmount)
                         return (true, null, true);
+                    else
+                        ScenarioManager.PlayFeedbackSound();
                 }
                 else if (requiredAmount > 1 && usedIntents.Contains(intent))
                 {
