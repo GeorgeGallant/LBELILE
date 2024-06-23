@@ -14,8 +14,6 @@ public class BaseIntentActivatable : BaseActivatable
 
     protected virtual void OnEnable()
     {
-        if (listenerEnabled || Time.time < 1) return;
-        listenerEnabled = true;
         foreach (var item in intents)
         {
             if (item.intents.Length < item.requiredAmount)
@@ -24,6 +22,7 @@ public class BaseIntentActivatable : BaseActivatable
             }
             foreach (var intent in item.intents)
             {
+                if (!sceneActive) return;
                 if (item.activateScene != null)
                     AzureVoice.intentDestinations.Add(intent, item.activateScene.gameObject.name);
                 else Debug.LogWarning($"{item.name} has no activate scene!");

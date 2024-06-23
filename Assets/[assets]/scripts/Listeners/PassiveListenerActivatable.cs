@@ -21,7 +21,6 @@ public class PassiveListenerActivatable : BaseIntentActivatable
     }
     async void activateListener()
     {
-        if (!sceneActive) return;
         if (activeListen.Value) return;
         base.OnEnable();
         Debug.Log("now passive listening");
@@ -42,6 +41,7 @@ public class PassiveListenerActivatable : BaseIntentActivatable
     protected override void OnEnable()
     {
         base.OnEnable();
+        if (!sceneActive) return;
         activateListener();
     }
 
