@@ -9,6 +9,7 @@ public class TimelineActivatable : BaseSceneActivatable
     protected override void StartSetup()
     {
         director = gameObject.GetComponent<PlayableDirector>();
+        director.Stop();
     }
     PlayableDirector director;
     public override void activateModifiers()
