@@ -1,0 +1,96 @@
+using System.Collections.Generic;
+using ThirdParty;
+using UnityEngine;
+using UnityEngine.Events;
+
+public abstract class BaseIntentActivatable : BaseActivatable
+{
+    public IntentEvents[] intents;
+    public int attemptsAllowed = 0;
+    int attempts = 0;
+    public BaseScene badAttemptScene;
+    public bool ignoreNoSpeech = true;
+    bool listenerEnabled = false;
+    bool dictPopulated = false;
+
+    protected virtual void OnEnable()
+    {
+        foreach (var item in intents)
+        {
+            if (item.intents.Length < item.requiredAmount)
+            {
+                Debug.LogWarning("More intents required than there are intents!");
+            }
+            if (!dictPopulated)
+            {
+                foreach (var intent in item.intents)
+                {
+                    if (!sceneActive) return;
+                    if (item.activateScene != null)
+                        AzureVoice.intentDestinations.Add(intent, item.activateScene.gameObject.name);
+                    else Debug.LogWarning($"{item.name} has no activate scene!");
+                }
+                dictPopulated = true;
+            }
+        }
+    }
+
+    protected virtual void OnDisable()
+    {
+        listenerEnabled = false;
+        foreach (var item in intents)
+        {
+            item.usedIntents.Clear();
+            foreach (var intent in item.intents)
+            {
+                AzureVoice.intentDestinations.Remove(intent);
+            }
+            dictPopulated = false;
+        }
+    }
+
+    protected void badAttempt(string attempt)
+    {
+        if (!badAttemptScene || (ignoreNoSpeech && attempt == "No speech")) return;
+        if (attempts >= attemptsAllowed) badAttemptScene.startScene();
+        else attempts++;
+
+    }
+}
+
+[System.Serializable]
+public class IntentEvents
+{
+    public string name = "";
+    public string[] intents = new string[1];
+    public BaseScene activateScene;
+    public UnityEvent intentEvent;
+    public int requiredAmount = 0;
+    internal List<string> usedIntents = new List<string>();
+    public (bool hadIntent, BaseScene activateScene, bool needMoreIntents) checkIntents(string intent)
+    {
+        GlobalPlayer.ReceiveIntent(intent);
+        foreach (var item in intents)
+        {
+            if (item.Trim().ToLower() == intent.ToLower())
+            {
+                if (requiredAmount > 1 && usedIntents.Count < requiredAmount && !usedIntents.Contains(intent))
+                {
+                    usedIntents.Add(intent);
+                    if (usedIntents.Count < requiredAmount)
+                    {
+                        ScenarioManager.PlayFeedbackSound();
+                        return (true, null, true);
+                    }
+                }
+                else if (requiredAmount > 1 && usedIntents.Contains(intent))
+                {
+                    return (false, null, true);
+                }
+                intentEvent.Invoke();
+                return (true, activateScene, false);
+            }
+        }
+        return (false, null, false);
+    }
+}

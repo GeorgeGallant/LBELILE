@@ -21,7 +21,6 @@ public class PassiveListenerActivatable : BaseIntentActivatable
     }
     async void activateListener()
     {
-        if (!sceneActive) return;
         if (activeListen.Value) return;
         base.OnEnable();
         Debug.Log("now passive listening");
@@ -41,6 +40,8 @@ public class PassiveListenerActivatable : BaseIntentActivatable
     }
     protected override void OnEnable()
     {
+        base.OnEnable();
+        if (!sceneActive) return;
         activateListener();
     }
 
@@ -59,7 +60,6 @@ public class PassiveListenerActivatable : BaseIntentActivatable
 
     private void intentListener((string topIntent, string initiator, string scene) o)
     {
-        Debug.Log("If an intent was found, at least this should appear");
         Debug.Log($"Intent: {o.topIntent}, Scene: {o.scene} equal to {activatableOwner.gameObject.name}?, Initiator: {o.initiator}");
         List<string> intentList = new List<string>();
         if (!sceneActive) return;
@@ -67,14 +67,7 @@ public class PassiveListenerActivatable : BaseIntentActivatable
         if (o.initiator == "passive")
         {
             var intent = o.topIntent;
-            if (activateIntent != string.Empty) intentList.Add(activateIntent);
-            if (activateIntent != string.Empty && intent.ToLower() == activateIntent.ToLower())
-            {
-                Debug.Log("Activate Scene intent hit");
-                OnDisable();
-                activateNextScene();
-            }
-            else if (intents.Length > 0)
+            if (intents.Length > 0)
             {
                 bool foundScene = false;
                 foreach (var item in intents)
@@ -83,10 +76,15 @@ public class PassiveListenerActivatable : BaseIntentActivatable
                     {
                         intentList.Add(itemIntent);
                     }
-                    var check = item.checkIntents(o.topIntent);
+                    var check = item.checkIntents(intent);
                     if (check.hadIntent)
                     {
                         Debug.Log("Had intent");
+                        if (check.needMoreIntents)
+                        {
+                            Debug.Log("Need more intents");
+                            continue;
+                        }
                         if (check.activateScene)
                         {
                             Debug.Log("Intent hit");
@@ -96,6 +94,10 @@ public class PassiveListenerActivatable : BaseIntentActivatable
                             foundScene = true;
                             break;
                         }
+                    }
+                    else if (check.needMoreIntents)
+                    {
+                        Debug.Log("Intent recognized but already used");
                     }
                 }
                 if (foundScene) return;

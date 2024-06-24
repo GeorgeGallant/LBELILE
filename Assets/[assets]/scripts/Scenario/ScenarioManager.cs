@@ -22,6 +22,8 @@ public class ScenarioManager : MonoBehaviour
     public string cluProjectName;
     public string cluDeploymentName;
     public string playingSoundscape;
+    public AudioClip feedbackSound;
+    AudioSource feedbackPlayer;
 
     public static Dictionary<ScenarioObject, GameObject> GameObjectDictionary
     {
@@ -97,6 +99,22 @@ public class ScenarioManager : MonoBehaviour
         createObjects();
         createSoundscapes();
         firstScenario.startScene();
+        if (feedbackSound)
+        {
+            var go = new GameObject("Feedback Audio Player");
+            var audio = go.AddComponent<AudioSource>();
+            audio.clip = feedbackSound;
+            feedbackPlayer = audio;
+        }
+    }
+
+    public static void PlayFeedbackSound()
+    {
+        if (instance.feedbackSound)
+        {
+            instance.feedbackPlayer.Stop();
+            instance.feedbackPlayer.Play();
+        }
     }
 
     static (Vector3 pos, Quaternion rot) getSpawn()

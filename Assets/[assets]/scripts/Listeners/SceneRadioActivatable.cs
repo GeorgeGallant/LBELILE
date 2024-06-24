@@ -34,10 +34,6 @@ public class SceneRadioActivatable : BaseIntentActivatable
     {
         if (!sceneActive) return;
         if (o.scene != activatableOwner.gameObject.name) return;
-        if (o.initiator == "radio" && o.topIntent.ToLower() == activateIntent.ToLower())
-        {
-            activateNextScene();
-        }
         else if (intents.Length > 0)
         {
             bool foundScene = false;
@@ -46,9 +42,18 @@ public class SceneRadioActivatable : BaseIntentActivatable
                 var check = item.checkIntents(o.topIntent);
                 if (check.hadIntent)
                 {
+                    if (check.needMoreIntents)
+                    {
+                        Debug.Log("Need more intents");
+                        continue;
+                    }
                     check.activateScene.startScene();
                     foundScene = true;
                     break;
+                }
+                else if (check.needMoreIntents)
+                {
+                    Debug.Log("Intent recognized but already used");
                 }
             }
             if (foundScene) return;
