@@ -704,10 +704,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
   intents:
   - name: Seperate
     intents:
@@ -717,7 +713,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  activateIntent: 
   attemptsAllowed: 0
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
@@ -766,12 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0955f172edec0d94291098e547db483a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 603800010}
   intents: []
-  activateIntent: p3v.dispatch.ackClear
   attemptsAllowed: 1
   badAttemptScene: {fileID: 306331103}
   ignoreNoSpeech: 1
@@ -819,10 +809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
   intents:
   - name: ' '
     intents:
@@ -832,7 +818,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  activateIntent: 
   attemptsAllowed: 0
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
@@ -1270,10 +1255,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
   intents:
   - name: Seperate
     intents:
@@ -1283,7 +1264,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  activateIntent: 
   attemptsAllowed: 0
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
@@ -2980,7 +2960,7 @@ GameObject:
   - component: {fileID: 586251285}
   - component: {fileID: 586251286}
   m_Layer: 0
-  m_Name: 5C2
+  m_Name: 5D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3015,7 +2995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb15da2cf0b0ea44b9b40fd30583976b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoURL: Dom5C2
+  videoURL: Dom5D
   videoLoader: {fileID: 0}
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
@@ -3313,10 +3293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
   intents:
   - name: Engage
     intents:
@@ -3326,7 +3302,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  activateIntent: 
   attemptsAllowed: 0
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
@@ -3375,10 +3350,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
   intents:
   - name: WordsOfInsertion
     intents:
@@ -3388,7 +3359,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  activateIntent: 
   attemptsAllowed: 0
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
@@ -3437,10 +3407,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
   intents:
   - name: Sit Down
     intents:
@@ -3450,7 +3416,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  activateIntent: 
   attemptsAllowed: 0
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
@@ -3808,7 +3773,7 @@ GameObject:
   - component: {fileID: 702969475}
   - component: {fileID: 702969476}
   m_Layer: 0
-  m_Name: 5C1
+  m_Name: 5C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3844,7 +3809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb15da2cf0b0ea44b9b40fd30583976b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoURL: Dom5C1
+  videoURL: Dom5C
   videoLoader: {fileID: 0}
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
@@ -4548,10 +4513,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
   intents:
   - name: Introduce yourself
     intents:
@@ -4561,7 +4522,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  activateIntent: 
   attemptsAllowed: 0
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
@@ -4660,10 +4620,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
   intents:
   - name: ' '
     intents:
@@ -4673,7 +4629,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  activateIntent: 
   attemptsAllowed: 0
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
@@ -5179,12 +5134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0955f172edec0d94291098e547db483a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 863111706}
   intents: []
-  activateIntent: p3v.dispatch.ackArrive
   attemptsAllowed: 1
   badAttemptScene: {fileID: 244839359}
   ignoreNoSpeech: 1
@@ -5608,10 +5558,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
   intents:
   - name: WordsOfInsertion
     intents:
@@ -5621,7 +5567,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  activateIntent: 
   attemptsAllowed: 0
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
@@ -5720,12 +5665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0955f172edec0d94291098e547db483a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 244839359}
   intents: []
-  activateIntent: p3v.dispatch.ackCopy
   attemptsAllowed: 1
   badAttemptScene: {fileID: 603800010}
   ignoreNoSpeech: 1
@@ -6322,6 +6262,7 @@ MonoBehaviour:
   cluProjectName: P360V_mentalhealth
   cluDeploymentName: P360V_mentalhealth
   playingSoundscape: 
+  feedbackSound: {fileID: 0}
   activeScenario: {fileID: 0}
   activeKeywords: []
   videoSphere: {fileID: 1844689361}
@@ -7288,10 +7229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
   intents:
   - name: Sit Down
     intents:
@@ -7301,211 +7238,10 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  activateIntent: 
   attemptsAllowed: 0
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
   getLastIntentWhenInactive: 0
---- !u!1 &1383820823
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1383820824}
-  - component: {fileID: 1383820825}
-  m_Layer: 0
-  m_Name: GFAudioRight
-  m_TagString: Untagged
-  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1383820824
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383820823}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.013, y: -0.122, z: -2.285}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1383820825
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383820823}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 0
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 490
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.0036689301
-      value: 1.1
-      inSlope: -500.20065
-      outSlope: -500.20065
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.004
-      value: 0.5
-      inSlope: -125.05016
-      outSlope: -125.05016
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.008
-      value: 0.25
-      inSlope: -31.26254
-      outSlope: -31.26254
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.016
-      value: 0.125
-      inSlope: -7.815635
-      outSlope: -7.815635
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.032
-      value: 0.0625
-      inSlope: -1.9539088
-      outSlope: -1.9539088
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.064
-      value: 0.03125
-      inSlope: -0.4884772
-      outSlope: -0.4884772
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.128
-      value: 0.015625
-      inSlope: -0.1221193
-      outSlope: -0.1221193
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.256
-      value: 0.0078125
-      inSlope: -0.030529825
-      outSlope: -0.030529825
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.512
-      value: 0.00390625
-      inSlope: -0.0076324563
-      outSlope: -0.0076324563
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0.002
-      inSlope: -0.002000801
-      outSlope: -0.002000801
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.02337265
-      value: 0.9926338
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1421440823
 GameObject:
   m_ObjectHideFlags: 0
@@ -7714,10 +7450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
   intents:
   - name: Engage
     intents:
@@ -7727,7 +7459,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  activateIntent: 
   attemptsAllowed: 0
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
@@ -8307,10 +8038,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
   intents:
   - name: ' '
     intents:
@@ -8320,7 +8047,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  activateIntent: 
   attemptsAllowed: 0
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
@@ -9197,10 +8923,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
   intents:
   - name: Sit Down
     intents:
@@ -9210,7 +8932,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  activateIntent: 
   attemptsAllowed: 0
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
@@ -10029,10 +9750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
   intents:
   - name: Sit Down
     intents:
@@ -10042,7 +9759,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  activateIntent: 
   attemptsAllowed: 0
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
@@ -10149,7 +9865,7 @@ GameObject:
   - component: {fileID: 1952456622}
   - component: {fileID: 1952456623}
   m_Layer: 0
-  m_Name: 5C3
+  m_Name: 5E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10184,7 +9900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb15da2cf0b0ea44b9b40fd30583976b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoURL: Dom5C3
+  videoURL: Dom5E
   videoLoader: {fileID: 0}
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
@@ -10465,10 +10181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 0}
   intents:
   - name: Get Story
     intents:
@@ -10478,7 +10190,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  activateIntent: 
   attemptsAllowed: 0
   badAttemptScene: {fileID: 0}
   ignoreNoSpeech: 1
@@ -10735,7 +10446,7 @@ MonoBehaviour:
   - scenarioObject: 2
     spawnPosition: {fileID: 1236465315}
     spawnInFront: 0
-  videoFinishedScenario: {fileID: 0}
+  videoFinishedScenario: {fileID: 1232617178}
   loopVideo: 0
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
@@ -11143,7 +10854,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1978912083863262236, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 995696442635339462, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 35269e6af55402c40971b1b5ef7066d5, type: 3}
 --- !u!1 &2108205768
 GameObject:
@@ -11363,5 +11082,4 @@ SceneRoots:
   - {fileID: 276550476}
   - {fileID: 332414175}
   - {fileID: 331311851}
-  - {fileID: 1383820824}
   - {fileID: 1236465315}
