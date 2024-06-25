@@ -79,9 +79,11 @@ public class NotepadGrabbable : MonoBehaviour
             int lineIndex = i;
             NotepadLine line = lines[lineIndex];
             lineEvents.Add(line, item.lineEvent);
-            line.tmp.SetText(item.lineText);
+            line.setText(item.lineText);
+            line.setSize(item.sizeMultiply);
+            line.setStyle(item.bold, item.italic, item.underline, item.strikethrough);
             Debug.Log(item.lineText);
-            line.available = item.selectable;
+            line.available = item.isSelectable;
             i++;
         }
     }
@@ -97,7 +99,7 @@ public class NotepadGrabbable : MonoBehaviour
             lineEvents.Add(line, item.lineEvent);
             line.tmp.SetText(item.lineText);
             Debug.Log(item.lineText);
-            line.available = item.selectable;
+            line.available = item.isSelectable;
             i++;
         }
     }
