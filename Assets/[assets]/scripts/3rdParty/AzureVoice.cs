@@ -121,7 +121,7 @@ namespace ThirdParty
                 string destination = "null";
                 intentDestinations.TryGetValue(intent, out destination);
                 long timeEnd = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-                if (conversationResult.result.prediction.intents.FindIndex(x => x.category == "None" && x.confidenceScore > 0.6) != -1)
+                if (false && conversationResult.result.prediction.intents.FindIndex(x => x.category == "None" && x.confidenceScore > 0.6) != -1)
                 {
                     UnityEngine.Debug.Log($"Top intent was {intent} but None had a score over 60%");
                     intent = "None";
