@@ -171,7 +171,7 @@ public class GlobalPlayer : MonoBehaviour
     public static void RecieveHeartRate(int heartRate)
     {
         heartRateEnabled = true;
-        instance.heartRateText.SetText(heartRate.ToString());
+        instance.heartRateText.SetText($"Heart Rate: {heartRate}");
 
     }
     void Update()

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.UI;
 
 public class NotepadGrabbable : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class NotepadGrabbable : MonoBehaviour
     public NotepadLine[] lines;
     NotepadLine currentSelection;
     Dictionary<NotepadLine, UnityEvent> lineEvents = new Dictionary<NotepadLine, UnityEvent>();
+    public Canvas canvas;
+    public Image image;
     protected void Start()
     {
         interactable = gameObject.GetComponent<XRHandedGrabInteractable>();
@@ -64,8 +67,21 @@ public class NotepadGrabbable : MonoBehaviour
         penGrabbable.gameObject.SetActive(true);
         resetPenPos();
     }
+    public void SetImage(Sprite newImage)
+    {
+        if (newImage == null)
+        {
+            canvas.gameObject.SetActive(false);
+        }
+        else
+        {
+            canvas.gameObject.SetActive(true);
+            image.sprite = newImage;
+        }
+    }
     public void SetLines(NotepadLineElement[] elements)
     {
+        heldTime = 0;
         lineEvents.Clear();
         clearNotepad();
         TopToBottomLines(elements);
