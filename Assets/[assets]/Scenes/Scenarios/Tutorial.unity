@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 1787299815}
+  firstScenario: {fileID: 1100407506}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -298,6 +298,7 @@ MonoBehaviour:
   cluProjectName: P360V_tutorial
   cluDeploymentName: P360V_tutorial
   playingSoundscape: 
+  feedbackSound: {fileID: 0}
   activeScenario: {fileID: 0}
   activeKeywords: []
   videoSphere: {fileID: 352560455}
@@ -360,10 +361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 157066888}
   intents:
   - name: check Catch
     intents:
@@ -373,7 +370,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 0
-  activateIntent: p3v.fishgame.getPermit
   attemptsAllowed: 1
   badAttemptScene: {fileID: 492640052}
   ignoreNoSpeech: 1
@@ -478,12 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0955f172edec0d94291098e547db483a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 492640052}
   intents: []
-  activateIntent: p3v.dispatch.ackClear
   attemptsAllowed: 3
   badAttemptScene: {fileID: 1100407506}
   ignoreNoSpeech: 1
@@ -710,12 +701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 225866208}
   intents: []
-  activateIntent: p3v.bill.convinceToGo
   attemptsAllowed: 1
   badAttemptScene: {fileID: 438277093}
   ignoreNoSpeech: 1
@@ -1078,7 +1064,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 85922430}
+  sizeMultiply: 1
+  bold: 0
+  italic: 0
+  strikethrough: 0
+  underline: 0
   selectable: 1
+  keywords: []
+  behaviour: 0
 --- !u!1 &352560455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,12 +1604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  activateScene: {fileID: 225866208}
   intents: []
-  activateIntent: p3v.bill.convinceToGo
   attemptsAllowed: 1
   badAttemptScene: {fileID: 438277093}
   ignoreNoSpeech: 1
@@ -1701,7 +1689,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 0}
+  sizeMultiply: 1
+  bold: 0
+  italic: 0
+  strikethrough: 0
+  underline: 0
   selectable: 0
+  keywords: []
+  behaviour: 0
 --- !u!1 &658509574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,7 +1927,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 0}
+  sizeMultiply: 1
+  bold: 0
+  italic: 0
+  strikethrough: 0
+  underline: 0
   selectable: 0
+  keywords: []
+  behaviour: 0
 --- !u!1 &739906127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2281,7 +2283,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 85922430}
+  sizeMultiply: 1
+  bold: 0
+  italic: 0
+  strikethrough: 0
+  underline: 0
   selectable: 0
+  keywords: []
+  behaviour: 0
 --- !u!1 &772869578
 GameObject:
   m_ObjectHideFlags: 0
@@ -3030,7 +3039,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 0}
+  sizeMultiply: 1
+  bold: 0
+  italic: 0
+  strikethrough: 0
+  underline: 0
   selectable: 0
+  keywords: []
+  behaviour: 0
 --- !u!1 &1151973126
 GameObject:
   m_ObjectHideFlags: 0
@@ -3159,7 +3175,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   videoFinishedScene: {fileID: 0}
+  sizeMultiply: 1
+  bold: 0
+  italic: 0
+  strikethrough: 0
+  underline: 0
   selectable: 0
+  keywords: []
+  behaviour: 0
 --- !u!1 &1198550469
 GameObject:
   m_ObjectHideFlags: 0
@@ -4240,7 +4263,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1978912083863262236, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 995696442635339462, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 35269e6af55402c40971b1b5ef7066d5, type: 3}
 --- !u!1 &1879399500
 GameObject:
