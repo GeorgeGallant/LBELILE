@@ -8,7 +8,7 @@ public class NotepadLine : MonoBehaviour
     public SpriteRenderer circle;
     public float lineSize;
     public bool available = true;
-    private void Start()
+    private void Awake()
     {
         lineSize = tmp.fontSize;
     }
@@ -31,10 +31,10 @@ public class NotepadLine : MonoBehaviour
     public void setStyle(bool bold, bool italic, bool underline, bool strikeThrough)
     {
         FontStyles styles = FontStyles.Normal;
-        if (bold) styles = styles | FontStyles.Bold;
-        if (italic) styles = styles | FontStyles.Italic;
-        if (underline) styles = styles | FontStyles.Underline;
-        if (strikeThrough) styles = styles | FontStyles.Strikethrough;
+        if (bold) styles |= FontStyles.Bold;
+        if (italic) styles |= FontStyles.Italic;
+        if (underline) styles |= FontStyles.Underline;
+        if (strikeThrough) styles |= FontStyles.Strikethrough;
 
         tmp.fontStyle = styles;
     }
