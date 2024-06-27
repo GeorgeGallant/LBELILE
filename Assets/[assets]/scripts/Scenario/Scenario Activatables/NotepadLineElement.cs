@@ -13,6 +13,7 @@ public class NotepadLineElement : MonoBehaviour
     {
         get
         {
+            if (keywords.Length == 0) return selectable;
             var keywordRestrict = true;
             if (keywords.Length > 0)
                 foreach (var item in keywords)
