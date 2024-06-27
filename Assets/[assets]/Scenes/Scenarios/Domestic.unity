@@ -1470,7 +1470,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 1, z: 0}
   sphereYaw: -25
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!1 &245354455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2708,6 +2708,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  overlayImage: {fileID: 0}
 --- !u!1 &360469503
 GameObject:
   m_ObjectHideFlags: 0
@@ -4734,6 +4735,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  overlayImage: {fileID: 0}
 --- !u!1 &677479318
 GameObject:
   m_ObjectHideFlags: 0
@@ -6234,6 +6236,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  overlayImage: {fileID: 0}
 --- !u!1 &863111704
 GameObject:
   m_ObjectHideFlags: 0
@@ -7145,6 +7148,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  overlayImage: {fileID: 21300000, guid: f04056b056bf3429ca31b53e4acc95e7, type: 3}
 --- !u!1 &1119262881
 GameObject:
   m_ObjectHideFlags: 0
@@ -7653,7 +7657,7 @@ MonoBehaviour:
   bold: 0
   italic: 0
   strikethrough: 0
-  underline: 1
+  underline: 0
   selectable: 1
   keywords: []
   behaviour: 0
@@ -7868,6 +7872,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  overlayImage: {fileID: 0}
 --- !u!1 &1232617177
 GameObject:
   m_ObjectHideFlags: 0
@@ -11596,6 +11601,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  overlayImage: {fileID: 0}
 --- !u!1 &1813820056
 GameObject:
   m_ObjectHideFlags: 0
@@ -12050,6 +12056,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  overlayImage: {fileID: 0}
 --- !u!1 &1907293468
 GameObject:
   m_ObjectHideFlags: 0
@@ -12114,6 +12121,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  overlayImage: {fileID: 0}
 --- !u!1 &1912211779
 GameObject:
   m_ObjectHideFlags: 0
@@ -13168,7 +13176,7 @@ MonoBehaviour:
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
-  soundscapeKey: 
+  soundscapeKey: city
 --- !u!1 &2086424483
 GameObject:
   m_ObjectHideFlags: 0
