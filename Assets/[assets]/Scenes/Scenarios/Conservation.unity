@@ -167,7 +167,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Check Catch
+    intents:
+    - p3v.fishgame.checkCatch
+    activateScene: {fileID: 1898487289}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
   attemptsAllowed: 1
   badAttemptScene: {fileID: 70657244}
   ignoreNoSpeech: 1
@@ -909,10 +917,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intents:
-  - name: p3v.fishgame.giveTicket
+  - name: GiveTicket
     intents:
     - p3v.fishgame.giveTicket
     activateScene: {fileID: 1942004134}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
+  - name: Give Warning
+    intents:
+    - p3v.fishgame.giveWarning
+    activateScene: {fileID: 473094385}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
+  - name: Let It Go
+    intents:
+    - p3v.fishgame.letItGo
+    activateScene: {fileID: 488898946}
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -965,7 +989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383884906c18a364986367c38a180e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineText: Size Limits - 63 cm
+  lineText: SIZE Limits - 63 cm
   lineEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2146,7 +2170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383884906c18a364986367c38a180e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineText: Size Limits - 63 cm
+  lineText: SIZE Limits - 63 cm
   lineEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2204,7 +2228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intents:
-  - name: p3v.fishgame.giveTicket
+  - name: Ticket
     intents:
     - p3v.fishgame.giveTicket
     activateScene: {fileID: 1510818907}
@@ -2212,8 +2236,16 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
+  - name: Warning
+    intents:
+    - p3v.fishgame.giveWarning
+    activateScene: {fileID: 160582081}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
   attemptsAllowed: 1
-  badAttemptScene: {fileID: 78970772}
+  badAttemptScene: {fileID: 1898487289}
   ignoreNoSpeech: 1
   getLastIntentWhenInactive: 0
 --- !u!1 &407991136
@@ -2964,8 +2996,8 @@ MonoBehaviour:
   videoURL: 4F
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 803722141}
-  loopVideo: 0
+  videoFinishedScenario: {fileID: 0}
+  loopVideo: 1
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
@@ -3334,7 +3366,7 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 4894892662351987373, guid: 4f5e7ec37473f2646ad44f7c296ba912, type: 2}
     value: {fileID: 0}
-  - key: {fileID: -8688151182744937621, guid: 046ee346cc4858244ac6c4c3815ffb8a, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 1386543058}
   - key: {fileID: -4494811139237831707, guid: 046ee346cc4858244ac6c4c3815ffb8a, type: 2}
     value: {fileID: 1633380480}
@@ -3612,10 +3644,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intents:
-  - name: Ask for licence
+  - name: Ask for Permit
     intents:
     - p3v.fishgame.getPermit
     activateScene: {fileID: 1945787631}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
+  - name: Ask for status card
+    intents:
+    - p3v.fishgame.getStatusCard
+    activateScene: {fileID: 66748831}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
+  - name: Ask for Harvest Card
+    intents:
+    - p3v.fishgame.harvestCard
+    activateScene: {fileID: 1000321769}
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -4257,9 +4305,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Check Catch
+    intents:
+    - p3v.fishgame.checkCatch
+    activateScene: {fileID: 803722141}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
   attemptsAllowed: 1
-  badAttemptScene: {fileID: 625443159}
+  badAttemptScene: {fileID: 1737063831}
   ignoreNoSpeech: 1
   getLastIntentWhenInactive: 0
 --- !u!1 &875252418
@@ -4800,7 +4856,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Get Permit
+    intents:
+    - p3v.fishgame.getPermit
+    activateScene: {fileID: 2122777601}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1550901325}
   ignoreNoSpeech: 1
@@ -4991,8 +5055,6 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 4894892662351987373, guid: 4f5e7ec37473f2646ad44f7c296ba912, type: 2}
     value: {fileID: 0}
-  - key: {fileID: -8688151182744937621, guid: 046ee346cc4858244ac6c4c3815ffb8a, type: 2}
-    value: {fileID: 1386543058}
   - key: {fileID: -4494811139237831707, guid: 046ee346cc4858244ac6c4c3815ffb8a, type: 2}
     value: {fileID: 1633380480}
   - key: {fileID: -1905429512221959937, guid: 046ee346cc4858244ac6c4c3815ffb8a, type: 2}
@@ -5046,7 +5108,7 @@ MonoBehaviour:
   intents:
   - name: Clear
     intents:
-    - p3V.dispatch.ackClear
+    - p3v.dispatch.ackClear
     activateScene: {fileID: 2025262541}
     intentEvent:
       m_PersistentCalls:
@@ -5104,8 +5166,8 @@ MonoBehaviour:
   videoURL: 4F3
   videoLoader: {fileID: 0}
   scenarioObjects: []
-  videoFinishedScenario: {fileID: 0}
-  loopVideo: 1
+  videoFinishedScenario: {fileID: 1041521910}
+  loopVideo: 0
   spherePosition: {x: 0, y: 0, z: 0}
   sphereYaw: 0
   sphereScale: 8
@@ -5239,7 +5301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383884906c18a364986367c38a180e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineText: Size Limits - 63 cm
+  lineText: SIZE Limits - 63 cm
   lineEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5302,12 +5364,13 @@ MonoBehaviour:
     - p3v.fishgame.haveAuthority
     - p3v.fishgame.checkCatch
     - p3v.fishgame.getPermit
+    - p3v.fishgame.citeRegulations
     activateScene: {fileID: 739733962}
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
-    requiredAmount: 0
-  attemptsAllowed: 2
+    requiredAmount: 1
+  attemptsAllowed: 1
   badAttemptScene: {fileID: 1706387272}
   ignoreNoSpeech: 1
   getLastIntentWhenInactive: 0
@@ -5504,8 +5567,6 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 2117851715713753762, guid: b24d24b996f9f114a91219172f74ba34, type: 2}
     value: {fileID: 0}
-  - key: {fileID: -3458997344674645070, guid: 150c558424a35674699e1e9b45e100e4, type: 2}
-    value: {fileID: 350536087}
   - key: {fileID: 5209151106288294663, guid: 150c558424a35674699e1e9b45e100e4, type: 2}
     value: {fileID: 70536213}
   - key: {fileID: 8304037470482062104, guid: 150c558424a35674699e1e9b45e100e4, type: 2}
@@ -5819,7 +5880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383884906c18a364986367c38a180e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineText: Size Limits - 63 cm
+  lineText: SIZE Limits - 63 cm
   lineEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6994,19 +7055,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intents:
-  - name: Ticket or Warning Fail
+  - name: Let It Go
     intents:
-    - p3v.fishgame.giveTicket
-    - p3v.fishgame.giveWarning
-    activateScene: {fileID: 1112931148}
+    - p3v.fishgame.letItGo
+    activateScene: {fileID: 1041521910}
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  - name: Harvest Card
+  - name: Ticket or Warning
     intents:
-    - p3v.fishgame.harvestCard
-    activateScene: {fileID: 1041521910}
+    - p3v.fishgame.giveTicket
+    - p3v.fishgame.giveWarning
+    activateScene: {fileID: 1112931148}
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -7117,25 +7178,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intents:
-  - name: p3v.fishgame.giveTicket
+  - name: Let It Go
     intents:
-    - p3v.fishgame.giveTicket
-    - p3v.fishgame.giveWarning
-    activateScene: {fileID: 1112931148}
-    intentEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    requiredAmount: 1
-  - name: Harvest Card
-    intents:
-    - p3v.fishgame.harvestCard
+    - p3v.fishgame.letItGo
     activateScene: {fileID: 1041521910}
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
-    requiredAmount: 1
+    requiredAmount: 0
   attemptsAllowed: 1
-  badAttemptScene: {fileID: 1112931148}
+  badAttemptScene: {fileID: 700443780}
   ignoreNoSpeech: 1
   getLastIntentWhenInactive: 0
 --- !u!1 &1491150929
@@ -7313,9 +7365,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Check Catch
+    intents:
+    - p3v.fishgame.checkCatch
+    activateScene: {fileID: 803722141}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   attemptsAllowed: 1
-  badAttemptScene: {fileID: 66748831}
+  badAttemptScene: {fileID: 1737063831}
   ignoreNoSpeech: 1
   getLastIntentWhenInactive: 0
 --- !u!1 &1534687811
@@ -9421,11 +9481,12 @@ MonoBehaviour:
     - p3v.fishgame.getPermit
     - p3v.fishgame.citeRegulations
     - p3v.fishgame.checkCatch
+    - p3v.fishgame.citeRegulation
     activateScene: {fileID: 1780303923}
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
-    requiredAmount: 0
+    requiredAmount: 1
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1863653290}
   ignoreNoSpeech: 1
@@ -9844,7 +9905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intents:
-  - name: p3v.fishgame.idPlusReason
+  - name: idPlusReason
     intents:
     - p3v.fishgame.idPlusReason
     activateScene: {fileID: 1550901325}
@@ -9852,15 +9913,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     requiredAmount: 1
-  - name: p3v.fishgame.getPermit
-    intents:
-    - p3v.fishgame.getPermit
-    activateScene: {fileID: 2122777601}
-    intentEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    requiredAmount: 1
-  - name: p3v.identification
+  - name: ID
     intents:
     - p3v.identification
     activateScene: {fileID: 1550901325}
@@ -10033,7 +10086,15 @@ MonoBehaviour:
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
-    requiredAmount: 0
+    requiredAmount: 1
+  - name: Status Card
+    intents:
+    - p3v.fishgame.getStatusCard
+    activateScene: {fileID: 66748831}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
   attemptsAllowed: 1
   badAttemptScene: {fileID: 2129817804}
   ignoreNoSpeech: 1
@@ -10325,8 +10386,6 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 6904558200260717685, guid: 093236942e8f27a49b8856e8c23c31d3, type: 2}
     value: {fileID: 0}
-  - key: {fileID: -4925752480771405390, guid: 8e9cfcb4a39ad2c4c99594aefe6d7da8, type: 2}
-    value: {fileID: 350536087}
   - key: {fileID: 5832560680667218831, guid: 8e9cfcb4a39ad2c4c99594aefe6d7da8, type: 2}
     value: {fileID: 70536213}
   - key: {fileID: -1922809551739781781, guid: 8e9cfcb4a39ad2c4c99594aefe6d7da8, type: 2}
@@ -10437,7 +10496,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intents:
-  - name: p3v.fishgame.giveTicket
+  - name: Warning
+    intents:
+    - p3v.fishgame.giveWarning
+    activateScene: {fileID: 473094385}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
+  - name: Ticket
     intents:
     - p3v.fishgame.giveTicket
     activateScene: {fileID: 1942004134}
@@ -10446,7 +10513,7 @@ MonoBehaviour:
         m_Calls: []
     requiredAmount: 1
   attemptsAllowed: 1
-  badAttemptScene: {fileID: 488898946}
+  badAttemptScene: {fileID: 803722141}
   ignoreNoSpeech: 1
   getLastIntentWhenInactive: 0
 --- !u!1 &1981512013
@@ -10493,9 +10560,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Check Catch
+    intents:
+    - p3v.fishgame.checkCatch
+    activateScene: {fileID: 700443780}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
   attemptsAllowed: 1
-  badAttemptScene: {fileID: 625443159}
+  badAttemptScene: {fileID: 1737063831}
   ignoreNoSpeech: 1
   getLastIntentWhenInactive: 0
 --- !u!1 &1989616491
@@ -10543,10 +10618,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intents:
-  - name: p3v.fishgame.giveTicket
+  - name: Ticket
     intents:
     - p3v.fishgame.giveTicket
     activateScene: {fileID: 1510818907}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
+  - name: Warning
+    intents:
+    - p3v.fishgame.giveWarning
+    activateScene: {fileID: 160582081}
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -10599,9 +10682,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Check Catch
+    intents:
+    - p3v.fishgame.checkCatch
+    activateScene: {fileID: 1898487289}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
   attemptsAllowed: 1
-  badAttemptScene: {fileID: 1550901325}
+  badAttemptScene: {fileID: 2122777601}
   ignoreNoSpeech: 1
   getLastIntentWhenInactive: 0
 --- !u!1 &2018563172
@@ -11065,8 +11156,6 @@ PlayableDirector:
     value: {fileID: 1486858914}
   - key: {fileID: -8479924406685175168, guid: dd867df85aad8cc479791b8c20400b4f, type: 2}
     value: {fileID: 1633380480}
-  - key: {fileID: 7291362684158504010, guid: dd867df85aad8cc479791b8c20400b4f, type: 2}
-    value: {fileID: 1386543058}
   - key: {fileID: -8207538391226090689, guid: dd867df85aad8cc479791b8c20400b4f, type: 2}
     value: {fileID: 1486858914}
   m_ExposedReferences:
@@ -11433,7 +11522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 2025262541}
+  firstScenario: {fileID: 2122777601}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
