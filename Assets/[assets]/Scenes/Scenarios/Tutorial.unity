@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &9630830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9630831}
+  - component: {fileID: 9630832}
+  m_Layer: 0
+  m_Name: Line blank
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9630831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9630830}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 246833912}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9630832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9630830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383884906c18a364986367c38a180e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineText: ' '
+  lineEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  videoFinishedScene: {fileID: 0}
+  sizeMultiply: 1
+  bold: 0
+  italic: 0
+  strikethrough: 0
+  underline: 0
+  selectable: 0
+  keywords: []
+  behaviour: 0
 --- !u!1 &13387455
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,9 +419,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intents:
-  - name: check Catch
+  - name: check Permits
     intents:
-    - p3v.fishgame.checkCatch
+    - p3v.fishgame.getPermit
     activateScene: {fileID: 157066888}
     intentEvent:
       m_PersistentCalls:
@@ -474,7 +531,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0955f172edec0d94291098e547db483a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Clear
+    intents:
+    - p3v.dispatch.ackClear
+    activateScene: {fileID: 492640052}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
   attemptsAllowed: 3
   badAttemptScene: {fileID: 1100407506}
   ignoreNoSpeech: 1
@@ -701,7 +766,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Convince to go
+    intents:
+    - p3v.bill.convinceToGo
+    activateScene: {fileID: 225866208}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   attemptsAllowed: 1
   badAttemptScene: {fileID: 438277093}
   ignoreNoSpeech: 1
@@ -792,9 +865,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 641799620}
+  - {fileID: 409210944}
   - {fileID: 1172628671}
   - {fileID: 723025020}
   - {fileID: 1102916689}
+  - {fileID: 9630831}
   - {fileID: 767152127}
   - {fileID: 347031466}
   m_Father: {fileID: 157066889}
@@ -815,6 +890,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
+  overlayImage: {fileID: 0}
 --- !u!1 &317775437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,7 +1144,7 @@ MonoBehaviour:
   bold: 0
   italic: 0
   strikethrough: 0
-  underline: 0
+  underline: 1
   selectable: 1
   keywords: []
   behaviour: 0
@@ -1260,6 +1336,63 @@ PlayableDirector:
     value: {fileID: 215579519}
   m_ExposedReferences:
     m_References: []
+--- !u!1 &409210943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 409210944}
+  - component: {fileID: 409210945}
+  m_Layer: 0
+  m_Name: Line blank
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &409210944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409210943}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 246833912}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &409210945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409210943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383884906c18a364986367c38a180e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineText: ' '
+  lineEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  videoFinishedScene: {fileID: 0}
+  sizeMultiply: 1
+  bold: 1
+  italic: 0
+  strikethrough: 0
+  underline: 0
+  selectable: 0
+  keywords: []
+  behaviour: 0
 --- !u!1 &438277092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,7 +1427,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  spherePosition: {x: 0, y: 0, z: 0}
+  spherePosition: {x: 0, y: 1, z: 0}
   sphereYaw: -50.07
   sphereScale: 8
   soundscapeKey: city
@@ -1604,7 +1737,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Convince to go
+    intents:
+    - p3v.bill.convinceToGo
+    activateScene: {fileID: 0}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 1
   attemptsAllowed: 1
   badAttemptScene: {fileID: 438277093}
   ignoreNoSpeech: 1
@@ -1651,7 +1792,7 @@ GameObject:
   - component: {fileID: 641799620}
   - component: {fileID: 641799621}
   m_Layer: 0
-  m_Name: Line
+  m_Name: NotePad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1690,7 +1831,7 @@ MonoBehaviour:
       m_Calls: []
   videoFinishedScene: {fileID: 0}
   sizeMultiply: 1
-  bold: 0
+  bold: 1
   italic: 0
   strikethrough: 0
   underline: 0
@@ -4170,7 +4311,7 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  spherePosition: {x: 0, y: 0, z: 0}
+  spherePosition: {x: 0, y: 1, z: 0}
   sphereYaw: -50.3
   sphereScale: 8
   soundscapeKey: city
@@ -4254,6 +4395,11 @@ PrefabInstance:
         type: 3}
       propertyPath: hand
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5657967247356619936, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6239347369989014381, guid: 35269e6af55402c40971b1b5ef7066d5,
         type: 3}
