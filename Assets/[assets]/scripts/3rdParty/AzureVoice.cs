@@ -15,6 +15,7 @@ using Azure;
 using Microsoft.Extensions.Azure;
 using Microsoft.CognitiveServices.Speech.Audio;
 using System.Diagnostics;
+using UnityEngine.Android;
 
 namespace ThirdParty
 {
@@ -83,7 +84,20 @@ namespace ThirdParty
             recognizer.Recognized += resultRecieved;
             recognizer.Canceled += cancelled;
             // UnityEngine.Debug.Log("Azure listening and busy");
-            await recognizer.StartContinuousRecognitionAsync();
+            if (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
+            {
+                UnityEngine.Debug.LogError("Microphone permission is not granted");
+                return;
+            }
+            try
+            {
+                await recognizer.StartContinuousRecognitionAsync();
+            }
+            catch (System.Exception e)
+            {
+                UnityEngine.Debug.LogException(e);
+                throw;
+            }
 
             while (continueListening != null && continueListening.Value)
             {
@@ -148,6 +162,7 @@ namespace ThirdParty
             {
                 recognizer.Recognized -= resultRecieved;
                 recognizer.Canceled -= cancelled;
+                recognizer.Dispose();
                 busy = false;
             }
         }

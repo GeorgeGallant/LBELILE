@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class GlobalPlayer : MonoBehaviour
@@ -71,8 +73,37 @@ public class GlobalPlayer : MonoBehaviour
 
     private void Awake()
     {
+        if (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
+        {
+            if (Application.platform == RuntimePlatform.Android)
+            {
+                using (AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+                {
+                    AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+                    activity.Call("runOnUiThread", new AndroidJavaRunnable(() =>
+                    {
+                        Permission.RequestUserPermission(Permission.Microphone);
+                    }));
+                }
+            }
+        }
         controls = new VRInputAsset();
         controls.Enable();
+    }
+
+    private void OnPermissionGranted(string obj)
+    {
+        Debug.LogWarning($"OnPermissionGranted: {obj}");
+    }
+
+    private void OnPermissionDeniedAndDontAskAgain(string obj)
+    {
+        Debug.LogWarning($"OnPermissionDeniedAndDontAskAgain: {obj}");
+    }
+
+    private void OnPermissionDenied(string obj)
+    {
+        Debug.LogWarning($"OnPermissionDenied: {obj}");
     }
 
     private void Start()
