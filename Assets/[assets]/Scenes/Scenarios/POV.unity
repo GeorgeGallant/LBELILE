@@ -192,10 +192,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7566544766940377778, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1978912083863262236, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 995696442635339462, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 35269e6af55402c40971b1b5ef7066d5, type: 3}
 --- !u!1 &221968703
 GameObject:
@@ -287,6 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7181f3715ceafa1418093f6e515820f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  modelMode: 0
   firstScenario: {fileID: 1814442498}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
@@ -301,8 +315,11 @@ MonoBehaviour:
   - scenarioObject: 3
     gameObject: {fileID: 1035828444273184424, guid: fd39933c54602ef4aae2280090237a92,
       type: 3}
+  soundScapeCreator: []
   cluProjectName: P360V_1
   cluDeploymentName: p3vDev1
+  playingSoundscape: 
+  feedbackSound: {fileID: 0}
   activeScenario: {fileID: 0}
   activeKeywords: []
   videoSphere: {fileID: 489930395}
@@ -1051,10 +1068,10 @@ MonoBehaviour:
     spawnInFront: 1
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 0
   spherePosition: {x: 0, y: 1, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: 
 --- !u!4 &1700476860
 Transform:
   m_ObjectHideFlags: 0
@@ -1129,10 +1146,10 @@ MonoBehaviour:
     spawnInFront: 1
   videoFinishedScenario: {fileID: 0}
   loopVideo: 1
-  hasBirds: 0
   spherePosition: {x: 0, y: 1, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: 
 --- !u!1 &1887160041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,10 +1661,10 @@ MonoBehaviour:
   scenarioObjects: []
   videoFinishedScenario: {fileID: 0}
   loopVideo: 0
-  hasBirds: 0
   spherePosition: {x: 0, y: 1, z: 0}
   sphereYaw: 0
   sphereScale: 8
+  soundscapeKey: 
 --- !u!4 &2033993131
 Transform:
   m_ObjectHideFlags: 0
