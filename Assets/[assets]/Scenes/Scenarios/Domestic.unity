@@ -5488,7 +5488,7 @@ GameObject:
   - component: {fileID: 670449407}
   - component: {fileID: 670449408}
   m_Layer: 0
-  m_Name: Notepad Scene2 (1)
+  m_Name: Notepad Scene2
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -5522,7 +5522,7 @@ Transform:
   - {fileID: 549114869}
   - {fileID: 115185591}
   - {fileID: 2090044847}
-  - {fileID: 1568814925}
+  - {fileID: 1665972540}
   m_Father: {fileID: 80087717}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &670449408
@@ -7100,7 +7100,7 @@ MonoBehaviour:
   italic: 0
   strikethrough: 0
   underline: 0
-  selectable: 0
+  selectable: 1
   keywords: []
   behaviour: 0
 --- !u!1 &830022394
@@ -7534,6 +7534,8 @@ PlayableDirector:
     value: {fileID: 2108205769}
   - key: {fileID: 1767986242869868309, guid: dc1f343ae195d88449607f7a8ee9ee46, type: 2}
     value: {fileID: 1513233728}
+  - key: {fileID: -1650205591102503541, guid: dc1f343ae195d88449607f7a8ee9ee46, type: 2}
+    value: {fileID: 813001672}
   m_ExposedReferences:
     m_References: []
 --- !u!1001 &905802005
@@ -9267,7 +9269,7 @@ GameObject:
   - component: {fileID: 1231938973}
   - component: {fileID: 1231938974}
   m_Layer: 0
-  m_Name: Notepad Scene2 (1)
+  m_Name: Notepad Scene2
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -9683,7 +9685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 1952456623}
+  firstScenario: {fileID: 2058957863}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -11971,63 +11973,6 @@ MonoBehaviour:
   selectable: 0
   keywords: []
   behaviour: 0
---- !u!1 &1568814924
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1568814925}
-  - component: {fileID: 1568814926}
-  m_Layer: 0
-  m_Name: Line Enter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1568814925
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568814924}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 670449407}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1568814926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568814924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 383884906c18a364986367c38a180e3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lineText: Enter The House
-  lineEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  videoFinishedScene: {fileID: 1421440825}
-  sizeMultiply: 1
-  bold: 0
-  italic: 0
-  strikethrough: 0
-  underline: 0
-  selectable: 1
-  keywords: []
-  behaviour: 0
 --- !u!1 &1569188960
 GameObject:
   m_ObjectHideFlags: 0
@@ -12682,6 +12627,65 @@ MonoBehaviour:
   underline: 0
   selectable: 0
   keywords: []
+  behaviour: 0
+--- !u!1 &1665972539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1665972540}
+  - component: {fileID: 1665972541}
+  m_Layer: 0
+  m_Name: Line Enter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1665972540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665972539}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 670449407}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1665972541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665972539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383884906c18a364986367c38a180e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineText: Enter The House
+  lineEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  videoFinishedScene: {fileID: 1421440825}
+  sizeMultiply: 1
+  bold: 0
+  italic: 0
+  strikethrough: 0
+  underline: 0
+  selectable: 1
+  keywords:
+  - Tombstone
+  - Living
   behaviour: 0
 --- !u!1 &1673937919
 GameObject:
