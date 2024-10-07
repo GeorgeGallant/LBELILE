@@ -5,16 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/[assets]/Scenes/OpeningNEW.unity
     guid: fca405605fca8c6488cadc799580c819
+  - enabled: 1
+    path: Assets/[assets]/Scenes/OpeningTutPovCE.unity
+    guid: 67e35af39a5e17d4293c2a13fd940b69
   - enabled: 0
     path: Assets/[assets]/Scenes/SceneSelection.unity
     guid: fe64c8279f5ee3a44b9d66f465ca0b3e
+  - enabled: 1
+    path: Assets/[assets]/Scenes/SceneSelectionTutPovCE.unity
+    guid: 0eb9aa2b5ff58314b82e35d84b23be46
   - enabled: 0
     path: Assets/[assets]/Scenes/SceneSelectionCE.unity
     guid: d493e4e2e27a9d24ba29bf8c95a86680
-  - enabled: 1
+  - enabled: 0
     path: Assets/[assets]/Scenes/SceneSelectionPS.unity
     guid: 4ee12f168b798ae45823f6b6675fe22c
   - enabled: 1
@@ -23,13 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/[assets]/Scenes/Scenarios/Conservation.unity
     guid: 06165f0a2216875499dab39854543e15
-  - enabled: 1
+  - enabled: 0
     path: Assets/[assets]/Scenes/Scenarios/MentalHealth.unity
     guid: 47cfbd8978720d243b471284baf50023
   - enabled: 1
     path: Assets/[assets]/Scenes/Scenarios/POV.unity
     guid: 71b117c5e6bcf374fa1ea4a590c96ca7
-  - enabled: 1
+  - enabled: 0
     path: Assets/[assets]/Scenes/Scenarios/Domestic.unity
     guid: 78446fabd0936714db2a3c88d52b6e7e
   m_configObjects:

@@ -4411,6 +4411,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8878954572813429555, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: scene
+      value: SceneSelectionTutPovCE
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
