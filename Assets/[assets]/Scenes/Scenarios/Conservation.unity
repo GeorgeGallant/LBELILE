@@ -6093,7 +6093,7 @@ MonoBehaviour:
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
-    requiredAmount: 1
+    requiredAmount: 0
   - name: p3v.fishgame.checkCatch
     intents:
     - p3v.fishgame.checkCatch
@@ -6101,11 +6101,11 @@ MonoBehaviour:
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
-    requiredAmount: 1
-  attemptsAllowed: 1
-  badAttemptScene: {fileID: 0}
+    requiredAmount: 0
+  attemptsAllowed: 2
+  badAttemptScene: {fileID: 1863653290}
   ignoreNoSpeech: 1
-  getLastIntentWhenInactive: 0
+  getLastIntentWhenInactive: 1
 --- !u!1 &1325990202
 GameObject:
   m_ObjectHideFlags: 0
@@ -11522,7 +11522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 765742091}
+  firstScenario: {fileID: 2025262541}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -11539,8 +11539,8 @@ MonoBehaviour:
   soundScapeCreator:
   - keyName: birds
     clip: {fileID: 8300000, guid: fca9e24a8bf18c549bd7d5674924ddff, type: 3}
-    maxVolume: 0.4
-    fadeTime: 1
+    maxVolume: 0.3
+    fadeTime: 0.5
   cluProjectName: P360V_fishgame
   cluDeploymentName: P360V_fishgame
   playingSoundscape: 

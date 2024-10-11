@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelMode: 0
-  firstScenario: {fileID: 1100407506}
+  firstScenario: {fileID: 492640052}
   gameObjectDictionaryCreator:
   - scenarioObject: 0
     gameObject: {fileID: 8541174378120484427, guid: 914c9dfa5aef0904da3c9254b661782a,
@@ -426,7 +426,7 @@ MonoBehaviour:
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
-    requiredAmount: 0
+    requiredAmount: 1
   attemptsAllowed: 1
   badAttemptScene: {fileID: 492640052}
   ignoreNoSpeech: 1
@@ -1741,7 +1741,7 @@ MonoBehaviour:
   - name: Convince to go
     intents:
     - p3v.bill.convinceToGo
-    activateScene: {fileID: 0}
+    activateScene: {fileID: 225866208}
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -4828,7 +4828,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   activateScene: {fileID: 0}
-  seekTime: 30
+  seekTime: 33
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
