@@ -167,7 +167,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Convince to Goo
+    intents:
+    - p3v.bill.convinceToGo
+    activateScene: {fileID: 1349165813}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1353046878}
   ignoreNoSpeech: 1
@@ -551,7 +559,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: helpResolve
+    intents:
+    - p3v.bill.justification
+    - p3v.bill.helpResolve
+    activateScene: {fileID: 2005759078}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   attemptsAllowed: 1
   badAttemptScene: {fileID: 968718089}
   ignoreNoSpeech: 1
@@ -739,7 +756,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Search
+    intents:
+    - p3v.bill.agreeToSearch
+    activateScene: {fileID: 767965154}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   attemptsAllowed: 1
   badAttemptScene: {fileID: 586719952}
   ignoreNoSpeech: 1
@@ -788,7 +813,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Move Location
+    intents:
+    - p3v.bill.moveLocation
+    activateScene: {fileID: 968718089}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   attemptsAllowed: 1
   badAttemptScene: {fileID: 134299424}
   ignoreNoSpeech: 1
@@ -1805,7 +1838,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: ConfirmIdentity/Justification
+    intents:
+    - p3v.bill.justification
+    - p3v.bill.confirmIdentity
+    activateScene: {fileID: 418594466}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   attemptsAllowed: 1
   badAttemptScene: {fileID: 412597883}
   ignoreNoSpeech: 1
@@ -2261,7 +2303,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Convince to go
+    intents:
+    - p3v.bill.convinceToGo
+    activateScene: {fileID: 1349165813}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1127379840}
   ignoreNoSpeech: 1
@@ -2502,7 +2552,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0955f172edec0d94291098e547db483a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Arrive
+    intents:
+    - p3v.dispatch.ackArrive
+    activateScene: {fileID: 1022779688}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   attemptsAllowed: 3
   badAttemptScene: {fileID: 168777826}
   ignoreNoSpeech: 1
@@ -2704,7 +2762,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Move Location
+    intents:
+    - p3v.bill.moveLocation
+    activateScene: {fileID: 968718089}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   attemptsAllowed: 1
   badAttemptScene: {fileID: 2070124132}
   ignoreNoSpeech: 1
@@ -2807,7 +2873,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Identity/Justicication
+    intents:
+    - p3v.bill.confirmIdentity
+    - p3v.bill.justification
+    activateScene: {fileID: 418594466}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1637706487}
   ignoreNoSpeech: 1
@@ -3529,9 +3604,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intents:
-  - name: 
-    intents: []
-    activateScene: {fileID: 0}
+  - name: Claer
+    intents:
+    - p3v.dispatch.ackClear
+    activateScene: {fileID: 785001453}
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -3584,10 +3660,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intents:
-  - name: ID and Justification
+  - name: Identification
     intents:
+    - p3v.identification
     - p3v.bill.justification
-    activateScene: {fileID: 418594466}
+    activateScene: {fileID: 1637706487}
     intentEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -3676,7 +3753,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Help Resolve
+    intents:
+    - p3v.bill.helpResolve
+    activateScene: {fileID: 2005759078}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   attemptsAllowed: 1
   badAttemptScene: {fileID: 785722263}
   ignoreNoSpeech: 1
@@ -3861,7 +3946,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0955f172edec0d94291098e547db483a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Copy
+    intents:
+    - p3v.dispatch.ackCopy
+    activateScene: {fileID: 0}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   attemptsAllowed: 3
   badAttemptScene: {fileID: 785001453}
   ignoreNoSpeech: 1
@@ -4673,7 +4766,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2356fbba5b5435b4eb71e4b32d843503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intents: []
+  intents:
+  - name: Search
+    intents:
+    - p3v.bill.agreeToSearch
+    activateScene: {fileID: 767965154}
+    intentEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    requiredAmount: 0
   attemptsAllowed: 1
   badAttemptScene: {fileID: 1499199876}
   ignoreNoSpeech: 1
