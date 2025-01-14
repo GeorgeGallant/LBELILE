@@ -471,6 +471,41 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -538.75
       objectReference: {fileID: 0}
+    - target: {fileID: 4938210986785367031, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776819182158243071, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776819182158243071, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776819182158243071, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 485
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776819182158243071, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 292.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776819182158243071, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1362.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776819182158243071, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -196.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5904982103802897060, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
       propertyPath: m_Name
@@ -495,6 +530,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Public Safety
+      objectReference: {fileID: 0}
+    - target: {fileID: 6752563156073236233, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_text
+      value: Tutorials
       objectReference: {fileID: 0}
     - target: {fileID: 7296490657281934472, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
@@ -541,15 +581,32 @@ PrefabInstance:
       propertyPath: scene
       value: ' '
       objectReference: {fileID: 0}
+    - target: {fileID: 8236508862920146342, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: af743b9e83eefdc43bde3b4548a38097,
+        type: 3}
+    - target: {fileID: 8826749943867238710, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_Name
+      value: Tutorials
+      objectReference: {fileID: 0}
     - target: {fileID: 8834063442662014720, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
       propertyPath: m_Name
       value: Public Safety
       objectReference: {fileID: 0}
+    - target: {fileID: 8864707886590831828, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: scene
+      value: SceneSelectionTutorials
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3634123661662358577, guid: b17db76a1ed46954991600a1660cbef0, type: 3}
     - {fileID: 1669783271191267863, guid: b17db76a1ed46954991600a1660cbef0, type: 3}
+    - {fileID: 4938210986785367031, guid: b17db76a1ed46954991600a1660cbef0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b17db76a1ed46954991600a1660cbef0, type: 3}

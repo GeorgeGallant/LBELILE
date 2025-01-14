@@ -2896,6 +2896,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -538.75
       objectReference: {fileID: 0}
+    - target: {fileID: 1577288937281173623, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: scene
+      value: SceneSelectionTutorials
+      objectReference: {fileID: 0}
     - target: {fileID: 1837486778818553026, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3031,6 +3036,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -196.25
       objectReference: {fileID: 0}
+    - target: {fileID: 2917839135783974600, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_text
+      value: Tutorials
+      objectReference: {fileID: 0}
     - target: {fileID: 2918974984752389522, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
       propertyPath: scene
@@ -3115,6 +3125,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Nursing TBD
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991890985761319276, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_Name
+      value: Tutorials
       objectReference: {fileID: 0}
     - target: {fileID: 9161212052611902137, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
