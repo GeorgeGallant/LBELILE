@@ -1194,6 +1194,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8878954572813429555, guid: 35269e6af55402c40971b1b5ef7066d5,
+        type: 3}
+      propertyPath: scene
+      value: SceneSelectionPOVonly
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2899,8 +2904,14 @@ PrefabInstance:
     - target: {fileID: 1577288937281173623, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
       propertyPath: scene
-      value: SceneSelectionTutorials
+      value: TutorialPOV
       objectReference: {fileID: 0}
+    - target: {fileID: 1750209395929189949, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fa84a87b4348b2242aa0cbd91953d9f4,
+        type: 3}
     - target: {fileID: 1837486778818553026, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3006,6 +3017,36 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2133796731401186257, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133796731401186257, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133796731401186257, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 485
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133796731401186257, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 292.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133796731401186257, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 292.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133796731401186257, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -196.25
+      objectReference: {fileID: 0}
     - target: {fileID: 2655474562560320375, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3036,15 +3077,45 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -196.25
       objectReference: {fileID: 0}
+    - target: {fileID: 2673142544471525593, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673142544471525593, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673142544471525593, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673142544471525593, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673142544471525593, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673142544471525593, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2917839135783974600, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
       propertyPath: m_text
-      value: Tutorials
+      value: POV Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 2918974984752389522, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
       propertyPath: scene
-      value: ' '
+      value: POV
       objectReference: {fileID: 0}
     - target: {fileID: 2975634418467892644, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
@@ -3106,15 +3177,55 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -196.25
       objectReference: {fileID: 0}
+    - target: {fileID: 4384038702394256932, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858719798990213880, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858719798990213880, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858719798990213880, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 485
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858719798990213880, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 292.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858719798990213880, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 292.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858719798990213880, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -196.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4912468905639940632, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
       propertyPath: m_Name
-      value: Nursing TBD
+      value: POV Experience
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278415028729124335, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6243036753305100502, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
       propertyPath: m_text
-      value: "Run the Tutorial First, \nThen Select an Area of Study\n"
+      value: "Run the Tutorial First, \nThen Select the Experience\n"
       objectReference: {fileID: 0}
     - target: {fileID: 6243036753305100502, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
@@ -3124,12 +3235,42 @@ PrefabInstance:
     - target: {fileID: 6448551812654401864, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
       propertyPath: m_text
-      value: Nursing TBD
+      value: Point of View Experience
       objectReference: {fileID: 0}
     - target: {fileID: 6991890985761319276, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}
       propertyPath: m_Name
-      value: Tutorials
+      value: POV Tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681991951168415280, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681991951168415280, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681991951168415280, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681991951168415280, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681991951168415280, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681991951168415280, guid: b17db76a1ed46954991600a1660cbef0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9161212052611902137, guid: b17db76a1ed46954991600a1660cbef0,
         type: 3}

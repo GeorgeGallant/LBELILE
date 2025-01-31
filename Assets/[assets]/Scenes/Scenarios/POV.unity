@@ -200,7 +200,7 @@ PrefabInstance:
     - target: {fileID: 8878954572813429555, guid: 35269e6af55402c40971b1b5ef7066d5,
         type: 3}
       propertyPath: scene
-      value: SceneSelection
+      value: SceneSelectionPOVOnly
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1511,7 +1511,7 @@ PrefabInstance:
     - target: {fileID: 8894498682409408323, guid: f2ef4dd5710dd5c4eba2eb02f465105e,
         type: 3}
       propertyPath: scene
-      value: SceneSelectionTutPovCE
+      value: SceneSelectionPOVOnly
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
