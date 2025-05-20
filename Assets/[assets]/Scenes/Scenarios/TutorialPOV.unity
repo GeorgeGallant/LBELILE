@@ -1024,7 +1024,7 @@ PrefabInstance:
     - target: {fileID: 8878954572813429555, guid: 35269e6af55402c40971b1b5ef7066d5,
         type: 3}
       propertyPath: scene
-      value: SceneSelectionPOVOnly
+      value: SceneSelection
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
